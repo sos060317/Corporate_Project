@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,7 +21,7 @@ public class PathCreator : MonoBehaviour
         path = new Path(transform.position);
     }
 
-    void Reset()
+    private void Reset() 
     {
         CreatePath();
     }
