@@ -29,10 +29,7 @@ public class Path
 
      public bool IsClosed
      {
-          get
-          {
-               return isClosed;
-          }
+          get => isClosed;
           set
           {
                if (isClosed != value)
@@ -63,10 +60,7 @@ public class Path
 
      public bool AutoSetControlPoints
      {
-          get
-          {
-               return autoSetControlPoints;
-          }
+          get => autoSetControlPoints;
           set
           {
                if (autoSetControlPoints != value)
