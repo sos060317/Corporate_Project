@@ -17,7 +17,7 @@ public class EnemySpawner : MonoBehaviour
     [Tooltip("배열에 넣은 EnemyPrefab 중 하나를 랜덤으로 스폰한다.")]
 
     #endregion
-    [SerializeField] private GameObject[] enemyPrefab;
+    [SerializeField] private EnemyDetailsSO[] enemyDetails;
 
     #region Header
 
@@ -54,6 +54,12 @@ public class EnemySpawner : MonoBehaviour
         if (spawnTimer <= 0)
         {
             // Enemy Spawn Logic
+
+            int randomIndex = Random.Range(0, enemyDetails.Length);
+
+            var enemy = Instantiate(enemyDetails[randomIndex].enemyPrefab, spawnPos, Quaternion.identity);
+            
+            enemy.GetComponent<EnemyBase>().InitEnemy(path.path.CalculateEvenlySpacedPoints(0.1f), enemyDetails[randomIndex]);
             
             spawnTimer = spawnTime;
         }

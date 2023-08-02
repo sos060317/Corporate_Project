@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e79536c5d12114a81e26079da7d0b3, type: 3}
+  m_Name: EnemyDetails_Dog
+  m_EditorClassIdentifier: 
+  enemyBaseHealth: 100
+  enemyBaseMoveSpeed: 3
+  enemyPrefab: {fileID: 3310595651917034084, guid: 5a034e27af333ed4e96a24a3d82460e5, type: 3}

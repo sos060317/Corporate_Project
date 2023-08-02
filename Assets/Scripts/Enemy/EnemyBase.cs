@@ -6,16 +6,15 @@ using Random = UnityEngine.Random;
 
 public class EnemyBase : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed;
-    
     private int movePosIndex;
     
     private bool canMove = true;
     
     private Vector2[] movePoints;
-    private Vector3 moveOffset;
+    private Vector2 moveOffset;
 
     private SpriteRenderer sr;
+    private EnemyDetailsSO enemyDetailsSo;
 
     private void Awake()
     {
@@ -35,8 +34,8 @@ public class EnemyBase : MonoBehaviour
             return;
         }
         
-        Vector3 nextPos = (Vector3)movePoints[movePosIndex] - transform.position + moveOffset;
-        transform.position += nextPos.normalized * (moveSpeed * Time.deltaTime);
+        Vector3 nextPos = (Vector3)movePoints[movePosIndex] - transform.position + (Vector3)moveOffset;
+        transform.position += nextPos.normalized * (enemyDetailsSo.enemyBaseMoveSpeed * Time.deltaTime);
         
         if (nextPos.x < 0)
         {
@@ -47,7 +46,7 @@ public class EnemyBase : MonoBehaviour
             sr.flipX = false;
         }
 
-        if (Vector2.Distance(transform.position - moveOffset, movePoints[movePosIndex]) <= 0.01f)
+        if (Vector2.Distance(transform.position - (Vector3)(moveOffset), movePoints[movePosIndex]) <= 0.01f)
         {
             movePosIndex++;
         }
@@ -58,11 +57,14 @@ public class EnemyBase : MonoBehaviour
         }
     }
 
-    public void InitEnemy(Vector2[] movePoints)
+    public void InitEnemy(Vector2[] movePoints, EnemyDetailsSO enemyDetailsSo)
     {
         this.movePoints = movePoints;
+        this.enemyDetailsSo = enemyDetailsSo;
         
-        moveOffset = new Vector3(0, Random.Range(-1f, 1f), 0);
+        moveOffset = new Vector3(0, Random.Range(-1f, 1f));
+
+        transform.position = movePoints[movePosIndex] + moveOffset;
 
         canMove = true;
     }
