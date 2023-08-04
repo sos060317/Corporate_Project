@@ -1,0 +1,69 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[RequireComponent(typeof(RoadCreator))]
+[RequireComponent(typeof(PathCreator))]
+public class EnemySpawner : MonoBehaviour
+{
+    #region Header
+
+    [Space(10)]
+    [Header("랜덤으로 스폰할 EnemyPrefab")]
+
+    #endregion
+    #region Tooltip
+
+    [Tooltip("배열에 넣은 EnemyPrefab 중 하나를 랜덤으로 스폰한다.")]
+
+    #endregion
+    [SerializeField] private EnemyDetailsSO[] enemyDetails;
+
+    #region Header
+
+    [Space(10)]
+    [Header("적 소환 시간")]
+
+    #endregion
+    [SerializeField] private float spawnTime;
+    
+    private PathCreator path;
+
+    private float spawnTimer;
+
+    private Vector2 spawnPos;
+
+    private void Start()
+    {
+        // Load Component
+        path = GetComponent<PathCreator>();
+        
+        // Variable initialize
+        spawnPos = path.path[0];
+
+        spawnTimer = spawnTime;
+    }
+
+    private void Update()
+    {
+        SpawnEnemy();
+    }
+
+    private void SpawnEnemy()
+    {
+        if (spawnTimer <= 0)
+        {
+            // Enemy Spawn Logic
+
+            int randomIndex = Random.Range(0, enemyDetails.Length);
+
+            var enemy = Instantiate(enemyDetails[randomIndex].enemyPrefab, spawnPos, Quaternion.identity);
+            
+            enemy.GetComponent<EnemyBase>().InitEnemy(path.path.CalculateEvenlySpacedPoints(0.1f), enemyDetails[randomIndex]);
+            
+            spawnTimer = spawnTime;
+        }
+
+        spawnTimer -= Time.deltaTime;
+    }
+}
