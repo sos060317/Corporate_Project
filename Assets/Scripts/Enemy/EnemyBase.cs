@@ -53,6 +53,7 @@ public class EnemyBase : MonoBehaviour
 
         if (movePosIndex >= movePoints.Length)
         {
+            GameManager.Instance.defianceLife--;
             Destroy(gameObject);
         }
     }
