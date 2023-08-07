@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,7 +29,29 @@ public class EnemySpawner : MonoBehaviour
         // Wave Start
         StartCoroutine(WaveRoutine());
     }
-    
+
+    private void OnEnable()
+    {
+        WaveManager.Instance.waveEvent += NextWaveEvent;
+    }
+
+    private void OnDisable()
+    {
+        WaveManager.Instance.waveEvent -= NextWaveEvent;
+    }
+
+    private void NextWaveEvent()
+    {
+        curWaveIndex++;
+
+        if (curWaveIndex >= wave.waves.Length)
+        {
+            return;
+        }
+
+        StartCoroutine(WaveRoutine());
+    }
+
     private IEnumerator WaveRoutine()
     {
         WaveDetailsSO.WaveData curWaveData;
