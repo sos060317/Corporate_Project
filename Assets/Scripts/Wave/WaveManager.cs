@@ -20,7 +20,7 @@ public class WaveManager : MonoBehaviour
         }
     }
 
-    public int enemySpawnerCount;
+    [HideInInspector] public int enemySpawnerCount;
     
     public Action waveEvent;
 

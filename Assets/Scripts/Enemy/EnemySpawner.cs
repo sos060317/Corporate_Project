@@ -25,21 +25,15 @@ public class EnemySpawner : MonoBehaviour
         // Variable initialize
         spawnPos = path.path[0];
         curWaveIndex = 0;
+
+        WaveManager.Instance.waveEvent += NextWaveEvent;
+        WaveManager.Instance.enemySpawnerCount++;
         
         // Wave Start
         StartCoroutine(WaveRoutine());
     }
 
-    private void OnEnable()
-    {
-        WaveManager.Instance.waveEvent += NextWaveEvent;
-    }
-
-    private void OnDisable()
-    {
-        WaveManager.Instance.waveEvent -= NextWaveEvent;
-    }
-
+    // ReSharper disable Unity.PerformanceAnalysis
     private void NextWaveEvent()
     {
         curWaveIndex++;
@@ -52,6 +46,7 @@ public class EnemySpawner : MonoBehaviour
         StartCoroutine(WaveRoutine());
     }
 
+    // ReSharper disable Unity.PerformanceAnalysis
     private IEnumerator WaveRoutine()
     {
         WaveDetailsSO.WaveData curWaveData;
@@ -75,5 +70,7 @@ public class EnemySpawner : MonoBehaviour
 
             yield return new WaitForSeconds(curWaveData.nextEnemyDelay);
         }
+        
+        WaveManager.Instance.WaveComplete();
     }
 }
