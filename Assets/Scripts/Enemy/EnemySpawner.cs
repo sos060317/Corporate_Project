@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,32 +7,15 @@ using UnityEngine;
 [RequireComponent(typeof(PathCreator))]
 public class EnemySpawner : MonoBehaviour
 {
-    #region Header
+    [SerializeField] private WaveDetailsSO wave;
 
-    [Space(10)]
-    [Header("랜덤으로 스폰할 EnemyPrefab")]
-
-    #endregion
-    #region Tooltip
-
-    [Tooltip("배열에 넣은 EnemyPrefab 중 하나를 랜덤으로 스폰한다.")]
-
-    #endregion
-    [SerializeField] private EnemyDetailsSO[] enemyDetails;
-
-    #region Header
-
-    [Space(10)]
-    [Header("적 소환 시간")]
-
-    #endregion
-    [SerializeField] private float spawnTime;
+    private int curWaveIndex;
     
     private PathCreator path;
 
-    private float spawnTimer;
-
     private Vector2 spawnPos;
+
+    private WaitForSeconds enemySpawnTimer;
 
     private void Start()
     {
@@ -40,30 +24,53 @@ public class EnemySpawner : MonoBehaviour
         
         // Variable initialize
         spawnPos = path.path[0];
+        curWaveIndex = 0;
 
-        spawnTimer = spawnTime;
+        WaveManager.Instance.waveEvent += NextWaveEvent;
+        WaveManager.Instance.enemySpawnerCount++;
+        
+        // Wave Start
+        StartCoroutine(WaveRoutine());
     }
 
-    private void Update()
+    // ReSharper disable Unity.PerformanceAnalysis
+    private void NextWaveEvent()
     {
-        SpawnEnemy();
-    }
+        curWaveIndex++;
 
-    private void SpawnEnemy()
-    {
-        if (spawnTimer <= 0)
+        if (curWaveIndex >= wave.waves.Length)
         {
-            // Enemy Spawn Logic
-
-            int randomIndex = Random.Range(0, enemyDetails.Length);
-
-            var enemy = Instantiate(enemyDetails[randomIndex].enemyPrefab, spawnPos, Quaternion.identity);
-            
-            enemy.GetComponent<EnemyBase>().InitEnemy(path.path.CalculateEvenlySpacedPoints(0.1f), enemyDetails[randomIndex]);
-            
-            spawnTimer = spawnTime;
+            return;
         }
 
-        spawnTimer -= Time.deltaTime;
+        StartCoroutine(WaveRoutine());
+    }
+
+    // ReSharper disable Unity.PerformanceAnalysis
+    private IEnumerator WaveRoutine()
+    {
+        WaveDetailsSO.WaveData curWaveData;
+        
+        for (int waveDataIndex = 0; waveDataIndex < wave.waves[curWaveIndex].waveDatas.Length; waveDataIndex++)
+        {
+            curWaveData = wave.waves[curWaveIndex].waveDatas[waveDataIndex];
+            
+            enemySpawnTimer = new WaitForSeconds(curWaveData.enemySpawnInterval);
+
+            for (int enemySpawnCount = 0;
+                 enemySpawnCount < curWaveData.enemySpawnCount;
+                 enemySpawnCount++)
+            {
+                var enemy = Instantiate(curWaveData.enemyType.enemyPrefab, spawnPos, Quaternion.identity);
+                
+                enemy.GetComponent<EnemyBase>().InitEnemy(path.path.CalculateEvenlySpacedPoints(0.1f), curWaveData.enemyType);
+
+                yield return enemySpawnTimer;
+            }
+
+            yield return new WaitForSeconds(curWaveData.nextEnemyDelay);
+        }
+        
+        WaveManager.Instance.WaveComplete();
     }
 }
