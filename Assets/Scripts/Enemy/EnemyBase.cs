@@ -61,6 +61,8 @@ public class EnemyBase : MonoBehaviour
     {
         this.movePoints = movePoints;
         this.enemyDetailsSo = enemyDetailsSo;
+
+        movePosIndex = 0;
         
         moveOffset = new Vector3(0, Random.Range(-1f, 1f));
 

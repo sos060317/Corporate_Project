@@ -6,32 +6,15 @@ using UnityEngine;
 [RequireComponent(typeof(PathCreator))]
 public class EnemySpawner : MonoBehaviour
 {
-    #region Header
+    [SerializeField] private WaveDetailsSO wave;
 
-    [Space(10)]
-    [Header("랜덤으로 스폰할 EnemyPrefab")]
-
-    #endregion
-    #region Tooltip
-
-    [Tooltip("배열에 넣은 EnemyPrefab 중 하나를 랜덤으로 스폰한다.")]
-
-    #endregion
-    [SerializeField] private EnemyDetailsSO[] enemyDetails;
-
-    #region Header
-
-    [Space(10)]
-    [Header("적 소환 시간")]
-
-    #endregion
-    [SerializeField] private float spawnTime;
+    private int curWaveIndex;
     
     private PathCreator path;
 
-    private float spawnTimer;
-
     private Vector2 spawnPos;
+
+    private WaitForSeconds enemySpawnTimer;
 
     private void Start()
     {
@@ -40,30 +23,34 @@ public class EnemySpawner : MonoBehaviour
         
         // Variable initialize
         spawnPos = path.path[0];
-
-        spawnTimer = spawnTime;
+        curWaveIndex = 0;
+        
+        // Wave Start
+        StartCoroutine(WaveRoutine());
     }
-
-    private void Update()
+    
+    private IEnumerator WaveRoutine()
     {
-        SpawnEnemy();
-    }
-
-    private void SpawnEnemy()
-    {
-        if (spawnTimer <= 0)
+        WaveDetailsSO.WaveData curWaveData;
+        
+        for (int waveDataIndex = 0; waveDataIndex < wave.waves[curWaveIndex].waveDatas.Length; waveDataIndex++)
         {
-            // Enemy Spawn Logic
-
-            int randomIndex = Random.Range(0, enemyDetails.Length);
-
-            var enemy = Instantiate(enemyDetails[randomIndex].enemyPrefab, spawnPos, Quaternion.identity);
+            curWaveData = wave.waves[curWaveIndex].waveDatas[waveDataIndex];
             
-            enemy.GetComponent<EnemyBase>().InitEnemy(path.path.CalculateEvenlySpacedPoints(0.1f), enemyDetails[randomIndex]);
-            
-            spawnTimer = spawnTime;
+            enemySpawnTimer = new WaitForSeconds(curWaveData.enemySpawnInterval);
+
+            for (int enemySpawnCount = 0;
+                 enemySpawnCount < curWaveData.enemySpawnCount;
+                 enemySpawnCount++)
+            {
+                var enemy = Instantiate(curWaveData.enemyType.enemyPrefab, spawnPos, Quaternion.identity);
+                
+                enemy.GetComponent<EnemyBase>().InitEnemy(path.path.CalculateEvenlySpacedPoints(0.1f), curWaveData.enemyType);
+
+                yield return enemySpawnTimer;
+            }
+
+            yield return new WaitForSeconds(curWaveData.nextEnemyDelay);
         }
-
-        spawnTimer -= Time.deltaTime;
     }
 }
