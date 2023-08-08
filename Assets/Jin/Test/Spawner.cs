@@ -48,7 +48,7 @@ public class Spawner : MonoBehaviour
     //    SpawnPrefab(prefab);
     //}
 
-    public List<GameObject> prefabsToSpawn; // 여러 개의 Prefab을 넣을 수 있는 List
+    public List<GameObject> prefabsToSpawn; // Prefab을 넣을 수 있는 List
     public Transform parentTransform; // 부모로 설정할 Transform
 
     private List<GameObject> spawnedObjects = new List<GameObject>();
@@ -70,8 +70,8 @@ public class Spawner : MonoBehaviour
             if (spawnedObjects[i] == null)
             {
                 StartCoroutine(SpawnPrefabDelayed(prefabsToSpawn[i], 3f));
-                spawnedObjects.RemoveAt(i); // Remove the null object from the list
-                break; // Exit the loop after spawning one prefab
+                spawnedObjects.RemoveAt(i); 
+                break; 
             }
         }
     }
