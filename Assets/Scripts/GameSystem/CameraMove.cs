@@ -14,17 +14,20 @@ public class CameraMove : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            Vector2 position = Camera.main.ScreenToViewportPoint((Vector2)Input.mousePosition - clickPoint);
-
-            Vector2 move = position * -(Time.deltaTime * dragSpeed);
-
-            transform.Translate(move);
-            transform.transform.position = new Vector3(transform.position.x, transform.position.y, -10);
-            
-            if (Input.GetMouseButtonUp(0))
+            if (clickPoint != (Vector2)Input.mousePosition)
             {
-                //move = position * 0;
-                move = Vector2.zero;
+                Vector2 position = Camera.main.ScreenToViewportPoint((Vector2)Input.mousePosition - clickPoint);
+                
+                Vector2 move = position * -(Time.deltaTime * dragSpeed);
+                
+                transform.Translate(move);
+                transform.transform.position = new Vector3(transform.position.x, transform.position.y, -10);
+                
+                if (Input.GetMouseButtonUp(0))
+                {
+                    //move = position * 0;
+                    move = Vector2.zero;
+                }
             }
         }
     }
