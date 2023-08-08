@@ -20,6 +20,12 @@ public class CameraMove : MonoBehaviour
 
             transform.Translate(move);
             transform.transform.position = new Vector3(transform.position.x, transform.position.y, -10);
+            
+            if (Input.GetMouseButtonUp(0))
+            {
+                //move = position * 0;
+                move = Vector2.zero;
+            }
         }
     }
 }
