@@ -32,9 +32,13 @@ public class EnemyBase : MonoBehaviour
     private void Update()
     {
         MoveUpdate();
+    }
+
+    private void FixedUpdate()
+    {
         CheckTarget();
     }
-    
+
     private void MoveUpdate()
     {
         if (!canMove)
