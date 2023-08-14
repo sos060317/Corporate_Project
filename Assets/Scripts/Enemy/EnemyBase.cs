@@ -95,6 +95,11 @@ public class EnemyBase : MonoBehaviour
     
     private void CheckTarget()
     {
+        if (isTargeting)
+        {
+            return;
+        }  
+        
         Collider2D target;
         
         target = Physics2D.OverlapCircle(transform.position, scanRange, scanLayer);
