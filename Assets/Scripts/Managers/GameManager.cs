@@ -1,52 +1,33 @@
-using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager instance = null;
+    private static GameManager instance = null; // 해당 스크립트를 변수로 받아옴
 
+    // 싱글톤 프로퍼티
     public static GameManager Instance
     {
         get
         {
-            if (instance == null)
+            if (instance == null) // instance가 없으면
             {
-                return null;
+                return null; // null이면 null return
             }
-            return instance;
+            return instance; // instance가 있으면 return
         }
     }
 
-    public int defianceLife;
-    
-    [SerializeField] private Text defianceLifeText;
-    [SerializeField] private EnemySpawner enemySpawner;
-    
     private void Awake()
     {
-        if (instance == null)
+        if (instance == null) // null이면
         {
-            instance = this;
+            instance = this; // 넣어주고
+            
+            DontDestroyOnLoad(this.gameObject); // 씬이 전환되어도 유지
         }
         else
         {
-            Destroy(gameObject);
-        }
-    }
-
-    private void Update()
-    {
-        DefianceLifeUpdate();
-    }
-
-    private void DefianceLifeUpdate()
-    {
-        defianceLifeText.text = "Life: " + defianceLife.ToString();
-
-        if (defianceLife <= 0)
-        {
-            enemySpawner.enabled = false;
+            Destroy(gameObject); // null이면 Destroy
         }
     }
 }
