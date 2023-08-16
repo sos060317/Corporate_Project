@@ -14,6 +14,17 @@ public class Unit : MonoBehaviour
         SetSelectedVisible(false);
     }
 
+    // 이동 가능한 최대 거리 내에서 적절한 위치 반환
+    public Vector3 GetPositionWithinMaxDistance(Vector3 targetPosition, float maxDistance)
+    {
+        Vector3 dir = targetPosition - transform.position;
+        if (dir.magnitude <= maxDistance)
+        {
+            return targetPosition;
+        }
+        return transform.position + dir.normalized * maxDistance;
+    }
+
     public void SetSelectedVisible(bool visible)
     {
         selectedGameObject.SetActive(visible);
