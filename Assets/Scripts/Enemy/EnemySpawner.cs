@@ -17,7 +17,8 @@ public class EnemySpawner : MonoBehaviour
 
     private WaitForSeconds enemySpawnTimer;
 
-    private Dictionary<EnemyDetailsSO, int[]> enemyCountDictionary;
+    public List<string> enemyNameList;
+    public List<int> enemyCountList;
 
     private void Start()
     {
@@ -30,12 +31,16 @@ public class EnemySpawner : MonoBehaviour
 
         WaveManager.Instance.waveEvent += NextWaveEvent;
         WaveManager.Instance.enemySpawnerCount++;
+
+        CalculateEnemyCount();
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
     private void NextWaveEvent()
     {
         curWaveIndex++;
+        
+        CalculateEnemyCount();
 
         if (curWaveIndex >= wave.waves.Length)
         {
@@ -48,28 +53,57 @@ public class EnemySpawner : MonoBehaviour
     // ReSharper disable Unity.PerformanceAnalysis
     private IEnumerator WaveRoutine()
     {
-        WaveDetailsSO.WaveData curWaveData;
-        
-        for (int waveDataIndex = 0; waveDataIndex < wave.waves[curWaveIndex].waveDatas.Length; waveDataIndex++)
+        foreach (var item in wave.waves[curWaveIndex].waveDatas)
         {
-            curWaveData = wave.waves[curWaveIndex].waveDatas[waveDataIndex];
-            
-            enemySpawnTimer = new WaitForSeconds(curWaveData.enemySpawnInterval);
+            enemySpawnTimer = new WaitForSeconds(item.enemySpawnInterval);
 
             for (int enemySpawnCount = 0;
-                 enemySpawnCount < curWaveData.enemySpawnCount;
+                 enemySpawnCount < item.enemySpawnCount;
                  enemySpawnCount++)
             {
-                var enemy = Instantiate(curWaveData.enemyType.enemyPrefab, spawnPos, Quaternion.identity);
+                var enemy = Instantiate(item.enemyType.enemyPrefab, spawnPos, Quaternion.identity);
                 
-                enemy.GetComponent<EnemyBase>().InitEnemy(path.path.CalculateEvenlySpacedPoints(0.1f), curWaveData.enemyType);
+                enemy.GetComponent<EnemyBase>().InitEnemy(path.path.CalculateEvenlySpacedPoints(0.1f), item.enemyType);
 
                 yield return enemySpawnTimer;
             }
 
-            yield return new WaitForSeconds(curWaveData.nextEnemyDelay);
+            yield return new WaitForSeconds(item.nextEnemyDelay);
         }
         
         WaveManager.Instance.WaveComplete();
+    }
+    
+    private void CalculateEnemyCount()
+    {
+        enemyNameList.Clear();
+        enemyCountList.Clear();
+        
+        if ((curWaveIndex + 1) >= wave.waves.Length)
+        {
+            return;
+        }
+
+        foreach (var item in wave.waves[curWaveIndex + 1].waveDatas)
+        {
+            if(enemyNameList.Contains(item.enemyType.enemyName))
+            {
+                continue;
+            }
+            else
+            {
+                enemyNameList.Add(item.enemyType.enemyName);
+            }
+        }
+
+        for (int i = 0; i < enemyNameList.Count; i++)
+        {
+            enemyCountList.Add(0);
+        }
+
+        foreach (var item in wave.waves[curWaveIndex + 1].waveDatas)
+        {
+            enemyCountList[enemyNameList.FindIndex(x => x.Equals(item.enemyType.enemyName))] += item.enemySpawnCount;
+        }
     }
 }

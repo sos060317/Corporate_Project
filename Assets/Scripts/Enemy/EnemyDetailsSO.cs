@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "EnemyDetails_", menuName = "Scriptable Objects/Enemy/EnemyDetails")]
 public class EnemyDetailsSO : ScriptableObject
 {
+    public string enemyName;
+    
     #region Header
 
     [Space(10)] [Header("기본 스탯")]
