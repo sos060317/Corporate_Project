@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private WaveDetailsSO wave;
 
-    private int curWaveIndex;
+    private int curWaveIndex = -1;
     
     private PathCreator path;
 
@@ -28,9 +28,6 @@ public class EnemySpawner : MonoBehaviour
 
         WaveManager.Instance.waveEvent += NextWaveEvent;
         WaveManager.Instance.enemySpawnerCount++;
-        
-        // Wave Start
-        StartCoroutine(WaveRoutine());
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
