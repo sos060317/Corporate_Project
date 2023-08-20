@@ -37,7 +37,15 @@ public class WaveManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            WaveStart();
+        }
+    }
+
     public void WaveComplete()
     {
         waveCompleteCount++;
@@ -49,5 +57,11 @@ public class WaveManager : MonoBehaviour
             waveEvent?.Invoke();
             waveCompleteCount = 0;
         }
+    }
+    
+    public void WaveStart()
+    {
+        waveEvent?.Invoke();
+        waveCompleteCount = 0;
     }
 }

@@ -17,6 +17,8 @@ public class EnemySpawner : MonoBehaviour
 
     private WaitForSeconds enemySpawnTimer;
 
+    private Dictionary<EnemyDetailsSO, int[]> enemyCountDictionary;
+
     private void Start()
     {
         // Load Component
@@ -24,7 +26,7 @@ public class EnemySpawner : MonoBehaviour
         
         // Variable initialize
         spawnPos = path.path[0];
-        curWaveIndex = 0;
+        curWaveIndex = -1;
 
         WaveManager.Instance.waveEvent += NextWaveEvent;
         WaveManager.Instance.enemySpawnerCount++;
