@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.Analytics;
 using UnityEngine.UI;
 
 // 선택한 스테이지로 이동
@@ -14,9 +13,29 @@ public class StageSelection : MonoBehaviour
     [Header("씬 로딩")]
     [SerializeField] private SceneLoader sceneLoader;
 
+    private void Awake()
+    {
+        //PlayerPrefs.DeleteAll();
+    }
+
     private void Update()
     {
         UpdateLevelImage();
+        UpdateLevelStatus();
+    }
+
+    public void ResetPlayerPrefab()
+    {
+        PlayerPrefs.DeleteAll();
+    }
+
+    private void UpdateLevelStatus()
+    {
+        int previousLevelNum = int.Parse(gameObject.name) - 1;
+        if (PlayerPrefs.GetInt("Lv" + previousLevelNum) > 0)
+        {
+            unlocked = true;
+        }
     }
 
     // 스테이지 클리어 여부를 알려주는 함수
