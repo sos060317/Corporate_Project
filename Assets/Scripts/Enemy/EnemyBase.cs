@@ -19,19 +19,22 @@ public class EnemyBase : MonoBehaviour
     private bool canMove = true;
     private bool isTargeting = false;
     private bool isAttacking = false;
+    private bool attack = false;
     
     private Vector2[] movePoints;
     private Vector2 moveOffset;
 
     private SpriteRenderer sr;
     private EnemyDetailsSO enemyDetailsSo;
+    private Animator anim;
 
     private GameObject targetObj;
 
-    private void Awake()
+    private void Start()
     {
         // Load Component
         sr = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     private void OnEnable()
@@ -43,6 +46,7 @@ public class EnemyBase : MonoBehaviour
     {
         MoveUpdate();
         AttackUpdate();
+        AnimationUpdate();
     }
 
     private void FixedUpdate()
@@ -105,6 +109,11 @@ public class EnemyBase : MonoBehaviour
         }
     }
     
+    private void AnimationUpdate()
+    {
+        anim.SetBool("isRun", canMove);
+    }
+    
     private void CheckTarget()
     {
         if (isTargeting)
@@ -136,10 +145,26 @@ public class EnemyBase : MonoBehaviour
         if (attackTimer >= attackRate)
         {
             // 공격 로직
+            
+            anim.SetTrigger("Attack");
+            
             attackTimer = 0f;
+
+            attack = true;
         }
 
+        if (attack)
+        {
+            return;
+        }
+        
         attackTimer += Time.deltaTime;
+    }
+    
+    // 애니메이션 이벤트에서 사용할 함수.
+    private void AttackEnd()
+    {
+        attack = false;
     }
 
     public void InitEnemy(Vector2[] movePoints, EnemyDetailsSO enemyDetailsSo)

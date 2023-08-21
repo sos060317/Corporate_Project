@@ -97,4 +97,18 @@ public class NextWaveInfo : MonoBehaviour
 
         fadeAmount = 0f;
     }
+
+    private void OnDisable()
+    {
+        Color infoTextColor = infoText.color;
+        Color infoBgColor = infoBg.color;
+
+        infoTextColor.a = 0f;
+        infoBgColor.a = 0f;
+        
+        infoText.color = infoTextColor;
+        infoBg.color = infoBgColor;
+        
+        fadeAmount = 0f;
+    }
 }
