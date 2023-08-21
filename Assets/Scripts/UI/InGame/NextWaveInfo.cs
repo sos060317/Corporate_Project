@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class NextWaveInfo : MonoBehaviour
 {
@@ -48,6 +49,16 @@ public class NextWaveInfo : MonoBehaviour
     {
         StopAllCoroutines();
         StartCoroutine(HideInfo());
+    }
+    
+    private void OnMouseDown()
+    {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+        
+        WaveManager.Instance.WaveStart();
     }
 
     private IEnumerator ShowInfo()

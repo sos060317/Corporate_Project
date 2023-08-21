@@ -48,14 +48,6 @@ public class WaveManager : MonoBehaviour
         waveCompleteCount = 0;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            WaveStart();
-        }
-    }
-
     public void WaveComplete()
     {
         waveCompleteCount++;
@@ -73,6 +65,8 @@ public class WaveManager : MonoBehaviour
     public void WaveStart()
     {
         waveStartEvent?.Invoke();
+        
+        waveCompleteCount = 0;
     }
     
     private IEnumerator EndWaveRoutine()
