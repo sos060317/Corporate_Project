@@ -16,9 +16,11 @@ public class EnemySpawner : MonoBehaviour
     private Vector2 spawnPos;
 
     private WaitForSeconds enemySpawnTimer;
+    
+    private NextWaveInfo nextWaveInfoObj;
 
-    public List<string> enemyNameList;
-    public List<int> enemyCountList;
+    private List<string> enemyNameList;
+    private List<int> enemyCountList;
 
     private void Start()
     {
@@ -28,11 +30,14 @@ public class EnemySpawner : MonoBehaviour
         // Variable initialize
         spawnPos = path.path[0];
         curWaveIndex = -1;
+        enemyNameList = new List<string>();
+        enemyCountList = new List<int>();
+        nextWaveInfoObj = transform.GetChild(0).GetComponent<NextWaveInfo>();
 
         WaveManager.Instance.waveEvent += NextWaveEvent;
         WaveManager.Instance.enemySpawnerCount++;
 
-        CalculateEnemyCount();
+        ShowNextWaveInfo();
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
@@ -40,7 +45,7 @@ public class EnemySpawner : MonoBehaviour
     {
         curWaveIndex++;
         
-        CalculateEnemyCount();
+        nextWaveInfoObj.gameObject.SetActive(false);
 
         if (curWaveIndex >= wave.waves.Length)
         {
@@ -70,19 +75,40 @@ public class EnemySpawner : MonoBehaviour
 
             yield return new WaitForSeconds(item.nextEnemyDelay);
         }
+
+        WaveEnd();
+    }
+    
+    private void ShowNextWaveInfo()
+    {
+        if (curWaveIndex >= wave.waves.Length)
+        {
+            nextWaveInfoObj.gameObject.SetActive(false);
+            return;
+        }
         
-        WaveManager.Instance.WaveComplete();
+        if ((curWaveIndex + 1) >= wave.waves.Length)
+        {
+            return;
+        }
+
+        if (wave.waves[curWaveIndex + 1].waveDatas.Length == 0)
+        {
+            nextWaveInfoObj.gameObject.SetActive(false);
+            return;
+        }
+        
+        CalculateEnemyCount();
+        
+        nextWaveInfoObj.InitInfo(enemyNameList, enemyCountList);
+        
+        nextWaveInfoObj.gameObject.SetActive(true);
     }
     
     private void CalculateEnemyCount()
     {
         enemyNameList.Clear();
         enemyCountList.Clear();
-        
-        if ((curWaveIndex + 1) >= wave.waves.Length)
-        {
-            return;
-        }
 
         foreach (var item in wave.waves[curWaveIndex + 1].waveDatas)
         {
@@ -105,5 +131,13 @@ public class EnemySpawner : MonoBehaviour
         {
             enemyCountList[enemyNameList.FindIndex(x => x.Equals(item.enemyType.enemyName))] += item.enemySpawnCount;
         }
+    }
+    
+    // 웨이브가 끝났을때 실행되는 함수
+    private void WaveEnd()
+    {
+        ShowNextWaveInfo();
+        
+        WaveManager.Instance.WaveComplete();
     }
 }
