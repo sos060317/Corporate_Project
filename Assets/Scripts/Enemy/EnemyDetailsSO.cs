@@ -17,6 +17,12 @@ public class EnemyDetailsSO : ScriptableObject
 
     public float enemyBaseMoveSpeed;
 
+    public float enemyBaseAttackRate;
+
+    public float enemyBaseScanRange;
+
+    public float enemyBaseAttackRange;
+
     #region Header
 
     [Space(10)] [Header("적 프리팹")]

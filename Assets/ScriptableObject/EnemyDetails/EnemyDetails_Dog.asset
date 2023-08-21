@@ -15,4 +15,7 @@ MonoBehaviour:
   enemyName: "\uAC15\uC544\uC9C0"
   enemyBaseHealth: 100
   enemyBaseMoveSpeed: 2
+  enemyBaseAttackRate: 2
+  enemyBaseScanRange: 1
+  enemyBaseAttackRange: 1
   enemyPrefab: {fileID: 1370586008307256899, guid: 72ef17e905f3f26428040f0f9c7abd5f, type: 3}

@@ -34,7 +34,8 @@ public class EnemySpawner : MonoBehaviour
         enemyCountList = new List<int>();
         nextWaveInfoObj = transform.GetChild(0).GetComponent<NextWaveInfo>();
 
-        WaveManager.Instance.waveEvent += NextWaveEvent;
+        WaveManager.Instance.waveStartEvent += NextWaveEvent;
+        WaveManager.Instance.waveEndEvent += ShowNextWaveInfo;
         WaveManager.Instance.enemySpawnerCount++;
 
         ShowNextWaveInfo();
@@ -136,8 +137,6 @@ public class EnemySpawner : MonoBehaviour
     // 웨이브가 끝났을때 실행되는 함수
     private void WaveEnd()
     {
-        ShowNextWaveInfo();
-        
         WaveManager.Instance.WaveComplete();
     }
 }

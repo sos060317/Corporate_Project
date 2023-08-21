@@ -6,10 +6,15 @@ using Random = UnityEngine.Random;
 
 public class EnemyBase : MonoBehaviour
 {
-    [SerializeField] private float scanRange;
     [SerializeField] private LayerMask scanLayer;
     
     private int movePosIndex;
+
+    private float attackRate;
+    private float attackTimer;
+    private float scanRange;
+    private float attackRange;
+    private float moveSpeed;
     
     private bool canMove = true;
     private bool isTargeting = false;
@@ -29,9 +34,15 @@ public class EnemyBase : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
     }
 
+    private void OnEnable()
+    {
+        attackTimer = 0f;
+    }
+
     private void Update()
     {
         MoveUpdate();
+        AttackUpdate();
     }
 
     private void FixedUpdate()
@@ -45,11 +56,12 @@ public class EnemyBase : MonoBehaviour
         {
             return;
         }
-
+        
+        // 주변에 타겟이 있을때
         if (isTargeting)
         {
             Vector3 dir = targetObj.transform.position - transform.position;
-            transform.position += dir.normalized * (enemyDetailsSo.enemyBaseMoveSpeed * Time.deltaTime);
+            transform.position += dir.normalized * (moveSpeed * Time.deltaTime);
             
             if (dir.x < 0)
             {
@@ -60,7 +72,7 @@ public class EnemyBase : MonoBehaviour
                 sr.flipX = false;
             }
 
-            if (Vector2.Distance(transform.position, targetObj.transform.position) <= 1f)
+            if (Vector2.Distance(transform.position, targetObj.transform.position) <= attackRange)
             {
                 canMove = false;
                 isAttacking = true;
@@ -70,7 +82,7 @@ public class EnemyBase : MonoBehaviour
         }
         
         Vector3 nextPos = (Vector3)movePoints[movePosIndex] - transform.position + (Vector3)moveOffset;
-        transform.position += nextPos.normalized * (enemyDetailsSo.enemyBaseMoveSpeed * Time.deltaTime);
+        transform.position += nextPos.normalized * (moveSpeed * Time.deltaTime);
         
         if (nextPos.x < 0)
         {
@@ -114,11 +126,31 @@ public class EnemyBase : MonoBehaviour
             }
         }
     }
+    private void AttackUpdate()
+    {
+        if (!isAttacking)
+        {
+            return;
+        }
+
+        if (attackTimer >= attackRate)
+        {
+            // 공격 로직
+            attackTimer = 0f;
+        }
+
+        attackTimer += Time.deltaTime;
+    }
 
     public void InitEnemy(Vector2[] movePoints, EnemyDetailsSO enemyDetailsSo)
     {
         this.movePoints = movePoints;
         this.enemyDetailsSo = enemyDetailsSo;
+
+        moveSpeed = this.enemyDetailsSo.enemyBaseMoveSpeed;
+        scanRange = this.enemyDetailsSo.enemyBaseScanRange;
+        attackRate = this.enemyDetailsSo.enemyBaseAttackRate;
+        attackRange = this.enemyDetailsSo.enemyBaseAttackRange;
 
         movePosIndex = 0;
         
