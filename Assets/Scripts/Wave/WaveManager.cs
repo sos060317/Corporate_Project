@@ -65,8 +65,6 @@ public class WaveManager : MonoBehaviour
     public void WaveStart()
     {
         waveStartEvent?.Invoke();
-        
-        waveCompleteCount = 0;
     }
     
     private IEnumerator EndWaveRoutine()
