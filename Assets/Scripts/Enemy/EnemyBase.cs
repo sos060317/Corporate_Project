@@ -127,12 +127,15 @@ public class EnemyBase : MonoBehaviour
 
         if (target != null)
         {
-            if(!target.GetComponent<TargetTest>().targeting)
-            {
-                target.GetComponent<TargetTest>().targeting = true;
-                targetObj = target.gameObject;
-                isTargeting = true;
-            }
+            // if(!target.GetComponent<TargetTest>().targeting)
+            // {
+            //     target.GetComponent<TargetTest>().targeting = true;
+            //     targetObj = target.gameObject;
+            //     isTargeting = true;
+            // }
+            
+            targetObj = target.gameObject;
+            isTargeting = true;
         }
     }
     private void AttackUpdate()
