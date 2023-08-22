@@ -10,11 +10,14 @@ public class EnemyBase : MonoBehaviour
     
     private int movePosIndex;
 
+    private float maxHealth;
+    private float curHelath;
     private float attackRate;
     private float attackTimer;
     private float scanRange;
     private float attackRange;
     private float moveSpeed;
+    private float attackDamage;
     
     private bool canMove = true;
     private bool isTargeting = false;
@@ -28,7 +31,7 @@ public class EnemyBase : MonoBehaviour
     private EnemyDetailsSO enemyDetailsSo;
     private Animator anim;
 
-    private GameObject targetObj;
+    private AllyBase targetAlly;
 
     private void Start()
     {
@@ -64,7 +67,7 @@ public class EnemyBase : MonoBehaviour
         // 주변에 타겟이 있을때
         if (isTargeting)
         {
-            Vector3 dir = targetObj.transform.position - transform.position;
+            Vector3 dir = targetAlly.transform.position - transform.position;
             transform.position += dir.normalized * (moveSpeed * Time.deltaTime);
             
             if (dir.x < 0)
@@ -76,7 +79,7 @@ public class EnemyBase : MonoBehaviour
                 sr.flipX = false;
             }
 
-            if (Vector2.Distance(transform.position, targetObj.transform.position) <= attackRange)
+            if (Vector2.Distance(transform.position, targetAlly.transform.position ) <= attackRange)
             {
                 canMove = false;
                 isAttacking = true;
@@ -134,15 +137,25 @@ public class EnemyBase : MonoBehaviour
             //     isTargeting = true;
             // }
             
-            targetObj = target.gameObject;
+            targetAlly = target.gameObject.GetComponent<AllyBase>();
             isTargeting = true;
         }
     }
     private void AttackUpdate()
     {
-        if (!isAttacking)
+        if (!isAttacking || targetAlly == null)
         {
             return;
+        }
+        
+        // 아군을 죽였으면 다시 움직이게 하는 로직
+        if (targetAlly.CheckAllyIsDie())
+        {
+            isTargeting = false;
+            canMove = true;
+            isAttacking = false;
+            attack = false;
+            targetAlly = null;
         }
 
         if (attackTimer >= attackRate)
@@ -169,17 +182,42 @@ public class EnemyBase : MonoBehaviour
     {
         attack = false;
     }
+    
+    // 애니메이션 이벤트에서 사용할 함수.
+    private void AttackDamage()
+    {
+        if (targetAlly == null)
+        {
+            return;
+        }
+        
+        targetAlly.OnDamage(attackDamage);
+    }
+
+    public void OnDamage(float damage)
+    {
+        curHelath -= damage;
+
+        if (curHelath <= 0)
+        {
+            // 죽는 로직
+        }
+    }
 
     public void InitEnemy(Vector2[] movePoints, EnemyDetailsSO enemyDetailsSo)
     {
         this.movePoints = movePoints;
         this.enemyDetailsSo = enemyDetailsSo;
 
+        maxHealth = this.enemyDetailsSo.enemyBaseHealth;
         moveSpeed = this.enemyDetailsSo.enemyBaseMoveSpeed;
         scanRange = this.enemyDetailsSo.enemyBaseScanRange;
         attackRate = this.enemyDetailsSo.enemyBaseAttackRate;
         attackRange = this.enemyDetailsSo.enemyBaseAttackRange;
+        attackDamage = this.enemyDetailsSo.enemyBaseAttackDamage;
 
+
+        curHelath = maxHealth;
         movePosIndex = 0;
         
         moveOffset = new Vector3(0, Random.Range(-1f, 1f));

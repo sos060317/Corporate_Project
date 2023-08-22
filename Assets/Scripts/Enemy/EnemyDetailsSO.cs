@@ -23,6 +23,8 @@ public class EnemyDetailsSO : ScriptableObject
 
     public float enemyBaseAttackRange;
 
+    public float enemyBaseAttackDamage;
+
     #region Header
 
     [Space(10)] [Header("적 프리팹")]
