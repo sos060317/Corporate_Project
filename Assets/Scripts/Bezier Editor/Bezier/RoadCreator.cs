@@ -11,7 +11,7 @@ public class RoadCreator : MonoBehaviour
     public float spacing = 1f;
     public float roadWidth = 1;
     public bool autoUpdate;
-    public float tiling = 1;
+    public float tiling = 7;
     
     public void UpdateRoad()
     {
