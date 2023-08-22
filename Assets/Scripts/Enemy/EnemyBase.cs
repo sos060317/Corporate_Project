@@ -136,9 +136,12 @@ public class EnemyBase : MonoBehaviour
             //     targetObj = target.gameObject;
             //     isTargeting = true;
             // }
-            
-            targetAlly = target.gameObject.GetComponent<AllyBase>();
-            isTargeting = true;
+
+            if (!target.GetComponent<AllyBase>().CheckAllyIsDie())
+            {
+                targetAlly = target.gameObject.GetComponent<AllyBase>();
+                isTargeting = true;
+            }
         }
     }
     private void AttackUpdate()
@@ -201,6 +204,8 @@ public class EnemyBase : MonoBehaviour
         if (curHelath <= 0)
         {
             // 죽는 로직
+
+            gameObject.SetActive(false);
         }
     }
 

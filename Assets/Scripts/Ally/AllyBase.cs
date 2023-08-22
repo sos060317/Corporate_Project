@@ -21,6 +21,7 @@ public class AllyBase : MonoBehaviour
     private bool isDie;
 
     private SpriteRenderer sr;
+    private Animator anim;
     
     private GameObject targetObj;
 
@@ -28,6 +29,7 @@ public class AllyBase : MonoBehaviour
     {
         // 컴포넌트 할당
         sr = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
         
         // 변수 초기화
         isTargeting = false;
@@ -109,7 +111,7 @@ public class AllyBase : MonoBehaviour
         {
             // 죽는 로직
 
-            gameObject.SetActive(false);
+            anim.SetTrigger("Die");
             isDie = true;
         }
     }
@@ -117,6 +119,11 @@ public class AllyBase : MonoBehaviour
     public bool CheckAllyIsDie()
     {
         return isDie;
+    }
+    
+    private void SetActiveFalse()
+    {
+        gameObject.SetActive(false);
     }
 
     private void OnDrawGizmos()
