@@ -21,6 +21,8 @@ public class AllyDetailsSO : ScriptableObject
 
     public float allyBaseAttackRange;
 
+    public float allyBaseAttackDamage;
+
     #region Header
 
     [Space(10)] [Header("아군 프리팹")]

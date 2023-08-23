@@ -17,4 +17,5 @@ MonoBehaviour:
   allyBaseMoveSpeed: 2
   allyBaseAttackDelay: 1
   allyBaseAttackRange: 0.4
+  allyBaseAttackDamage: 20
   allyPrefab: {fileID: 0}

@@ -7,6 +7,8 @@ using Random = UnityEngine.Random;
 public class EnemyBase : MonoBehaviour
 {
     [SerializeField] private LayerMask scanLayer;
+
+    [HideInInspector] public bool Targeting;
     
     private int movePosIndex;
 
@@ -22,6 +24,7 @@ public class EnemyBase : MonoBehaviour
     private bool canMove = true;
     private bool isTargeting = false;
     private bool isAttacking = false;
+    private bool isDie = false;
     private bool attack = false;
     
     private Vector2[] movePoints;
@@ -43,6 +46,8 @@ public class EnemyBase : MonoBehaviour
     private void OnEnable()
     {
         attackTimer = 0f;
+        isDie = false;
+        Targeting = false;
     }
 
     private void Update()
@@ -50,11 +55,6 @@ public class EnemyBase : MonoBehaviour
         MoveUpdate();
         AttackUpdate();
         AnimationUpdate();
-    }
-
-    private void FixedUpdate()
-    {
-        CheckTarget();
     }
 
     private void MoveUpdate()
@@ -117,33 +117,6 @@ public class EnemyBase : MonoBehaviour
         anim.SetBool("isRun", canMove);
     }
     
-    private void CheckTarget()
-    {
-        if (isTargeting)
-        {
-            return;
-        }  
-        
-        Collider2D target;
-        
-        target = Physics2D.OverlapCircle(transform.position, scanRange, scanLayer);
-
-        if (target != null)
-        {
-            // if(!target.GetComponent<TargetTest>().targeting)
-            // {
-            //     target.GetComponent<TargetTest>().targeting = true;
-            //     targetObj = target.gameObject;
-            //     isTargeting = true;
-            // }
-
-            if (!target.GetComponent<AllyBase>().CheckAllyIsDie())
-            {
-                targetAlly = target.gameObject.GetComponent<AllyBase>();
-                isTargeting = true;
-            }
-        }
-    }
     private void AttackUpdate()
     {
         if (!isAttacking || targetAlly == null)
@@ -159,6 +132,7 @@ public class EnemyBase : MonoBehaviour
             isAttacking = false;
             attack = false;
             targetAlly = null;
+            Targeting = true;
         }
 
         if (attackTimer >= attackRate)
@@ -197,6 +171,13 @@ public class EnemyBase : MonoBehaviour
         targetAlly.OnDamage(attackDamage);
     }
 
+    public void SetTarget(AllyBase ally)
+    {
+        targetAlly = ally;
+        isTargeting = true;
+        Targeting = true;
+    }
+
     public void OnDamage(float damage)
     {
         curHelath -= damage;
@@ -205,8 +186,16 @@ public class EnemyBase : MonoBehaviour
         {
             // 죽는 로직
 
+            isDie = true;
+            targetAlly.targeting = false;
             gameObject.SetActive(false);
+            Targeting = false;
         }
+    }
+    
+    public bool CheckEnemyIsDie()
+    {
+        return isDie;
     }
 
     public void InitEnemy(Vector2[] movePoints, EnemyDetailsSO enemyDetailsSo)
