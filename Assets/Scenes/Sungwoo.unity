@@ -392,6 +392,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   allyDetailsSo: {fileID: 11400000, guid: a569ab6218155574b9e5fb7ebf4ba6c0, type: 2}
+  hitMaterial: {fileID: 2100000, guid: 5c4fc3ca9002333428abb9fa150391d9, type: 2}
+  defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   scanRange: 2
   targeting: 0
 --- !u!1 &790554600
@@ -1197,6 +1199,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   allyDetailsSo: {fileID: 11400000, guid: a569ab6218155574b9e5fb7ebf4ba6c0, type: 2}
+  hitMaterial: {fileID: 2100000, guid: 5c4fc3ca9002333428abb9fa150391d9, type: 2}
+  defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   scanRange: 2
   targeting: 0
 --- !u!95 &1684482278
@@ -1371,6 +1375,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   allyDetailsSo: {fileID: 11400000, guid: a569ab6218155574b9e5fb7ebf4ba6c0, type: 2}
+  hitMaterial: {fileID: 2100000, guid: 5c4fc3ca9002333428abb9fa150391d9, type: 2}
+  defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   scanRange: 2
   targeting: 0
 --- !u!95 &1710429273

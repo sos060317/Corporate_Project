@@ -7,6 +7,8 @@ using Random = UnityEngine.Random;
 public class EnemyBase : MonoBehaviour
 {
     [SerializeField] private LayerMask scanLayer;
+    [SerializeField] private Material hitMaterial;
+    [SerializeField] private Material defaultMaterial;
 
     [HideInInspector] public bool Targeting;
     
@@ -33,14 +35,18 @@ public class EnemyBase : MonoBehaviour
     private SpriteRenderer sr;
     private EnemyDetailsSO enemyDetailsSo;
     private Animator anim;
+    private WaitForSeconds hitDelay;
 
     private AllyBase targetAlly;
 
     private void Start()
     {
-        // Load Component
+        // 컴포넌트 할당
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        
+        // 변수 초기화
+        hitDelay = new WaitForSeconds(0.1f);
     }
 
     private void OnEnable()
@@ -170,6 +176,15 @@ public class EnemyBase : MonoBehaviour
         
         targetAlly.OnDamage(attackDamage);
     }
+    
+    private IEnumerator HitRoutine()
+    {
+        sr.material = hitMaterial;
+
+        yield return hitDelay;
+
+        sr.material = defaultMaterial;
+    }
 
     public void SetTarget(AllyBase ally)
     {
@@ -190,7 +205,10 @@ public class EnemyBase : MonoBehaviour
             targetAlly.targeting = false;
             gameObject.SetActive(false);
             Targeting = false;
+            return;
         }
+        
+        StartCoroutine(HitRoutine());
     }
     
     public bool CheckEnemyIsDie()

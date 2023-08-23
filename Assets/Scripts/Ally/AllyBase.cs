@@ -7,6 +7,8 @@ public class AllyBase : MonoBehaviour
 {
     [SerializeField] private LayerMask scanLayer;
     [SerializeField] private AllyDetailsSO allyDetailsSo;
+    [SerializeField] private Material hitMaterial;
+    [SerializeField] private Material defaultMaterial;
     
     [SerializeField] private float scanRange;
 
@@ -29,6 +31,7 @@ public class AllyBase : MonoBehaviour
 
     private SpriteRenderer sr;
     private Animator anim;
+    private WaitForSeconds hitDelay;
     
     private EnemyBase targetEnemy;
 
@@ -49,6 +52,7 @@ public class AllyBase : MonoBehaviour
         isAttacking = false;
         isDie = false;
         isRun = false;
+        hitDelay = new WaitForSeconds(0.1f);
 
         moveSpeed = allyDetailsSo.allyBaseMoveSpeed;
         attackRange = allyDetailsSo.allyBaseAttackRange;
@@ -181,18 +185,30 @@ public class AllyBase : MonoBehaviour
         
         targetEnemy.OnDamage(attackDamage);
     }
+    
+    private IEnumerator HitRoutine()
+    {
+        sr.material = hitMaterial;
+
+        yield return hitDelay;
+
+        sr.material = defaultMaterial;
+    }
 
     public void OnDamage(float damage)
     {
         curHealth -= damage;
-
+        
         if (curHealth <= 0)
         {
             // 죽는 로직
 
             anim.SetTrigger("Die");
             isDie = true;
+            return;
         }
+        
+        StartCoroutine(HitRoutine());
     }
     
     public bool CheckAllyIsDie()
