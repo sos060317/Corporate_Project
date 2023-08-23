@@ -129,19 +129,8 @@ public class EnemyBase : MonoBehaviour
         {
             return;
         }
-        
-        // 아군을 죽였으면 다시 움직이게 하는 로직
-        if (targetAlly.CheckAllyIsDie())
-        {
-            isTargeting = false;
-            canMove = true;
-            isAttacking = false;
-            attack = false;
-            targetAlly = null;
-            Targeting = true;
-        }
 
-        if (attackTimer >= attackRate)
+        if (attackTimer >= attackRate && !isDie)
         {
             // 공격 로직
             
@@ -185,12 +174,28 @@ public class EnemyBase : MonoBehaviour
 
         sr.material = defaultMaterial;
     }
+    
+    // 애니메이션 이벤트에 사용할 함수.
+    private void SetActiveFalse()
+    {
+        gameObject.SetActive(false);
+    }
 
     public void SetTarget(AllyBase ally)
     {
         targetAlly = ally;
         isTargeting = true;
         Targeting = true;
+    }
+
+    public void DeleteTarget()
+    {
+        isTargeting = false;
+        canMove = true;
+        isAttacking = false;
+        attack = false;
+        targetAlly = null;
+        Targeting = false;
     }
 
     public void OnDamage(float damage)
@@ -202,18 +207,12 @@ public class EnemyBase : MonoBehaviour
             // 죽는 로직
 
             isDie = true;
-            targetAlly.targeting = false;
-            gameObject.SetActive(false);
-            Targeting = false;
+            targetAlly.DeleteTarget();
+            anim.SetTrigger("Die");
             return;
         }
         
         StartCoroutine(HitRoutine());
-    }
-    
-    public bool CheckEnemyIsDie()
-    {
-        return isDie;
     }
 
     public void InitEnemy(Vector2[] movePoints, EnemyDetailsSO enemyDetailsSo)

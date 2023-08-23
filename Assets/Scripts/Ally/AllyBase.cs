@@ -38,6 +38,7 @@ public class AllyBase : MonoBehaviour
     private void OnEnable()
     {
         attactTimer = 0f;
+        isDie = false;
     }
 
     private void Start()
@@ -118,18 +119,8 @@ public class AllyBase : MonoBehaviour
         {
             return;
         }
-        
-        // 적이 죽였으면 다시 움직이게 하는 로직
-        if (targetEnemy.CheckEnemyIsDie())
-        {
-            isTargeting = false;
-            canMove = true;
-            isAttacking = false;
-            attack = false;
-            targetEnemy = null;
-        }
 
-        if (attactTimer >= attactRate)
+        if (attactTimer >= attactRate && !isDie)
         {
             // 공격 로직
             
@@ -194,6 +185,15 @@ public class AllyBase : MonoBehaviour
 
         sr.material = defaultMaterial;
     }
+    
+    public void DeleteTarget()
+    {
+        isTargeting = false;
+        canMove = true;
+        isAttacking = false;
+        attack = false;
+        targetEnemy = null;
+    }
 
     public void OnDamage(float damage)
     {
@@ -203,17 +203,13 @@ public class AllyBase : MonoBehaviour
         {
             // 죽는 로직
 
-            anim.SetTrigger("Die");
             isDie = true;
+            targetEnemy.DeleteTarget();
+            anim.SetTrigger("Die");
             return;
         }
         
         StartCoroutine(HitRoutine());
-    }
-    
-    public bool CheckAllyIsDie()
-    {
-        return isDie;
     }
     
     // 애니메이션 이벤트에 사용할 함수.
