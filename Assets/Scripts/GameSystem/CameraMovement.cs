@@ -32,6 +32,7 @@ public class CameraMovement : MonoBehaviour
     {
         PanCamera();
         ScrollCamera();
+        
     }
 
     private void PanCamera()
@@ -68,6 +69,7 @@ public class CameraMovement : MonoBehaviour
         {
             cam.orthographicSize -= scroll * 0.5f; // scroll 값만큼 카메라 크기에 적용
         }
+        cam.transform.position = ClampCamera(cam.transform.position);
     }
 
     private Vector3 ClampCamera(Vector3 targetPosition)
