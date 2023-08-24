@@ -2,19 +2,22 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class EnemyBase : MonoBehaviour
 {
     [SerializeField] private Material hitMaterial;
     [SerializeField] private Material defaultMaterial;
+    [SerializeField] private Image healthUiBg;
+    [SerializeField] private Image healthUiBar;
 
     [HideInInspector] public bool Targeting;
     
     private int movePosIndex;
 
     private float maxHealth;
-    private float curHelath;
+    private float curHealth;
     private float attackRate;
     private float attackTimer;
     private float scanRange;
@@ -22,6 +25,7 @@ public class EnemyBase : MonoBehaviour
     private float moveSpeed;
     private float attackDamage;
     private float xScale;
+    private float healthBgXScale;
     
     private bool canMove = true;
     private bool isTargeting = false;
@@ -48,6 +52,7 @@ public class EnemyBase : MonoBehaviour
         // 변수 초기화
         hitDelay = new WaitForSeconds(0.1f);
         xScale = transform.localScale.x;
+        healthBgXScale = healthUiBar.rectTransform.localScale.x;
     }
 
     private void OnEnable()
@@ -62,6 +67,16 @@ public class EnemyBase : MonoBehaviour
         MoveUpdate();
         AttackUpdate();
         AnimationUpdate();
+    }
+    
+    private void LateUpdate()
+    {
+        HealthUpdate();
+    }
+    
+    private void HealthUpdate()
+    {
+        healthUiBar.fillAmount = Mathf.Lerp(healthUiBar.fillAmount, curHealth / maxHealth, Time.deltaTime * 12);
     }
 
     private void MoveUpdate()
@@ -81,11 +96,17 @@ public class EnemyBase : MonoBehaviour
             {
                 transform.localScale =
                     new Vector3(-xScale, transform.localScale.y, transform.localScale.z);
+                
+                healthUiBg.rectTransform.localScale = new Vector3(-healthBgXScale, healthUiBg.rectTransform.localScale.y,
+                    healthUiBg.rectTransform.localScale.z);
             }
             else
             {
                 transform.localScale =
                     new Vector3(xScale, transform.localScale.y, transform.localScale.z);
+                
+                healthUiBg.rectTransform.localScale = new Vector3(healthBgXScale, healthUiBg.rectTransform.localScale.y,
+                    healthUiBg.rectTransform.localScale.z);
             }
 
             if (Vector2.Distance(transform.position, targetAlly.transform.position ) <= attackRange)
@@ -104,11 +125,17 @@ public class EnemyBase : MonoBehaviour
         {
             transform.localScale =
                 new Vector3(-xScale, transform.localScale.y, transform.localScale.z);
+            
+            healthUiBg.rectTransform.localScale = new Vector3(-healthBgXScale, healthUiBg.rectTransform.localScale.y,
+                healthUiBg.rectTransform.localScale.z);
         }
         else
         {
             transform.localScale =
                 new Vector3(xScale, transform.localScale.y, transform.localScale.z);
+            
+            healthUiBg.rectTransform.localScale = new Vector3(healthBgXScale, healthUiBg.rectTransform.localScale.y,
+                healthUiBg.rectTransform.localScale.z);
         }
 
         if (Vector2.Distance(transform.position - (Vector3)(moveOffset), movePoints[movePosIndex]) <= 0.01f)
@@ -205,9 +232,9 @@ public class EnemyBase : MonoBehaviour
 
     public void OnDamage(float damage)
     {
-        curHelath -= damage;
+        curHealth -= damage;
 
-        if (curHelath <= 0)
+        if (curHealth <= 0)
         {
             // 죽는 로직
 
@@ -233,7 +260,7 @@ public class EnemyBase : MonoBehaviour
         attackDamage = this.enemyDetailsSo.enemyBaseAttackDamage;
 
 
-        curHelath = maxHealth;
+        curHealth = maxHealth;
         movePosIndex = 0;
         
         moveOffset = new Vector3(0, Random.Range(-1f, 1f));
