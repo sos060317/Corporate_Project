@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AllyBase : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class AllyBase : MonoBehaviour
     [SerializeField] private AllyDetailsSO allyDetailsSo;
     [SerializeField] private Material hitMaterial;
     [SerializeField] private Material defaultMaterial;
+    [SerializeField] private Image healthUiBg;
+    [SerializeField] private Image healthUiBar;
     
     [SerializeField] private float scanRange;
 
@@ -22,6 +25,7 @@ public class AllyBase : MonoBehaviour
     private float attactTimer;
     private float attackDamage;
     private float xScale;
+    private float healthBgXScale;
 
     private bool isTargeting;
     private bool canMove;
@@ -61,6 +65,7 @@ public class AllyBase : MonoBehaviour
         attactRate = allyDetailsSo.allyBaseAttackDelay;
         attackDamage = allyDetailsSo.allyBaseAttackDamage;
         xScale = transform.localScale.x;
+        healthBgXScale = healthUiBar.rectTransform.localScale.x;
 
         maxHealth = allyDetailsSo.allyBaseHealth;
         curHealth = maxHealth;
@@ -77,7 +82,17 @@ public class AllyBase : MonoBehaviour
     {
         CheckTarget();
     }
+
+    private void LateUpdate()
+    {
+        HealthUpdate();
+    }
     
+    private void HealthUpdate()
+    {
+        healthUiBar.fillAmount = Mathf.Lerp(healthUiBar.fillAmount, curHealth / maxHealth, Time.deltaTime * 12);
+    }
+
     private void MoveUpdate()
     {
         if (!canMove)
@@ -94,11 +109,17 @@ public class AllyBase : MonoBehaviour
             {
                 transform.localScale =
                     new Vector3(-xScale, transform.localScale.y, transform.localScale.z);
+
+                healthUiBg.rectTransform.localScale = new Vector3(-healthBgXScale, healthUiBg.rectTransform.localScale.y,
+                    healthUiBg.rectTransform.localScale.z);
             }
             else
             {
                 transform.localScale =
                     new Vector3(xScale, transform.localScale.y, transform.localScale.z);
+                
+                healthUiBg.rectTransform.localScale = new Vector3(healthBgXScale, healthUiBg.rectTransform.localScale.y,
+                    healthUiBg.rectTransform.localScale.z);
             }
 
             isRun = true;

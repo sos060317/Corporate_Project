@@ -6,7 +6,6 @@ using Random = UnityEngine.Random;
 
 public class EnemyBase : MonoBehaviour
 {
-    [SerializeField] private LayerMask scanLayer;
     [SerializeField] private Material hitMaterial;
     [SerializeField] private Material defaultMaterial;
 
