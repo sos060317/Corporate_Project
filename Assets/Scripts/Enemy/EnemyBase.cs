@@ -22,6 +22,7 @@ public class EnemyBase : MonoBehaviour
     private float attackRange;
     private float moveSpeed;
     private float attackDamage;
+    private float xScale;
     
     private bool canMove = true;
     private bool isTargeting = false;
@@ -47,6 +48,7 @@ public class EnemyBase : MonoBehaviour
         
         // 변수 초기화
         hitDelay = new WaitForSeconds(0.1f);
+        xScale = transform.localScale.x;
     }
 
     private void OnEnable()
@@ -78,11 +80,13 @@ public class EnemyBase : MonoBehaviour
             
             if (dir.x < 0)
             {
-                sr.flipX = true;
+                transform.localScale =
+                    new Vector3(-xScale, transform.localScale.y, transform.localScale.z);
             }
             else
             {
-                sr.flipX = false;
+                transform.localScale =
+                    new Vector3(xScale, transform.localScale.y, transform.localScale.z);
             }
 
             if (Vector2.Distance(transform.position, targetAlly.transform.position ) <= attackRange)
@@ -99,11 +103,13 @@ public class EnemyBase : MonoBehaviour
         
         if (nextPos.x < 0)
         {
-            sr.flipX = true;
+            transform.localScale =
+                new Vector3(-xScale, transform.localScale.y, transform.localScale.z);
         }
         else
         {
-            sr.flipX = false;
+            transform.localScale =
+                new Vector3(xScale, transform.localScale.y, transform.localScale.z);
         }
 
         if (Vector2.Distance(transform.position - (Vector3)(moveOffset), movePoints[movePosIndex]) <= 0.01f)

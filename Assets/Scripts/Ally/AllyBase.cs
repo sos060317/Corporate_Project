@@ -21,6 +21,7 @@ public class AllyBase : MonoBehaviour
     private float attactRate;
     private float attactTimer;
     private float attackDamage;
+    private float xScale;
 
     private bool isTargeting;
     private bool canMove;
@@ -59,6 +60,7 @@ public class AllyBase : MonoBehaviour
         attackRange = allyDetailsSo.allyBaseAttackRange;
         attactRate = allyDetailsSo.allyBaseAttackDelay;
         attackDamage = allyDetailsSo.allyBaseAttackDamage;
+        xScale = transform.localScale.x;
 
         maxHealth = allyDetailsSo.allyBaseHealth;
         curHealth = maxHealth;
@@ -90,11 +92,13 @@ public class AllyBase : MonoBehaviour
             
             if (dir.x < 0)
             {
-                sr.flipX = true;
+                transform.localScale =
+                    new Vector3(-xScale, transform.localScale.y, transform.localScale.z);
             }
             else
             {
-                sr.flipX = false;
+                transform.localScale =
+                    new Vector3(xScale, transform.localScale.y, transform.localScale.z);
             }
 
             isRun = true;
