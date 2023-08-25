@@ -323,26 +323,44 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 2
-      outSlope: 2
+      inSlope: 2.6579466
+      outSlope: 2.6579466
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.09880256
+      value: 0.26261193
+      inSlope: 2.5778427
+      outSlope: 2.5778427
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 0.5
       value: 1
       inSlope: 0
       outSlope: 0
-      tangentMode: 34
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.8874364
+      value: 0.31489298
+      inSlope: -2.6655366
+      outSlope: -2.6655366
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: -2
-      outSlope: -2
+      inSlope: -2.797467
+      outSlope: -2.797467
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -350,9 +368,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  duration: 1
+  duration: 3
   heightY: 2
-  endPos: {x: 0, y: 3}
+  endPos: {x: 3, y: 0}
 --- !u!1 &790554600
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +470,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 790554600}
-  m_Mesh: {fileID: 1501717200}
+  m_Mesh: {fileID: 1333700429}
 --- !u!114 &790554605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -791,7 +809,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &1501717200
+--- !u!43 &1333700429
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
