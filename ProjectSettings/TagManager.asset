@@ -7,7 +7,6 @@ TagManager:
   - Enemy
   - Enemy Spawner
   - SpawnTower
-  - Tree Branch
   layers:
   - Default
   - TransparentFX
@@ -18,7 +17,7 @@ TagManager:
   - Player
   - Enemy
   - SpawnTower
-  - Tree Branch
+  - Ally
   - 
   - 
   - 

@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e79536c5d12114a81e26079da7d0b3, type: 3}
   m_Name: EnemyDetails_Dog
   m_EditorClassIdentifier: 
+  enemyName: "\uAC15\uC544\uC9C0"
   enemyBaseHealth: 100
   enemyBaseMoveSpeed: 2
+  enemyBaseAttackRate: 1.5
+  enemyBaseScanRange: 1
+  enemyBaseAttackRange: 0.4
+  enemyBaseAttackDamage: 10
   enemyPrefab: {fileID: 1370586008307256899, guid: 72ef17e905f3f26428040f0f9c7abd5f, type: 3}

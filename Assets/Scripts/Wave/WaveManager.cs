@@ -22,9 +22,12 @@ public class WaveManager : MonoBehaviour
 
     [HideInInspector] public int enemySpawnerCount;
     
-    public Action waveEvent;
+    public Action waveStartEvent;
+    public Action waveEndEvent;
 
-    private int waveCompleteCount = 0;
+    private int waveCompleteCount;
+
+    private WaitForSeconds nextWaveDelay;
 
     private void Awake()
     {
@@ -37,17 +40,37 @@ public class WaveManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
+
+    private void Start()
+    {
+        nextWaveDelay = new WaitForSeconds(2f);
+
+        waveCompleteCount = 0;
+    }
+
     public void WaveComplete()
     {
         waveCompleteCount++;
-
+        
         if (waveCompleteCount >= enemySpawnerCount)
         {
             Debug.Log("Next Wave.");
+
+            StartCoroutine(EndWaveRoutine());
             
-            waveEvent?.Invoke();
             waveCompleteCount = 0;
         }
+    }
+    
+    public void WaveStart()
+    {
+        waveStartEvent?.Invoke();
+    }
+    
+    private IEnumerator EndWaveRoutine()
+    {
+        yield return nextWaveDelay;
+        
+        waveEndEvent?.Invoke();
     }
 }
