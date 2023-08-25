@@ -7,6 +7,7 @@ using JinCode.Utils;
 public class GameUnitChake : MonoBehaviour
 {
     //public GameObject Tower;
+    //public GameObject Range;
     //public List<Unit> selectedUnitRTSList;
 
     //[SerializeField] private bool clicked = false;
@@ -14,6 +15,7 @@ public class GameUnitChake : MonoBehaviour
     //private void Awake()
     //{
     //    selectedUnitRTSList = new List<Unit>();
+    //    Range.SetActive(false); // 초기에 Range를 비활성화
     //}
 
     //private void OnMouseDown()
@@ -22,6 +24,7 @@ public class GameUnitChake : MonoBehaviour
     //    {
     //        clicked = true;
     //        SelectUnitsInTower();
+    //        Range.SetActive(true); // Tower 클릭 시 Range 활성화
     //    }
     //}
 
@@ -38,23 +41,28 @@ public class GameUnitChake : MonoBehaviour
 
     //    if (Input.GetMouseButtonDown(1))
     //    {
-    //        Vector3 moveToPosition = UtilsClass.GetMouseWorldPosition();
-    //        List<Vector3> targetPositionList = GetPositionListAround(moveToPosition, new float[] { 1f, 2f, 3f }, new int[] { 5, 10, 20 });
-    //        int targetPositionListIndex = 0;
-
-    //        foreach (Unit unitRTS in selectedUnitRTSList)
+    //        RaycastHit2D hit = Physics2D.Raycast(UtilsClass.GetMouseWorldPosition(), Vector2.zero);
+    //        if (hit.collider != null && hit.collider.gameObject == Range)
     //        {
-    //            unitRTS.MoveTo(targetPositionList[targetPositionListIndex]);
-    //            targetPositionListIndex = (targetPositionListIndex + 1) % targetPositionList.Count;
-    //        }
+    //            Vector3 moveToPosition = UtilsClass.GetMouseWorldPosition();
+    //            List<Vector3> targetPositionList = GetPositionListAround(moveToPosition, new float[] { 1f, 2f, 3f }, new int[] { 5, 10, 20 });
+    //            int targetPositionListIndex = 0;
 
-    //        selectedUnitRTSList.Clear(); // List 비우기
-    //        clicked = false; // bool 값 false로 변경
+    //            foreach (Unit unitRTS in selectedUnitRTSList)
+    //            {
+    //                unitRTS.MoveTo(targetPositionList[targetPositionListIndex]);
+    //                targetPositionListIndex = (targetPositionListIndex + 1) % targetPositionList.Count;
+    //            }
 
-    //        // 모든 UnitRTS 선택 해제
-    //        foreach (Unit unitRTS in FindObjectsOfType<Unit>())
-    //        {
-    //            unitRTS.SetSelectedVisible(false);
+    //            selectedUnitRTSList.Clear();
+    //            clicked = false;
+
+    //            foreach (Unit unitRTS in FindObjectsOfType<Unit>())
+    //            {
+    //                unitRTS.SetSelectedVisible(false);
+    //            }
+
+    //            Range.SetActive(false); // 우클릭 시 Range 비활성화
     //        }
     //    }
     //}
@@ -102,7 +110,8 @@ public class GameUnitChake : MonoBehaviour
     //}
 
 
-
+    // 세이브용  |  위
+ 
 
 
     public GameObject Tower;
@@ -110,6 +119,8 @@ public class GameUnitChake : MonoBehaviour
     public List<Unit> selectedUnitRTSList;
 
     [SerializeField] private bool clicked = false;
+
+    public Vector3 lastRightClickPosition; // 가장 최근 우클릭 위치 저장 (아마도)
 
     private void Awake()
     {
@@ -143,6 +154,8 @@ public class GameUnitChake : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(UtilsClass.GetMouseWorldPosition(), Vector2.zero);
             if (hit.collider != null && hit.collider.gameObject == Range)
             {
+                lastRightClickPosition = UtilsClass.GetMouseWorldPosition(); // 우클릭한 위치 저장
+
                 Vector3 moveToPosition = UtilsClass.GetMouseWorldPosition();
                 List<Vector3> targetPositionList = GetPositionListAround(moveToPosition, new float[] { 1f, 2f, 3f }, new int[] { 5, 10, 20 });
                 int targetPositionListIndex = 0;
@@ -162,6 +175,9 @@ public class GameUnitChake : MonoBehaviour
                 }
 
                 Range.SetActive(false); // 우클릭 시 Range 비활성화
+
+
+                Debug.Log("호우 : " + lastRightClickPosition);
             }
         }
     }
