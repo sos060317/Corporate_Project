@@ -20,7 +20,6 @@ public class EnemyBase : MonoBehaviour
     private float curHealth;
     private float attackRate;
     private float attackTimer;
-    private float scanRange;
     private float attackRange;
     private float moveSpeed;
     private float attackDamage;
@@ -254,7 +253,6 @@ public class EnemyBase : MonoBehaviour
 
         maxHealth = this.enemyDetailsSo.enemyBaseHealth;
         moveSpeed = this.enemyDetailsSo.enemyBaseMoveSpeed;
-        scanRange = this.enemyDetailsSo.enemyBaseScanRange;
         attackRate = this.enemyDetailsSo.enemyBaseAttackRate;
         attackRange = this.enemyDetailsSo.enemyBaseAttackRange;
         attackDamage = this.enemyDetailsSo.enemyBaseAttackDamage;
@@ -268,12 +266,5 @@ public class EnemyBase : MonoBehaviour
         transform.position = movePoints[movePosIndex] + moveOffset;
 
         canMove = true;
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        
-        Gizmos.DrawWireSphere(transform.position, scanRange);
     }
 }

@@ -27,6 +27,29 @@ public class EnemyDetailsSO : ScriptableObject
 
     #region Header
 
+    [Space(10)]
+    [Header("방어력 관련")]
+
+    #endregion
+
+    [Range(0f, 100f)]
+    public float defense;
+    
+    [Range(0f, 100f)]
+    public float magicResistance;
+
+    #region Header
+
+    [Space(10)] [Header("공격력 관련")]
+
+    #endregion
+
+    public float attackPower;
+
+    public float spellPower;
+
+    #region Header
+
     [Space(10)] [Header("적 프리팹")]
 
     #endregion
