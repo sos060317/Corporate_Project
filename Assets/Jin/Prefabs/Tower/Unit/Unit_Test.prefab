@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 8381850660524280976}
   - component: {fileID: 7871441825769820721}
   - component: {fileID: 8381850660524280980}
-  - component: {fileID: 8381850660524281003}
+  - component: {fileID: 8838919105264767159}
   m_Layer: 9
   m_Name: Ally_Monkey
   m_TagString: Untagged
@@ -540,7 +540,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8381850660524281003
+--- !u!114 &8838919105264767159
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -580,7 +580,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8381850660680754023
 RectTransform:
   m_ObjectHideFlags: 0

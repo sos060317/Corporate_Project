@@ -107,19 +107,11 @@ public class AllyBase : MonoBehaviour
             
             if (dir.x < 0)
             {
-                transform.localScale =
-                    new Vector3(-xScale, transform.localScale.y, transform.localScale.z);
-
-                healthUiBg.rectTransform.localScale = new Vector3(-healthBgXScale, healthUiBg.rectTransform.localScale.y,
-                    healthUiBg.rectTransform.localScale.z);
+                FilpFunction(-1);
             }
             else
             {
-                transform.localScale =
-                    new Vector3(xScale, transform.localScale.y, transform.localScale.z);
-                
-                healthUiBg.rectTransform.localScale = new Vector3(healthBgXScale, healthUiBg.rectTransform.localScale.y,
-                    healthUiBg.rectTransform.localScale.z);
+                FilpFunction(1);
             }
 
             isRun = true;
@@ -131,6 +123,16 @@ public class AllyBase : MonoBehaviour
                 isRun = false;
             }
         }
+    }
+
+
+    private void FilpFunction(int index)
+    {
+        transform.localScale =
+            new Vector3(xScale * index, transform.localScale.y, transform.localScale.z);
+
+        healthUiBg.rectTransform.localScale = new Vector3(healthBgXScale * index, healthUiBg.rectTransform.localScale.y,
+            healthUiBg.rectTransform.localScale.z);
     }
     
     private void AttackUpdate()
@@ -241,6 +243,30 @@ public class AllyBase : MonoBehaviour
     private void SetActiveFalse()
     {
         gameObject.SetActive(false);
+    }
+
+    public void SetMoveAnimation(bool isMoving, Vector3 dir)
+    {
+        if (isMoving)
+        {
+            canMove = false;
+            isAttacking = false;
+        }
+        else
+        {
+            canMove = true;
+        }
+
+        isRun = isMoving;
+        
+        if (dir.x < 0)
+        {
+            FilpFunction(-1);
+        }
+        else
+        {
+            FilpFunction(1);
+        }
     }
 
     private void OnDrawGizmos()
