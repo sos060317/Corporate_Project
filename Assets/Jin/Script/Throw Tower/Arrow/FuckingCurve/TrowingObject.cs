@@ -4,60 +4,6 @@ using UnityEngine;
 
 public class TrowingObject : MonoBehaviour
 {
-    //public AnimationCurve curve;
-    //public float duration = 1.0f;
-    //public float maxHeightY = 3.0f;
-    //public string enemyTag = "Enemy"; // Tag of the enemy objects
-
-    //private GameObject enemy; // Reference to the enemy object
-    //private bool reachedEnd = false;
-
-    //private void Awake()
-    //{
-    //    Vector3 start = transform.position;
-
-    //    InvokeRepeating("SetEnemyPositionAsFinish", 0.3f, 0.3f);
-
-    //    StartCoroutine(Curve(start, Vector2.zero));
-    //}
-
-    //private void SetEnemyPositionAsFinish()
-    //{
-    //    GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
-    //    if (enemies.Length > 0)
-    //    {
-    //        enemy = enemies[0]; // You might need more logic here to determine the appropriate enemy
-    //        Vector2 finish = enemy.transform.position;
-    //        StartCoroutine(Curve(transform.position, finish));
-    //    }
-    //}
-
-    //public IEnumerator Curve(Vector3 start, Vector2 finish)
-    //{
-    //    float timePast = 0f;
-
-    //    while (timePast < duration)
-    //    {
-    //        timePast += Time.deltaTime;
-
-    //        float linearTime = timePast / duration;
-    //        float heightTime = curve.Evaluate(linearTime);
-
-    //        float height = Mathf.Lerp(0f, maxHeightY, heightTime);
-
-    //        transform.position = Vector2.Lerp(start, finish, linearTime) + new Vector2(0f, height);
-
-    //        yield return null;
-    //    }
-
-    //    // If the end is reached, destroy the object
-    //    if (!reachedEnd)
-    //    {
-    //        reachedEnd = true;
-    //        Destroy(gameObject);
-    //    }
-    //}
-
     public AnimationCurve curve;
     public float duration = 1.0f;
     public float maxHeightY = 3.0f;
@@ -114,4 +60,64 @@ public class TrowingObject : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+
+
+
+    //public AnimationCurve curve;
+    //public float duration = 1.0f;
+    //public float maxHeightY = 3.0f;
+    //public GameObject Wowgood; // 추가된 오브젝트
+
+    //private Vector2 finish;
+    //private bool reachedEnd = false;
+
+    //private void Awake()
+    //{
+    //    Vector3 start = transform.position;
+
+    //    StartCoroutine(Curve(start, finish));
+    //}
+
+    //public void SetEnemyList(List<GameObject> list)
+    //{
+    //    if (list != null && list.Count > 0)
+    //    {
+    //        finish = list[0].transform.position;
+
+    //        // 종료 위치를 Wowgood 오브젝트의 위치로 설정
+    //        if (Wowgood != null)
+    //        {
+    //            Debug.Log("씨발 왜 안됨");
+    //            finish = Wowgood.transform.position;
+    //        }
+    //    }
+    //}
+
+    //private IEnumerator Curve(Vector3 start, Vector2 finish)
+    //{
+    //    float timePast = 0f;
+
+    //    while (timePast < duration)
+    //    {
+    //        timePast += Time.deltaTime;
+
+    //        float linearTime = timePast / duration;
+    //        float heightTime = curve.Evaluate(linearTime);
+
+    //        float height = Mathf.Lerp(0f, maxHeightY, heightTime);
+
+    //        transform.position = Vector2.Lerp(start, finish, linearTime) + new Vector2(0f, height);
+
+    //        yield return null;
+    //    }
+
+    //    if (!reachedEnd)
+    //    {
+    //        reachedEnd = true;
+    //        Destroy(gameObject);
+    //    }
+    //}
+
+
 }
