@@ -19,11 +19,7 @@ public class EnemyDetailsSO : ScriptableObject
 
     public float enemyBaseAttackRate;
 
-    public float enemyBaseScanRange;
-
     public float enemyBaseAttackRange;
-
-    public float enemyBaseAttackDamage;
 
     #region Header
 

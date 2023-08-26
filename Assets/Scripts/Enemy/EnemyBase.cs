@@ -255,7 +255,6 @@ public class EnemyBase : MonoBehaviour
         moveSpeed = this.enemyDetailsSo.enemyBaseMoveSpeed;
         attackRate = this.enemyDetailsSo.enemyBaseAttackRate;
         attackRange = this.enemyDetailsSo.enemyBaseAttackRange;
-        attackDamage = this.enemyDetailsSo.enemyBaseAttackDamage;
 
 
         curHealth = maxHealth;
