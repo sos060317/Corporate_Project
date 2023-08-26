@@ -222,9 +222,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabsToSpawn:
-  - {fileID: 5692192332803497078, guid: d6d6e4a1ef7170a4985fb375ce9cebf1, type: 3}
-  - {fileID: 5692192332803497078, guid: d6d6e4a1ef7170a4985fb375ce9cebf1, type: 3}
-  - {fileID: 5692192332803497078, guid: d6d6e4a1ef7170a4985fb375ce9cebf1, type: 3}
+  - {fileID: 6869279931616084616, guid: 1b0cc7c8f37e7e34c9a82c33fc0412ba, type: 3}
+  - {fileID: 6869279931616084616, guid: 1b0cc7c8f37e7e34c9a82c33fc0412ba, type: 3}
+  - {fileID: 6869279931616084616, guid: 1b0cc7c8f37e7e34c9a82c33fc0412ba, type: 3}
   parentTransform: {fileID: 288866992}
 --- !u!212 &288866991
 SpriteRenderer:
