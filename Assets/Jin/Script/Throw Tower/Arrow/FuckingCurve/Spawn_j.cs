@@ -13,7 +13,7 @@ public class Spawn_j : MonoBehaviour
     public float spawnInterval = 1.5f;
 
     [SerializeField]
-    public List<GameObject> enemyList = new List<GameObject>();
+    private List<GameObject> enemyList = new List<GameObject>();
     private bool canSpawn = false;
     private float timeSinceLastSpawn = 0f;
 
