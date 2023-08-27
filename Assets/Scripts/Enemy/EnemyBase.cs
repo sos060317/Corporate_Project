@@ -12,7 +12,7 @@ public abstract class EnemyBase : MonoBehaviour
     [SerializeField] private Image healthUiBg;
     [SerializeField] private Image healthUiBar;
 
-     public bool Targeting;
+    [HideInInspector] public bool Targeting;
     
     private int movePosIndex;
 
@@ -95,11 +95,11 @@ public abstract class EnemyBase : MonoBehaviour
             
             if (dir.x < 0)
             {
-                FlipFunction(-1);
+                FlipFunction(1);
             }
             else
             {
-                FlipFunction(1);
+                FlipFunction(-1);
             }
 
             if (Vector2.Distance(transform.position, targetAlly.transform.position ) <= attackRange)
@@ -116,11 +116,11 @@ public abstract class EnemyBase : MonoBehaviour
         
         if (nextPos.x < 0)
         {
-            FlipFunction(-1);
+            FlipFunction(1);
         }
         else
         {
-            FlipFunction(1);
+            FlipFunction(-1);
         }
 
         if (Vector2.Distance(transform.position - (Vector3)(moveOffset), movePoints[movePosIndex]) <= 0.01f)
@@ -187,12 +187,12 @@ public abstract class EnemyBase : MonoBehaviour
     {
         if (targetAlly != null)
         {
-            targetAlly.DieEvent -= DeleteTarget;
+            targetAlly.EnemyUnTargetingEvent -= DeleteTarget;
         }
         
         targetAlly = ally;
 
-        ally.DieEvent += DeleteTarget;
+        ally.EnemyUnTargetingEvent += DeleteTarget;
         
         isTargeting = true;
         Targeting = true;
@@ -200,6 +200,8 @@ public abstract class EnemyBase : MonoBehaviour
 
     protected void DeleteTarget()
     {
+        targetAlly.EnemyUnTargetingEvent -= DeleteTarget;
+        
         isTargeting = false;
         canMove = true;
         isAttacking = false;

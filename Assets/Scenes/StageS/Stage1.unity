@@ -21783,7 +21783,7 @@ MonoBehaviour:
   cam: {fileID: 1451707422}
   zoomSpeed: 5
   maxZoomIn: 5
-  maxZoomOut: 20
+  maxZoomOut: 13
   mapRenderer: {fileID: 678763086}
 --- !u!4 &1456146165 stripped
 Transform:

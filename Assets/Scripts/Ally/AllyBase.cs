@@ -15,9 +15,9 @@ public class AllyBase : MonoBehaviour
     
     [SerializeField] private float scanRange;
 
-     public bool targeting;
+    [HideInInspector] public bool targeting;
 
-    public Action DieEvent;
+    public Action EnemyUnTargetingEvent;
 
     private float maxHealth;
     private float curHealth;
@@ -39,7 +39,7 @@ public class AllyBase : MonoBehaviour
     private Animator anim;
     private WaitForSeconds hitDelay;
     
-    public EnemyBase targetEnemy;
+    private EnemyBase targetEnemy;
 
     private void OnEnable()
     {
@@ -85,7 +85,7 @@ public class AllyBase : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isDie)
+        if (isDie || !canMove)
         {
             return;
         }
@@ -249,7 +249,7 @@ public class AllyBase : MonoBehaviour
 
             targeting = false;
             
-            DieEvent?.Invoke();
+            EnemyUnTargetingEvent?.Invoke();
 
             transform.GetComponent<Collider2D>().enabled = false;
             
@@ -273,6 +273,9 @@ public class AllyBase : MonoBehaviour
         {
             canMove = false;
             isAttacking = false;
+            EnemyUnTargetingEvent?.Invoke();
+            targetEnemy = null;
+            isTargeting = false;
         }
         else
         {

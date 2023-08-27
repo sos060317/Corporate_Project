@@ -71,7 +71,7 @@ public class Node : MonoBehaviour
     {
         if (sr.color.a != 0)
         {
-            sr.color = overColor;
+            sr.color = nomalColor;
         }
     }
 }
