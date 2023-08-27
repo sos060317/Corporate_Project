@@ -155,3 +155,5 @@ MonoBehaviour:
   duration: 0.5
   maxHeightY: 3
   enemyTag: FlowingPos
+  damageTag: Enemy
+  damageAreaRadius: 0.55

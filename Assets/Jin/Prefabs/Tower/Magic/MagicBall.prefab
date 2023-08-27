@@ -100,3 +100,5 @@ MonoBehaviour:
   enemyTag: FlowingPos
   speed: 17
   initialDelay: 0.1
+  damageAreaRadius: 0.7
+  Damage: 30

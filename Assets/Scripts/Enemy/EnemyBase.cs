@@ -208,7 +208,7 @@ public abstract class EnemyBase : MonoBehaviour
         Targeting = false;
     }
 
-    public virtual void OnDamage(float attackPower, float spellPower)
+    public virtual void OnDamage(float attackPower, float spellPower) // 물리 , 마법
     {
         curHealth -= (attackPower - (attackPower * (enemyDetailsSo.defense * 0.01f))) + (spellPower - (spellPower * (enemyDetailsSo.magicResistance * 0.01f)));
 

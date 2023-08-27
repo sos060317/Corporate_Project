@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &179292984
 Transform:
   m_ObjectHideFlags: 0
@@ -465,6 +465,10 @@ PrefabInstance:
       propertyPath: initialDelay
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 327585374298066499, guid: 1a491bc5c6c310a49b6bbc47b7d0b490, type: 3}
+      propertyPath: damageAreaRadius
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 327585374298066501, guid: 1a491bc5c6c310a49b6bbc47b7d0b490, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -697,7 +701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1095003695
 Transform:
   m_ObjectHideFlags: 0
@@ -1194,11 +1198,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 436306374769745551, guid: 78abbb71781fdc245849bd3fe2194792, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.09
+      value: -6.32
       objectReference: {fileID: 0}
     - target: {fileID: 436306374769745551, guid: 78abbb71781fdc245849bd3fe2194792, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.93
+      value: -0.16
       objectReference: {fileID: 0}
     - target: {fileID: 436306374769745551, guid: 78abbb71781fdc245849bd3fe2194792, type: 3}
       propertyPath: m_LocalPosition.z
