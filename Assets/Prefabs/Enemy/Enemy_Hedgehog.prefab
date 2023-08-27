@@ -239,6 +239,7 @@ MonoBehaviour:
   defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   healthUiBg: {fileID: 56147406949248163}
   healthUiBar: {fileID: 7053703022624280111}
+  enemy: {fileID: 388473290193081027}
   Targeting: 0
   scanRange: 3
   scanLayer:

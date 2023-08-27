@@ -163,6 +163,7 @@ MonoBehaviour:
   defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   healthUiBg: {fileID: 3927143001955413002}
   healthUiBar: {fileID: 7462625816331178221}
+  enemy: {fileID: 1370586008307256899}
   Targeting: 0
 --- !u!1 &2092013226599794380
 GameObject:

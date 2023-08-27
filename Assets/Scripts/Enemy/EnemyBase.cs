@@ -93,13 +93,13 @@ public abstract class EnemyBase : MonoBehaviour
             Vector3 dir = targetAlly.transform.position - transform.position;
             transform.position += dir.normalized * (moveSpeed * Time.deltaTime);
             
-            if (dir.x < 0)
+            if (dir.normalized.x < 0)
             {
-                FlipFunction(1);
+                FlipFunction(true);
             }
             else
             {
-                FlipFunction(-1);
+                FlipFunction(false);
             }
 
             if (Vector2.Distance(transform.position, targetAlly.transform.position ) <= attackRange)
@@ -114,13 +114,13 @@ public abstract class EnemyBase : MonoBehaviour
         Vector3 nextPos = (Vector3)movePoints[movePosIndex] - transform.position + (Vector3)moveOffset;
         transform.position += nextPos.normalized * (moveSpeed * Time.deltaTime);
         
-        if (nextPos.x < 0)
+        if (nextPos.normalized.x < 0)
         {
-            FlipFunction(1);
+            FlipFunction(true);
         }
-        else
+        else if (nextPos.normalized.x > 0)
         {
-            FlipFunction(-1);
+            FlipFunction(false);
         }
 
         if (Vector2.Distance(transform.position - (Vector3)(moveOffset), movePoints[movePosIndex]) <= 0.01f)
@@ -134,14 +134,10 @@ public abstract class EnemyBase : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
-    private void FlipFunction(int index)
-    {
-        transform.localScale =
-            new Vector3(xScale * index, transform.localScale.y, transform.localScale.z);
 
-        healthUiBg.rectTransform.localScale = new Vector3(healthBgXScale * index, healthUiBg.rectTransform.localScale.y,
-            healthUiBg.rectTransform.localScale.z);
+    private void FlipFunction(bool index)
+    {
+        sr.flipX = index;
     }
     
     private void AnimationUpdate()
