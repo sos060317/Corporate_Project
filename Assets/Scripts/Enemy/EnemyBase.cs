@@ -5,42 +5,44 @@ using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
-public class EnemyBase : MonoBehaviour
+public abstract class EnemyBase : MonoBehaviour
 {
     [SerializeField] private Material hitMaterial;
     [SerializeField] private Material defaultMaterial;
     [SerializeField] private Image healthUiBg;
     [SerializeField] private Image healthUiBar;
 
-    [HideInInspector] public bool Targeting;
+     public bool Targeting;
     
     private int movePosIndex;
 
     private float maxHealth;
-    private float curHealth;
-    private float attackRate;
-    private float attackTimer;
-    private float attackRange;
     private float moveSpeed;
-    private float attackDamage;
     private float xScale;
     private float healthBgXScale;
     
-    private bool canMove = true;
-    private bool isTargeting = false;
-    private bool isAttacking = false;
-    private bool isDie = false;
-    private bool attack = false;
+    protected bool canMove = true;
+    protected bool isTargeting = false;
+    protected bool isAttacking = false;
+    protected bool isDie = false;
+    protected bool attack = false;
     
     private Vector2[] movePoints;
     private Vector2 moveOffset;
 
     private SpriteRenderer sr;
-    private EnemyDetailsSO enemyDetailsSo;
-    private Animator anim;
     private WaitForSeconds hitDelay;
+    
+    protected float curHealth;
+    protected float attackRate;
+    protected float attackTimer;
+    protected float attackRange;
+    
+    protected EnemyDetailsSO enemyDetailsSo;
+    
+    protected Animator anim;
 
-    private AllyBase targetAlly;
+    protected AllyBase targetAlly;
 
     private void Start()
     {
@@ -61,7 +63,7 @@ public class EnemyBase : MonoBehaviour
         Targeting = false;
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         MoveUpdate();
         AttackUpdate();
@@ -93,19 +95,11 @@ public class EnemyBase : MonoBehaviour
             
             if (dir.x < 0)
             {
-                transform.localScale =
-                    new Vector3(-xScale, transform.localScale.y, transform.localScale.z);
-                
-                healthUiBg.rectTransform.localScale = new Vector3(-healthBgXScale, healthUiBg.rectTransform.localScale.y,
-                    healthUiBg.rectTransform.localScale.z);
+                FlipFunction(-1);
             }
             else
             {
-                transform.localScale =
-                    new Vector3(xScale, transform.localScale.y, transform.localScale.z);
-                
-                healthUiBg.rectTransform.localScale = new Vector3(healthBgXScale, healthUiBg.rectTransform.localScale.y,
-                    healthUiBg.rectTransform.localScale.z);
+                FlipFunction(1);
             }
 
             if (Vector2.Distance(transform.position, targetAlly.transform.position ) <= attackRange)
@@ -122,19 +116,11 @@ public class EnemyBase : MonoBehaviour
         
         if (nextPos.x < 0)
         {
-            transform.localScale =
-                new Vector3(-xScale, transform.localScale.y, transform.localScale.z);
-            
-            healthUiBg.rectTransform.localScale = new Vector3(-healthBgXScale, healthUiBg.rectTransform.localScale.y,
-                healthUiBg.rectTransform.localScale.z);
+            FlipFunction(-1);
         }
         else
         {
-            transform.localScale =
-                new Vector3(xScale, transform.localScale.y, transform.localScale.z);
-            
-            healthUiBg.rectTransform.localScale = new Vector3(healthBgXScale, healthUiBg.rectTransform.localScale.y,
-                healthUiBg.rectTransform.localScale.z);
+            FlipFunction(1);
         }
 
         if (Vector2.Distance(transform.position - (Vector3)(moveOffset), movePoints[movePosIndex]) <= 0.01f)
@@ -149,36 +135,21 @@ public class EnemyBase : MonoBehaviour
         }
     }
     
+    private void FlipFunction(int index)
+    {
+        transform.localScale =
+            new Vector3(xScale * index, transform.localScale.y, transform.localScale.z);
+
+        healthUiBg.rectTransform.localScale = new Vector3(healthBgXScale * index, healthUiBg.rectTransform.localScale.y,
+            healthUiBg.rectTransform.localScale.z);
+    }
+    
     private void AnimationUpdate()
     {
         anim.SetBool("isRun", canMove);
     }
-    
-    private void AttackUpdate()
-    {
-        if (!isAttacking || targetAlly == null)
-        {
-            return;
-        }
 
-        if (attackTimer >= attackRate && !isDie)
-        {
-            // 공격 로직
-            
-            anim.SetTrigger("Attack");
-            
-            attackTimer = 0f;
-
-            attack = true;
-        }
-
-        if (attack)
-        {
-            return;
-        }
-        
-        attackTimer += Time.deltaTime;
-    }
+    protected abstract void AttackUpdate();
     
     // 애니메이션 이벤트에서 사용할 함수.
     private void AttackEnd()
@@ -194,10 +165,10 @@ public class EnemyBase : MonoBehaviour
             return;
         }
         
-        targetAlly.OnDamage(attackDamage);
+        targetAlly.OnDamage(enemyDetailsSo.attackPower, enemyDetailsSo.spellPower);
     }
     
-    private IEnumerator HitRoutine()
+    protected IEnumerator HitRoutine()
     {
         sr.material = hitMaterial;
 
@@ -212,14 +183,22 @@ public class EnemyBase : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void SetTarget(AllyBase ally)
+    public virtual void SetTarget(AllyBase ally)
     {
+        if (targetAlly != null)
+        {
+            targetAlly.DieEvent -= DeleteTarget;
+        }
+        
         targetAlly = ally;
+
+        ally.DieEvent += DeleteTarget;
+        
         isTargeting = true;
         Targeting = true;
     }
 
-    public void DeleteTarget()
+    protected void DeleteTarget()
     {
         isTargeting = false;
         canMove = true;
@@ -229,16 +208,23 @@ public class EnemyBase : MonoBehaviour
         Targeting = false;
     }
 
-    public void OnDamage(float damage)
+    public virtual void OnDamage(float attackPower, float spellPower)
     {
-        curHealth -= damage;
+        curHealth -= (attackPower - (attackPower * (enemyDetailsSo.defense * 0.01f))) + (spellPower - (spellPower * (enemyDetailsSo.magicResistance * 0.01f)));
 
         if (curHealth <= 0)
         {
             // 죽는 로직
 
+            transform.GetComponent<Collider2D>().enabled = false;
+            
             isDie = true;
-            targetAlly.DeleteTarget();
+            
+            if (targetAlly != null)
+            {
+                targetAlly.DeleteTarget();
+            }
+            
             anim.SetTrigger("Die");
             return;
         }

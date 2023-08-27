@@ -15,7 +15,9 @@ public class AllyBase : MonoBehaviour
     
     [SerializeField] private float scanRange;
 
-    [HideInInspector] public bool targeting;
+     public bool targeting;
+
+    public Action DieEvent;
 
     private float maxHealth;
     private float curHealth;
@@ -23,7 +25,6 @@ public class AllyBase : MonoBehaviour
     private float attackRange;
     private float attactRate;
     private float attactTimer;
-    private float attackDamage;
     private float xScale;
     private float healthBgXScale;
 
@@ -38,7 +39,7 @@ public class AllyBase : MonoBehaviour
     private Animator anim;
     private WaitForSeconds hitDelay;
     
-    private EnemyBase targetEnemy;
+    public EnemyBase targetEnemy;
 
     private void OnEnable()
     {
@@ -63,7 +64,6 @@ public class AllyBase : MonoBehaviour
         moveSpeed = allyDetailsSo.allyBaseMoveSpeed;
         attackRange = allyDetailsSo.allyBaseAttackRange;
         attactRate = allyDetailsSo.allyBaseAttackDelay;
-        attackDamage = allyDetailsSo.allyBaseAttackDamage;
         xScale = transform.localScale.x;
         healthBgXScale = healthUiBar.rectTransform.localScale.x;
 
@@ -73,6 +73,11 @@ public class AllyBase : MonoBehaviour
 
     private void Update()
     {
+        if (isDie)
+        {
+            return;
+        }
+        
         MoveUpdate();
         AttackUpdate();
         AnimationUpdate();
@@ -80,6 +85,11 @@ public class AllyBase : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (isDie)
+        {
+            return;
+        }
+        
         CheckTarget();
     }
 
@@ -107,11 +117,11 @@ public class AllyBase : MonoBehaviour
             
             if (dir.x < 0)
             {
-                FilpFunction(-1);
+                FlipFunction(-1);
             }
             else
             {
-                FilpFunction(1);
+                FlipFunction(1);
             }
 
             isRun = true;
@@ -126,7 +136,7 @@ public class AllyBase : MonoBehaviour
     }
 
 
-    private void FilpFunction(int index)
+    private void FlipFunction(int index)
     {
         transform.localScale =
             new Vector3(xScale * index, transform.localScale.y, transform.localScale.z);
@@ -173,16 +183,21 @@ public class AllyBase : MonoBehaviour
             return;
         }
         
-        var target = Physics2D.OverlapCircle(transform.position, scanRange, scanLayer);
+        Collider2D[] targets = Physics2D.OverlapCircleAll(transform.position, scanRange, scanLayer);
 
-        if (target != null)
+        if (targets != null)
         {
-            if (!target.GetComponent<EnemyBase>().Targeting)
+            foreach (var target in targets)
             {
-                targetEnemy = target.gameObject.GetComponent<EnemyBase>();
-                targetEnemy.SetTarget(this);
-                targetEnemy.Targeting = true;
-                isTargeting = true;
+                if (!target.GetComponent<EnemyBase>().Targeting)
+                {
+                    targetEnemy = target.gameObject.GetComponent<EnemyBase>();
+                    targetEnemy.SetTarget(this);
+                    targetEnemy.Targeting = true;
+                    isTargeting = true;
+
+                    return;
+                }
             }
         }
     }
@@ -201,7 +216,7 @@ public class AllyBase : MonoBehaviour
             return;
         }
         
-        targetEnemy.OnDamage(attackDamage);
+        targetEnemy.OnDamage(allyDetailsSo.attackPower, allyDetailsSo.spellPower);
     }
     
     private IEnumerator HitRoutine()
@@ -222,16 +237,22 @@ public class AllyBase : MonoBehaviour
         targetEnemy = null;
     }
 
-    public void OnDamage(float damage)
+    public void OnDamage(float attackPower, float spellPower)
     {
-        curHealth -= damage;
+        curHealth -= (attackPower - (attackPower * (allyDetailsSo.defense * 0.01f))) + (spellPower - (spellPower * (allyDetailsSo.magicResistance * 0.01f)));
         
         if (curHealth <= 0)
         {
             // 죽는 로직
 
             isDie = true;
-            targetEnemy.DeleteTarget();
+
+            targeting = false;
+            
+            DieEvent?.Invoke();
+
+            transform.GetComponent<Collider2D>().enabled = false;
+            
             anim.SetTrigger("Die");
             return;
         }
@@ -242,6 +263,7 @@ public class AllyBase : MonoBehaviour
     // 애니메이션 이벤트에 사용할 함수.
     private void SetActiveFalse()
     {
+        targeting = false;
         gameObject.SetActive(false);
     }
 
@@ -261,17 +283,17 @@ public class AllyBase : MonoBehaviour
         
         if (dir.x < 0)
         {
-            FilpFunction(-1);
+            FlipFunction(-1);
         }
         else
         {
-            FilpFunction(1);
+            FlipFunction(1);
         }
     }
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.white;
         
         Gizmos.DrawWireSphere(transform.position, scanRange);
     }

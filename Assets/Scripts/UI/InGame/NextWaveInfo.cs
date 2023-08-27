@@ -30,9 +30,9 @@ public class NextWaveInfo : MonoBehaviour
 
         for (int i = 0; i < enemyNameList.Count; i++)
         {
-            infoText.text += enemyNameList[i] + " X " + enemyCountList[i].ToString();
+            infoText.text += enemyNameList[i] + " X " + enemyCountList[i];
             
-            if (i - enemyNameList.Count > 0)
+            if (enemyNameList.Count - i - 1 > 0)
             {
                 infoText.text += "\n";
             }
