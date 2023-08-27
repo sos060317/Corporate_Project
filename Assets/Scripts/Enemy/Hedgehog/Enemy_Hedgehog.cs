@@ -38,12 +38,12 @@ public class Enemy_Hedgehog : EnemyBase
                 {
                     if (targetAlly != null)
                     {
-                        targetAlly.DieEvent -= DeleteTarget;
+                        targetAlly.EnemyUnTargetingEvent -= DeleteTarget;
                     }
                     
                     targetAlly = target.gameObject.GetComponent<AllyBase>();
                     
-                    target.gameObject.GetComponent<AllyBase>().DieEvent += DeleteTarget;
+                    target.gameObject.GetComponent<AllyBase>().EnemyUnTargetingEvent += DeleteTarget;
                     
                     isAttacking = true;
                     isTargeting = true;
@@ -136,13 +136,13 @@ public class Enemy_Hedgehog : EnemyBase
     {
         if (targetAlly != null)
         {
-            targetAlly.DieEvent -= DeleteTarget;
+            targetAlly.EnemyUnTargetingEvent -= DeleteTarget;
             targetAlly.targeting = false;
         }
         
         targetAlly = ally;
 
-        ally.DieEvent += DeleteTarget;
+        ally.EnemyUnTargetingEvent += DeleteTarget;
         
         isTargeting = true;
         Targeting = true;

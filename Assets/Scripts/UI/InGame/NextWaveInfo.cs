@@ -77,7 +77,7 @@ public class NextWaveInfo : MonoBehaviour
             infoText.color = infoTextColor;
             infoBg.color = infoBgColor;
 
-            fadeAmount += Time.deltaTime * 4;
+            fadeAmount += Time.deltaTime * 5;
 
             yield return null;
         }
@@ -101,7 +101,7 @@ public class NextWaveInfo : MonoBehaviour
             infoText.color = infoTextColor;
             infoBg.color = infoBgColor;
 
-            fadeAmount -= Time.deltaTime * 4;
+            fadeAmount -= Time.deltaTime * 5;
 
             yield return null;
         }
