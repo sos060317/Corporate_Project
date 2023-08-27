@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrowingObject : MonoBehaviour
+public class Bomb : MonoBehaviour
 {
     public AnimationCurve curve;
     public float duration = 1.0f;
@@ -27,18 +27,18 @@ public class TrowingObject : MonoBehaviour
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
         if (enemies.Length > 0)
         {
-            finish = enemies[0].transform.position; // 첫 번째 적의 좌표를 종료 위치로 설정
+            finish = enemies[0].transform.position;
         }
         else
         {
-            // 적이 없을 경우 임의의 기본값으로 설정
-            finish = Vector2.zero;
+            Destroy(gameObject);
         }
     }
 
     public IEnumerator Curve(Vector3 start, Vector2 finish)
     {
         float timePast = 0f;
+        Vector3 originalScale = transform.localScale; // 원래 크기 저장
 
         while (timePast < duration)
         {
@@ -57,6 +57,26 @@ public class TrowingObject : MonoBehaviour
         if (!reachedEnd)
         {
             reachedEnd = true;
+            float scaleFactor = 0.1f; // 시작할 작아짐 비율
+            float scaleTime = 0f;
+
+            while (scaleTime < 0.2f) // 0.2초 동안 작아지는 동안의 루프
+            {
+                scaleTime += Time.deltaTime;
+                float shrinkFactor = Mathf.Lerp(1f, scaleFactor, scaleTime / 0.2f);
+                transform.localScale = originalScale * shrinkFactor;
+                yield return null;
+            }
+
+            scaleTime = 0f;
+            while (scaleTime < 0.3f) // 0.8초 동안 커지는 동안의 루프
+            {
+                scaleTime += Time.deltaTime;
+                float growthFactor = Mathf.Lerp(scaleFactor, 3f, scaleTime / 0.3f);
+                transform.localScale = originalScale * growthFactor;
+                yield return null;
+            }
+
             Destroy(gameObject);
         }
     }
