@@ -46,12 +46,17 @@ public class Node : MonoBehaviour
 
         var srColor = sr.color;
         srColor.a = 0;
+        sr.color = srColor;
     }
     
     public void DestoryTower()
     {
         Destroy(tower);
         tower = null;
+        
+        var srColor = sr.color;
+        srColor.a = 1;
+        sr.color = srColor;
     }
 
     private void OnMouseEnter()
