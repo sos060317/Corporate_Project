@@ -23,7 +23,6 @@ public class AllyBase : MonoBehaviour
     private float attackRange;
     private float attactRate;
     private float attactTimer;
-    private float attackDamage;
     private float xScale;
     private float healthBgXScale;
 
@@ -63,7 +62,6 @@ public class AllyBase : MonoBehaviour
         moveSpeed = allyDetailsSo.allyBaseMoveSpeed;
         attackRange = allyDetailsSo.allyBaseAttackRange;
         attactRate = allyDetailsSo.allyBaseAttackDelay;
-        attackDamage = allyDetailsSo.allyBaseAttackDamage;
         xScale = transform.localScale.x;
         healthBgXScale = healthUiBar.rectTransform.localScale.x;
 
@@ -201,7 +199,7 @@ public class AllyBase : MonoBehaviour
             return;
         }
         
-        targetEnemy.OnDamage(attackDamage);
+        targetEnemy.OnDamage(allyDetailsSo.attackPower, allyDetailsSo.spellPower);
     }
     
     private IEnumerator HitRoutine()
@@ -222,9 +220,9 @@ public class AllyBase : MonoBehaviour
         targetEnemy = null;
     }
 
-    public void OnDamage(float damage)
+    public void OnDamage(float attackPower, float spellPower)
     {
-        curHealth -= damage;
+        curHealth -= (attackPower - (attackPower * (allyDetailsSo.defense * 0.01f))) + (spellPower - (spellPower * (allyDetailsSo.magicResistance * 0.01f)));
         
         if (curHealth <= 0)
         {

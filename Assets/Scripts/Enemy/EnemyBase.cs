@@ -22,7 +22,6 @@ public class EnemyBase : MonoBehaviour
     private float attackTimer;
     private float attackRange;
     private float moveSpeed;
-    private float attackDamage;
     private float xScale;
     private float healthBgXScale;
     
@@ -194,7 +193,7 @@ public class EnemyBase : MonoBehaviour
             return;
         }
         
-        targetAlly.OnDamage(attackDamage);
+        targetAlly.OnDamage(enemyDetailsSo.attackPower, enemyDetailsSo.spellPower);
     }
     
     private IEnumerator HitRoutine()
@@ -229,9 +228,9 @@ public class EnemyBase : MonoBehaviour
         Targeting = false;
     }
 
-    public void OnDamage(float damage)
+    public void OnDamage(float attackPower, float spellPower)
     {
-        curHealth -= damage;
+        curHealth -= (attackPower - (attackPower * (enemyDetailsSo.defense * 0.01f))) + (spellPower - (spellPower * (enemyDetailsSo.magicResistance * 0.01f)));
 
         if (curHealth <= 0)
         {

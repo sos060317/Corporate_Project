@@ -18,4 +18,8 @@ MonoBehaviour:
   allyBaseAttackDelay: 1
   allyBaseAttackRange: 0.4
   allyBaseAttackDamage: 20
+  defense: 0
+  magicResistance: 0
+  attackPower: 20
+  spellPower: 0
   allyPrefab: {fileID: 7729813741705156868, guid: 5d1f8bff958685f4ea8fb0ae9b890510, type: 3}
