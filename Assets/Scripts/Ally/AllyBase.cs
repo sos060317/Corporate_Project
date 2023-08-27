@@ -15,7 +15,7 @@ public class AllyBase : MonoBehaviour
     
     [SerializeField] private float scanRange;
 
-    [HideInInspector] public bool targeting;
+     public bool targeting;
 
     public Action DieEvent;
 
@@ -39,7 +39,7 @@ public class AllyBase : MonoBehaviour
     private Animator anim;
     private WaitForSeconds hitDelay;
     
-    private EnemyBase targetEnemy;
+    public EnemyBase targetEnemy;
 
     private void OnEnable()
     {
@@ -293,7 +293,7 @@ public class AllyBase : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.white;
         
         Gizmos.DrawWireSphere(transform.position, scanRange);
     }

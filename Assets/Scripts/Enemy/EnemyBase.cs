@@ -12,7 +12,7 @@ public abstract class EnemyBase : MonoBehaviour
     [SerializeField] private Image healthUiBg;
     [SerializeField] private Image healthUiBar;
 
-    [HideInInspector] public bool Targeting;
+     public bool Targeting;
     
     private int movePosIndex;
 
@@ -183,7 +183,7 @@ public abstract class EnemyBase : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void SetTarget(AllyBase ally)
+    public virtual void SetTarget(AllyBase ally)
     {
         if (targetAlly != null)
         {
@@ -192,13 +192,13 @@ public abstract class EnemyBase : MonoBehaviour
         
         targetAlly = ally;
 
-        targetAlly.DieEvent += DeleteTarget;
+        ally.DieEvent += DeleteTarget;
         
         isTargeting = true;
         Targeting = true;
     }
 
-    public void DeleteTarget()
+    protected void DeleteTarget()
     {
         isTargeting = false;
         canMove = true;
@@ -208,7 +208,29 @@ public abstract class EnemyBase : MonoBehaviour
         Targeting = false;
     }
 
-    public abstract void OnDamage(float attackPower, float spellPower);
+    public virtual void OnDamage(float attackPower, float spellPower)
+    {
+        curHealth -= (attackPower - (attackPower * (enemyDetailsSo.defense * 0.01f))) + (spellPower - (spellPower * (enemyDetailsSo.magicResistance * 0.01f)));
+
+        if (curHealth <= 0)
+        {
+            // 죽는 로직
+
+            transform.GetComponent<Collider2D>().enabled = false;
+            
+            isDie = true;
+            
+            if (targetAlly != null)
+            {
+                targetAlly.DeleteTarget();
+            }
+            
+            anim.SetTrigger("Die");
+            return;
+        }
+        
+        StartCoroutine(HitRoutine());
+    }
 
     public void InitEnemy(Vector2[] movePoints, EnemyDetailsSO enemyDetailsSo)
     {

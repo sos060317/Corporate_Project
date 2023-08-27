@@ -11,6 +11,11 @@ public class Enemy_Hedgehog : EnemyBase
     
     protected override void Update()
     {
+        if (isDie)
+        {
+            return;
+        }
+        
         base.Update();
         
         CheckTarget();
@@ -38,14 +43,14 @@ public class Enemy_Hedgehog : EnemyBase
                     
                     targetAlly = target.gameObject.GetComponent<AllyBase>();
                     
-                    targetAlly.DieEvent += DeleteTarget;
+                    target.gameObject.GetComponent<AllyBase>().DieEvent += DeleteTarget;
                     
                     isAttacking = true;
                     isTargeting = true;
                     canMove = false;
                     targetAlly.targeting = true;
 
-                    return;
+                    break;
                 }
             }
         }
@@ -112,6 +117,8 @@ public class Enemy_Hedgehog : EnemyBase
 
             isDie = true;
             
+            transform.GetComponent<Collider2D>().enabled = false;
+            
             if (targetAlly != null)
             {
                 targetAlly.DeleteTarget();
@@ -123,6 +130,22 @@ public class Enemy_Hedgehog : EnemyBase
         }
         
         StartCoroutine(HitRoutine());
+    }
+
+    public override void SetTarget(AllyBase ally)
+    {
+        if (targetAlly != null)
+        {
+            targetAlly.DieEvent -= DeleteTarget;
+            targetAlly.targeting = false;
+        }
+        
+        targetAlly = ally;
+
+        ally.DieEvent += DeleteTarget;
+        
+        isTargeting = true;
+        Targeting = true;
     }
 
     private void OnDrawGizmos()
