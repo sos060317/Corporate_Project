@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Enemy_AC_Hedgehog
+  m_Controller: {fileID: 9100000, guid: 453218a88846af440b71b646f5c65ebb, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: c293090ae8d12b8489fadeb8f54a27c7, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b871cbfb86be4c941a57619e826dc995, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 59c64f9524e71424e987c13e81fc91e4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: caea384c4fab55b468aacf0dbb9dc5fa, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4080e30760b150e4ab2f10d10f619766, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 00b9d49a6e4f04b46b247fb99b6a57d1, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 98d900a0e7757e648aa1597e11b89275, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2ec13f6d0af48b04fb8792e222b12892, type: 2}

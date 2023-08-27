@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
-public class EnemyBase : MonoBehaviour
+public abstract class EnemyBase : MonoBehaviour
 {
     [SerializeField] private Material hitMaterial;
     [SerializeField] private Material defaultMaterial;
@@ -16,30 +16,31 @@ public class EnemyBase : MonoBehaviour
     
     private int movePosIndex;
 
-    private float maxHealth;
-    private float curHealth;
-    private float attackRate;
-    private float attackTimer;
-    private float attackRange;
-    private float moveSpeed;
-    private float xScale;
-    private float healthBgXScale;
+    protected float maxHealth;
+    protected float curHealth;
+    protected float attackRate;
+    protected float attackTimer;
+    protected float attackRange;
+    protected float moveSpeed;
+    protected float xScale;
+    protected float healthBgXScale;
     
-    private bool canMove = true;
-    private bool isTargeting = false;
-    private bool isAttacking = false;
-    private bool isDie = false;
-    private bool attack = false;
+    protected bool canMove = true;
+    protected bool isTargeting = false;
+    protected bool isAttacking = false;
+    protected bool isDie = false;
+    protected bool attack = false;
     
     private Vector2[] movePoints;
     private Vector2 moveOffset;
 
     private SpriteRenderer sr;
     private EnemyDetailsSO enemyDetailsSo;
-    private Animator anim;
     private WaitForSeconds hitDelay;
+    
+    protected Animator anim;
 
-    private AllyBase targetAlly;
+    protected AllyBase targetAlly;
 
     private void Start()
     {
@@ -60,7 +61,7 @@ public class EnemyBase : MonoBehaviour
         Targeting = false;
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         MoveUpdate();
         AttackUpdate();
@@ -92,19 +93,11 @@ public class EnemyBase : MonoBehaviour
             
             if (dir.x < 0)
             {
-                transform.localScale =
-                    new Vector3(-xScale, transform.localScale.y, transform.localScale.z);
-                
-                healthUiBg.rectTransform.localScale = new Vector3(-healthBgXScale, healthUiBg.rectTransform.localScale.y,
-                    healthUiBg.rectTransform.localScale.z);
+                FlipFunction(-1);
             }
             else
             {
-                transform.localScale =
-                    new Vector3(xScale, transform.localScale.y, transform.localScale.z);
-                
-                healthUiBg.rectTransform.localScale = new Vector3(healthBgXScale, healthUiBg.rectTransform.localScale.y,
-                    healthUiBg.rectTransform.localScale.z);
+                FlipFunction(1);
             }
 
             if (Vector2.Distance(transform.position, targetAlly.transform.position ) <= attackRange)
@@ -121,19 +114,11 @@ public class EnemyBase : MonoBehaviour
         
         if (nextPos.x < 0)
         {
-            transform.localScale =
-                new Vector3(-xScale, transform.localScale.y, transform.localScale.z);
-            
-            healthUiBg.rectTransform.localScale = new Vector3(-healthBgXScale, healthUiBg.rectTransform.localScale.y,
-                healthUiBg.rectTransform.localScale.z);
+            FlipFunction(-1);
         }
         else
         {
-            transform.localScale =
-                new Vector3(xScale, transform.localScale.y, transform.localScale.z);
-            
-            healthUiBg.rectTransform.localScale = new Vector3(healthBgXScale, healthUiBg.rectTransform.localScale.y,
-                healthUiBg.rectTransform.localScale.z);
+            FlipFunction(1);
         }
 
         if (Vector2.Distance(transform.position - (Vector3)(moveOffset), movePoints[movePosIndex]) <= 0.01f)
@@ -148,36 +133,21 @@ public class EnemyBase : MonoBehaviour
         }
     }
     
+    private void FlipFunction(int index)
+    {
+        transform.localScale =
+            new Vector3(xScale * index, transform.localScale.y, transform.localScale.z);
+
+        healthUiBg.rectTransform.localScale = new Vector3(healthBgXScale * index, healthUiBg.rectTransform.localScale.y,
+            healthUiBg.rectTransform.localScale.z);
+    }
+    
     private void AnimationUpdate()
     {
         anim.SetBool("isRun", canMove);
     }
-    
-    private void AttackUpdate()
-    {
-        if (!isAttacking || targetAlly == null)
-        {
-            return;
-        }
 
-        if (attackTimer >= attackRate && !isDie)
-        {
-            // 공격 로직
-            
-            anim.SetTrigger("Attack");
-            
-            attackTimer = 0f;
-
-            attack = true;
-        }
-
-        if (attack)
-        {
-            return;
-        }
-        
-        attackTimer += Time.deltaTime;
-    }
+    protected abstract void AttackUpdate();
     
     // 애니메이션 이벤트에서 사용할 함수.
     private void AttackEnd()

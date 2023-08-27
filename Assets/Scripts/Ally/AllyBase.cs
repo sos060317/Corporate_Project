@@ -105,11 +105,11 @@ public class AllyBase : MonoBehaviour
             
             if (dir.x < 0)
             {
-                FilpFunction(-1);
+                FlipFunction(-1);
             }
             else
             {
-                FilpFunction(1);
+                FlipFunction(1);
             }
 
             isRun = true;
@@ -124,7 +124,7 @@ public class AllyBase : MonoBehaviour
     }
 
 
-    private void FilpFunction(int index)
+    private void FlipFunction(int index)
     {
         transform.localScale =
             new Vector3(xScale * index, transform.localScale.y, transform.localScale.z);
@@ -259,11 +259,11 @@ public class AllyBase : MonoBehaviour
         
         if (dir.x < 0)
         {
-            FilpFunction(-1);
+            FlipFunction(-1);
         }
         else
         {
-            FilpFunction(1);
+            FlipFunction(1);
         }
     }
 

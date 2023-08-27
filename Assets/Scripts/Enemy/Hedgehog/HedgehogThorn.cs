@@ -10,14 +10,7 @@ public class HedgehogThorn : MonoBehaviour
     [SerializeField] private float duration = 1.0f;
     [SerializeField] private float heightY = 3.0f;
 
-    public Vector2 endPos;
-
-    private void Start()
-    {
-        StartCoroutine(Curve(transform.position, endPos));
-    }
-
-    public IEnumerator Curve(Vector3 start, Vector2 target)
+    public IEnumerator Curve(Vector3 start, Vector2 target, AllyBase ally, float damage)
     {
         float timePassed = 0f;
 
@@ -40,6 +33,12 @@ public class HedgehogThorn : MonoBehaviour
             transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
             
             transform.position = nextPos;
+
+            if (Vector2.Distance(transform.position, ally.transform.position) <= 0.1f)
+            {
+                ally.OnDamage(damage, 0);
+                Destroy(gameObject);
+            }
 
             yield return null;
         }
