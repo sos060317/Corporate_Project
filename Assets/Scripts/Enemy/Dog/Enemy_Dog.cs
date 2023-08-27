@@ -33,4 +33,26 @@ public class Enemy_Dog : EnemyBase
         
         attackTimer += Time.deltaTime;
     }
+
+    public override void OnDamage(float attackPower, float spellPower)
+    {
+        curHealth -= (attackPower - (attackPower * (enemyDetailsSo.defense * 0.01f))) + (spellPower - (spellPower * (enemyDetailsSo.magicResistance * 0.01f)));
+
+        if (curHealth <= 0)
+        {
+            // 죽는 로직
+
+            isDie = true;
+            
+            if (targetAlly != null)
+            {
+                targetAlly.DeleteTarget();
+            }
+            
+            anim.SetTrigger("Die");
+            return;
+        }
+        
+        StartCoroutine(HitRoutine());
+    }
 }

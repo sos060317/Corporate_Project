@@ -16,14 +16,10 @@ public abstract class EnemyBase : MonoBehaviour
     
     private int movePosIndex;
 
-    protected float maxHealth;
-    protected float curHealth;
-    protected float attackRate;
-    protected float attackTimer;
-    protected float attackRange;
-    protected float moveSpeed;
-    protected float xScale;
-    protected float healthBgXScale;
+    private float maxHealth;
+    private float moveSpeed;
+    private float xScale;
+    private float healthBgXScale;
     
     protected bool canMove = true;
     protected bool isTargeting = false;
@@ -35,8 +31,14 @@ public abstract class EnemyBase : MonoBehaviour
     private Vector2 moveOffset;
 
     private SpriteRenderer sr;
-    private EnemyDetailsSO enemyDetailsSo;
     private WaitForSeconds hitDelay;
+    
+    protected float curHealth;
+    protected float attackRate;
+    protected float attackTimer;
+    protected float attackRange;
+    
+    protected EnemyDetailsSO enemyDetailsSo;
     
     protected Animator anim;
 
@@ -166,7 +168,7 @@ public abstract class EnemyBase : MonoBehaviour
         targetAlly.OnDamage(enemyDetailsSo.attackPower, enemyDetailsSo.spellPower);
     }
     
-    private IEnumerator HitRoutine()
+    protected IEnumerator HitRoutine()
     {
         sr.material = hitMaterial;
 
@@ -183,7 +185,15 @@ public abstract class EnemyBase : MonoBehaviour
 
     public void SetTarget(AllyBase ally)
     {
+        if (targetAlly != null)
+        {
+            targetAlly.DieEvent -= DeleteTarget;
+        }
+        
         targetAlly = ally;
+
+        targetAlly.DieEvent += DeleteTarget;
+        
         isTargeting = true;
         Targeting = true;
     }
@@ -198,22 +208,7 @@ public abstract class EnemyBase : MonoBehaviour
         Targeting = false;
     }
 
-    public void OnDamage(float attackPower, float spellPower)
-    {
-        curHealth -= (attackPower - (attackPower * (enemyDetailsSo.defense * 0.01f))) + (spellPower - (spellPower * (enemyDetailsSo.magicResistance * 0.01f)));
-
-        if (curHealth <= 0)
-        {
-            // 죽는 로직
-
-            isDie = true;
-            targetAlly.DeleteTarget();
-            anim.SetTrigger("Die");
-            return;
-        }
-        
-        StartCoroutine(HitRoutine());
-    }
+    public abstract void OnDamage(float attackPower, float spellPower);
 
     public void InitEnemy(Vector2[] movePoints, EnemyDetailsSO enemyDetailsSo)
     {

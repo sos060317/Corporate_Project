@@ -17,6 +17,8 @@ public class AllyBase : MonoBehaviour
 
     [HideInInspector] public bool targeting;
 
+    public Action DieEvent;
+
     private float maxHealth;
     private float curHealth;
     private float moveSpeed;
@@ -71,6 +73,11 @@ public class AllyBase : MonoBehaviour
 
     private void Update()
     {
+        if (isDie)
+        {
+            return;
+        }
+        
         MoveUpdate();
         AttackUpdate();
         AnimationUpdate();
@@ -78,6 +85,11 @@ public class AllyBase : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (isDie)
+        {
+            return;
+        }
+        
         CheckTarget();
     }
 
@@ -171,16 +183,21 @@ public class AllyBase : MonoBehaviour
             return;
         }
         
-        var target = Physics2D.OverlapCircle(transform.position, scanRange, scanLayer);
+        Collider2D[] targets = Physics2D.OverlapCircleAll(transform.position, scanRange, scanLayer);
 
-        if (target != null)
+        if (targets != null)
         {
-            if (!target.GetComponent<EnemyBase>().Targeting)
+            foreach (var target in targets)
             {
-                targetEnemy = target.gameObject.GetComponent<EnemyBase>();
-                targetEnemy.SetTarget(this);
-                targetEnemy.Targeting = true;
-                isTargeting = true;
+                if (!target.GetComponent<EnemyBase>().Targeting)
+                {
+                    targetEnemy = target.gameObject.GetComponent<EnemyBase>();
+                    targetEnemy.SetTarget(this);
+                    targetEnemy.Targeting = true;
+                    isTargeting = true;
+
+                    return;
+                }
             }
         }
     }
@@ -229,7 +246,13 @@ public class AllyBase : MonoBehaviour
             // 죽는 로직
 
             isDie = true;
-            targetEnemy.DeleteTarget();
+
+            targeting = false;
+            
+            DieEvent?.Invoke();
+
+            transform.GetComponent<Collider2D>().enabled = false;
+            
             anim.SetTrigger("Die");
             return;
         }
@@ -240,6 +263,7 @@ public class AllyBase : MonoBehaviour
     // 애니메이션 이벤트에 사용할 함수.
     private void SetActiveFalse()
     {
+        targeting = false;
         gameObject.SetActive(false);
     }
 

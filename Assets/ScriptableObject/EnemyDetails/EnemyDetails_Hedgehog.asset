@@ -16,9 +16,9 @@ MonoBehaviour:
   enemyBaseHealth: 100
   enemyBaseMoveSpeed: 2
   enemyBaseAttackRate: 2
-  enemyBaseAttackRange: 0.4
+  enemyBaseAttackRange: 3
   defense: 0
   magicResistance: 0
   attackPower: 10
   spellPower: 0
-  enemyPrefab: {fileID: 1902716591323251924, guid: f88695b99f218d6499c24906e23267c2, type: 3}
+  enemyPrefab: {fileID: 388473290193081027, guid: f88695b99f218d6499c24906e23267c2, type: 3}
