@@ -61,11 +61,17 @@ public class Node : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        sr.color = overColor;
+        if (sr.color.a != 0)
+        {
+            sr.color = overColor;
+        }
     }
 
     private void OnMouseExit()
     {
-        sr.color = nomalColor;
+        if (sr.color.a != 0)
+        {
+            sr.color = overColor;
+        }
     }
 }
