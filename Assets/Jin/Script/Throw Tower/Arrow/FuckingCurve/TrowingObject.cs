@@ -130,9 +130,8 @@ public class TrowingObject : MonoBehaviour
             {
                 if (collider.CompareTag(damageTag))
                 {
-                    Debug.Log("How");
-                    enemybase.OnDamage(attackPower, Damage); // 만약 이 오브젝트가 남아있다면 오류가 나서 그런거임 
-                }                                        // 아마도 성우 코드 고치면 사라질껄? 아마도?
+                    collider.GetComponent<EnemyBase>().OnDamage(attackPower, Damage);
+                }
             }
 
             yield return new WaitForSeconds(0.1f);

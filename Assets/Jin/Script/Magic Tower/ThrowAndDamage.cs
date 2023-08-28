@@ -51,7 +51,7 @@ public class ThrowAndDamage : MonoBehaviour
 
 
     private EnemyBase enemybase;
-    private float spellPower;
+    private float spellPower = 20;
 
     public string enemyTag = "FlowingPos";
     public float speed = 10f;
@@ -104,7 +104,8 @@ public class ThrowAndDamage : MonoBehaviour
                     if (collider.CompareTag(DamageTag))
                     {
                         Debug.Log("How");
-                        enemybase.OnDamage(spellPower, Damage);
+                        collider.GetComponent<EnemyBase>().OnDamage(0, spellPower);
+                        //enemybase.OnDamage(spellPower, Damage);
                     }
                 }
 

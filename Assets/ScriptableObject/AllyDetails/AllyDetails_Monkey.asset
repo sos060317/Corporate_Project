@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allyName: 
   allyBaseHealth: 100
-  allyBaseMoveSpeed: 2
+  allyBaseMoveSpeed: 1
   allyBaseAttackDelay: 1
   allyBaseAttackRange: 0.4
   allyBaseAttackDamage: 20

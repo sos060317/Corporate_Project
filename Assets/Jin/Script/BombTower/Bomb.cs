@@ -82,7 +82,7 @@ public class Bomb : MonoBehaviour
     //}
 
     private EnemyBase enemybase;
-    private float attackPower;
+    private float attackPower = 20;
 
     public AnimationCurve curve;
     public float duration = 1.0f;
@@ -171,6 +171,7 @@ public class Bomb : MonoBehaviour
                         if (collider.CompareTag(DamageTag))
                         {
                             Debug.Log("How");
+                            collider.GetComponent<EnemyBase>().OnDamage(attackPower, Damage);
                             // enemybase.OnDamage(attackPower, Damage);
                             // OnDamage 함수 호출 코드가 필요합니다.
                             damageDealt = true; // 데미지 주었음을 표시
