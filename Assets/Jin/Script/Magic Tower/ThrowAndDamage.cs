@@ -105,6 +105,7 @@ public class ThrowAndDamage : MonoBehaviour
                     {
                         Debug.Log("How");
                         collider.GetComponent<EnemyBase>().OnDamage(0, spellPower);
+                        break;
                         //enemybase.OnDamage(spellPower, Damage);
                     }
                 }

@@ -131,6 +131,7 @@ public class TrowingObject : MonoBehaviour
                 if (collider.CompareTag(damageTag))
                 {
                     collider.GetComponent<EnemyBase>().OnDamage(attackPower, Damage);
+                    break;
                 }
             }
 
