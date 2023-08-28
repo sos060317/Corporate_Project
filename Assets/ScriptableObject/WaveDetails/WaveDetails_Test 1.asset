@@ -24,10 +24,19 @@ MonoBehaviour:
       nextEnemyDelay: 3
   - waveDatas:
     - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 10
+      enemySpawnCount: 5
       enemySpawnInterval: 1
       nextEnemyDelay: 3
     - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 10
+      enemySpawnCount: 3
+      enemySpawnInterval: 1
+      nextEnemyDelay: 2
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 3
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+    - enemyType: {fileID: 11400000, guid: 7584a0e377f8c0847b41c04f521485d5, type: 2}
+      enemySpawnCount: 3
       enemySpawnInterval: 1
       nextEnemyDelay: 2
