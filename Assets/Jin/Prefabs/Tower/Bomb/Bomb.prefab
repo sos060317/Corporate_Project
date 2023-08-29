@@ -132,4 +132,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   duration: 0.78
   maxHeightY: 4
-  enemyTag: FlowingPos
+  enemyTag: BombPos
+  DamageTag: Enemy
+  damageAreaRadius: 2
+  Damage: 50

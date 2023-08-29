@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7292649999794134348}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: FlowingPos
-  m_TagString: FlowingPos
+  m_TagString: BombPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

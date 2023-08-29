@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3562389828438803397}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: MovePos
-  m_TagString: FlowingPos
+  m_TagString: MagicPos
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

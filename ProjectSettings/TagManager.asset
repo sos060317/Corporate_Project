@@ -9,6 +9,8 @@ TagManager:
   - SpawnTower
   - Tree Branch
   - FlowingPos
+  - BombPos
+  - MagicPos
   layers:
   - Default
   - TransparentFX
@@ -21,8 +23,8 @@ TagManager:
   - SpawnTower
   - Ally
   - FlowingPos
-  - 
-  - 
+  - BombPos
+  - Magicpos
   - 
   - 
   - 
