@@ -23,7 +23,7 @@ public class Spawner : MonoBehaviour
         // 각 Prefab이 없어졌을 때, 3초 후에 다시 생성
         for (int i = 0; i < spawnedObjects.Count; i++)
         {
-            if (spawnedObjects[i] == null)
+            if (spawnedObjects[i].activeSelf == false)
             {
                 StartCoroutine(SpawnPrefabDelayed(prefabsToSpawn[i], 3f));
                 spawnedObjects.RemoveAt(i); 
