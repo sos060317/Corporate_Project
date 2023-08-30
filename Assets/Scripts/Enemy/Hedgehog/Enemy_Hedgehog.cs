@@ -65,10 +65,10 @@ public class Enemy_Hedgehog : EnemyBase
         
         if (Vector2.Distance(transform.position, targetAlly.transform.position ) >= enemyDetailsSo.enemyBaseAttackRange + 1)
         {
-            Debug.Log("a");
             canMove = true;
             isAttacking = false;
             isTargeting = false;
+            targetAlly = null;
         }
 
         if (attackTimer >= attackRate && !isDie)
