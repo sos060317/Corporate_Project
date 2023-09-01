@@ -21,4 +21,4 @@ MonoBehaviour:
   magicResistance: 20
   attackPower: 15
   spellPower: 0
-  enemyPrefab: {fileID: 0}
+  enemyPrefab: {fileID: 6892805195981400713, guid: d36073761df0e294a9a51a078b3ec20a, type: 3}
