@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45e79536c5d12114a81e26079da7d0b3, type: 3}
-  m_Name: EnemyDetails_Hedgehog
+  m_Name: EnemyDetails_Armadillo
   m_EditorClassIdentifier: 
-  enemyName: "\uACE0\uC2B4\uB3C4\uCE58"
+  enemyName: "\uC544\uB974\uB9C8\uB51C\uB85C"
   enemyBaseHealth: 100
-  enemyBaseMoveSpeed: 1.3
-  enemyBaseAttackRate: 2
-  enemyBaseAttackRange: 3
+  enemyBaseMoveSpeed: 2
+  enemyBaseAttackRate: 1
+  enemyBaseAttackRange: 0.4
   defense: 0
-  magicResistance: 0
-  attackPower: 10
+  magicResistance: 20
+  attackPower: 15
   spellPower: 0
-  enemyPrefab: {fileID: 388473290193081027, guid: f88695b99f218d6499c24906e23267c2, type: 3}
+  enemyPrefab: {fileID: 6892805195981400713, guid: d36073761df0e294a9a51a078b3ec20a, type: 3}
