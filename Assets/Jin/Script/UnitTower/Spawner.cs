@@ -60,16 +60,19 @@ public class Spawner : MonoBehaviour
     //}
 
     public TowerTemplate towerTemplate;
+
     private PlayerGold playerGold;
     private int level = 0;
     private int currentUnitCount = 0; // 현재 소환된 유닛 수
 
-    public int SpawnCount = 3;
     public List<GameObject> prefabsToSpawn; // Prefab을 넣을 수 있는 List
     public Transform parentTransform; // 부모로 설정할 Transform
     public float SpawnTime = 5f;
 
     private List<GameObject> spawnedObjects = new List<GameObject>();
+
+    public GameObject Round;
+
 
     private void Start()
     {
@@ -79,20 +82,20 @@ public class Spawner : MonoBehaviour
 
     private void SpawnInitialUnits()
     {
-        currentUnitCount = 0; // 초기화
+        currentUnitCount = 0;
         SpawnUnits(towerTemplate.weapon[level].MaxUnit);
     }
 
     private void Update()
     {
-        // 업그레이드 로직은 여기에 추가
-
-        // 유닛 체크 및 추가 소환 로직
         if (currentUnitCount < towerTemplate.weapon[level].MaxUnit)
         {
             int unitsToSpawn = towerTemplate.weapon[level].MaxUnit - currentUnitCount;
             SpawnUnits(unitsToSpawn);
         }
+
+        float radius = towerTemplate.weapon[level].radius;
+        Round.transform.localScale = new Vector3(radius, radius, radius);
     }
 
     private void SpawnUnits(int count)

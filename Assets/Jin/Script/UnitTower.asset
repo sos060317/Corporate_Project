@@ -12,25 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 341266600dabcaa49b837723be10791b, type: 3}
   m_Name: UnitTower
   m_EditorClassIdentifier: 
-  UnitTowerPrefab: {fileID: 9149477779743725172, guid: 91d91b332021c7f49946aca91da58446, type: 3}
+  UnitTowerPrefab: {fileID: 6657359522095291632, guid: 91d91b332021c7f49946aca91da58446, type: 3}
   weapon:
   - Unitdamage: 20
     UnitHp: 100
+    radius: 7
     SpawnTime: 5
     MaxUnit: 3
     cost: 100
   - Unitdamage: 30
     UnitHp: 150
+    radius: 7
     SpawnTime: 5
     MaxUnit: 3
     cost: 150
   - Unitdamage: 30
     UnitHp: 150
-    SpawnTime: 3.5
+    radius: 8.5
+    SpawnTime: 4
     MaxUnit: 3
     cost: 220
   - Unitdamage: 30
-    UnitHp: 150
-    SpawnTime: 3.5
+    UnitHp: 170
+    radius: 8.5
+    SpawnTime: 4
     MaxUnit: 4
     cost: 300

@@ -111,8 +111,6 @@ public class GameUnitChake : MonoBehaviour
 
 
     // 세이브용  |  위
- 
-
 
     public GameObject Tower;
     public GameObject Range;
@@ -134,12 +132,15 @@ public class GameUnitChake : MonoBehaviour
         {
             clicked = true;
             SelectUnitsInTower();
+
             Range.SetActive(true); // Tower 클릭 시 Range 활성화
         }
     }
 
     private void Update()
     {
+        
+
         selectedUnitRTSList.RemoveAll(item => item == null);
         for (int i = selectedUnitRTSList.Count - 1; i >= 0; i--)
         {

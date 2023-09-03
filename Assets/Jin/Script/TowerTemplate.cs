@@ -14,6 +14,7 @@ public class TowerTemplate : ScriptableObject
         //public GameObject sprite;         // 아마도 오브젝트로 넣지 않을까?
         public float Unitdamage;            // Unit 데미지
         public float UnitHp;                // UnitHp
+        public float radius;
         public float SpawnTime;             // 스폰 시간
         public int MaxUnit;                 // 아마도 유닛?
         public int cost;                    // 비용
