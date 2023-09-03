@@ -100,11 +100,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e7e74c0c0ae784f85177e6f27f71bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerTemplate: {fileID: 11400000, guid: 9f9a7552b7fd1184b89604ed5a0a67cf, type: 2}
+  SpawnCount: 3
   prefabsToSpawn:
   - {fileID: 6869279931616084616, guid: 1b0cc7c8f37e7e34c9a82c33fc0412ba, type: 3}
   - {fileID: 6869279931616084616, guid: 1b0cc7c8f37e7e34c9a82c33fc0412ba, type: 3}
   - {fileID: 6869279931616084616, guid: 1b0cc7c8f37e7e34c9a82c33fc0412ba, type: 3}
   parentTransform: {fileID: 8778266224339022145}
+  SpawnTime: 5
 --- !u!61 &8778266224339022146
 BoxCollider2D:
   m_ObjectHideFlags: 0

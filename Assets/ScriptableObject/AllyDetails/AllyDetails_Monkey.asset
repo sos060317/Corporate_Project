@@ -23,3 +23,4 @@ MonoBehaviour:
   attackPower: 20
   spellPower: 0
   allyPrefab: {fileID: 7729813741705156868, guid: 5d1f8bff958685f4ea8fb0ae9b890510, type: 3}
+  profileImage: {fileID: 896939951, guid: 940f41b15722f20429ae2489c3700750, type: 3}

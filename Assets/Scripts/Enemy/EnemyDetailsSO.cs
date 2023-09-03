@@ -51,4 +51,12 @@ public class EnemyDetailsSO : ScriptableObject
     #endregion
 
     public GameObject enemyPrefab;
+
+    #region Header
+
+    [Space(10)] [Header("UI 관련")]
+
+    #endregion
+
+    public Sprite profileImage;
 }

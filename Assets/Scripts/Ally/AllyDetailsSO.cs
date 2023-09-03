@@ -52,4 +52,12 @@ public class AllyDetailsSO : ScriptableObject
     #endregion
 
     public GameObject allyPrefab;
+
+    #region Header
+
+    [Space(10)] [Header("UI 관련")]
+
+    #endregion
+
+    public Sprite profileImage;
 }

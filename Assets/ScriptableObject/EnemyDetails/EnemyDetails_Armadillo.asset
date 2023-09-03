@@ -22,3 +22,4 @@ MonoBehaviour:
   attackPower: 15
   spellPower: 0
   enemyPrefab: {fileID: 6892805195981400713, guid: d36073761df0e294a9a51a078b3ec20a, type: 3}
+  profileImage: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}

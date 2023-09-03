@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class AllyBase : MonoBehaviour
 {
     [SerializeField] private LayerMask scanLayer;
-    [SerializeField] private AllyDetailsSO allyDetailsSo;
+    [SerializeField] public AllyDetailsSO allyDetailsSo;
     [SerializeField] private Material hitMaterial;
     [SerializeField] private Material defaultMaterial;
     [SerializeField] private Image healthUiBg;
@@ -17,10 +18,11 @@ public class AllyBase : MonoBehaviour
 
     [HideInInspector] public bool targeting;
 
+    [HideInInspector] public float curHealth;
+    
     public Action EnemyUnTargetingEvent;
 
     private float maxHealth;
-    private float curHealth;
     private float moveSpeed;
     private float attackRange;
     private float attactRate;
@@ -239,7 +241,10 @@ public class AllyBase : MonoBehaviour
 
     public void OnDamage(float attackPower, float spellPower)
     {
-        curHealth -= (attackPower - (attackPower * (allyDetailsSo.defense * 0.01f))) + (spellPower - (spellPower * (allyDetailsSo.magicResistance * 0.01f)));
+        curHealth =
+            Mathf.Max(
+                curHealth - ((attackPower - (attackPower * (allyDetailsSo.defense * 0.01f))) +
+                             (spellPower - (spellPower * (allyDetailsSo.magicResistance * 0.01f)))), 0);
         
         if (curHealth <= 0)
         {
@@ -292,6 +297,16 @@ public class AllyBase : MonoBehaviour
         {
             FlipFunction(1);
         }
+    }
+    
+    private void OnMouseDown()
+    {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+        
+        HUDManager.Instance.ShowAllyWindow(this);
     }
 
     private void OnDrawGizmos()

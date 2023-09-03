@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
+using UnityEngine.EventSystems;
 
 public abstract class EnemyBase : MonoBehaviour
 {
@@ -33,12 +34,12 @@ public abstract class EnemyBase : MonoBehaviour
     private SpriteRenderer sr;
     private WaitForSeconds hitDelay;
     
-    protected float curHealth;
+    [HideInInspector] public float curHealth;
     protected float attackRate;
     protected float attackTimer;
     protected float attackRange;
     
-    protected EnemyDetailsSO enemyDetailsSo;
+    [HideInInspector] public EnemyDetailsSO enemyDetailsSo;
     
     protected Animator anim;
 
@@ -208,7 +209,10 @@ public abstract class EnemyBase : MonoBehaviour
 
     public virtual void OnDamage(float attackPower, float spellPower) // 물리 , 마법
     {
-        curHealth -= (attackPower - (attackPower * (enemyDetailsSo.defense * 0.01f))) + (spellPower - (spellPower * (enemyDetailsSo.magicResistance * 0.01f)));
+        curHealth =
+            Mathf.Max(
+                curHealth - ((attackPower - (attackPower * (enemyDetailsSo.defense * 0.01f))) +
+                (spellPower - (spellPower * (enemyDetailsSo.magicResistance * 0.01f)))), 0);
 
         if (curHealth <= 0)
         {
@@ -228,6 +232,16 @@ public abstract class EnemyBase : MonoBehaviour
         }
         
         StartCoroutine(HitRoutine());
+    }
+
+    private void OnMouseDown()
+    {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+        
+        HUDManager.Instance.ShowEnemyWindow(this);
     }
 
     public void InitEnemy(Vector2[] movePoints, EnemyDetailsSO enemyDetailsSo)
