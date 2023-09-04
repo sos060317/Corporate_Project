@@ -98,7 +98,7 @@ public class Bomb : MonoBehaviour
                             // enemybase.OnDamage(attackPower, Damage);
                             // OnDamage 함수 호출 코드가 필요합니다.
                             damageDealt = true; // 데미지 주었음을 표시
-                            break; // 더 이상 확인할 필요가 없으므로 루프 종료
+                            //break; // 더 이상 확인할 필요가 없으므로 루프 종료
                         }
                     }
                 }

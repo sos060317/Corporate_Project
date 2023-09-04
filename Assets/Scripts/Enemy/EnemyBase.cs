@@ -221,6 +221,7 @@ public abstract class EnemyBase : MonoBehaviour
             transform.GetComponent<Collider2D>().enabled = false;
             
             isDie = true;
+            canMove = false;
             
             if (targetAlly != null)
             {
