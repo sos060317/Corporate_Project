@@ -59,4 +59,12 @@ public class EnemyDetailsSO : ScriptableObject
     #endregion
 
     public Sprite profileImage;
+
+    #region Header
+
+    [Space(10)] [Header("코인 관련")]
+
+    #endregion
+
+    public int coins;
 }
