@@ -218,6 +218,8 @@ public abstract class EnemyBase : MonoBehaviour
         {
             // 죽는 로직
 
+            GameManager.Instance.GetGold(enemyDetailsSo.coins);
+            
             transform.GetComponent<Collider2D>().enabled = false;
             
             isDie = true;

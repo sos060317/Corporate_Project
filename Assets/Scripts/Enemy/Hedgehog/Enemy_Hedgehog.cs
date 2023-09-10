@@ -109,13 +109,18 @@ public class Enemy_Hedgehog : EnemyBase
 
     public override void OnDamage(float attackPower, float spellPower)
     {
-        curHealth -= (attackPower - (attackPower * (enemyDetailsSo.defense * 0.01f))) + (spellPower - (spellPower * (enemyDetailsSo.magicResistance * 0.01f)));
+        curHealth = 
+            Mathf.Max(
+                curHealth - ((attackPower - (attackPower * (enemyDetailsSo.defense * 0.01f))) + 
+                             (spellPower - (spellPower * (enemyDetailsSo.magicResistance * 0.01f)))), 0);
 
         if (curHealth <= 0)
         {
             // 죽는 로직
 
             isDie = true;
+            
+            GameManager.Instance.GetGold(enemyDetailsSo.coins);
             
             transform.GetComponent<Collider2D>().enabled = false;
             
