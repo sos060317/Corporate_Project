@@ -4874,7 +4874,7 @@ MonoBehaviour:
         m_MethodName: BuildTower
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 916704655821607024, guid: 1048e610c43894140b84f8ba53f752a4, type: 3}
+          m_ObjectArgument: {fileID: 436306374769745550, guid: 78abbb71781fdc245849bd3fe2194792, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -26411,7 +26411,7 @@ MonoBehaviour:
         m_MethodName: BuildTower
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2131662387810886253, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
+          m_ObjectArgument: {fileID: 8036015310624444776, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -28037,7 +28037,7 @@ MonoBehaviour:
         m_MethodName: BuildTower
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7108412534176524940, guid: a859291005cc5a14199674f8e588ac69, type: 3}
+          m_ObjectArgument: {fileID: 8691131037144156039, guid: a859291005cc5a14199674f8e588ac69, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0

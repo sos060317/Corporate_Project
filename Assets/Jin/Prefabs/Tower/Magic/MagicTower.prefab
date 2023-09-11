@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4061dd9a198bc0b4cb4ea841abfb03eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,12 +100,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MagicPrefab: {fileID: 327585374298066498, guid: 1a491bc5c6c310a49b6bbc47b7d0b490, type: 3}
-  spawnPos: {fileID: 436306375462523278}
+  spawnPositions:
+  - {fileID: 436306375462523278}
   enemyTag: Enemy
   detectionRadius: 5
   FlowingObject: {fileID: 436306375444156881}
   followSpeed: 1000
-  enemyList: []
 --- !u!1 &436306375140747022
 GameObject:
   m_ObjectHideFlags: 0

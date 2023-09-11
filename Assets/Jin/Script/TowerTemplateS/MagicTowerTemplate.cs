@@ -5,10 +5,10 @@ using UnityEngine;
 [CreateAssetMenu]
 public class MagicTowerTemplate : ScriptableObject
 {
-    public Weapon[] weapon;
+    public MWeapon[] mweapon;
 
     [System.Serializable]
-    public struct Weapon
+    public struct MWeapon
     {
         public int LeveL;
         public float damage;

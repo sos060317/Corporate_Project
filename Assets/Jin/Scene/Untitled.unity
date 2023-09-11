@@ -467,6 +467,7 @@ GameObject:
   - component: {fileID: 525242999}
   - component: {fileID: 525243001}
   - component: {fileID: 525243002}
+  - component: {fileID: 525243003}
   m_Layer: 0
   m_Name: MagicTower
   m_TagString: Untagged
@@ -558,12 +559,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MagicPrefab: {fileID: 327585374298066498, guid: 1a491bc5c6c310a49b6bbc47b7d0b490, type: 3}
-  spawnPos: {fileID: 881040758}
+  spawnPositions:
+  - {fileID: 881040758}
+  - {fileID: 433314286}
+  - {fileID: 2045709565}
   enemyTag: Enemy
   detectionRadius: 5
   FlowingObject: {fileID: 1503857623}
   followSpeed: 1000
-  enemyList: []
+--- !u!114 &525243003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525242998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e19da58538486c48a17b5ffca300300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magicTemplate: {fileID: 11400000, guid: 5670774e8af21c045b191e342e0caafd, type: 2}
+  Magiclevel: 0
+  Pos1: {fileID: 881040758}
+  Pos2: {fileID: 433314286}
+  Pos3: {fileID: 2045709565}
 --- !u!1 &575592726
 GameObject:
   m_ObjectHideFlags: 0
@@ -10738,7 +10758,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1095003695
 Transform:
   m_ObjectHideFlags: 0
@@ -10839,8 +10859,32 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1594610448}
+      - m_Target: {fileID: 1426691011}
+        m_TargetAssemblyTypeName: Spawner, Assembly-CSharp
+        m_MethodName: UpgradeTower
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1594610443}
         m_TargetAssemblyTypeName: UpgradeArrowTower, Assembly-CSharp
+        m_MethodName: UpgradeTower
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 525243003}
+        m_TargetAssemblyTypeName: MagicPosCheck, Assembly-CSharp
         m_MethodName: UpgradeTower
         m_Mode: 1
         m_Arguments:
@@ -11007,6 +11051,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1426691011 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2377752368054829537, guid: 91d91b332021c7f49946aca91da58446, type: 3}
+  m_PrefabInstance: {fileID: 2377752368310076239}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e7e74c0c0ae784f85177e6f27f71bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1503857623 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3562389828438803398, guid: 1519787ff3e9b09478e956b5a973561e, type: 3}
@@ -11019,13 +11074,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1594610442 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4052441830535054345, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
-  m_PrefabInstance: {fileID: 4052441829813131011}
+  m_CorrespondingSourceObject: {fileID: 8036015310624444779, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
+  m_PrefabInstance: {fileID: 8036015311714320993}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1594610448 stripped
+--- !u!114 &1594610443 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4052441830535054355, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
-  m_PrefabInstance: {fileID: 4052441829813131011}
+  m_CorrespondingSourceObject: {fileID: 8036015310624444785, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
+  m_PrefabInstance: {fileID: 8036015311714320993}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -16312,60 +16367,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1519787ff3e9b09478e956b5a973561e, type: 3}
---- !u!1001 &4052441829813131011
+--- !u!1001 &8036015311714320993
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 179292984}
     m_Modifications:
-    - target: {fileID: 4052441830535054345, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
+    - target: {fileID: 8036015310624444776, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
+      propertyPath: m_Name
+      value: ArrowTower
+      objectReference: {fileID: 0}
+    - target: {fileID: 8036015310624444779, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4052441830535054345, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
+    - target: {fileID: 8036015310624444779, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.91
       objectReference: {fileID: 0}
-    - target: {fileID: 4052441830535054345, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
+    - target: {fileID: 8036015310624444779, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.1
       objectReference: {fileID: 0}
-    - target: {fileID: 4052441830535054345, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
+    - target: {fileID: 8036015310624444779, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.028429259
       objectReference: {fileID: 0}
-    - target: {fileID: 4052441830535054345, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
+    - target: {fileID: 8036015310624444779, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4052441830535054345, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
+    - target: {fileID: 8036015310624444779, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4052441830535054345, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
+    - target: {fileID: 8036015310624444779, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4052441830535054345, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
+    - target: {fileID: 8036015310624444779, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4052441830535054345, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
+    - target: {fileID: 8036015310624444779, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4052441830535054345, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
+    - target: {fileID: 8036015310624444779, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4052441830535054345, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
+    - target: {fileID: 8036015310624444779, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4052441830535054346, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
-      propertyPath: m_Name
-      value: ArrowTower
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}

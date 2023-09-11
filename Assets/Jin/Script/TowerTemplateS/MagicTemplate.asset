@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7286ce61e04fd1e46a944abe98392e9d, type: 3}
   m_Name: MagicTemplate
   m_EditorClassIdentifier: 
-  weapon:
-  - LeveL: 0
+  mweapon:
+  - LeveL: 1
     damage: 0
-    Mcost: 0
+    Mcost: 150
     Mradius: 0
-  - LeveL: 0
+  - LeveL: 2
     damage: 0
-    Mcost: 0
+    Mcost: 250
     Mradius: 0
-  - LeveL: 0
+  - LeveL: 3
     damage: 0
-    Mcost: 0
+    Mcost: 300
     Mradius: 0
-  - LeveL: 0
+  - LeveL: 4
     damage: 0
-    Mcost: 0
+    Mcost: 400
     Mradius: 0

@@ -80,14 +80,13 @@ public class TowerSetting : MonoBehaviour
     //}
 
     public GameObject MagicPrefab;
-    public GameObject spawnPos;
+    public List<GameObject> spawnPositions = new List<GameObject>();
     public string enemyTag = "Enemy";
     public float detectionRadius = 5.0f;
     public GameObject FlowingObject;
     public float followSpeed = 1000f;
 
-    [SerializeField]
-    public List<GameObject> enemyList = new List<GameObject>();
+    private List<GameObject> enemyList = new List<GameObject>();
     private bool canSpawn = false;
     private float spawnInterval = 1.5f;
     private float timeSinceLastSpawn = 0f;
@@ -119,7 +118,14 @@ public class TowerSetting : MonoBehaviour
             if (timeSinceLastSpawn >= spawnInterval)
             {
                 timeSinceLastSpawn = 0f;
-                SpawnMagic();
+                foreach (GameObject spawnPos in spawnPositions)
+                {
+                    // spawnPos가 활성화되어 있을 때만 소환
+                    if (spawnPos.activeSelf)
+                    {
+                        SpawnMagic(spawnPos);
+                    }
+                }
             }
         }
         else
@@ -138,9 +144,9 @@ public class TowerSetting : MonoBehaviour
         }
     }
 
-    private void SpawnMagic()
+    private void SpawnMagic(GameObject spawnPosition)
     {
-        Instantiate(MagicPrefab, spawnPos.transform.position, Quaternion.identity);
+        Instantiate(MagicPrefab, spawnPosition.transform.position, Quaternion.identity);
     }
 
     private bool IsWithinRadius(Vector2 position)
