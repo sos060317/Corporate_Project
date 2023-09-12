@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class BombTower : MonoBehaviour
 {
+    private GameManager playerGold;
+
+
     public GameObject arrowPrefab;
     public GameObject spawnPos;
     public string enemyTag = "Enemy";
@@ -16,6 +19,23 @@ public class BombTower : MonoBehaviour
     private List<GameObject> enemyList = new List<GameObject>();
     private bool canSpawn = false;
     private float timeSinceLastSpawn = 0f;
+
+    private bool checkCoin = false;
+    public int TestCoste = 150;
+
+
+    private void Start()
+    {
+
+        playerGold = FindObjectOfType<GameManager>();
+        // Testcoin 값만큼 PlayerGold를 처음 한 번만 감소시킵니다.
+        if (!checkCoin)
+        {
+            Debug.Log("d");
+            playerGold.currentGold -= TestCoste;
+            checkCoin = true;
+        }
+    }
 
     private void Update()
     {

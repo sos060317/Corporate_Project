@@ -194,6 +194,7 @@ MonoBehaviour:
   Pos1: {fileID: 8036015311734093103}
   Pos2: {fileID: 8036015311550706674}
   Pos3: {fileID: 8036015311923482117}
+  Testcoin: 100
 --- !u!1 &8036015311550706674
 GameObject:
   m_ObjectHideFlags: 0

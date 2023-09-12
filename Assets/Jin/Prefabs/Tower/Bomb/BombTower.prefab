@@ -139,6 +139,7 @@ MonoBehaviour:
   followSpeed: 10000
   spawnInterval: 2
   enemyList: []
+  TestCoste: 220
 --- !u!114 &6219008420406673524
 MonoBehaviour:
   m_ObjectHideFlags: 0

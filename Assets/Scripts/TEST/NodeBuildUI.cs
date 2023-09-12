@@ -63,6 +63,7 @@ public class NodeBuildUI : MonoBehaviour
 
     public void BuildTower(GameObject towerPrefab)
     {
+
         selectNode.BuildTower(towerPrefab);
         
         BuildManager.Instance.DeselectNode();

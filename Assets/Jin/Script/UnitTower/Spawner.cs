@@ -90,7 +90,7 @@ public class Spawner : MonoBehaviour
 
     public TowerTemplate towerTemplate;
 
-    private PlayerGold playerGold;
+    private GameManager playerGold;
     private int level = 0;
     private bool isSpawning = false;
 
@@ -100,13 +100,25 @@ public class Spawner : MonoBehaviour
     public Transform parentTransform; // 부모로 설정할 Transform
     public GameObject Round;
 
+    private bool SpawncostCheck = false;
+    public int StartCost = 125;
+
+
     private void Start()
     {
-        playerGold = FindObjectOfType<PlayerGold>();
+        playerGold = FindObjectOfType<GameManager>();
 
         // 시작할 때 MaxUnit 수만큼 소환
         int initialUnitsToSpawn = towerTemplate.weapon[level].MaxUnit;
         SpawnUnits(initialUnitsToSpawn);
+
+        // Testcoin 값만큼 PlayerGold를 처음 한 번만 감소시킵니다.
+        if (!SpawncostCheck)
+        {
+            Debug.Log("d");
+            playerGold.currentGold -= StartCost;
+            SpawncostCheck = true;
+        }
     }
 
     private void Update()
@@ -194,9 +206,9 @@ public class Spawner : MonoBehaviour
     {
         if (level < towerTemplate.weapon.Length - 1)
         {
-            if (playerGold.CurrentGold >= towerTemplate.weapon[level + 1].cost)
+            if (playerGold.currentGold >= towerTemplate.weapon[level + 1].cost)
             {
-                playerGold.CurrentGold -= towerTemplate.weapon[level + 1].cost;
+                playerGold.currentGold -= towerTemplate.weapon[level + 1].cost;
                 level++;
                 Debug.Log("타워 업그레이드: 레벨 " + level);
             }
