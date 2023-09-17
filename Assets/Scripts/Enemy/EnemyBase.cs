@@ -158,7 +158,9 @@ public abstract class EnemyBase : MonoBehaviour
     {
         if (isMoveEnd)
         {
-            GameManager.Instance.OnEvolutionStoneDamaged(enemyDetailsSo.attackPower, enemyDetailsSo.spellPower);
+            GameManager.Instance.OnEvolutionStoneDamaged(
+                enemyDetailsSo.attackPower * GameManager.Instance.enemyAttackDamageMultiply,
+                enemyDetailsSo.spellPower * GameManager.Instance.enemyAttackDamageMultiply);
             return;
         }
         
@@ -166,8 +168,9 @@ public abstract class EnemyBase : MonoBehaviour
         {
             return;
         }
-        
-        targetAlly.OnDamage(enemyDetailsSo.attackPower, enemyDetailsSo.spellPower);
+
+        targetAlly.OnDamage(enemyDetailsSo.attackPower * GameManager.Instance.enemyAttackDamageMultiply,
+            enemyDetailsSo.spellPower * GameManager.Instance.enemyAttackDamageMultiply);
     }
     
     protected IEnumerator HitRoutine()

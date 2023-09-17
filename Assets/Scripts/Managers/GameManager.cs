@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public float getGoldMultiply;
     [HideInInspector] public float allyAttackDamageMultiply;
     [HideInInspector] public float allyHealthMultiply;
+    [HideInInspector] public float enemyAttackDamageMultiply;
 
     #endregion
 
@@ -82,6 +83,7 @@ public class GameManager : MonoBehaviour
         evolutionStoneCurHealth = evolutionStoneMaxHealth;
         getGoldMultiply = 1;
         allyAttackDamageMultiply = 1;
+        enemyAttackDamageMultiply = 1;
     }
 
     private void Update()
