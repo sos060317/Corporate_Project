@@ -102,6 +102,12 @@ public abstract class EvolutionStoneButton : MonoBehaviour
         }
 
         fadeAmount = 1f;
+        
+        infoTextColor.a = fadeAmount * textAlpha;
+        infoBgColor.a = fadeAmount * bgAlpha;
+
+        infoText.color = infoTextColor;
+        infoBg.color = infoBgColor;
     }
     
     private IEnumerator HideInfo()
@@ -126,6 +132,12 @@ public abstract class EvolutionStoneButton : MonoBehaviour
         }
 
         fadeAmount = 0f;
+        
+        infoTextColor.a = fadeAmount * textAlpha;
+        infoBgColor.a = fadeAmount * bgAlpha;
+
+        infoText.color = infoTextColor;
+        infoBg.color = infoBgColor;
     }
 
     protected abstract void LevelUp();
