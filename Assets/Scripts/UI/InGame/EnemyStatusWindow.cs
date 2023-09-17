@@ -88,7 +88,7 @@ public class EnemyStatusWindow : MonoBehaviour
         healthStatText.text = "체력 : " + enemyStat.enemyDetailsSo.enemyBaseHealth;
         attackStatText.text = "공격력 : " + enemyStat.enemyDetailsSo.attackPower * GameManager.Instance.enemyAttackDamageMultiply;
         spellStatText.text = "마법공격력 : " + enemyStat.enemyDetailsSo.spellPower * GameManager.Instance.enemyAttackDamageMultiply;
-        speedStatText.text = "스피드 : " + enemyStat.enemyDetailsSo.enemyBaseMoveSpeed;
+        speedStatText.text = "스피드 : " + enemyStat.enemyDetailsSo.enemyBaseMoveSpeed * GameManager.Instance.enemyMoveSpeedMultiply;
         defenseStatText.text = "방어력 : " + enemyStat.enemyDetailsSo.defense + "%";
         magicResistanceStatText.text = "마법저항력 : " + enemyStat.enemyDetailsSo.magicResistance + "%";
         

@@ -89,7 +89,7 @@ public abstract class EnemyBase : MonoBehaviour
         if (isTargeting)
         {
             Vector3 dir = targetAlly.transform.position - transform.position;
-            transform.position += dir.normalized * (moveSpeed * Time.deltaTime);
+            transform.position += dir.normalized * (moveSpeed * Time.deltaTime * GameManager.Instance.enemyMoveSpeedMultiply);
             
             if (dir.normalized.x < 0)
             {
@@ -110,7 +110,7 @@ public abstract class EnemyBase : MonoBehaviour
         }
         
         Vector3 nextPos = (Vector3)movePoints[movePosIndex] - transform.position + (Vector3)moveOffset;
-        transform.position += nextPos.normalized * (moveSpeed * Time.deltaTime);
+        transform.position += nextPos.normalized * (moveSpeed * Time.deltaTime * GameManager.Instance.enemyMoveSpeedMultiply);
         
         if (nextPos.normalized.x < 0)
         {

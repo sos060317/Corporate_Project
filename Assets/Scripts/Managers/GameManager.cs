@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public float allyAttackDamageMultiply;
     [HideInInspector] public float allyHealthMultiply;
     [HideInInspector] public float enemyAttackDamageMultiply;
+    [HideInInspector] public float enemyMoveSpeedMultiply;
 
     #endregion
 
@@ -84,6 +85,7 @@ public class GameManager : MonoBehaviour
         getGoldMultiply = 1;
         allyAttackDamageMultiply = 1;
         enemyAttackDamageMultiply = 1;
+        enemyMoveSpeedMultiply = 1;
     }
 
     private void Update()
