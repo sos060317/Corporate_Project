@@ -30,6 +30,8 @@ public abstract class EvolutionStoneButton : MonoBehaviour
     
     #endregion
 
+    [HideInInspector] public bool canClick;
+    
     protected int curLevel = 0;
 
     private float fadeAmount;
@@ -57,6 +59,11 @@ public abstract class EvolutionStoneButton : MonoBehaviour
             return;
         }
 
+        if (!canClick)
+        {
+            return;
+        }
+
         if (curLevel >= buffDetails.buffDatas.Length)
         {
             return;
@@ -70,12 +77,22 @@ public abstract class EvolutionStoneButton : MonoBehaviour
     
     private void OnMouseEnter()
     {
+        if (!canClick)
+        {
+            return;
+        }
+        
         StopAllCoroutines();
         StartCoroutine(ShowInfo());
     }
     
     private void OnMouseExit()
     {
+        if (!canClick)
+        {
+            return;
+        }
+        
         StopAllCoroutines();
         StartCoroutine(HideInfo());
     }

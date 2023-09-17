@@ -22,6 +22,7 @@ public class EvolutionStone : MonoBehaviour
         {
             upgradeButtonsPos[i] = upgradeButtons[i].GetComponent<Transform>().position;
             upgradeButtons[i].gameObject.SetActive(false);
+            upgradeButtons[i].gameObject.GetComponent<EvolutionStoneButton>().canClick = false;
         }
 
         waitForSeconds = new WaitForSeconds(0.3f);
@@ -65,6 +66,8 @@ public class EvolutionStone : MonoBehaviour
         {
             upgradeButtons[i].GetComponent<Transform>().DOMove(upgradeButtonsPos[i], 0.3f);
         }
+
+        StartCoroutine(ShowUIRoutine());
     }
     
     private void HideUpgradeUI()
@@ -74,9 +77,20 @@ public class EvolutionStone : MonoBehaviour
         for (int i = 0; i < upgradeButtons.Length; i++)
         {
             upgradeButtons[i].GetComponent<Transform>().DOMove(transform.position, 0.3f);
+            upgradeButtons[i].gameObject.GetComponent<EvolutionStoneButton>().canClick = false;
         }
 
         StartCoroutine(DisableUI());
+    }
+    
+    private IEnumerator ShowUIRoutine()
+    {
+        yield return waitForSeconds;
+
+        for (int i = 0; i < upgradeButtons.Length; i++)
+        {
+            upgradeButtons[i].gameObject.GetComponent<EvolutionStoneButton>().canClick = true;
+        }
     }
 
     private IEnumerator DisableUI()
