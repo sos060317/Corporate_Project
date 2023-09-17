@@ -33,8 +33,19 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    #region 진화석 관련
+
+    [Space(10)] [Header("진화석 관련")]
+    [SerializeField] private Image evolutionStoneHealthBar;
+
+    [SerializeField] private float evolutionStoneMaxHealth;
+
+    #endregion
+
     public float currentGold;
 
+    private float evolutionStoneCurHealth;
+    
     private static GameManager instance = null; // 해당 스크립트를 변수로 받아옴
 
     // 싱글톤 프로퍼티
@@ -68,6 +79,7 @@ public class GameManager : MonoBehaviour
     {
         //변수 초기화
         currentGold = startGoldCount;
+        evolutionStoneCurHealth = evolutionStoneMaxHealth;
         getGoldMultiply = 1;
         allyAttackDamageMultiply = 1;
     }
@@ -75,6 +87,8 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         //goldText.text = currentGold.ToString();
+
+        EvolutionHealthBarUpdate();
     }
 
     public void GetGold(float gold)
@@ -121,5 +135,23 @@ public class GameManager : MonoBehaviour
 
         current = target;
         goldText.text = Mathf.FloorToInt(current).ToString();
+    }
+
+    public void OnEvolutionStoneDamaged(float attackPower, float spellPower)
+    {
+        evolutionStoneCurHealth =
+            Mathf.Max(
+                evolutionStoneCurHealth - (attackPower + spellPower), 0);
+
+        if (evolutionStoneCurHealth <= 0)
+        {
+            // 게임 오버 로직.
+        }
+    }
+    
+    private void EvolutionHealthBarUpdate()
+    {
+        evolutionStoneHealthBar.fillAmount = Mathf.Lerp(evolutionStoneHealthBar.fillAmount,
+            evolutionStoneCurHealth / evolutionStoneMaxHealth, Time.deltaTime * 12);
     }
 }

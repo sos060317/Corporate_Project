@@ -399,6 +399,8 @@ MonoBehaviour:
   getGoldMultiply: 0
   allyAttackDamageMultiply: 0
   allyHealthMultiply: 0
+  evolutionStoneHealthBar: {fileID: 2054950755}
+  evolutionStoneMaxHealth: 1000
   currentGold: 0
 --- !u!1 &91867732
 GameObject:

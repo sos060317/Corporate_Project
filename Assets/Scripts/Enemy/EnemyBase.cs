@@ -24,6 +24,7 @@ public abstract class EnemyBase : MonoBehaviour
     protected bool isAttacking = false;
     protected bool isDie = false;
     protected bool attack = false;
+    protected bool isMoveEnd = false;
     
     private Vector2[] movePoints;
     private Vector2 moveOffset;
@@ -128,7 +129,9 @@ public abstract class EnemyBase : MonoBehaviour
         if (movePosIndex >= movePoints.Length)
         {
             //GameManager.Instance.defianceLife--;
-            Destroy(gameObject);
+            isMoveEnd = true;
+            canMove = false;
+            isAttacking = true;
         }
     }
 
@@ -153,6 +156,12 @@ public abstract class EnemyBase : MonoBehaviour
     // 애니메이션 이벤트에서 사용할 함수.
     private void AttackDamage()
     {
+        if (isMoveEnd)
+        {
+            GameManager.Instance.OnEvolutionStoneDamaged(enemyDetailsSo.attackPower, enemyDetailsSo.spellPower);
+            return;
+        }
+        
         if (targetAlly == null)
         {
             return;
@@ -178,6 +187,11 @@ public abstract class EnemyBase : MonoBehaviour
 
     public virtual void SetTarget(AllyBase ally)
     {
+        if (isMoveEnd)
+        {
+            return;
+        }
+        
         if (targetAlly != null)
         {
             targetAlly.EnemyUnTargetingEvent -= DeleteTarget;
