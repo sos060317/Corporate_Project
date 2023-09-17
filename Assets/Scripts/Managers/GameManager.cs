@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     #region 버프 관련 변수들
 
     [HideInInspector] public float getGoldMultiply;
+    [HideInInspector] public float allyAttackDamageMultiply;
 
     #endregion
 
@@ -67,6 +68,7 @@ public class GameManager : MonoBehaviour
         //변수 초기화
         currentGold = startGoldCount;
         getGoldMultiply = 1;
+        allyAttackDamageMultiply = 1;
     }
 
     private void Update()

@@ -274,7 +274,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uACE8\uB4DC \uD68D\uB4DD\uB7C9\n100%"
+  m_Text: "\uC544\uAD70 \uACF5\uACA9\uB825\n100%"
 --- !u!222 &14607419
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -397,6 +397,7 @@ MonoBehaviour:
   goldText: {fileID: 1132474588}
   buffIconParent: {fileID: 1554575937}
   getGoldMultiply: 0
+  allyAttackDamageMultiply: 0
   currentGold: 0
 --- !u!1 &91867732
 GameObject:
@@ -26512,8 +26513,9 @@ GameObject:
   - component: {fileID: 1419234376}
   - component: {fileID: 1419234375}
   - component: {fileID: 1419234374}
+  - component: {fileID: 1419234377}
   m_Layer: 0
-  m_Name: Gold Upgrade Button (1)
+  m_Name: Ally Attack Damage Upgrade Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26635,6 +26637,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1419234377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419234371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3b11d3d82601547927cd7fc7201410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buffDetails: {fileID: 11400000, guid: d421b7cb26b30f84fb256b203ac77a82, type: 2}
+  infoText: {fileID: 14607418}
+  infoBg: {fileID: 1097455966}
+  goldText: {fileID: 345444194}
+  levelMaxText: {fileID: 255252020}
+  levelStarParent: {fileID: 1064289074}
+  levelUpEffect: {fileID: 1719551105}
+  levelStarPrefab: {fileID: 7066261491260931147, guid: 34c853f5a65273340b81cd58d40c2b11, type: 3}
+  iconPrefab: {fileID: 6396079056183618436, guid: 55b27572b2ac4984caab01947fbca8ee, type: 3}
 --- !u!1 &1435684369
 GameObject:
   m_ObjectHideFlags: 0

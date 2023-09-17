@@ -217,8 +217,9 @@ public class AllyBase : MonoBehaviour
         {
             return;
         }
-        
-        targetEnemy.OnDamage(allyDetailsSo.attackPower, allyDetailsSo.spellPower);
+
+        targetEnemy.OnDamage(allyDetailsSo.attackPower * GameManager.Instance.allyAttackDamageMultiply,
+            allyDetailsSo.spellPower * GameManager.Instance.allyAttackDamageMultiply);
     }
     
     private IEnumerator HitRoutine()
