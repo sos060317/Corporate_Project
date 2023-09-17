@@ -21,9 +21,17 @@ public class GameManager : MonoBehaviour
     [Header("UI 관련 오브젝트")]
     [SerializeField] private TextMeshProUGUI goldText;
 
+    public Transform buffIconParent;
+
     #endregion
 
-    public int currentGold;
+    #region 버프 관련 변수들
+
+    [HideInInspector] public float getGoldMultiply;
+
+    #endregion
+
+    public float currentGold;
 
     private static GameManager instance = null; // 해당 스크립트를 변수로 받아옴
 
@@ -46,7 +54,7 @@ public class GameManager : MonoBehaviour
         {
             instance = this; // 넣어주고
 
-            DontDestroyOnLoad(this.gameObject); // 씬이 전환되어도 유지
+            //DontDestroyOnLoad(this.gameObject); // 씬이 전환되어도 유지
         }
         else
         {
@@ -58,19 +66,19 @@ public class GameManager : MonoBehaviour
     {
         //변수 초기화
         currentGold = startGoldCount;
-        
+        getGoldMultiply = 1;
     }
 
     private void Update()
     {
-        goldText.text = currentGold.ToString();
+        //goldText.text = currentGold.ToString();
     }
 
-    public void GetGold(int gold)
+    public void GetGold(float gold)
     {
-        StartCoroutine(GoldCount(currentGold + gold, currentGold));
+        StartCoroutine(GoldCount(currentGold + (gold * getGoldMultiply), currentGold));
 
-        currentGold += gold;
+        currentGold += gold * getGoldMultiply;
     }
 
     private IEnumerator GoldCount(float target, float current)
@@ -86,6 +94,29 @@ public class GameManager : MonoBehaviour
         }
 
         current = target;
-        goldText.text = ((int)current).ToString();
+        goldText.text = Mathf.FloorToInt(current).ToString();
+    }
+
+    public void UseGold(float gold)
+    {
+        StartCoroutine(GoldCountDown(currentGold - gold, currentGold));
+
+        currentGold -= gold;
+    }
+    
+    private IEnumerator GoldCountDown(float target, float current)
+    {
+        float duration = 0.5f; // 카운팅에 걸리는 시간 설정. 
+        float offset = (current - target) / duration;
+
+        while (current > target)
+        {
+            current -= offset * Time.deltaTime;
+            goldText.text = ((int)current).ToString();
+            yield return null;
+        }
+
+        current = target;
+        goldText.text = Mathf.FloorToInt(current).ToString();
     }
 }

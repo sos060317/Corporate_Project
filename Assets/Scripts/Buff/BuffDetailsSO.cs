@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "BuffDetails_", menuName = "Scriptable Objects/Buff/BuffDetails")]
 public class BuffDetailsSO : ScriptableObject
 {
-    public BuffDataInfo[] buffData;
+    public BuffDataInfo[] buffDatas;
     
     [System.Serializable]
     public struct BuffDataInfo

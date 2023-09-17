@@ -19,8 +19,6 @@ public abstract class EnemyBase : MonoBehaviour
 
     private float maxHealth;
     private float moveSpeed;
-    private float xScale;
-    private float healthBgXScale;
     
     protected bool canMove = true;
     protected bool isTargeting = false;
@@ -53,8 +51,6 @@ public abstract class EnemyBase : MonoBehaviour
         
         // 변수 초기화
         hitDelay = new WaitForSeconds(0.1f);
-        xScale = transform.localScale.x;
-        healthBgXScale = healthUiBar.rectTransform.localScale.x;
     }
 
     private void OnEnable()
