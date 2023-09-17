@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector] public float getGoldMultiply;
     [HideInInspector] public float allyAttackDamageMultiply;
+    [HideInInspector] public float allyHealthMultiply;
 
     #endregion
 

@@ -114,7 +114,7 @@ public class EnemyStatusWindow : MonoBehaviour
         
         profileImage.sprite = allyStat.allyDetailsSo.profileImage;
         nameText.text = allyStat.allyDetailsSo.allyName;
-        healthStatText.text = "체력 : " + allyStat.allyDetailsSo.allyBaseHealth;
+        healthStatText.text = "체력 : " + allyStat.maxHealth;
         attackStatText.text = "공격력 : " + allyStat.allyDetailsSo.attackPower * GameManager.Instance.allyAttackDamageMultiply;
         spellStatText.text = "마법공격력 : " + allyStat.allyDetailsSo.spellPower * GameManager.Instance.allyAttackDamageMultiply;
         speedStatText.text = "스피드 : " + allyStat.allyDetailsSo.allyBaseMoveSpeed;
@@ -140,7 +140,7 @@ public class EnemyStatusWindow : MonoBehaviour
         }
         else if (allyStat != null)
         {
-            healthText.text = allyStat.curHealth + " / " + allyStat.allyDetailsSo.allyBaseHealth;
+            healthText.text = allyStat.curHealth + " / " + allyStat.maxHealth;
             healthBarImage.fillAmount = Mathf.Lerp(healthBarImage.fillAmount,
                 allyStat.curHealth / allyStat.allyDetailsSo.allyBaseHealth, Time.deltaTime * 12);
         }

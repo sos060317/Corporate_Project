@@ -16,8 +16,7 @@ public abstract class EnemyBase : MonoBehaviour
     [HideInInspector] public bool Targeting;
     
     private int movePosIndex;
-
-    private float maxHealth;
+    
     private float moveSpeed;
     
     protected bool canMove = true;
@@ -32,6 +31,7 @@ public abstract class EnemyBase : MonoBehaviour
     private SpriteRenderer sr;
     private WaitForSeconds hitDelay;
     
+    [HideInInspector] public float maxHealth;
     [HideInInspector] public float curHealth;
     protected float attackRate;
     protected float attackTimer;
