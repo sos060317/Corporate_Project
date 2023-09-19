@@ -37,6 +37,8 @@ public class EnemySpawner : MonoBehaviour
         WaveManager.Instance.waveStartEvent += NextWaveEvent;
         WaveManager.Instance.waveEndEvent += ShowNextWaveInfo;
         WaveManager.Instance.enemySpawnerCount++;
+        
+        GameManager.Instance.SetCurStageMaxWave(wave.waves.Length);
 
         ShowNextWaveInfo();
     }

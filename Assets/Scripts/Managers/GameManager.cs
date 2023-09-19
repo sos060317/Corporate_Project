@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
 
     public Transform buffIconParent;
 
+    [SerializeField] private Text waveText;
+
     #endregion
 
     #region 버프 관련 변수들
@@ -45,6 +47,9 @@ public class GameManager : MonoBehaviour
     #endregion
 
     public float currentGold;
+
+    private int curStageMaxWave;
+    private int curWave;
 
     private float evolutionStoneCurHealth;
     
@@ -86,6 +91,8 @@ public class GameManager : MonoBehaviour
         allyAttackDamageMultiply = 1;
         enemyAttackDamageMultiply = 1;
         enemyMoveSpeedMultiply = 1;
+        curStageMaxWave = 0;
+        curWave = 0;
     }
 
     private void Update()
@@ -151,6 +158,28 @@ public class GameManager : MonoBehaviour
         {
             // 게임 오버 로직.
         }
+    }
+
+    public void SetCurStageMaxWave(int index)
+    {
+        if (index > curStageMaxWave)
+        {
+            curStageMaxWave = index;
+            
+            SetWaveText();
+        }
+    }
+    
+    public void NextWave()
+    {
+        curWave++;
+        
+        SetWaveText();
+    }
+    
+    private void SetWaveText()
+    {
+        waveText.text = curWave + " / " + curStageMaxWave;
     }
     
     private void EvolutionHealthBarUpdate()
