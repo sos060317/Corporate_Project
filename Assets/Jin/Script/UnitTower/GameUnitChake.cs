@@ -139,7 +139,7 @@ public class GameUnitChake : MonoBehaviour
 
     private void Update()
     {
-        
+
 
         selectedUnitRTSList.RemoveAll(item => item == null);
         for (int i = selectedUnitRTSList.Count - 1; i >= 0; i--)
@@ -147,6 +147,7 @@ public class GameUnitChake : MonoBehaviour
             if (EditorUtility.IsPersistent(selectedUnitRTSList[i]))
             {
                 selectedUnitRTSList.RemoveAt(i);
+                Debug.Log("´Ï ¹¹ÇÏ´Â ³ðÀÌ´Ï?");
             }
         }
 

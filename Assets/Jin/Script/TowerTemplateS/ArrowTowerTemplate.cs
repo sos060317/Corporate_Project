@@ -15,6 +15,7 @@ public class ArrowTowerTemplate : ScriptableObject
         public float aDamage;
         public int Acost;
         public float Aradius;
+        public int ResellCoset;
     }
 
 }
