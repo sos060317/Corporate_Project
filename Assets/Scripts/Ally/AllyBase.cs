@@ -18,11 +18,11 @@ public class AllyBase : MonoBehaviour
 
     [HideInInspector] public bool targeting;
 
+    [HideInInspector] public float maxHealth;
     [HideInInspector] public float curHealth;
     
     public Action EnemyUnTargetingEvent;
 
-    private float maxHealth;
     private float moveSpeed;
     private float attackRange;
     private float attactRate;
@@ -47,6 +47,9 @@ public class AllyBase : MonoBehaviour
     {
         attactTimer = 0f;
         isDie = false;
+        
+        maxHealth = allyDetailsSo.allyBaseHealth * GameManager.Instance.allyHealthMultiply;
+        curHealth = maxHealth;
     }
 
     private void Start()
@@ -68,9 +71,6 @@ public class AllyBase : MonoBehaviour
         attactRate = allyDetailsSo.allyBaseAttackDelay;
         xScale = transform.localScale.x;
         healthBgXScale = healthUiBar.rectTransform.localScale.x;
-
-        maxHealth = allyDetailsSo.allyBaseHealth;
-        curHealth = maxHealth;
     }
 
     private void Update()
@@ -217,8 +217,9 @@ public class AllyBase : MonoBehaviour
         {
             return;
         }
-        
-        targetEnemy.OnDamage(allyDetailsSo.attackPower, allyDetailsSo.spellPower);
+
+        targetEnemy.OnDamage(allyDetailsSo.attackPower * GameManager.Instance.allyAttackDamageMultiply,
+            allyDetailsSo.spellPower * GameManager.Instance.allyAttackDamageMultiply);
     }
     
     private IEnumerator HitRoutine()

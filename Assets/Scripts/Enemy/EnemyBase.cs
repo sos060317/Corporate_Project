@@ -16,17 +16,15 @@ public abstract class EnemyBase : MonoBehaviour
     [HideInInspector] public bool Targeting;
     
     private int movePosIndex;
-
-    private float maxHealth;
+    
     private float moveSpeed;
-    private float xScale;
-    private float healthBgXScale;
     
     protected bool canMove = true;
     protected bool isTargeting = false;
     protected bool isAttacking = false;
     protected bool isDie = false;
     protected bool attack = false;
+    protected bool isMoveEnd = false;
     
     private Vector2[] movePoints;
     private Vector2 moveOffset;
@@ -34,6 +32,7 @@ public abstract class EnemyBase : MonoBehaviour
     private SpriteRenderer sr;
     private WaitForSeconds hitDelay;
     
+    [HideInInspector] public float maxHealth;
     [HideInInspector] public float curHealth;
     protected float attackRate;
     protected float attackTimer;
@@ -53,8 +52,6 @@ public abstract class EnemyBase : MonoBehaviour
         
         // 변수 초기화
         hitDelay = new WaitForSeconds(0.1f);
-        xScale = transform.localScale.x;
-        healthBgXScale = healthUiBar.rectTransform.localScale.x;
     }
 
     private void OnEnable()
@@ -92,7 +89,7 @@ public abstract class EnemyBase : MonoBehaviour
         if (isTargeting)
         {
             Vector3 dir = targetAlly.transform.position - transform.position;
-            transform.position += dir.normalized * (moveSpeed * Time.deltaTime);
+            transform.position += dir.normalized * (moveSpeed * Time.deltaTime * GameManager.Instance.enemyMoveSpeedMultiply);
             
             if (dir.normalized.x < 0)
             {
@@ -113,7 +110,7 @@ public abstract class EnemyBase : MonoBehaviour
         }
         
         Vector3 nextPos = (Vector3)movePoints[movePosIndex] - transform.position + (Vector3)moveOffset;
-        transform.position += nextPos.normalized * (moveSpeed * Time.deltaTime);
+        transform.position += nextPos.normalized * (moveSpeed * Time.deltaTime * GameManager.Instance.enemyMoveSpeedMultiply);
         
         if (nextPos.normalized.x < 0)
         {
@@ -132,7 +129,9 @@ public abstract class EnemyBase : MonoBehaviour
         if (movePosIndex >= movePoints.Length)
         {
             //GameManager.Instance.defianceLife--;
-            Destroy(gameObject);
+            isMoveEnd = true;
+            canMove = false;
+            isAttacking = true;
         }
     }
 
@@ -157,12 +156,21 @@ public abstract class EnemyBase : MonoBehaviour
     // 애니메이션 이벤트에서 사용할 함수.
     private void AttackDamage()
     {
+        if (isMoveEnd)
+        {
+            GameManager.Instance.OnEvolutionStoneDamaged(
+                enemyDetailsSo.attackPower * GameManager.Instance.enemyAttackDamageMultiply,
+                enemyDetailsSo.spellPower * GameManager.Instance.enemyAttackDamageMultiply);
+            return;
+        }
+        
         if (targetAlly == null)
         {
             return;
         }
-        
-        targetAlly.OnDamage(enemyDetailsSo.attackPower, enemyDetailsSo.spellPower);
+
+        targetAlly.OnDamage(enemyDetailsSo.attackPower * GameManager.Instance.enemyAttackDamageMultiply,
+            enemyDetailsSo.spellPower * GameManager.Instance.enemyAttackDamageMultiply);
     }
     
     protected IEnumerator HitRoutine()
@@ -182,6 +190,11 @@ public abstract class EnemyBase : MonoBehaviour
 
     public virtual void SetTarget(AllyBase ally)
     {
+        if (isMoveEnd)
+        {
+            return;
+        }
+        
         if (targetAlly != null)
         {
             targetAlly.EnemyUnTargetingEvent -= DeleteTarget;

@@ -65,6 +65,8 @@ public class WaveManager : MonoBehaviour
     public void WaveStart()
     {
         waveStartEvent?.Invoke();
+        
+        GameManager.Instance.NextWave();
     }
     
     private IEnumerator EndWaveRoutine()

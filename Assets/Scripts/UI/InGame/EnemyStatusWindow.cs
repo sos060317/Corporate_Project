@@ -86,9 +86,9 @@ public class EnemyStatusWindow : MonoBehaviour
         profileImage.sprite = enemyStat.enemyDetailsSo.profileImage;
         nameText.text = enemyStat.enemyDetailsSo.enemyName;
         healthStatText.text = "체력 : " + enemyStat.enemyDetailsSo.enemyBaseHealth;
-        attackStatText.text = "공격력 : " + enemyStat.enemyDetailsSo.attackPower;
-        spellStatText.text = "마법공격력 : " + enemyStat.enemyDetailsSo.spellPower;
-        speedStatText.text = "스피드 : " + enemyStat.enemyDetailsSo.enemyBaseMoveSpeed;
+        attackStatText.text = "공격력 : " + enemyStat.enemyDetailsSo.attackPower * GameManager.Instance.enemyAttackDamageMultiply;
+        spellStatText.text = "마법공격력 : " + enemyStat.enemyDetailsSo.spellPower * GameManager.Instance.enemyAttackDamageMultiply;
+        speedStatText.text = "스피드 : " + enemyStat.enemyDetailsSo.enemyBaseMoveSpeed * GameManager.Instance.enemyMoveSpeedMultiply;
         defenseStatText.text = "방어력 : " + enemyStat.enemyDetailsSo.defense + "%";
         magicResistanceStatText.text = "마법저항력 : " + enemyStat.enemyDetailsSo.magicResistance + "%";
         
@@ -114,9 +114,9 @@ public class EnemyStatusWindow : MonoBehaviour
         
         profileImage.sprite = allyStat.allyDetailsSo.profileImage;
         nameText.text = allyStat.allyDetailsSo.allyName;
-        healthStatText.text = "체력 : " + allyStat.allyDetailsSo.allyBaseHealth;
-        attackStatText.text = "공격력 : " + allyStat.allyDetailsSo.attackPower;
-        spellStatText.text = "마법공격력 : " + allyStat.allyDetailsSo.spellPower;
+        healthStatText.text = "체력 : " + allyStat.maxHealth;
+        attackStatText.text = "공격력 : " + allyStat.allyDetailsSo.attackPower * GameManager.Instance.allyAttackDamageMultiply;
+        spellStatText.text = "마법공격력 : " + allyStat.allyDetailsSo.spellPower * GameManager.Instance.allyAttackDamageMultiply;
         speedStatText.text = "스피드 : " + allyStat.allyDetailsSo.allyBaseMoveSpeed;
         defenseStatText.text = "방어력 : " + allyStat.allyDetailsSo.defense + "%";
         magicResistanceStatText.text = "마법저항력 : " + allyStat.allyDetailsSo.magicResistance + "%";
@@ -140,7 +140,7 @@ public class EnemyStatusWindow : MonoBehaviour
         }
         else if (allyStat != null)
         {
-            healthText.text = allyStat.curHealth + " / " + allyStat.allyDetailsSo.allyBaseHealth;
+            healthText.text = allyStat.curHealth + " / " + allyStat.maxHealth;
             healthBarImage.fillAmount = Mathf.Lerp(healthBarImage.fillAmount,
                 allyStat.curHealth / allyStat.allyDetailsSo.allyBaseHealth, Time.deltaTime * 12);
         }
