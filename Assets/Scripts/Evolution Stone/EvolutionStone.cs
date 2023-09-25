@@ -21,7 +21,6 @@ public class EvolutionStone : MonoBehaviour
         for(int i = 0; i < upgradeButtonsPos.Length; i++)
         {
             upgradeButtonsPos[i] = upgradeButtons[i].GetComponent<Transform>().position;
-            upgradeButtons[i].gameObject.SetActive(false);
             upgradeButtons[i].gameObject.GetComponent<EvolutionStoneButton>().canClick = false;
         }
 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 326f992854b27534abed09cc209aa7d5, type: 3}
   m_Name: AllyDetails_Monkey
   m_EditorClassIdentifier: 
-  allyName: 
+  allyName: "\uC6D0\uC22D\uC774"
   allyBaseHealth: 100
   allyBaseMoveSpeed: 1
   allyBaseAttackDelay: 1

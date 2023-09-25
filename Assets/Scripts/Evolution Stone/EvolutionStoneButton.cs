@@ -38,6 +38,11 @@ public abstract class EvolutionStoneButton : MonoBehaviour
 
     protected BuffIcon icon;
 
+    private void Awake()
+    {
+        
+    }
+
     private void Start()
     {
         Color infoTextColor = infoText.color;
@@ -48,8 +53,13 @@ public abstract class EvolutionStoneButton : MonoBehaviour
         
         infoText.color = infoTextColor;
         infoBg.color = infoBgColor;
-
+        
+        icon = Instantiate(iconPrefab, GameManager.Instance.buffIconParent);
+        icon.TextChange(curLevel.ToString());
+    
         goldText.text = buffDetails.buffDatas[curLevel].needGold.ToString();
+        
+        gameObject.SetActive(false);
     }
 
     private void OnMouseDown()
