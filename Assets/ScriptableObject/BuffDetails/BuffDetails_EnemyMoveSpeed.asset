@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buffDatas:
   - buffForce: 0.99
-    needGold: 10
+    needGold: 100
     buffExplanation: "\uC801\uAD70 \uC774\uB3D9\uC18D\uB3C4\n99%"
   - buffForce: 0.98
     needGold: 100
