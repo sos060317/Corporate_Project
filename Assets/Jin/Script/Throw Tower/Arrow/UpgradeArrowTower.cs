@@ -5,7 +5,7 @@ using UnityEngine;
 public class UpgradeArrowTower : MonoBehaviour
 {
     //public ArrowTowerTemplate arrowTemplate;
-    //private PlayerGold playerGold;
+    //private GameManager playerGold;
 
     //public int Arrowlevel = 0; // 아마? 만렙은 3?
     //public GameObject Pos1;
@@ -17,7 +17,7 @@ public class UpgradeArrowTower : MonoBehaviour
 
     //private void Start()
     //{
-    //    playerGold = FindObjectOfType<PlayerGold>();
+    //    playerGold = FindObjectOfType<GameManager>();
     //    Debug.Log("Null" + playerGold.currentGold);
 
     //    // 시작 시 모든 Pos 오브젝트를 비활성화
@@ -28,6 +28,7 @@ public class UpgradeArrowTower : MonoBehaviour
     //    // Testcoin 값만큼 PlayerGold를 처음 한 번만 감소시킵니다.
     //    if (!hasSubtractedGold)
     //    {
+    //        Debug.Log("d");
     //        playerGold.currentGold -= Testcoin;
     //        hasSubtractedGold = true;
     //    }
@@ -45,7 +46,7 @@ public class UpgradeArrowTower : MonoBehaviour
     //    {
     //        if (playerGold.currentGold >= arrowTemplate.aweapon[Arrowlevel + 1].Acost)
     //        {
-    //            playerGold.currentGold -= arrowTemplate.aweapon[Arrowlevel + 1].Acost;
+    //            playerGold.currentGold -= arrowTemplate.aweapon[Arrowlevel + 1].Acost;    // 돈계산 
     //            Arrowlevel++;
     //            Debug.Log("타워 업그레이드: 레벨 " + Arrowlevel);
     //        }
@@ -111,7 +112,8 @@ public class UpgradeArrowTower : MonoBehaviour
         if (!hasSubtractedGold)
         {
             Debug.Log("d");
-            playerGold.currentGold -= Testcoin;
+            //playerGold.currentGold -= Testcoin;
+            playerGold.UseGold(Testcoin);
             hasSubtractedGold = true;
         }
     }
@@ -128,7 +130,10 @@ public class UpgradeArrowTower : MonoBehaviour
         {
             if (playerGold.currentGold >= arrowTemplate.aweapon[Arrowlevel + 1].Acost)
             {
-                playerGold.currentGold -= arrowTemplate.aweapon[Arrowlevel + 1].Acost;
+                // Acost만큼의 골드를 소비하는 부분을 UseGold 함수를 호출하여 수정하도록 바꿈
+                float cost = arrowTemplate.aweapon[Arrowlevel + 1].Acost;
+                playerGold.UseGold(cost);
+
                 Arrowlevel++;
                 Debug.Log("타워 업그레이드: 레벨 " + Arrowlevel);
             }
