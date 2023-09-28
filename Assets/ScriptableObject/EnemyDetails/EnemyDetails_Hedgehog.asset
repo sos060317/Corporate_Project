@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EnemyDetails_Hedgehog
   m_EditorClassIdentifier: 
   enemyName: "\uACE0\uC2B4\uB3C4\uCE58"
-  enemyBaseHealth: 100
+  enemyBaseHealth: 70
   enemyBaseMoveSpeed: 1.3
   enemyBaseAttackRate: 2
   enemyBaseAttackRange: 3
