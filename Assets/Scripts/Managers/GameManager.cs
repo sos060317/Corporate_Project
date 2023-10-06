@@ -48,6 +48,8 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    [HideInInspector] public bool isGameStop;
+
     public float currentGold;
 
     private int curStageMaxWave;
@@ -197,6 +199,8 @@ public class GameManager : MonoBehaviour
 
     public void GameClear()
     {
+        isGameStop = true;
+        
         if(evolutionStoneCurHealth > 0)
         {
             starCount++;
