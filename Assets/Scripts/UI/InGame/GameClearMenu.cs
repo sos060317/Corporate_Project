@@ -7,6 +7,7 @@ using DG.Tweening;
 public class GameClearMenu : MonoBehaviour
 {
     [SerializeField] private RectTransform[] starRects;
+    [SerializeField] private GameObject[] particleObjs;
 
     public void Init(int starCount)
     {
@@ -25,7 +26,8 @@ public class GameClearMenu : MonoBehaviour
         {
             starRects[i].gameObject.SetActive(true);
             starRects[i].DOScale(new Vector3(1, 1, 1), 0.4f).SetEase(Ease.OutBack);
-            yield return new WaitForSeconds(0.4f);
+            particleObjs[i].SetActive(true);
+            yield return new WaitForSeconds(0.5f);
         }
     }
 }
