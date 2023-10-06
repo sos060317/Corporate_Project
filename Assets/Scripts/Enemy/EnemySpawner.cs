@@ -52,6 +52,8 @@ public class EnemySpawner : MonoBehaviour
 
         if (curWaveIndex >= wave.waves.Length)
         {
+            WaveManager.Instance.WaveEnd();
+            
             return;
         }
 
@@ -139,6 +141,13 @@ public class EnemySpawner : MonoBehaviour
     // 웨이브가 끝났을때 실행되는 함수
     private void WaveEnd()
     {
+        if (curWaveIndex >= wave.waves.Length - 1)
+        {
+            WaveManager.Instance.WaveEnd();
+            
+            return;
+        }
+        
         WaveManager.Instance.WaveComplete();
     }
 }
