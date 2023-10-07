@@ -405,6 +405,7 @@ MonoBehaviour:
   enemyMoveSpeedMultiply: 0
   evolutionStoneHealthBar: {fileID: 2054950755}
   evolutionStoneMaxHealth: 1000
+  isGameStop: 0
   currentGold: 0
 --- !u!1 &91867732
 GameObject:
@@ -2775,8 +2776,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 10}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 15.439152, y: -17.350655}
-  m_SizeDelta: {x: 27, y: 27}
+  m_AnchoredPosition: {x: 10, y: -22.6}
+  m_SizeDelta: {x: 33, y: 33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &314749003
 MonoBehaviour:
@@ -11924,8 +11925,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -13.000016}
-  m_SizeDelta: {x: 27, y: 27}
+  m_AnchoredPosition: {x: 0, y: -18.249357}
+  m_SizeDelta: {x: 33, y: 33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &893233337
 MonoBehaviour:
@@ -48862,8 +48863,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -15.839165, y: -17.350657}
-  m_SizeDelta: {x: 27, y: 27}
+  m_AnchoredPosition: {x: -10, y: -22.599997}
+  m_SizeDelta: {x: 33, y: 33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1579799983
 MonoBehaviour:
@@ -49367,9 +49368,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1620390593}
-  m_LocalRotation: {x: -0, y: -0, z: 0.08715578, w: 0.9961948}
+  m_LocalRotation: {x: -0, y: -0, z: 0.08715579, w: 0.9961947}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.16, y: 0.16, z: 0.1}
+  m_LocalScale: {x: 0.15999995, y: 0.15999995, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1442974248}
@@ -49378,7 +49379,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 34.160835, y: 32.649345}
+  m_AnchoredPosition: {x: 40.000004, y: 27.400002}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1620390595
@@ -49496,7 +49497,7 @@ MonoBehaviour:
       m_ConstantMin: 0
       m_ConstantMax: 40
   _startColor:
-    m_Mode: 0
+    m_Mode: 2
     m_GradientMin:
       serializedVersion: 2
       key0: {r: 1, g: 1, b: 1, a: 1}
@@ -49555,7 +49556,7 @@ MonoBehaviour:
       m_Mode: 0
       m_NumColorKeys: 3
       m_NumAlphaKeys: 2
-    m_ColorMin: {r: 0, g: 0.13491178, b: 1, a: 1}
+    m_ColorMin: {r: 0.60784316, g: 0.65882355, b: 1, a: 1}
     m_ColorMax: {r: 1, g: 0.988726, b: 0.33490568, a: 1}
   _lifetime:
     m_Mode: 0
@@ -49573,7 +49574,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_ConstantMin: 0
-    m_ConstantMax: 0.8
+    m_ConstantMax: 1
   _startSpeed:
     m_Mode: 2
     m_CurveMultiplier: 1
@@ -57544,7 +57545,7 @@ RectTransform:
   m_GameObject: {fileID: 1787607978}
   m_LocalRotation: {x: -0, y: -0, z: 0.08715578, w: 0.9961947}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.16, y: 0.16, z: 0.1}
+  m_LocalScale: {x: 0.15999998, y: 0.15999998, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1027195627}
@@ -57553,7 +57554,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -34.560844, y: 32.649345}
+  m_AnchoredPosition: {x: -40.000004, y: 27.400002}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1787607980
@@ -57671,7 +57672,7 @@ MonoBehaviour:
       m_ConstantMin: 0
       m_ConstantMax: 40
   _startColor:
-    m_Mode: 0
+    m_Mode: 2
     m_GradientMin:
       serializedVersion: 2
       key0: {r: 1, g: 1, b: 1, a: 1}
@@ -57730,7 +57731,7 @@ MonoBehaviour:
       m_Mode: 0
       m_NumColorKeys: 3
       m_NumAlphaKeys: 2
-    m_ColorMin: {r: 0, g: 0.13491178, b: 1, a: 1}
+    m_ColorMin: {r: 0.6084906, g: 0.660692, b: 1, a: 1}
     m_ColorMax: {r: 1, g: 0.988726, b: 0.33490568, a: 1}
   _lifetime:
     m_Mode: 0
@@ -57748,7 +57749,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_ConstantMin: 0
-    m_ConstantMax: 0.8
+    m_ConstantMax: 1
   _startSpeed:
     m_Mode: 2
     m_CurveMultiplier: 1
@@ -58744,7 +58745,7 @@ MonoBehaviour:
   _bursts:
   - time: 0
     count: 200
-    used: 0
+    used: 1
   _particleTrailRenderer: {fileID: 1027195628}
   _trailModule:
     enabled: 1
@@ -59916,7 +59917,7 @@ RectTransform:
   m_GameObject: {fileID: 1983526674}
   m_LocalRotation: {x: -0, y: -0, z: 0.08715578, w: 0.9961947}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.16, y: 0.16, z: 0.1}
+  m_LocalScale: {x: 0.15999995, y: 0.15999995, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1309324419}
@@ -59925,7 +59926,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 36.99999}
+  m_AnchoredPosition: {x: 0, y: 31.750643}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1983526676
@@ -60043,7 +60044,7 @@ MonoBehaviour:
       m_ConstantMin: 0
       m_ConstantMax: 40
   _startColor:
-    m_Mode: 0
+    m_Mode: 2
     m_GradientMin:
       serializedVersion: 2
       key0: {r: 1, g: 1, b: 1, a: 1}
@@ -60102,7 +60103,7 @@ MonoBehaviour:
       m_Mode: 0
       m_NumColorKeys: 3
       m_NumAlphaKeys: 2
-    m_ColorMin: {r: 0, g: 0.13491178, b: 1, a: 1}
+    m_ColorMin: {r: 0.60784316, g: 0.65882355, b: 1, a: 1}
     m_ColorMax: {r: 1, g: 0.988726, b: 0.33490568, a: 1}
   _lifetime:
     m_Mode: 0
@@ -60120,7 +60121,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_ConstantMin: 0
-    m_ConstantMax: 0.8
+    m_ConstantMax: 1
   _startSpeed:
     m_Mode: 2
     m_CurveMultiplier: 1
