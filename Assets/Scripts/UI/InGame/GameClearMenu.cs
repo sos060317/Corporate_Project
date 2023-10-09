@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using EasyTransition;
 
 public class GameClearMenu : MonoBehaviour
 {
     [SerializeField] private RectTransform[] starRects;
     [SerializeField] private GameObject[] particleObjs;
+    [SerializeField] private TransitionSettings transitionSettings;
 
     public void Init(int starCount)
     {
@@ -29,5 +31,10 @@ public class GameClearMenu : MonoBehaviour
             particleObjs[i].SetActive(true);
             yield return new WaitForSeconds(0.5f);
         }
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        TransitionManager.Instance().Transition(sceneName, transitionSettings, 0);
     }
 }
