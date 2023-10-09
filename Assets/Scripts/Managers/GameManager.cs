@@ -19,11 +19,14 @@ public class GameManager : MonoBehaviour
 
     [Space(10)]
     [Header("UI 관련 오브젝트")]
+    
     [SerializeField] private TextMeshProUGUI goldText;
     
     [SerializeField] private Text waveText;
 
     [SerializeField] private GameClearMenu gameClearMenu;
+
+    [SerializeField] private GameOverMenu gameOverMenu;
 
     public Transform buffIconParent;
 
@@ -102,6 +105,7 @@ public class GameManager : MonoBehaviour
         curStageMaxWave = 0;
         curWave = 0;
         gameClearMenu.gameObject.SetActive(false);
+        gameOverMenu.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -165,8 +169,15 @@ public class GameManager : MonoBehaviour
 
         if (evolutionStoneCurHealth <= 0)
         {
-            // 게임 오버 로직.
+            GameOver();
         }
+    }
+    
+    private void GameOver()
+    {
+        isGameStop = true;
+        
+        gameOverMenu.gameObject.SetActive(true);
     }
 
     public void SetCurStageMaxWave(int index)

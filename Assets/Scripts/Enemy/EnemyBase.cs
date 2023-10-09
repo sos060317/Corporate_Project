@@ -81,7 +81,7 @@ public abstract class EnemyBase : MonoBehaviour
 
     private void MoveUpdate()
     {
-        if (!canMove)
+        if (!canMove || GameManager.Instance.isGameStop)
         {
             return;
         }
@@ -144,6 +144,15 @@ public abstract class EnemyBase : MonoBehaviour
     private void AnimationUpdate()
     {
         anim.SetBool("isRun", canMove);
+
+        if (GameManager.Instance.isGameStop)
+        {
+            anim.StartPlayback();
+        }
+        else
+        {
+            anim.StopPlayback();
+        }
     }
 
     protected abstract void AttackUpdate();
