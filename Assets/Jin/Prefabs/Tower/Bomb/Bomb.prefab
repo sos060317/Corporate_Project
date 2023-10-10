@@ -135,4 +135,4 @@ MonoBehaviour:
   enemyTag: BombPos
   DamageTag: Enemy
   damageAreaRadius: 2
-  Damage: 50
+  Damage: 10
