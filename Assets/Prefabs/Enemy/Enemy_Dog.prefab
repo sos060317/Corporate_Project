@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1370586008307256899}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8817660477816343504}
@@ -163,8 +163,10 @@ MonoBehaviour:
   defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   healthUiBg: {fileID: 3927143001955413002}
   healthUiBar: {fileID: 7462625816331178221}
-  enemy: {fileID: 1370586008307256899}
   Targeting: 0
+  maxHealth: 0
+  curHealth: 0
+  enemyDetailsSo: {fileID: 0}
 --- !u!1 &2092013226599794380
 GameObject:
   m_ObjectHideFlags: 0
