@@ -230,7 +230,7 @@ TextureImporter:
         width: 10
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -238,6 +238,27 @@ TextureImporter:
       bones: []
       spriteID: 908c0fd98f70f2e46b7be1bb862e0eec
       internalID: -624137733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Button_Close
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 242
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80d7f4703ccca9d43b580967d8321a7b
+      internalID: 1491727201
       vertices: []
       indices: 
       edges: []
@@ -255,6 +276,7 @@ TextureImporter:
     nameFileIdTable:
       UI_Button_01: -678682675
       UI_Button_02: -423471956
+      UI_Button_Close: 1491727201
       UI_Panel: -993308019
       UI_Star_01: -1008867147
       UI_Star_02: 245128687
