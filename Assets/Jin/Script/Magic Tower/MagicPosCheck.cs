@@ -101,6 +101,8 @@ public class MagicPosCheck : MonoBehaviour
 
     private bool checkCoin = false;
 
+    public bool isclick = false;
+
 
     private void Start()
     {
@@ -160,6 +162,13 @@ public class MagicPosCheck : MonoBehaviour
             Debug.LogError("magicTemplate이 없다.");
         }
     }
+
+    private void OnMouseDown()
+    {
+        isclick = false;
+        Debug.Log("성호 죽여야 겠다");
+    }
+
 
     private void UpdatePosObjects()
     {
