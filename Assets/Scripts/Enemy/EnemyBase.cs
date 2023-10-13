@@ -56,6 +56,7 @@ public abstract class EnemyBase : MonoBehaviour
 
     private void OnEnable()
     {
+        WaveManager.Instance.EnemyCountPlus();
         attackTimer = 0f;
         isDie = false;
         Targeting = false;
@@ -80,7 +81,7 @@ public abstract class EnemyBase : MonoBehaviour
 
     private void MoveUpdate()
     {
-        if (!canMove)
+        if (!canMove || GameManager.Instance.isGameStop)
         {
             return;
         }
@@ -143,6 +144,15 @@ public abstract class EnemyBase : MonoBehaviour
     private void AnimationUpdate()
     {
         anim.SetBool("isRun", canMove);
+
+        if (GameManager.Instance.isGameStop)
+        {
+            anim.StartPlayback();
+        }
+        else
+        {
+            anim.StopPlayback();
+        }
     }
 
     protected abstract void AttackUpdate();
@@ -182,9 +192,11 @@ public abstract class EnemyBase : MonoBehaviour
         sr.material = defaultMaterial;
     }
     
-    // 애니메이션 이벤트에 사용할 함수.
+    // 적이 죽는 애니메이션을 다 실행하고 호출되는 애니메이션 이벤트 함수
     private void SetActiveFalse()
     {
+        WaveManager.Instance.EnemyCountMinus();
+        
         gameObject.SetActive(false);
     }
 

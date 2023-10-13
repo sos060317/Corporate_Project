@@ -19,11 +19,16 @@ public class GameManager : MonoBehaviour
 
     [Space(10)]
     [Header("UI 관련 오브젝트")]
+    
     [SerializeField] private TextMeshProUGUI goldText;
+    
+    [SerializeField] private Text waveText;
+
+    [SerializeField] private GameClearMenu gameClearMenu;
+
+    [SerializeField] private GameOverMenu gameOverMenu;
 
     public Transform buffIconParent;
-
-    [SerializeField] private Text waveText;
 
     #endregion
 
@@ -46,10 +51,13 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    [HideInInspector] public bool isGameStop;
+
     public float currentGold;
 
     private int curStageMaxWave;
     private int curWave;
+    private int starCount;
 
     private float evolutionStoneCurHealth;
     
@@ -96,6 +104,8 @@ public class GameManager : MonoBehaviour
         evolutionStoneCurHealth = evolutionStoneMaxHealth;
         curStageMaxWave = 0;
         curWave = 0;
+        gameClearMenu.gameObject.SetActive(false);
+        gameOverMenu.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -159,8 +169,15 @@ public class GameManager : MonoBehaviour
 
         if (evolutionStoneCurHealth <= 0)
         {
-            // 게임 오버 로직.
+            GameOver();
         }
+    }
+    
+    private void GameOver()
+    {
+        isGameStop = true;
+        
+        gameOverMenu.gameObject.SetActive(true);
     }
 
     public void SetCurStageMaxWave(int index)
@@ -189,5 +206,29 @@ public class GameManager : MonoBehaviour
     {
         evolutionStoneHealthBar.fillAmount = Mathf.Lerp(evolutionStoneHealthBar.fillAmount,
             evolutionStoneCurHealth / evolutionStoneMaxHealth, Time.deltaTime * 12);
+    }
+
+    public void GameClear()
+    {
+        isGameStop = true;
+        
+        if(evolutionStoneCurHealth > 0)
+        {
+            starCount++;
+        }
+
+        if (evolutionStoneCurHealth >= evolutionStoneMaxHealth * 0.7f)
+        {
+            starCount++;
+        }
+
+        if (evolutionStoneCurHealth == evolutionStoneMaxHealth)
+        {
+            starCount++;
+        }
+        
+        gameClearMenu.gameObject.SetActive(true);
+        
+        gameClearMenu.Init(starCount);
     }
 }

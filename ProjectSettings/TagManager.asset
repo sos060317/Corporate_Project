@@ -49,3 +49,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Decorate
+    uniqueID: 1863012141
+    locked: 0
+  - name: Evolution Stone
+    uniqueID: 2026474405
+    locked: 0
+  - name: Node
+    uniqueID: 2385504769
+    locked: 0

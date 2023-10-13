@@ -10,8 +10,6 @@ public class BuildManager : MonoBehaviour
 
     public NodeBuildUI nodeBuildUI;
 
-    public NodeUpgradeUI nodeUpgradeUI;
-
     public static BuildManager Instance
     {
         get
@@ -49,35 +47,15 @@ public class BuildManager : MonoBehaviour
         
         nodeBuildUI.ShowBuildUI(node);
     }
-
-    public void ShowUpgradeWindow(Node node)
-    {
-        if (selectNode == node)
-        {
-            DeselectNode();
-            return;
-        }
-
-        selectNode = node;
-        
-        nodeUpgradeUI.ShowUpgradeUI(node);
-    }
     
     public void DeselectNode()
     {
         HideBuildUI();
-        HideUpgradeUI();
     }
     
     public void HideBuildUI()
     {
         selectNode = null;
         nodeBuildUI.HideBuildUI();
-    }
-    
-    public void HideUpgradeUI()
-    {
-        selectNode = null;
-        nodeUpgradeUI.HideUpgradeUI();
     }
 }

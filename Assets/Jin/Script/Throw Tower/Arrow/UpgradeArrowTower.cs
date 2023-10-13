@@ -7,25 +7,25 @@ public class UpgradeArrowTower : MonoBehaviour
     //public ArrowTowerTemplate arrowTemplate;
     //private GameManager playerGold;
 
-    //public int Arrowlevel = 0; // ¾Æ¸¶? ¸¸·¾Àº 3?
+    //public int Arrowlevel = 0; // ì•„ë§ˆ? ë§Œë ™ì€ 3?
     //public GameObject Pos1;
     //public GameObject Pos2;
     //public GameObject Pos3;
 
-    //private bool hasSubtractedGold = false; // ÀÌ¹Ì °¨¼ÒÇß´ÂÁö ¿©ºÎ¸¦ ³ªÅ¸³»´Â º¯¼ö
-    //public int Testcoin = 50; // Å×½ºÆ®¿ë ÄÚÀÎ º¯¼ö
+    //private bool hasSubtractedGold = false; // ì´ë¯¸ ê°ì†Œí–ˆëŠ”ì§€ ì—¬ë¶€ë¥¼ ë‚˜íƒ€ë‚´ëŠ” ë³€ìˆ˜
+    //public int Testcoin = 50; // í…ŒìŠ¤íŠ¸ìš© ì½”ì¸ ë³€ìˆ˜
 
     //private void Start()
     //{
     //    playerGold = FindObjectOfType<GameManager>();
     //    Debug.Log("Null" + playerGold.currentGold);
 
-    //    // ½ÃÀÛ ½Ã ¸ğµç Pos ¿ÀºêÁ§Æ®¸¦ ºñÈ°¼ºÈ­
+    //    // ì‹œì‘ ì‹œ ëª¨ë“  Pos ì˜¤ë¸Œì íŠ¸ë¥¼ ë¹„í™œì„±í™”
     //    Pos1.SetActive(false);
     //    Pos2.SetActive(false);
     //    Pos3.SetActive(false);
 
-    //    // Testcoin °ª¸¸Å­ PlayerGold¸¦ Ã³À½ ÇÑ ¹ø¸¸ °¨¼Ò½ÃÅµ´Ï´Ù.
+    //    // Testcoin ê°’ë§Œí¼ PlayerGoldë¥¼ ì²˜ìŒ í•œ ë²ˆë§Œ ê°ì†Œì‹œí‚µë‹ˆë‹¤.
     //    if (!hasSubtractedGold)
     //    {
     //        Debug.Log("d");
@@ -36,7 +36,7 @@ public class UpgradeArrowTower : MonoBehaviour
 
     //private void Update()
     //{
-    //    // ·¹º§ÀÌ ¿À¸¦ ¶§¸¶´Ù Pos ¿ÀºêÁ§Æ®ÀÇ »óÅÂ¸¦ ¾÷µ¥ÀÌÆ®
+    //    // ë ˆë²¨ì´ ì˜¤ë¥¼ ë•Œë§ˆë‹¤ Pos ì˜¤ë¸Œì íŠ¸ì˜ ìƒíƒœë¥¼ ì—…ë°ì´íŠ¸
     //    UpdatePosObjects();
     //}
 
@@ -46,24 +46,24 @@ public class UpgradeArrowTower : MonoBehaviour
     //    {
     //        if (playerGold.currentGold >= arrowTemplate.aweapon[Arrowlevel + 1].Acost)
     //        {
-    //            playerGold.currentGold -= arrowTemplate.aweapon[Arrowlevel + 1].Acost;    // µ·°è»ê 
+    //            playerGold.currentGold -= arrowTemplate.aweapon[Arrowlevel + 1].Acost;    // ëˆê³„ì‚° 
     //            Arrowlevel++;
-    //            Debug.Log("Å¸¿ö ¾÷±×·¹ÀÌµå: ·¹º§ " + Arrowlevel);
+    //            Debug.Log("íƒ€ì›Œ ì—…ê·¸ë ˆì´ë“œ: ë ˆë²¨ " + Arrowlevel);
     //        }
     //        else
     //        {
-    //            Debug.Log("µ· ºÎÁ·ÇÏ´Ù");
+    //            Debug.Log("ëˆ ë¶€ì¡±í•˜ë‹¤");
     //        }
     //    }
     //    else
     //    {
-    //        Debug.Log("ÃÖ´ë ¾÷±×·¹ÀÌµå »óÅÂ ÀÔ´Ï´Ù.");
+    //        Debug.Log("ìµœëŒ€ ì—…ê·¸ë ˆì´ë“œ ìƒíƒœ ì…ë‹ˆë‹¤.");
     //    }
     //}
 
     //private void UpdatePosObjects()
     //{
-    //    // ÇöÀç ·¹º§¿¡ µû¶ó Pos ¿ÀºêÁ§Æ®ÀÇ »óÅÂ¸¦ ¾÷µ¥ÀÌÆ®
+    //    // í˜„ì¬ ë ˆë²¨ì— ë”°ë¼ Pos ì˜¤ë¸Œì íŠ¸ì˜ ìƒíƒœë¥¼ ì—…ë°ì´íŠ¸
     //    switch (Arrowlevel)
     //    {
     //        case 0:
@@ -90,36 +90,37 @@ public class UpgradeArrowTower : MonoBehaviour
     public ArrowTowerTemplate arrowTemplate;
     private GameManager playerGold;
 
-    public int Arrowlevel = 0; // ¾Æ¸¶? ¸¸·¾Àº 3?
+    public int Arrowlevel = 0; // ì•„ë§ˆ? ë§Œë ™ì€ 3?
     public GameObject Pos1;
     public GameObject Pos2;
     public GameObject Pos3;
 
-    private bool hasSubtractedGold = false; // ÀÌ¹Ì °¨¼ÒÇß´ÂÁö ¿©ºÎ¸¦ ³ªÅ¸³»´Â º¯¼ö
+    private bool hasSubtractedGold = false; // ì´ë¯¸ ê°ì†Œí–ˆëŠ”ì§€ ì—¬ë¶€ë¥¼ ë‚˜íƒ€ë‚´ëŠ” ë³€ìˆ˜
+    public int Testcoin = 50; // í…ŒìŠ¤íŠ¸ìš© ì½”ì¸ ë³€ìˆ˜
 
     private void Start()
     {
         playerGold = FindObjectOfType<GameManager>();
         Debug.Log("Null" + playerGold.currentGold);
 
-        // ½ÃÀÛ ½Ã ¸ğµç Pos ¿ÀºêÁ§Æ®¸¦ ºñÈ°¼ºÈ­
+        // ì‹œì‘ ì‹œ ëª¨ë“  Pos ì˜¤ë¸Œì íŠ¸ë¥¼ ë¹„í™œì„±í™”
         Pos1.SetActive(false);
         Pos2.SetActive(false);
         Pos3.SetActive(false);
 
-        // Testcoin °ª¸¸Å­ PlayerGold¸¦ Ã³À½ ÇÑ ¹ø¸¸ °¨¼Ò½ÃÅµ´Ï´Ù.
+        // Testcoin ê°’ë§Œí¼ PlayerGoldë¥¼ ì²˜ìŒ í•œ ë²ˆë§Œ ê°ì†Œì‹œí‚µë‹ˆë‹¤.
         if (!hasSubtractedGold)
         {
             Debug.Log("d");
             //playerGold.currentGold -= Testcoin;
-            playerGold.UseGold(arrowTemplate.aweapon[Arrowlevel].Acost);
+            playerGold.UseGold(Testcoin);
             hasSubtractedGold = true;
         }
     }
 
     private void Update()
     {
-        // ·¹º§ÀÌ ¿À¸¦ ¶§¸¶´Ù Pos ¿ÀºêÁ§Æ®ÀÇ »óÅÂ¸¦ ¾÷µ¥ÀÌÆ®
+        // ë ˆë²¨ì´ ì˜¤ë¥¼ ë•Œë§ˆë‹¤ Pos ì˜¤ë¸Œì íŠ¸ì˜ ìƒíƒœë¥¼ ì—…ë°ì´íŠ¸
         UpdatePosObjects();
     }
 
@@ -129,27 +130,27 @@ public class UpgradeArrowTower : MonoBehaviour
         {
             if (playerGold.currentGold >= arrowTemplate.aweapon[Arrowlevel + 1].Acost)
             {
-                // Acost¸¸Å­ÀÇ °ñµå¸¦ ¼ÒºñÇÏ´Â ºÎºĞÀ» UseGold ÇÔ¼ö¸¦ È£ÃâÇÏ¿© ¼öÁ¤ÇÏµµ·Ï ¹Ù²Ş
+                // Acostë§Œí¼ì˜ ê³¨ë“œë¥¼ ì†Œë¹„í•˜ëŠ” ë¶€ë¶„ì„ UseGold í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ì—¬ ìˆ˜ì •í•˜ë„ë¡ ë°”ê¿ˆ
                 float cost = arrowTemplate.aweapon[Arrowlevel + 1].Acost;
                 playerGold.UseGold(cost);
 
                 Arrowlevel++;
-                Debug.Log("Å¸¿ö ¾÷±×·¹ÀÌµå: ·¹º§ " + Arrowlevel);
+                Debug.Log("íƒ€ì›Œ ì—…ê·¸ë ˆì´ë“œ: ë ˆë²¨ " + Arrowlevel);
             }
             else
             {
-                Debug.Log("µ· ºÎÁ·ÇÏ´Ù");
+                Debug.Log("ëˆ ë¶€ì¡±í•˜ë‹¤");
             }
         }
         else
         {
-            Debug.Log("ÃÖ´ë ¾÷±×·¹ÀÌµå »óÅÂ ÀÔ´Ï´Ù.");
+            Debug.Log("ìµœëŒ€ ì—…ê·¸ë ˆì´ë“œ ìƒíƒœ ì…ë‹ˆë‹¤.");
         }
     }
 
     private void UpdatePosObjects()
     {
-        // ÇöÀç ·¹º§¿¡ µû¶ó Pos ¿ÀºêÁ§Æ®ÀÇ »óÅÂ¸¦ ¾÷µ¥ÀÌÆ®
+        // í˜„ì¬ ë ˆë²¨ì— ë”°ë¼ Pos ì˜¤ë¸Œì íŠ¸ì˜ ìƒíƒœë¥¼ ì—…ë°ì´íŠ¸
         switch (Arrowlevel)
         {
             case 0:

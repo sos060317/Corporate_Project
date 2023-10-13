@@ -30,9 +30,13 @@ public class CameraMovement : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.isGameStop)
+        {
+            return;
+        }
+        
         PanCamera();
         ScrollCamera();
-        
     }
 
     private void PanCamera()

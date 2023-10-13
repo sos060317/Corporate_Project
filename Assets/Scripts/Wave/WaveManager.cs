@@ -26,6 +26,10 @@ public class WaveManager : MonoBehaviour
     public Action waveEndEvent;
 
     private int waveCompleteCount;
+    private int waveEndCount;
+    private int enemyCount;
+
+    private bool stageClear = false;
 
     private WaitForSeconds nextWaveDelay;
 
@@ -59,6 +63,33 @@ public class WaveManager : MonoBehaviour
             StartCoroutine(EndWaveRoutine());
             
             waveCompleteCount = 0;
+        }
+    }
+
+    public void WaveEnd()
+    {
+        waveEndCount++;
+
+        if (waveEndCount >= enemySpawnerCount)
+        {
+            Debug.Log("Stage Clear!");
+
+            stageClear = true;
+        }
+    }
+    
+    public void EnemyCountPlus()
+    {
+        enemyCount++;
+    }
+    
+    public void EnemyCountMinus()
+    {
+        enemyCount--;
+
+        if (enemyCount <= 0 && stageClear)
+        {
+            GameManager.Instance.GameClear();
         }
     }
     

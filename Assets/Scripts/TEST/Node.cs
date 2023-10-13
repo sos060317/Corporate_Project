@@ -30,12 +30,8 @@ public class Node : MonoBehaviour
             
             BuildManager.Instance.HideBuildUI();
             
-            BuildManager.Instance.ShowUpgradeWindow(this);
-            
             return;
         }
-        
-        BuildManager.Instance.HideUpgradeUI();
         
         BuildManager.Instance.ShowBuildWindow(this);
     }

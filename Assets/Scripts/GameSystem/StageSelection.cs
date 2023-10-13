@@ -65,7 +65,7 @@ public class StageSelection : MonoBehaviour
     {
         if (unlocked)
         {
-            sceneLoader.GetComponent<SceneLoader>().LoadScene(stageId + 1); // 로딩 창 불러오기
+            sceneLoader.GetComponent<SceneLoader>().LoadScene(stageId + 2); // 로딩 창 불러오기
         }
     }
 }
