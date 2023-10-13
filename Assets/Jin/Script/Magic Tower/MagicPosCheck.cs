@@ -128,6 +128,14 @@ public class MagicPosCheck : MonoBehaviour
     {
         // 레벨이 오를 때마다 Pos 오브젝트의 상태를 업데이트
         UpdatePosObjects();
+
+        if (isclick == true)
+        {
+            if (Input.GetMouseButtonDown(1))
+            {
+                isclick = false;
+            }
+        }
     }
 
 
@@ -165,7 +173,7 @@ public class MagicPosCheck : MonoBehaviour
 
     private void OnMouseDown()
     {
-        isclick = false;
+        isclick = true;
         Debug.Log("성호 죽여야 겠다");
     }
 
