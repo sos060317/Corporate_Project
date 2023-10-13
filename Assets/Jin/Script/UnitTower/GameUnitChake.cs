@@ -116,7 +116,7 @@ public class GameUnitChake : MonoBehaviour
     public GameObject Range;
     public List<Unit> selectedUnitRTSList;
 
-    [SerializeField] private bool clicked = false;
+    public bool clicked = false;
 
     public Vector3 lastRightClickPosition; // 가장 최근 우클릭 위치 저장 (아마도)
 
@@ -128,6 +128,7 @@ public class GameUnitChake : MonoBehaviour
 
     private void OnMouseDown()
     {
+
         if (gameObject.CompareTag("SpawnTower"))
         {
             clicked = true;
@@ -139,7 +140,6 @@ public class GameUnitChake : MonoBehaviour
 
     private void Update()
     {
-
 
         selectedUnitRTSList.RemoveAll(item => item == null);
         for (int i = selectedUnitRTSList.Count - 1; i >= 0; i--)
@@ -180,6 +180,12 @@ public class GameUnitChake : MonoBehaviour
 
 
                 Debug.Log("호우 : " + lastRightClickPosition);
+            }
+            else
+            {
+                Range.SetActive(false);
+                Debug.Log("범위 밖이다 뻬에에에에에에엑");
+                clicked = false;
             }
         }
     }
@@ -226,6 +232,3 @@ public class GameUnitChake : MonoBehaviour
         return Quaternion.Euler(0, 0, angle) * vec;
     }
 }
-
-
-

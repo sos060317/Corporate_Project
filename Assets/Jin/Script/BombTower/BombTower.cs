@@ -5,6 +5,7 @@ using UnityEngine;
 public class BombTower : MonoBehaviour
 {
     private GameManager playerGold;
+    public BombTowerTemplate bombTemplate; 
 
 
     public GameObject arrowPrefab;
@@ -13,15 +14,18 @@ public class BombTower : MonoBehaviour
     public float detectionRadius = 5.0f;
     public GameObject FlowingObject;
     public float followSpeed = 5.0f;
-    public float spawnInterval = 1.5f;
+    public float spawnInterval = 1.5f; // 발사 속도?
 
     [SerializeField]
     private List<GameObject> enemyList = new List<GameObject>();
     private bool canSpawn = false;
     private float timeSinceLastSpawn = 0f;
 
+    private int BombLevel = 0;
+
     private bool checkCoin = false;
-    public int TestCoste = 150;
+
+    public bool isClick = false;
 
 
     private void Start()
@@ -32,7 +36,7 @@ public class BombTower : MonoBehaviour
         if (!checkCoin)
         {
             Debug.Log("d");
-            playerGold.currentGold -= TestCoste;
+            playerGold.UseGold(bombTemplate.Bweapon[BombLevel].Bcost);
             checkCoin = true;
         }
     }
@@ -81,6 +85,51 @@ public class BombTower : MonoBehaviour
             Vector2 targetPosition = enemyList[0].transform.position;
             FlowingObject.transform.position = Vector2.MoveTowards(FlowingObject.transform.position, targetPosition, followSpeed * Time.deltaTime);
         }
+
+        if (isClick == true)
+        {
+            if (Input.GetMouseButtonDown(1))
+            {
+                isClick = false;
+                Debug.Log("클릭 false");
+            }
+        }
+    }
+
+    
+    public void UpgradeTower()
+    {
+        if(bombTemplate != null)
+        {
+            if(BombLevel < bombTemplate.Bweapon.Length - 1)
+            {
+                if(playerGold.currentGold >= bombTemplate.Bweapon[BombLevel + 1].Bcost)
+                {
+                    float cost = bombTemplate.Bweapon[BombLevel + 1].Bcost;
+                    playerGold.UseGold(cost);
+                    BombLevel++;
+                    Debug.Log("타워 업그레이드 : 레벨 " + BombLevel);
+                }
+                else
+                {
+                    Debug.Log("돈이 없어");
+                }
+            }
+            else
+            {
+                Debug.Log("최대 업그레이드 상태입니다");
+            }
+        }
+        else
+        {
+            Debug.Log("Templat이 없어");
+        }
+    }
+
+    private void OnMouseDown()
+    {
+        isClick = true;
+        Debug.Log("클릭확인");
     }
 
     private void SpawnArrow()

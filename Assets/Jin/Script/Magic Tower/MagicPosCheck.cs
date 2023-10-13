@@ -100,7 +100,7 @@ public class MagicPosCheck : MonoBehaviour
     public GameObject Pos3;
 
     private bool checkCoin = false;
-    public int TestCoste = 150;
+
 
     private void Start()
     {
@@ -117,7 +117,7 @@ public class MagicPosCheck : MonoBehaviour
         if (!checkCoin)
         {
             Debug.Log("d");
-            playerGold.currentGold -= TestCoste;
+            playerGold.UseGold(magicTemplate.mweapon[Magiclevel].Mcost);
             checkCoin = true;
         }
     }
@@ -137,7 +137,11 @@ public class MagicPosCheck : MonoBehaviour
             {
                 if (playerGold.currentGold >= magicTemplate.mweapon[Magiclevel + 1].Mcost)
                 {
-                    playerGold.currentGold -= magicTemplate.mweapon[Magiclevel + 1].Mcost;
+                    //playerGold.currentGold -= magicTemplate.mweapon[Magiclevel + 1].Mcost;
+                    //Magiclevel++;
+
+                    float cost = magicTemplate.mweapon[Magiclevel + 1].Mcost;
+                    playerGold.UseGold(cost);
                     Magiclevel++;
                     Debug.Log("타워 업그레이드: 레벨 " + Magiclevel);
                 }
@@ -153,7 +157,7 @@ public class MagicPosCheck : MonoBehaviour
         }
         else
         {
-            Debug.LogError("magicTemplate이 설정되지 않았습니다.");
+            Debug.LogError("magicTemplate이 없다.");
         }
     }
 

@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 850595722543012933}
   - component: {fileID: 4276954074458060088}
   - component: {fileID: 8691131037144156036}
-  - component: {fileID: 6219008420406673524}
   m_Layer: 0
   m_Name: BombTower
   m_TagString: Untagged
@@ -140,29 +139,6 @@ MonoBehaviour:
   spawnInterval: 2
   enemyList: []
   TestCoste: 220
---- !u!114 &6219008420406673524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8691131037144156039}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bb11df076c6c1c4fadf1b0c3262a4f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RoundObject: {fileID: 0}
-  arrowTemplate: {fileID: 0}
-  sp: {fileID: 0}
-  arrowPrefab: {fileID: 4906636563904787637, guid: dcb1a917eef0535498a3cad494bcf02a, type: 3}
-  spawnPositions: []
-  enemyTag: Enemy
-  detectionRadius: 10
-  FlowingObject: {fileID: 1470551070476775033}
-  followSpeed: 1000
-  spawnInterval: 2
-  enemyList: []
 --- !u!1001 &8161725085999318992
 PrefabInstance:
   m_ObjectHideFlags: 0

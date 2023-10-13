@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f09b61b5b02915a4abfe44eab09785a8, type: 3}
+  m_Name: Bomb Template
+  m_EditorClassIdentifier: 
+  Bweapon:
+  - Bcost: 220
+    damage: 50
+    round: 2
+    shotSpeed: 2
+  - Bcost: 270
+    damage: 75
+    round: 2
+    shotSpeed: 2
+  - Bcost: 330
+    damage: 75
+    round: 3
+    shotSpeed: 2
+  - Bcost: 400
+    damage: 75
+    round: 3
+    shotSpeed: 3

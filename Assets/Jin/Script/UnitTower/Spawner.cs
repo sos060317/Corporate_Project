@@ -101,7 +101,6 @@ public class Spawner : MonoBehaviour
     public GameObject Round;
 
     private bool SpawncostCheck = false;
-    public int StartCost = 125;
 
 
     private void Start()
@@ -116,7 +115,7 @@ public class Spawner : MonoBehaviour
         if (!SpawncostCheck)
         {
             Debug.Log("d");
-            playerGold.UseGold(StartCost);
+            playerGold.UseGold(towerTemplate.weapon[level].cost);
             SpawncostCheck = true;
         }
     }
