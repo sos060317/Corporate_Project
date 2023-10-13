@@ -159,7 +159,7 @@ public class GameUnitChake : MonoBehaviour
                 lastRightClickPosition = UtilsClass.GetMouseWorldPosition(); // 우클릭한 위치 저장
 
                 Vector3 moveToPosition = UtilsClass.GetMouseWorldPosition();
-                List<Vector3> targetPositionList = GetPositionListAround(moveToPosition, new float[] { 1f, 2f, 3f }, new int[] { 5, 10, 20 });
+                List<Vector3> targetPositionList = GetPositionListAround(moveToPosition, new float[] { 0.8f, 0.9f, 1f }, new int[] { 5, 10, 20 });
                 int targetPositionListIndex = 0;
 
                 foreach (Unit unitRTS in selectedUnitRTSList)
@@ -183,6 +183,7 @@ public class GameUnitChake : MonoBehaviour
             }
             else
             {
+                selectedUnitRTSList.Clear();
                 Range.SetActive(false);
                 Debug.Log("범위 밖이다 뻬에에에에에에엑");
                 clicked = false;
