@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameOverMenu gameOverMenu;
 
+    [SerializeField] private GamePauseMenu gamePauseMenu;
+
     public Transform buffIconParent;
 
     #endregion
@@ -113,6 +115,7 @@ public class GameManager : MonoBehaviour
         //goldText.text = currentGold.ToString();
 
         EvolutionHealthBarUpdate();
+        GamePauseUpdate();
     }
 
     public void GetGold(float gold)
@@ -206,6 +209,35 @@ public class GameManager : MonoBehaviour
     {
         evolutionStoneHealthBar.fillAmount = Mathf.Lerp(evolutionStoneHealthBar.fillAmount,
             evolutionStoneCurHealth / evolutionStoneMaxHealth, Time.deltaTime * 12);
+    }
+
+    private void GamePauseUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!isGameStop)
+            {
+                ShowGamePause();
+            }
+            else if (isGameStop)
+            {
+                HideGamePause();
+            }
+        }
+    }
+    
+    private void ShowGamePause()
+    {
+        isGameStop = true;
+        
+        gamePauseMenu.gameObject.SetActive(true);
+    }
+    
+    private void HideGamePause()
+    {
+        isGameStop = false;
+        
+        gamePauseMenu.CloseMenu();
     }
 
     public void GameClear()
