@@ -108,6 +108,7 @@ public class GameManager : MonoBehaviour
         curWave = 0;
         gameClearMenu.gameObject.SetActive(false);
         gameOverMenu.gameObject.SetActive(false);
+        gamePauseMenu.gameObject.SetActive(false);
     }
 
     private void Update()
