@@ -398,6 +398,7 @@ MonoBehaviour:
   waveText: {fileID: 1332969625}
   gameClearMenu: {fileID: 466374068}
   gameOverMenu: {fileID: 927627616}
+  gamePauseMenu: {fileID: 79450910}
   buffIconParent: {fileID: 1554575937}
   getGoldMultiply: 0
   allyAttackDamageMultiply: 0
@@ -515,6 +516,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 79450909}
+  - component: {fileID: 79450910}
   m_Layer: 5
   m_Name: GamePauseObj
   m_TagString: Untagged
@@ -543,6 +545,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &79450910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79450908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5081ef5f92c7b164099b011866c9cccb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transition: {fileID: 11400000, guid: b0126e1e0c6c2a04895d564bd230dfb9, type: 2}
 --- !u!1 &91867732
 GameObject:
   m_ObjectHideFlags: 0
@@ -2241,7 +2256,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 783570671}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StageButton, Assembly-CSharp
         m_MethodName: PressStarsButton
         m_Mode: 3
@@ -9006,7 +9021,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 490280071}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 79450910}
+        m_TargetAssemblyTypeName: GamePauseMenu, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: StageSelection
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &490280071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10365,7 +10392,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 652038847}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 79450910}
+        m_TargetAssemblyTypeName: GamePauseMenu, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Stage0
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &652038847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10792,7 +10831,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 783570671}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StageButton, Assembly-CSharp
         m_MethodName: PressStarsButton
         m_Mode: 3
@@ -11884,7 +11923,6 @@ GameObject:
   - component: {fileID: 783570669}
   - component: {fileID: 783570668}
   - component: {fileID: 783570667}
-  - component: {fileID: 783570671}
   m_Layer: 5
   m_Name: UICanvas
   m_TagString: Untagged
@@ -11981,20 +12019,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &783570671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 783570666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a992845e5bfd0bf4f9a33200ca7bab84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panel: {fileID: 178076836}
-  levelIndex: 0
 --- !u!1 &794734687
 GameObject:
   m_ObjectHideFlags: 0
@@ -34605,7 +34629,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 783570671}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StageButton, Assembly-CSharp
         m_MethodName: PressStarsButton
         m_Mode: 3
@@ -49809,7 +49833,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Title
+          m_StringArgument: StageSelection
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1557111908
@@ -52205,7 +52229,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 783570671}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StageButton, Assembly-CSharp
         m_MethodName: RestartButton
         m_Mode: 1
@@ -59040,7 +59064,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1783741931}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 79450910}
+        m_TargetAssemblyTypeName: GamePauseMenu, Assembly-CSharp
+        m_MethodName: CloseMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1783741931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61059,7 +61095,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 783570671}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StageButton, Assembly-CSharp
         m_MethodName: ExitButton
         m_Mode: 1
@@ -61453,7 +61489,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 26, y: -125.79}
+  m_AnchoredPosition: {x: 46.3, y: -144}
   m_SizeDelta: {x: 86, y: 86}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1936415680
@@ -63260,7 +63296,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 783570671}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StageButton, Assembly-CSharp
         m_MethodName: ContinueButton
         m_Mode: 1
@@ -63506,7 +63542,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Title
+          m_StringArgument: StageSelection
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2029944135
