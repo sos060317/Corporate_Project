@@ -275,6 +275,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: UI_Coin
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 291
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91709ee542cdaeb4c8d6ccc0865bbe86
+      internalID: 1286806277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -289,6 +310,7 @@ TextureImporter:
       UI_Button_01: -678682675
       UI_Button_02: -423471956
       UI_Button_Close: 1491727201
+      UI_Coin: 1286806277
       UI_Panel: -993308019
       UI_Star_01: -1008867147
       UI_Star_02: 245128687
