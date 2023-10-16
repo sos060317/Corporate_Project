@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: "\uAC15\uC544\uC9C0"
   enemyBaseHealth: 100
-  enemyBaseMoveSpeed: 1.5
+  enemyBaseMoveSpeed: 3
   enemyBaseAttackRate: 1.5
   enemyBaseAttackRange: 0.4
   defense: 0

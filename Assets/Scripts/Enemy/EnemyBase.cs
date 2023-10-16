@@ -64,6 +64,16 @@ public abstract class EnemyBase : MonoBehaviour
 
     protected virtual void Update()
     {
+        if (GameManager.Instance.isGameStop)
+        {
+            anim.StartPlayback();
+            return;
+        }
+        else
+        {
+            anim.StopPlayback();
+        }
+        
         MoveUpdate();
         AttackUpdate();
         AnimationUpdate();
@@ -81,9 +91,9 @@ public abstract class EnemyBase : MonoBehaviour
 
     private void MoveUpdate()
     {
-        if (!canMove || GameManager.Instance.isGameStop)
+        if (!canMove)
         {
-            return;
+            return; 
         }
         
         // 주변에 타겟이 있을때
@@ -144,15 +154,6 @@ public abstract class EnemyBase : MonoBehaviour
     private void AnimationUpdate()
     {
         anim.SetBool("isRun", canMove);
-
-        if (GameManager.Instance.isGameStop)
-        {
-            anim.StartPlayback();
-        }
-        else
-        {
-            anim.StopPlayback();
-        }
     }
 
     protected abstract void AttackUpdate();

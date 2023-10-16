@@ -12,6 +12,7 @@ TagManager:
   - BombPos
   - MagicPos
   - ArrowTower
+  - Road
   layers:
   - Default
   - TransparentFX
@@ -57,4 +58,7 @@ TagManager:
     locked: 0
   - name: Node
     uniqueID: 2385504769
+    locked: 0
+  - name: Skill
+    uniqueID: 3524679541
     locked: 0
