@@ -96,11 +96,14 @@ public class UpgradeArrowTower : MonoBehaviour
     public GameObject Pos3;
 
     private bool hasSubtractedGold = false; // 이미 감소했는지 여부를 나타내는 변수
-    public int Testcoin = 50; // 테스트용 코인 변수
+    public int StartingCost = 120; // 설치할때 코인
 
     private void Start()
     {
+        StartingCost = arrowTemplate.aweapon[Arrowlevel].Acost;
         playerGold = FindObjectOfType<GameManager>();
+        //node = GetComponentInParent<Node>();
+
         Debug.Log("Null" + playerGold.currentGold);
 
         // 시작 시 모든 Pos 오브젝트를 비활성화
@@ -113,8 +116,19 @@ public class UpgradeArrowTower : MonoBehaviour
         {
             Debug.Log("d");
             //playerGold.currentGold -= Testcoin;
-            playerGold.UseGold(Testcoin);
+            //if (playerGold.currentGold >= StartingCost)
+            //{
+            //    playerGold.UseGold(arrowTemplate.aweapon[Arrowlevel].Acost);
+            //    hasSubtractedGold = true;
+            //}
+            //else
+            //{
+            //    Destroy(gameObject);
+            //}
+
+            playerGold.UseGold(arrowTemplate.aweapon[Arrowlevel].Acost);
             hasSubtractedGold = true;
+
         }
     }
 

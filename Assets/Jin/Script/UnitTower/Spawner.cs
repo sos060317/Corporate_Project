@@ -102,6 +102,8 @@ public class Spawner : MonoBehaviour
 
     private bool SpawncostCheck = false;
 
+    public int StartingCoin;
+
 
     private void Start()
     {
