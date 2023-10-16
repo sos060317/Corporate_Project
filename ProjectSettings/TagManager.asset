@@ -12,6 +12,7 @@ TagManager:
   - BombPos
   - MagicPos
   - ArrowTower
+  - Road
   layers:
   - Default
   - TransparentFX

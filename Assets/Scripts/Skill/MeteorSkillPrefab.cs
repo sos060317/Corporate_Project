@@ -9,8 +9,13 @@ public class MeteorSkillPrefab : MonoBehaviour
     [SerializeField] private int meteorCount;
     
     [SerializeField] private Meteor meteorPrefab;
-    [SerializeField] private GameObject sizeObj;
+    [SerializeField] private SpriteRenderer sizeObj;
 
+    [SerializeField] private Color ableColor;
+    [SerializeField] private Color unableColor;
+
+    private bool attackPossible = false;
+    
     private Vector2 skillPos;
 
     private bool stop;
@@ -25,9 +30,9 @@ public class MeteorSkillPrefab : MonoBehaviour
         transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,
             -Camera.main.transform.position.z));
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && attackPossible)
         {
-            sizeObj.SetActive(false);
+            sizeObj.gameObject.SetActive(false);
 
             skillPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,
                 -Camera.main.transform.position.z));
@@ -52,5 +57,19 @@ public class MeteorSkillPrefab : MonoBehaviour
         }
         
         Destroy(gameObject);
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Road"))
+        {
+            sizeObj.color = ableColor;
+            attackPossible = true;
+        }
+        else
+        {
+            sizeObj.color = unableColor;
+            attackPossible = false;
+        }
     }
 }
