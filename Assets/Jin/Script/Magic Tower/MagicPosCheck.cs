@@ -103,6 +103,7 @@ public class MagicPosCheck : MonoBehaviour
 
     public bool isclick = false;
 
+    public int Startingcoin = 150;
 
     private void Start()
     {

@@ -27,6 +27,8 @@ public class BombTower : MonoBehaviour
 
     public bool isClick = false;
 
+    public int Startcoin = 210;
+
 
     private void Start()
     {
