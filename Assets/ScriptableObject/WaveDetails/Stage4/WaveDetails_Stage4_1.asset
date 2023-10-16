@@ -1,0 +1,150 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc100e2b902d3fe4d89fce7eca13326f, type: 3}
+  m_Name: WaveDetails_Stage4_1
+  m_EditorClassIdentifier: 
+  waves:
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
