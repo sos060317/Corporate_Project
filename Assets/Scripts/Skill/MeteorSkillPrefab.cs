@@ -61,7 +61,7 @@ public class MeteorSkillPrefab : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Road"))
+        if (other.CompareTag("Road") || other.CompareTag("Enemy"))
         {
             sizeObj.color = ableColor;
             attackPossible = true;
