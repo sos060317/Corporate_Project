@@ -8957,6 +8957,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leaves Particle System
       objectReference: {fileID: 0}
+    - target: {fileID: 628379637886388189, guid: 17b65990d3abccd4ca7c62494c5c6e67, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 628379637886388189, guid: 17b65990d3abccd4ca7c62494c5c6e67, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 628379637886388190, guid: 17b65990d3abccd4ca7c62494c5c6e67, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -12964,6 +12972,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4ba305a85cfa9f4a8c7dfaff285124c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ATower: {fileID: 0}
+  BTower: {fileID: 0}
+  MTower: {fileID: 0}
+  UTower: {fileID: 0}
   buildButtons:
   - {fileID: 1748936037}
   - {fileID: 711069333}
