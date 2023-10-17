@@ -15,136 +15,99 @@ MonoBehaviour:
   waves:
   - waveDatas:
     - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 3
+      enemySpawnInterval: 0.3
+      nextEnemyDelay: 5
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 0.5
+      nextEnemyDelay: 3
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 30078f86dc69c064c84a8583be72171d, type: 2}
+      enemySpawnCount: 2
+      enemySpawnInterval: 0.4
+      nextEnemyDelay: 2
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 0.3
+      nextEnemyDelay: 3
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 10
+      enemySpawnInterval: 0.3
+      nextEnemyDelay: 3
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 3e86b7733a7288c4e986c83c3929dfb6, type: 2}
       enemySpawnCount: 5
       enemySpawnInterval: 1
       nextEnemyDelay: 3
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 7584a0e377f8c0847b41c04f521485d5, type: 2}
+      enemySpawnCount: 7
+      enemySpawnInterval: 1
+      nextEnemyDelay: 3
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 30078f86dc69c064c84a8583be72171d, type: 2}
+      enemySpawnCount: 3
+      enemySpawnInterval: 1
+      nextEnemyDelay: 10
     - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 7
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 1
+      nextEnemyDelay: 7
+    - enemyType: {fileID: 11400000, guid: 3e86b7733a7288c4e986c83c3929dfb6, type: 2}
+      enemySpawnCount: 2
+      enemySpawnInterval: 0.4
+      nextEnemyDelay: 3
+    - enemyType: {fileID: 11400000, guid: 7584a0e377f8c0847b41c04f521485d5, type: 2}
+      enemySpawnCount: 3
+      enemySpawnInterval: 0.4
+      nextEnemyDelay: 3
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 15
+      enemySpawnInterval: 0.7
+      nextEnemyDelay: 3
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+      enemySpawnCount: 15
+      enemySpawnInterval: 0.7
+      nextEnemyDelay: 3
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 30078f86dc69c064c84a8583be72171d, type: 2}
+      enemySpawnCount: 4
+      enemySpawnInterval: 0.5
+      nextEnemyDelay: 7
+    - enemyType: {fileID: 11400000, guid: 3e86b7733a7288c4e986c83c3929dfb6, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 0.7
+      nextEnemyDelay: 5
+    - enemyType: {fileID: 11400000, guid: 7584a0e377f8c0847b41c04f521485d5, type: 2}
       enemySpawnCount: 5
       enemySpawnInterval: 1
       nextEnemyDelay: 3
   - waveDatas:
     - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
+      enemySpawnCount: 7
+      enemySpawnInterval: 0.8
+      nextEnemyDelay: 2
     - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
+      enemySpawnCount: 10
+      enemySpawnInterval: 0.5
       nextEnemyDelay: 3
-  - waveDatas:
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
+    - enemyType: {fileID: 11400000, guid: 3e86b7733a7288c4e986c83c3929dfb6, type: 2}
+      enemySpawnCount: 3
+      enemySpawnInterval: 0.3
       nextEnemyDelay: 3
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
+    - enemyType: {fileID: 11400000, guid: 30078f86dc69c064c84a8583be72171d, type: 2}
       enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
-  - waveDatas:
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
-  - waveDatas:
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
-  - waveDatas:
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
-  - waveDatas:
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
-  - waveDatas:
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
-  - waveDatas:
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
-  - waveDatas:
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
-  - waveDatas:
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
-  - waveDatas:
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
-  - waveDatas:
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
-  - waveDatas:
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
-  - waveDatas:
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
-      nextEnemyDelay: 3
-    - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
-      enemySpawnCount: 5
-      enemySpawnInterval: 1
+      enemySpawnInterval: 2
+      nextEnemyDelay: 5
+    - enemyType: {fileID: 11400000, guid: 7584a0e377f8c0847b41c04f521485d5, type: 2}
+      enemySpawnCount: 3
+      enemySpawnInterval: 0.4
       nextEnemyDelay: 3
