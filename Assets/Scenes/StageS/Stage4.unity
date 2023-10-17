@@ -1743,7 +1743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af100504740ad6843909c02859d96e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wave: {fileID: 11400000, guid: f6e0fd4b6e96db74c865c85bf94bf9a4, type: 2}
+  wave: {fileID: 11400000, guid: 9a59a673ab6d05748acd9f2c55792caf, type: 2}
 --- !u!114 &143650595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33537,6 +33537,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4ba305a85cfa9f4a8c7dfaff285124c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ATower: {fileID: 0}
+  BTower: {fileID: 0}
+  MTower: {fileID: 0}
+  UTower: {fileID: 0}
   buildButtons:
   - {fileID: 1748936037}
   - {fileID: 711069333}
@@ -38857,7 +38861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3347543616739314970, guid: c4a55705bf4afe6438518d8d6af4e976, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24
+      value: -24.86
       objectReference: {fileID: 0}
     - target: {fileID: 3347543616739314970, guid: c4a55705bf4afe6438518d8d6af4e976, type: 3}
       propertyPath: m_LocalPosition.y
@@ -39542,7 +39546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3347543616739314970, guid: c4a55705bf4afe6438518d8d6af4e976, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24
+      value: -24.86
       objectReference: {fileID: 0}
     - target: {fileID: 3347543616739314970, guid: c4a55705bf4afe6438518d8d6af4e976, type: 3}
       propertyPath: m_LocalPosition.y
@@ -63322,7 +63326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af100504740ad6843909c02859d96e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wave: {fileID: 11400000, guid: f6e0fd4b6e96db74c865c85bf94bf9a4, type: 2}
+  wave: {fileID: 11400000, guid: 8c49ada5a517a934d90d2aba30c0eb62, type: 2}
 --- !u!114 &1910373640
 MonoBehaviour:
   m_ObjectHideFlags: 0

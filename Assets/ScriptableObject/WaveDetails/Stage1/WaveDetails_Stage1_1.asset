@@ -17,34 +17,34 @@ MonoBehaviour:
     - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
       enemySpawnCount: 3
       enemySpawnInterval: 1
-      nextEnemyDelay: 5
+      nextEnemyDelay: 3
     - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
       enemySpawnCount: 3
       enemySpawnInterval: 1
-      nextEnemyDelay: 5
+      nextEnemyDelay: 3
     - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
       enemySpawnCount: 3
       enemySpawnInterval: 1
-      nextEnemyDelay: 5
+      nextEnemyDelay: 3
   - waveDatas:
     - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
       enemySpawnCount: 5
       enemySpawnInterval: 1
-      nextEnemyDelay: 5
+      nextEnemyDelay: 3
     - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
       enemySpawnCount: 7
       enemySpawnInterval: 1.25
-      nextEnemyDelay: 7
+      nextEnemyDelay: 3
   - waveDatas:
     - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
       enemySpawnCount: 3
       enemySpawnInterval: 1
-      nextEnemyDelay: 5
+      nextEnemyDelay: 2
     - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
       enemySpawnCount: 5
       enemySpawnInterval: 1
-      nextEnemyDelay: 5
+      nextEnemyDelay: 2
     - enemyType: {fileID: 11400000, guid: 4b1146e60570a054a987c210e226bad2, type: 2}
       enemySpawnCount: 8
       enemySpawnInterval: 1
-      nextEnemyDelay: 5
+      nextEnemyDelay: 3
