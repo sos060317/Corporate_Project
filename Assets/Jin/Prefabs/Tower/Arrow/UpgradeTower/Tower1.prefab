@@ -109,6 +109,7 @@ MonoBehaviour:
   - {fileID: 6869279931616084616, guid: 1b0cc7c8f37e7e34c9a82c33fc0412ba, type: 3}
   parentTransform: {fileID: 6198729432821190632}
   Round: {fileID: 6198729432438164596}
+  StartingCoin: 100
 --- !u!61 &6198729432191957990
 BoxCollider2D:
   m_ObjectHideFlags: 0

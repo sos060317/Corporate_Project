@@ -264,4 +264,5 @@ public class GameManager : MonoBehaviour
         
         gameClearMenu.Init(starCount);
     }
+
 }
