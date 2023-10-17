@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Searcher;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -18,6 +19,8 @@ public abstract class EnemyBase : MonoBehaviour
     private int movePosIndex;
     
     private float moveSpeed;
+
+    private bool isFaint = false;
     
     protected bool canMove = true;
     protected bool isTargeting = false;
@@ -72,6 +75,11 @@ public abstract class EnemyBase : MonoBehaviour
         else
         {
             anim.StopPlayback();
+        }
+
+        if (isFaint)
+        {
+            return;
         }
         
         MoveUpdate();
@@ -292,5 +300,23 @@ public abstract class EnemyBase : MonoBehaviour
         transform.position = movePoints[movePosIndex] + moveOffset;
 
         canMove = true;
+    }
+
+    public void FaintEnemy(float faintTime)
+    {
+        StartCoroutine(FaintRoutine(faintTime));
+    }
+
+    private IEnumerator FaintRoutine(float faintTime)
+    {
+        isFaint = true;
+        
+        anim.SetBool("Faint", true);
+
+        yield return new WaitForSeconds(faintTime);
+
+        isFaint = false;
+        
+        anim.SetBool("Faint", false);
     }
 }
