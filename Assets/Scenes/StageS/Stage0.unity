@@ -1011,6 +1011,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NextWaveInfo
       objectReference: {fileID: 0}
+    - target: {fileID: 4323829001148095390, guid: 9c9ec31d946929c4288e52509993275f, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     - target: {fileID: 4323829001180222569, guid: 9c9ec31d946929c4288e52509993275f, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -61915,7 +61919,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 46.30005, y: -144}
-  m_SizeDelta: {x: 86, y: 86}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1936415680
 MonoBehaviour:
@@ -61937,7 +61941,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1286806277, guid: 8fd732bd974bf1245b6adb2376e6ae57, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 949a6dded2230bb46af410152b1e3a28, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
