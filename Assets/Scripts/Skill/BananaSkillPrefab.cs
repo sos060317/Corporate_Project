@@ -1,14 +1,13 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
+using UnityEngine.Serialization;
 
-public class MeteorSkillPrefab : MonoBehaviour
+public class BananaSkillPrefab : MonoBehaviour
 {
-    [SerializeField] private int meteorCount;
+    [SerializeField] private int bananaCount;
     
-    [SerializeField] private Meteor meteorPrefab;
+    [SerializeField] private Banana bananaPrefab;
     [SerializeField] private SpriteRenderer sizeObj;
 
     [SerializeField] private Color ableColor;
@@ -47,9 +46,9 @@ public class MeteorSkillPrefab : MonoBehaviour
     
     private IEnumerator MeteorRoutine()
     {
-        for (int i = 0; i < meteorCount; i++)
+        for (int i = 0; i < bananaCount; i++)
         {
-            var meteor = Instantiate(meteorPrefab, skillPos, Quaternion.identity);
+            var meteor = Instantiate(bananaPrefab, skillPos, Quaternion.identity);
             
             meteor.Init(skillPos + Random.insideUnitCircle);
             

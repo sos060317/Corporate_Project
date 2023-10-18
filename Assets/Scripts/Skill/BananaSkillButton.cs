@@ -1,14 +1,13 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MeteorSkillButton : MonoBehaviour
+public class BananaSkillButton : MonoBehaviour
 {
     [SerializeField] private float skillCooldownTime;
     [SerializeField] private Image skillImage;
-    [SerializeField] private GameObject meteorSkillPrefab;
+    [SerializeField] private GameObject bananaSkillPrefab;
 
     private float skillTime;
 
@@ -40,12 +39,12 @@ public class MeteorSkillButton : MonoBehaviour
         skillImage.fillAmount = skillTime / skillCooldownTime;
     }
 
-    public void UseMeteorSkill()
+    public void UseBananaSkill()
     {
         skillButton.interactable = false;
 
         skillTime = 0;
         
-        Instantiate(meteorSkillPrefab, Vector3.zero, Quaternion.identity);
+        Instantiate(bananaSkillPrefab, Vector3.zero, Quaternion.identity);
     }
 }
