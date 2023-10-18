@@ -9,6 +9,8 @@ public class GamePauseMenu : MonoBehaviour
     
     public void CloseMenu()
     {
+        GameManager.Instance.isGameStop = false;
+
         gameObject.SetActive(false);
     }
 
