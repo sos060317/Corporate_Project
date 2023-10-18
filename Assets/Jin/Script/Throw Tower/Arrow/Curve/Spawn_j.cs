@@ -185,7 +185,7 @@ public class Spawn_j : MonoBehaviour
             }
         }
         else
-        {
+        { 
             // 리스트가 비어 있으면 FlowingObject를 비활성화
             if (FlowingObject != null)
             {

@@ -94,6 +94,8 @@ public class MagicPosCheck : MonoBehaviour
     public MagicTowerTemplate magicTemplate;
     private GameManager playerGold;
 
+    public GameObject RoundObj;
+
     public int Magiclevel = 0;
     public GameObject Pos1;
     public GameObject Pos2;
@@ -107,6 +109,8 @@ public class MagicPosCheck : MonoBehaviour
 
     private void Start()
     {
+        RoundObj.SetActive(false);
+
         playerGold = FindObjectOfType<GameManager>();
         Debug.Log("Null" + playerGold.currentGold);
 
@@ -127,6 +131,10 @@ public class MagicPosCheck : MonoBehaviour
 
     private void Update()
     {
+        float roundSize = magicTemplate.mweapon[Magiclevel].Mradius;
+        RoundObj.transform.localScale = new Vector3(roundSize, roundSize, roundSize);
+
+
         // 레벨이 오를 때마다 Pos 오브젝트의 상태를 업데이트
         UpdatePosObjects();
 
@@ -134,6 +142,7 @@ public class MagicPosCheck : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(1))
             {
+                RoundObj.SetActive(false);
                 isclick = false;
             }
         }
@@ -175,7 +184,8 @@ public class MagicPosCheck : MonoBehaviour
     private void OnMouseDown()
     {
         isclick = true;
-        Debug.Log("성호 죽여야 겠다");
+        Debug.Log("범위 첵크");
+        RoundObj.SetActive(true);
     }
 
 
