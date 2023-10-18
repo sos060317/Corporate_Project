@@ -556,7 +556,6 @@ MonoBehaviour:
   Pos1: {fileID: 3225689150003025915}
   Pos2: {fileID: 3225689150222356774}
   Pos3: {fileID: 3225689150049823953}
-  node: {fileID: 0}
   StartingCost: 120
 --- !u!114 &3225689151435142048
 MonoBehaviour:

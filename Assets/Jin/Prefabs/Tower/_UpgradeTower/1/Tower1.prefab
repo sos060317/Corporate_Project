@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6198729432821190632}
   - component: {fileID: 6198729432191957991}
   - component: {fileID: 6198729432191957988}
-  - component: {fileID: 6198729432191957990}
   - component: {fileID: 6198729432191957989}
+  - component: {fileID: 6015158735474066074}
   - component: {fileID: 6198729432191957912}
   m_Layer: 8
   m_Name: Tower1
@@ -110,32 +110,6 @@ MonoBehaviour:
   parentTransform: {fileID: 6198729432821190632}
   Round: {fileID: 6198729432438164596}
   StartingCoin: 100
---- !u!61 &6198729432191957990
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6198729432191957987}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.024851859, y: -0.24340439}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.334936, y: 1.4868088}
-  m_EdgeRadius: 0
 --- !u!114 &6198729432191957989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,6 +127,19 @@ MonoBehaviour:
   selectedUnitRTSList: []
   clicked: 0
   lastRightClickPosition: {x: 0, y: 0, z: 0}
+--- !u!65 &6015158735474066074
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6198729432191957987}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3422546, y: 1.3300316, z: 0.20000003}
+  m_Center: {x: 0.036670133, y: -0.12834552, z: 0}
 --- !u!114 &6198729432191957912
 MonoBehaviour:
   m_ObjectHideFlags: 0

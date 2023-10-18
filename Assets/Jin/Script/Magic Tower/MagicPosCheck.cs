@@ -184,7 +184,7 @@ public class MagicPosCheck : MonoBehaviour
     private void OnMouseDown()
     {
         isclick = true;
-        Debug.Log("¹üÀ§ Ã½Å©");
+        Debug.Log("Å¬¸¯ Ã½Å©");
         RoundObj.SetActive(true);
     }
 

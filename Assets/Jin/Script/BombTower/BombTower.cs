@@ -5,8 +5,10 @@ using UnityEngine;
 public class BombTower : MonoBehaviour
 {
     private GameManager playerGold;
-    public BombTowerTemplate bombTemplate; 
+    public BombTowerTemplate bombTemplate;
 
+
+    public GameObject bombRound;
 
     public GameObject arrowPrefab;
     public GameObject spawnPos;
@@ -32,6 +34,8 @@ public class BombTower : MonoBehaviour
 
     private void Start()
     {
+
+        bombRound.SetActive(false);
 
         playerGold = FindObjectOfType<GameManager>();
         // Testcoin 값만큼 PlayerGold를 처음 한 번만 감소시킵니다.
@@ -64,6 +68,9 @@ public class BombTower : MonoBehaviour
 
         canSpawn = enemyList.Count > 0;
 
+        float bombround = bombTemplate.Bweapon[BombLevel].round;
+        bombRound.transform.localScale = new Vector3(bombround, bombround, bombround);
+
         if (canSpawn)
         {
             timeSinceLastSpawn += Time.deltaTime;
@@ -93,7 +100,7 @@ public class BombTower : MonoBehaviour
             if (Input.GetMouseButtonDown(1))
             {
                 isClick = false;
-                Debug.Log("클릭 false");
+                bombRound.SetActive(false);
             }
         }
     }
@@ -132,6 +139,7 @@ public class BombTower : MonoBehaviour
     {
         isClick = true;
         Debug.Log("클릭확인");
+        bombRound.SetActive(true);
     }
 
     private void SpawnArrow()
