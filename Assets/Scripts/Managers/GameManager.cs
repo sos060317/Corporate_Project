@@ -109,6 +109,8 @@ public class GameManager : MonoBehaviour
         gameClearMenu.gameObject.SetActive(false);
         gameOverMenu.gameObject.SetActive(false);
         gamePauseMenu.gameObject.SetActive(false);
+        
+        
     }
 
     private void Update()

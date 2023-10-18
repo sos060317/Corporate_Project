@@ -47,7 +47,7 @@ public abstract class EnemyBase : MonoBehaviour
 
     protected AllyBase targetAlly;
 
-    private void Start()
+    protected virtual void Start()
     {
         // 컴포넌트 할당
         sr = GetComponent<SpriteRenderer>();

@@ -48,8 +48,7 @@ public class AllyBase : MonoBehaviour
         attactTimer = 0f;
         isDie = false;
         
-        maxHealth = allyDetailsSo.allyBaseHealth * GameManager.Instance.allyHealthMultiply;
-        curHealth = maxHealth;
+        
     }
 
     private void Start()
@@ -65,6 +64,9 @@ public class AllyBase : MonoBehaviour
         isDie = false;
         isRun = false;
         hitDelay = new WaitForSeconds(0.1f);
+        
+        maxHealth = allyDetailsSo.allyBaseHealth * GameManager.Instance.allyHealthMultiply;
+        curHealth = maxHealth;
 
         moveSpeed = allyDetailsSo.allyBaseMoveSpeed;
         attackRange = allyDetailsSo.allyBaseAttackRange;
