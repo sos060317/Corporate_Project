@@ -319,3 +319,12 @@ public class AllyBase : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, scanRange);
     }
 }
+
+
+
+
+
+
+
+
+

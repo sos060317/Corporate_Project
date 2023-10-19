@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowTemplate: {fileID: 11400000, guid: 7ff9544debe48214a9d2cc8f3751d44a, type: 2}
+  ArrowUpgrade: {fileID: 3225689151435142053, guid: 196c68d09a1f2894a9ea9de35a54464c, type: 3}
   curve:
     serializedVersion: 2
     m_Curve:

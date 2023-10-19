@@ -151,6 +151,45 @@ public class GameUnitChake : MonoBehaviour
             }
         }
 
+        //if (Input.GetMouseButtonDown(1))
+        //{
+        //    RaycastHit2D hit = Physics2D.Raycast(UtilsClass.GetMouseWorldPosition(), Vector2.zero);
+        //    if (hit.collider != null && hit.collider.gameObject == Range)
+        //    {
+        //        lastRightClickPosition = UtilsClass.GetMouseWorldPosition(); // 우클릭한 위치 저장
+
+        //        Vector3 moveToPosition = UtilsClass.GetMouseWorldPosition();
+        //        List<Vector3> targetPositionList = GetPositionListAround(moveToPosition, new float[] { 0.8f, 0.9f, 1f }, new int[] { 5, 10, 20 });
+        //        int targetPositionListIndex = 0;
+
+        //        foreach (Unit unitRTS in selectedUnitRTSList)
+        //        {
+        //            unitRTS.MoveTo(targetPositionList[targetPositionListIndex]);
+        //            targetPositionListIndex = (targetPositionListIndex + 1) % targetPositionList.Count;
+        //        }
+
+        //        selectedUnitRTSList.Clear();
+        //        clicked = false;
+
+        //        foreach (Unit unitRTS in FindObjectsOfType<Unit>())
+        //        {
+        //            unitRTS.SetSelectedVisible(false);
+        //        }
+
+        //        Range.SetActive(false); // 우클릭 시 Range 비활성화
+
+
+        //        Debug.Log("호우 : " + lastRightClickPosition);
+        //    }
+        //    else
+        //    {
+        //        selectedUnitRTSList.Clear();
+        //        Range.SetActive(false);
+        //        Debug.Log("범위 밖이다 뻬에에에에에에엑");
+        //        clicked = false;
+        //    }
+        //}
+
         if (Input.GetMouseButtonDown(1))
         {
             RaycastHit2D hit = Physics2D.Raycast(UtilsClass.GetMouseWorldPosition(), Vector2.zero);
@@ -158,8 +197,7 @@ public class GameUnitChake : MonoBehaviour
             {
                 lastRightClickPosition = UtilsClass.GetMouseWorldPosition(); // 우클릭한 위치 저장
 
-                Vector3 moveToPosition = UtilsClass.GetMouseWorldPosition();
-                List<Vector3> targetPositionList = GetPositionListAround(moveToPosition, new float[] { 0.8f, 0.9f, 1f }, new int[] { 5, 10, 20 });
+                List<Vector3> targetPositionList = GetPositionListAround(lastRightClickPosition, new float[] { 0.8f, 0.9f, 1f }, new int[] { 5, 10, 20 });
                 int targetPositionListIndex = 0;
 
                 foreach (Unit unitRTS in selectedUnitRTSList)
@@ -178,7 +216,6 @@ public class GameUnitChake : MonoBehaviour
 
                 Range.SetActive(false); // 우클릭 시 Range 비활성화
 
-
                 Debug.Log("호우 : " + lastRightClickPosition);
             }
             else
@@ -189,7 +226,15 @@ public class GameUnitChake : MonoBehaviour
                 clicked = false;
             }
         }
+
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(lastRightClickPosition, 0.1f); // 우클릭 위치를 시각화
+    }
+
 
     private void SelectUnitsInTower()
     {

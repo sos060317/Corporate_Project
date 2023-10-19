@@ -8,7 +8,7 @@ public class TrowingObject : MonoBehaviour
     private float attackPower;
 
     public ArrowTowerTemplate arrowTemplate;
-    private UpgradeArrowTower ArrowUpgrade;
+    public UpgradeArrowTower ArrowUpgrade;
     private int aLevel = 0; 
 
 
