@@ -36,8 +36,6 @@ public class MeteorSkillPrefab : MonoBehaviour
 
             skillPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,
                 -Camera.main.transform.position.z));
-            
-            Debug.Log(skillPos);
 
             stop = true;
 

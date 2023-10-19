@@ -83,25 +83,6 @@ public class RoadCreator : MonoBehaviour
         mesh.triangles = tris;
         mesh.uv = uvs;
 
-        if (GetComponent<PolygonCollider2D>() != null)
-        {
-            Mesh polymesh;
-            PolygonCollider2D poly2d;
-            Vector3[] vertices;
-            Vector2[] vertices2d;
-            
-            polymesh = mesh;
-            vertices = polymesh.vertices;
-            vertices2d = new Vector2[vertices.Length];
-
-            for (var i = 0; i < vertices.Length; i++) {
-                vertices2d[i] = new Vector2(vertices[i].x, vertices[i].y);
-            }
-
-            poly2d = gameObject.GetComponent<PolygonCollider2D>();
-            poly2d.points = vertices2d;
-        }
-
         return mesh;
     }
 }
