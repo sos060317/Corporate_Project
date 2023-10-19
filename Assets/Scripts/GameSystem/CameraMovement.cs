@@ -1,6 +1,7 @@
 using System;
 using Unity.VisualScripting.FullSerializer.Internal;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Rendering;
 
 public class CameraMovement : MonoBehaviour
@@ -41,6 +42,11 @@ public class CameraMovement : MonoBehaviour
 
     private void PanCamera()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+
         if (Input.GetMouseButtonDown(0)) // 마우스를 처음 클릭했을 때
         {
             dragOrigin = cam.ScreenToWorldPoint(Input.mousePosition); // 그 벡터를 받아옴
@@ -57,6 +63,11 @@ public class CameraMovement : MonoBehaviour
 
     private void ScrollCamera()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+
         float scroll = Input.GetAxis("Mouse ScrollWheel") * zoomSpeed; // 마우스 휠 값 * 줌 인 아웃 속도
 
         if (cam.orthographicSize <= maxZoomIn && scroll > 0) // 최대 줌일 때, 확대하는 것 방지 
