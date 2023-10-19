@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Sockets;
 using UnityEngine;
 
 public class TowerBuildManager : MonoBehaviour
@@ -37,8 +38,25 @@ public class TowerBuildManager : MonoBehaviour
 
     public void ShowTowerWindow(TowerNode towerNode)
     {
+        if(selectedNode == towerNode)
+        {
+            DeselectNode();
+            return;
+        }
+
         selectedNode = towerNode;
 
         towerNodeBuildUI.ShowTowerWindow(towerNode);
+    }
+
+    public void DeselectNode()
+    {
+        HideTowerWindow();
+    }
+
+    public void HideTowerWindow()
+    {
+        selectedNode = null;
+        towerNodeBuildUI.HideTowerWindow(); 
     }
 }

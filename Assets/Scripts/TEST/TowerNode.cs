@@ -19,6 +19,34 @@ public class TowerNode : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+
+        if(tower != null)
+        {
+            TowerBuildManager.Instance.HideTowerWindow();
+
+            return;
+        }
+
         TowerBuildManager.Instance.ShowTowerWindow(this);
+    }
+
+    private void OnMouseEnter()
+    {
+        if (spriteRenderer.color.a != 0)
+        {
+            spriteRenderer.color = overColor;
+        }
+    }
+
+    private void OnMouseExit()
+    {
+        if (spriteRenderer.color.a != 0)
+        {
+            spriteRenderer.color = nomalColor;
+        }
     }
 }

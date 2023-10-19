@@ -140,6 +140,4 @@ public class Node : MonoBehaviour
             sr.color = nomalColor;
         }
     }
-
-    
 }
