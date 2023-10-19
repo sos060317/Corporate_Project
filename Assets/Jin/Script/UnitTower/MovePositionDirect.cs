@@ -34,7 +34,7 @@ public class MovePositionDirect : MonoBehaviour, IMovePosition
         
         ally.SetMoveAnimation(true, moveDir);
         
-        if (Vector3.Distance(movePosition, transform.position) < 1f) 
+        if (Vector3.Distance(movePosition, transform.position) < 0.3f) 
         {
             moveDir = Vector3.zero; // Stop moving when near
             canMove = false;

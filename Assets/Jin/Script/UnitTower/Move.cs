@@ -21,12 +21,8 @@ public class Move : MonoBehaviour, IMoveVelocity
 
     private void FixedUpdate()
     {
-        //rigidbody2D.velocity = velocityVector * moveSpeed;
-
         Vector3 nextPos = velocityVector * moveSpeed * Time.deltaTime;
         transform.position += nextPos;
-
-        //characterBase.PlayMoveAnim(velocityVector);
     }
 
     public void Disable()

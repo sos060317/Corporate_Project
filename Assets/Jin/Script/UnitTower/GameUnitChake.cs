@@ -118,7 +118,7 @@ public class GameUnitChake : MonoBehaviour
 
     public bool clicked = false;
 
-    public Vector3 lastRightClickPosition; // 가장 최근 우클릭 위치 저장 (아마도)
+    public Vector3 lastRightClickPosition; // 가장 최근 우클릭 위치 저장
 
     private void Awake()
     {
@@ -147,7 +147,6 @@ public class GameUnitChake : MonoBehaviour
             if (EditorUtility.IsPersistent(selectedUnitRTSList[i]))
             {
                 selectedUnitRTSList.RemoveAt(i);
-                Debug.Log("니 뭐하는 놈이니?");
             }
         }
 
@@ -216,13 +215,13 @@ public class GameUnitChake : MonoBehaviour
 
                 Range.SetActive(false); // 우클릭 시 Range 비활성화
 
-                Debug.Log("호우 : " + lastRightClickPosition);
+                Debug.Log("우클릭 위치값 : " + lastRightClickPosition);
             }
             else
             {
                 selectedUnitRTSList.Clear();
                 Range.SetActive(false);
-                Debug.Log("범위 밖이다 뻬에에에에에에엑");
+                Debug.Log("범위 밖");
                 clicked = false;
             }
         }
@@ -257,7 +256,10 @@ public class GameUnitChake : MonoBehaviour
         {
             positionList.AddRange(GetPositionListAround(startPosition, ringDistanceArray[i], ringPositionCountArray[i]));
         }
+
         return positionList;
+
+
     }
 
     private List<Vector3> GetPositionListAround(Vector3 startPosition, float distance, int positionCount)
