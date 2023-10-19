@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - waveDatas:
-    - enemyType: {fileID: 11400000, guid: 3e86b7733a7288c4e986c83c3929dfb6, type: 2}
+    - enemyType: {fileID: 11400000, guid: 5fb966f12a0c2cc48b9b77cc4c67d696, type: 2}
       enemySpawnCount: 1
       enemySpawnInterval: 1
       nextEnemyDelay: 3

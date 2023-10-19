@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e79536c5d12114a81e26079da7d0b3, type: 3}
+  m_Name: EnemyDetails_Wolf
+  m_EditorClassIdentifier: 
+  enemyName: "\uB291\uB300"
+  enemyBaseHealth: 1000
+  enemyBaseMoveSpeed: 3
+  enemyBaseAttackRate: 1.5
+  enemyBaseAttackRange: 0.4
+  defense: 0
+  magicResistance: 0
+  attackPower: 100
+  spellPower: 0
+  enemyPrefab: {fileID: 8696831600610002810, guid: cd78fc39cdf02f9479a1a23de2a01e7a, type: 3}
+  profileImage: {fileID: -1652181765, guid: d2bfec5a5a1888a4bb7168cd0d50e878, type: 3}
+  coins: 100
