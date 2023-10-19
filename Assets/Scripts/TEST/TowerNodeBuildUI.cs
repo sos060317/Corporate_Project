@@ -11,37 +11,22 @@ public class TowerNodeBuildUI : MonoBehaviour
     public MagicPosCheck MTower;
     public Spawner UTower;
 
-    private GameManager playerCoin;
-
     public Image towerWindow;
-
-    private Vector2 towerWindowPos;
-
-    private WaitForSeconds waitForSeconds;
-
-    private TowerNode selectedNode;
 
     private RectTransform rectTransform;
 
     private void Start()
     {
-        towerWindowPos = towerWindow.GetComponent<RectTransform>().anchoredPosition;
         rectTransform = GetComponent<RectTransform>();
-        playerCoin = GameManager.Instance;
-        waitForSeconds = new WaitForSeconds(0.3f);
     }
 
     public void ShowTowerWindow(TowerNode towerNode)
     {
-        selectedNode = towerNode;
-
         rectTransform.DOAnchorPosY(0, 0.3f).SetEase(Ease.Linear);
     }
 
     public void HideTowerWindow()
     {
-        selectedNode = null;
-
         rectTransform.DOAnchorPosY(-500, 0.3f).SetEase(Ease.Linear);
     }
 }
