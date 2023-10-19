@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6015158735474066074}
   - component: {fileID: 6198729432191957912}
   m_Layer: 8
-  m_Name: Tower1
+  m_Name: UnitTower
   m_TagString: SpawnTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

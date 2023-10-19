@@ -1551,6 +1551,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MagicTowerZone
       objectReference: {fileID: 0}
+    - target: {fileID: 4276195814295872340, guid: 57c1cdfec1cfc2c4b82b4efe9926ebea, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4276195814295872341, guid: 57c1cdfec1cfc2c4b82b4efe9926ebea, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1667,7 +1671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6782947782489991216, guid: 8fa9fd51fac3457449aaf98fe3c027eb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6782947782489991219, guid: 8fa9fd51fac3457449aaf98fe3c027eb, type: 3}
       propertyPath: m_RootOrder
