@@ -35,7 +35,13 @@ public class TowerNodeBuildUI : MonoBehaviour
     {
         selectedNode = towerNode;
 
-        //towerWindow.GetComponent<RectTransform>().DOAnchorPos(towerWindowPos, 0.3f);
         rectTransform.DOAnchorPosY(0, 0.3f).SetEase(Ease.Linear);
+    }
+
+    public void HideTowerWindow()
+    {
+        selectedNode = null;
+
+        rectTransform.DOAnchorPosY(-500, 0.3f).SetEase(Ease.Linear);
     }
 }
