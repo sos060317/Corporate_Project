@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Spawn_j : MonoBehaviour
 {
+    #region ì§€ëž„ ì½”ë“œ
+    
     //public GameObject RoundObject;
     //public ArrowTowerTemplate arrowTemplate;
     //public UpgradeArrowTower sp;
@@ -22,11 +24,11 @@ public class Spawn_j : MonoBehaviour
     //private bool canSpawn = false;
     //private float timeSinceLastSpawn = 0f;
 
-    //private bool isClicked = false; // Å¬¸¯ »óÅÂ¸¦ ÀúÀåÇÏ´Â º¯¼ö
+    //private bool isClicked = false; // Å¬ï¿½ï¿½ ï¿½ï¿½ï¿½Â¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     //private void Start()
     //{
-    //    // °ÔÀÓ ½ÃÀÛ ½Ã RoundObject¸¦ ºñÈ°¼ºÈ­ÇÕ´Ï´Ù.
+    //    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ RoundObjectï¿½ï¿½ ï¿½ï¿½È°ï¿½ï¿½È­ï¿½Õ´Ï´ï¿½.
     //    RoundObject.SetActive(false);
     //}
 
@@ -44,7 +46,7 @@ public class Spawn_j : MonoBehaviour
     //        if (collider.CompareTag(enemyTag) && !enemyList.Contains(collider.gameObject))
     //        {
     //            enemyList.Add(collider.gameObject);
-    //            // »õ·Î¿î ¿ÀºêÁ§Æ®°¡ ¸®½ºÆ®¿¡ Ãß°¡µÇ¸é FlowingObject¸¦ È°¼ºÈ­
+    //            // ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ç¸ï¿½ FlowingObjectï¿½ï¿½ È°ï¿½ï¿½È­
     //            if (FlowingObject != null)
     //            {
     //                FlowingObject.SetActive(true);
@@ -70,7 +72,7 @@ public class Spawn_j : MonoBehaviour
     //    }
     //    else
     //    {
-    //        // ¸®½ºÆ®°¡ ºñ¾î ÀÖÀ¸¸é FlowingObject¸¦ ºñÈ°¼ºÈ­
+    //        // ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ FlowingObjectï¿½ï¿½ ï¿½ï¿½È°ï¿½ï¿½È­
     //        if (FlowingObject != null)
     //        {
     //            FlowingObject.SetActive(false);
@@ -90,7 +92,7 @@ public class Spawn_j : MonoBehaviour
 
     //private void OnMouseDown()
     //{
-    //    // ÀÌ ¿ÀºêÁ§Æ®¸¦ Å¬¸¯ÇÒ ¶§¸¸ isClicked¸¦ true·Î ¼³Á¤ÇÏ¿© ¹üÀ§¸¦ È°¼ºÈ­ÇÕ´Ï´Ù.
+    //    // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ isClickedï¿½ï¿½ trueï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È°ï¿½ï¿½È­ï¿½Õ´Ï´ï¿½.
     //    isClicked = true;
     //    RoundObject.SetActive(true);
     //}
@@ -99,7 +101,7 @@ public class Spawn_j : MonoBehaviour
     //{
     //    foreach (GameObject spawnPosition in spawnPositions)
     //    {
-    //        if (spawnPosition.activeSelf) // ¿ÀºêÁ§Æ®°¡ È°¼ºÈ­µÇ¾î ÀÖ´Â °æ¿ì¿¡¸¸ ¼ÒÈ¯ÇÕ´Ï´Ù.
+    //        if (spawnPosition.activeSelf) // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ È°ï¿½ï¿½È­ï¿½Ç¾ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Õ´Ï´ï¿½.
     //        {
     //            Instantiate(arrowPrefab, spawnPosition.transform.position, Quaternion.identity);
     //        }
@@ -118,6 +120,8 @@ public class Spawn_j : MonoBehaviour
     //}
 
     //=======================================================================================================
+    
+    #endregion
 
     public GameObject RoundObject;
     public ArrowTowerTemplate arrowTemplate;
@@ -137,11 +141,11 @@ public class Spawn_j : MonoBehaviour
     private bool canSpawn = false;
     private float timeSinceLastSpawn = 0f;
 
-    public bool isClicked = false; // Å¬¸¯ »óÅÂ¸¦ ÀúÀåÇÏ´Â º¯¼ö
+    public bool isClicked = false; // Å¬ï¿½ï¿½ ï¿½ï¿½ï¿½Â¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     private void Start()
     {
-        // °ÔÀÓ ½ÃÀÛ ½Ã RoundObject¸¦ ºñÈ°¼ºÈ­ÇÕ´Ï´Ù.
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ RoundObjectï¿½ï¿½ ï¿½ï¿½È°ï¿½ï¿½È­ï¿½Õ´Ï´ï¿½.
         RoundObject.SetActive(false);
     }
 
@@ -159,7 +163,7 @@ public class Spawn_j : MonoBehaviour
             if (collider.CompareTag(enemyTag) && !enemyList.Contains(collider.gameObject))
             {
                 enemyList.Add(collider.gameObject);
-                // »õ·Î¿î ¿ÀºêÁ§Æ®°¡ ¸®½ºÆ®¿¡ Ãß°¡µÇ¸é FlowingObject¸¦ È°¼ºÈ­
+                // ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ç¸ï¿½ FlowingObjectï¿½ï¿½ È°ï¿½ï¿½È­
                 if (FlowingObject != null)
                 {
                     FlowingObject.SetActive(true);
@@ -179,14 +183,14 @@ public class Spawn_j : MonoBehaviour
                 timeSinceLastSpawn = 0f;
                 if (FlowingObject != null && FlowingObject.activeSelf)
                 {
-                    UpdateFlowingObjectPosition(); // FlowingObject À§Ä¡ ¾÷µ¥ÀÌÆ®
+                    UpdateFlowingObjectPosition(); // FlowingObject ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
                     SpawnArrowsAtPositions();
                 }
             }
         }
         else
         { 
-            // ¸®½ºÆ®°¡ ºñ¾î ÀÖÀ¸¸é FlowingObject¸¦ ºñÈ°¼ºÈ­
+            // ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ FlowingObjectï¿½ï¿½ ï¿½ï¿½È°ï¿½ï¿½È­
             if (FlowingObject != null)
             {
                 FlowingObject.SetActive(false);
@@ -211,9 +215,9 @@ public class Spawn_j : MonoBehaviour
 
     private void OnMouseDown()
     {
-        // ÀÌ ¿ÀºêÁ§Æ®¸¦ Å¬¸¯ÇÒ ¶§¸¸ isClicked¸¦ true·Î ¼³Á¤ÇÏ¿© ¹üÀ§¸¦ È°¼ºÈ­ÇÕ´Ï´Ù.
+        // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ isClickedï¿½ï¿½ trueï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È°ï¿½ï¿½È­ï¿½Õ´Ï´ï¿½.
         isClicked = true;
-        //¹öÆ°ÀÌ ³ª¿À´Â ÄÚµå
+        //ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Úµï¿½
         RoundObject.SetActive(true);
     }
 
@@ -221,7 +225,7 @@ public class Spawn_j : MonoBehaviour
     {
         if (enemyList.Count > 0)
         {
-            // Ã¹ ¹øÂ° ¿ÀºêÁ§Æ®¸¸ µû¶ó°¡µµ·Ï ¼öÁ¤
+            // Ã¹ ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ó°¡µï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             GameObject firstEnemy = enemyList[0];
             Vector2 targetPosition = firstEnemy.transform.position;
             FlowingObject.transform.position = Vector2.MoveTowards(FlowingObject.transform.position, targetPosition, followSpeed * Time.deltaTime);
@@ -232,7 +236,7 @@ public class Spawn_j : MonoBehaviour
     {
         foreach (GameObject spawnPosition in spawnPositions)
         {
-            if (spawnPosition.activeSelf) // ¿ÀºêÁ§Æ®°¡ È°¼ºÈ­µÇ¾î ÀÖ´Â °æ¿ì¿¡¸¸ ¼ÒÈ¯ÇÕ´Ï´Ù.
+            if (spawnPosition.activeSelf) // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ È°ï¿½ï¿½È­ï¿½Ç¾ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Õ´Ï´ï¿½.
             {
                 Instantiate(arrowPrefab, spawnPosition.transform.position, Quaternion.identity);
             }
