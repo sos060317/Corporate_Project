@@ -156,7 +156,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   duration: 0.4
-  maxHeightY: 4
+  maxHeightY: 7
   damageTag: Enemy
   damageAreaRadius: 0.7
   Damage: 25
