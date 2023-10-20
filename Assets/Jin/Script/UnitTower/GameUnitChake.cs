@@ -141,14 +141,14 @@ public class GameUnitChake : MonoBehaviour
     private void Update()
     {
 
-        selectedUnitRTSList.RemoveAll(item => item == null);
-        for (int i = selectedUnitRTSList.Count - 1; i >= 0; i--)
-        {
-            if (EditorUtility.IsPersistent(selectedUnitRTSList[i]))
-            {
-                selectedUnitRTSList.RemoveAt(i);
-            }
-        }
+        //selectedUnitRTSList.RemoveAll(item => item == null);
+        //for (int i = selectedUnitRTSList.Count - 1; i >= 0; i--)
+        //{
+        //    if (EditorUtility.IsPersistent(selectedUnitRTSList[i]))
+        //    {
+        //        selectedUnitRTSList.RemoveAt(i);
+        //    }
+        //}
 
         if (Input.GetMouseButtonDown(1))
         {

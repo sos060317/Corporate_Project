@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using System.Net.Sockets;
 
 public class TowerNodeBuildUI : MonoBehaviour
 {
@@ -15,33 +16,53 @@ public class TowerNodeBuildUI : MonoBehaviour
 
     public Image towerWindow;
 
-    private Vector2 towerWindowPos;
-
-    private WaitForSeconds waitForSeconds;
-
-    private TowerNode selectedNode;
+    public RectTransform buttonImage;
 
     private RectTransform rectTransform;
 
+    private TowerNode selectedTowerNode;
+
+    private bool isShowWindow = false;
+
     private void Start()
     {
-        towerWindowPos = towerWindow.GetComponent<RectTransform>().anchoredPosition;
         rectTransform = GetComponent<RectTransform>();
-        playerCoin = GameManager.Instance;
-        waitForSeconds = new WaitForSeconds(0.3f);
+    }
+
+    public void ButtonShowFunction()
+    {
+        if (isShowWindow)
+        {
+            TowerBuildManager.Instance.HideTowerWindow();
+        }
+        else
+        {
+            ShowTowerWindow(null);
+        }
     }
 
     public void ShowTowerWindow(TowerNode towerNode)
     {
-        selectedNode = towerNode;
-
+        isShowWindow = true;
+        buttonImage.rotation = Quaternion.Euler(0, 0, 180f);
         rectTransform.DOAnchorPosY(0, 0.3f).SetEase(Ease.Linear);
     }
 
     public void HideTowerWindow()
     {
-        selectedNode = null;
+        isShowWindow = false;
+        buttonImage.rotation = Quaternion.Euler(0, 0, 0f);
+        rectTransform.DOAnchorPosY(-270, 0.3f).SetEase(Ease.Linear);
+    }
 
-        rectTransform.DOAnchorPosY(-500, 0.3f).SetEase(Ease.Linear);
+    public void BuildTower(GameObject towerPrefab)  // 타워 설치? 아마
+    {
+        if (playerCoin.currentGold >= ATower.StartingCost || playerCoin.currentGold >= BTower.Startcoin || playerCoin.currentGold >= MTower.Startingcoin || playerCoin.currentGold >= UTower.StartingCoin)
+        {
+            //selectedNode.BuildTower(towerPrefab);
+            selectedTowerNode.BuildTower(towerPrefab);
+
+            BuildManager.Instance.DeselectNode();
+        }
     }
 }
