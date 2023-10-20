@@ -7,6 +7,7 @@ public class TrowingObject : MonoBehaviour
     private EnemyBase enemybase;
     private float attackPower;
 
+    [HideInInspector] public Spawn_j arrowTower;
     public ArrowTowerTemplate arrowTemplate;
     public UpgradeArrowTower ArrowUpgrade;
     private int aLevel = 0; 
@@ -15,7 +16,7 @@ public class TrowingObject : MonoBehaviour
     public AnimationCurve curve;
     public float duration = 1.0f;
     public float maxHeightY = 3.0f;
-    public string enemyTag = "FlowingPos"; // 적의 태그
+    //public string enemyTag = "FlowingPos"; // 적의 태그
 
     public string damageTag = "Enemy"; // 데미지를 줄 옵젝
     public float damageAreaRadius = 2.0f; // 공격 범위
@@ -24,13 +25,15 @@ public class TrowingObject : MonoBehaviour
     private Vector2 finish; // 종료 위치
     private bool reachedEnd = false;
 
-    private void Awake()
+
+
+    private void Start()
     {
         Vector3 start = transform.position;
 
         // 소환될 때 적의 좌표를 종료 위치로 설정
-        SetEnemyPositionAsFinish();
 
+        SetEnemyPositionAsFinish();
         StartCoroutine(Curve(start, finish));
     }
 
@@ -42,20 +45,30 @@ public class TrowingObject : MonoBehaviour
         {
             Damage = arrowTemplate.aweapon[aLevel].aDamage;
         }
+
+        
     }
 
     private void SetEnemyPositionAsFinish()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
-        if (enemies.Length > 0)
+        //GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
+        //if (enemies.Length > 0)
+        //{
+        //    finish = enemies[0].transform.position; // 첫 번째 적의 좌표를 종료 위치로 설정
+        //}
+        //else
+        //{
+        //    // 적이 없을 경우 임의의 기본값으로 설정
+        //    finish = Vector2.zero;
+        //}
+
+        Debug.Log(arrowTower.EnemyPos);
+        if (arrowTower.nowShot != false)
         {
-            finish = enemies[0].transform.position; // 첫 번째 적의 좌표를 종료 위치로 설정
+            Debug.Log("finishLine 확인");
+            finish = arrowTower.EnemyPos;
         }
-        else
-        {
-            // 적이 없을 경우 임의의 기본값으로 설정
-            finish = Vector2.zero;
-        }
+
     }
 
     public IEnumerator Curve(Vector3 start, Vector2 finish)
@@ -87,6 +100,7 @@ public class TrowingObject : MonoBehaviour
                 if (collider.CompareTag(damageTag))
                 {
                     collider.GetComponent<EnemyBase>().OnDamage(attackPower, Damage);
+                    Destroy(gameObject);
                     break;
                 }
             }
