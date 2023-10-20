@@ -34,6 +34,8 @@ public class Spawn_j : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(enemyList.Count);
+
         alevel = sp.Arrowlevel;
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, detectionRadius);
