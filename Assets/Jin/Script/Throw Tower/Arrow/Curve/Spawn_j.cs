@@ -132,20 +132,22 @@ public class Spawn_j : MonoBehaviour
     public List<GameObject> spawnPositions;
     public string enemyTag = "Enemy";
     public float detectionRadius = 5.0f;
-    public GameObject FlowingObject;
-    public float followSpeed = 5.0f;
     public float spawnInterval = 1.5f;
 
     [SerializeField]
     private List<GameObject> enemyList = new List<GameObject>();
-    private bool canSpawn = false;
     private float timeSinceLastSpawn = 0f;
 
-    public bool isClicked = false; // Ŭ�� ���¸� �����ϴ� ����
+    public bool isClicked = false;
+
+    //
+    public Vector2 EnemyPos;
+    public bool nowShot = false;
+    
 
     private void Start()
     {
-        // ���� ���� �� RoundObject�� ��Ȱ��ȭ�մϴ�.
+        
         RoundObject.SetActive(false);
     }
 
@@ -163,38 +165,26 @@ public class Spawn_j : MonoBehaviour
             if (collider.CompareTag(enemyTag) && !enemyList.Contains(collider.gameObject))
             {
                 enemyList.Add(collider.gameObject);
-                // ���ο� ������Ʈ�� ����Ʈ�� �߰��Ǹ� FlowingObject�� Ȱ��ȭ
-                if (FlowingObject != null)
-                {
-                    FlowingObject.SetActive(true);
-                }
             }
         }
 
         enemyList.RemoveAll(enemy => enemy == null || !IsWithinRadius(enemy.transform.position) || !enemy.activeSelf);
 
-        canSpawn = enemyList.Count > 0;
+        nowShot = enemyList.Count > 0;
 
-        if (canSpawn)
+        if (nowShot)
         {
             timeSinceLastSpawn += Time.deltaTime;
             if (timeSinceLastSpawn >= spawnInterval)
             {
                 timeSinceLastSpawn = 0f;
-                if (FlowingObject != null && FlowingObject.activeSelf)
-                {
-                    UpdateFlowingObjectPosition(); // FlowingObject ��ġ ������Ʈ
-                    SpawnArrowsAtPositions();
-                }
+                UpdateFlowingObjectPosition();
+                SpawnArrowsAtPositions();
             }
         }
         else
         { 
-            // ����Ʈ�� ��� ������ FlowingObject�� ��Ȱ��ȭ
-            if (FlowingObject != null)
-            {
-                FlowingObject.SetActive(false);
-            }
+
         }
 
         if (isClicked == true)
@@ -206,6 +196,19 @@ public class Spawn_j : MonoBehaviour
             }
         }
 
+        if (enemyList.Count > 0)
+        {
+            GameObject firstEnemy = enemyList[0];
+            EnemyPos = firstEnemy.transform.position;
+            nowShot = true;
+
+        }
+        else
+        {
+            nowShot = false;
+            EnemyPos = Vector2.zero;
+        }
+
 
         if (isClicked && alevel == 3)
         {
@@ -215,9 +218,7 @@ public class Spawn_j : MonoBehaviour
 
     private void OnMouseDown()
     {
-        // �� ������Ʈ�� Ŭ���� ���� isClicked�� true�� �����Ͽ� ������ Ȱ��ȭ�մϴ�.
         isClicked = true;
-        //��ư�� ������ �ڵ�
         RoundObject.SetActive(true);
     }
 
@@ -225,10 +226,9 @@ public class Spawn_j : MonoBehaviour
     {
         if (enemyList.Count > 0)
         {
-            // ù ��° ������Ʈ�� ���󰡵��� ����
+            
             GameObject firstEnemy = enemyList[0];
             Vector2 targetPosition = firstEnemy.transform.position;
-            FlowingObject.transform.position = Vector2.MoveTowards(FlowingObject.transform.position, targetPosition, followSpeed * Time.deltaTime);
         }
     }
 
@@ -236,9 +236,11 @@ public class Spawn_j : MonoBehaviour
     {
         foreach (GameObject spawnPosition in spawnPositions)
         {
-            if (spawnPosition.activeSelf) // ������Ʈ�� Ȱ��ȭ�Ǿ� �ִ� ��쿡�� ��ȯ�մϴ�.
+            if (spawnPosition.activeSelf)
             {
-                Instantiate(arrowPrefab, spawnPosition.transform.position, Quaternion.identity);
+                var temp = Instantiate(arrowPrefab, spawnPosition.transform.position, Quaternion.identity).GetComponent<TrowingObject>();
+
+                temp.arrowTower = GetComponent<Spawn_j>();
             }
         }
     }
