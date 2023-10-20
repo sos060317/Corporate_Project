@@ -224,23 +224,5 @@ public class Spawner : MonoBehaviour
         {
             Debug.Log("최대 업그레이드 상태 입니다.");
         }
-
-        //if (level < towerTemplate.weapon.Length - 1)
-        //{
-        //    if (playerGold.currentGold >= towerTemplate.weapon[level + 1].cost)
-        //    {
-        //        playerGold.currentGold -= towerTemplate.weapon[level + 1].cost;
-        //        level++;
-        //        Debug.Log("타워 업그레이드: 레벨 " + level);
-        //    }
-        //    else
-        //    {
-        //        Debug.Log("돈 부족하다");
-        //    }
-        //}
-        //else
-        //{
-        //    Debug.Log("최대 업그레이드 상태 입니다.");
-        //}
     }
 }
