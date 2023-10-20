@@ -5,17 +5,20 @@ using UnityEngine;
 public class TowerSetting : MonoBehaviour
 {
     //public GameObject MagicPrefab;
-    //public GameObject spawnPos;
+    //public List<GameObject> spawnPositions = new List<GameObject>();
     //public string enemyTag = "Enemy";
     //public float detectionRadius = 5.0f;
     //public GameObject FlowingObject;
     //public float followSpeed = 1000f;
 
-    //[SerializeField]
-    //public List<GameObject> enemyList = new List<GameObject>();
+    //private List<GameObject> enemyList = new List<GameObject>();
     //private bool canSpawn = false;
     //private float spawnInterval = 1.5f;
     //private float timeSinceLastSpawn = 0f;
+
+
+    //public Vector2 EnemyPos;
+    //public bool itTimeToShot;
 
     //private void Update()
     //{
@@ -44,7 +47,14 @@ public class TowerSetting : MonoBehaviour
     //        if (timeSinceLastSpawn >= spawnInterval)
     //        {
     //            timeSinceLastSpawn = 0f;
-    //            SpawnMagic();
+    //            foreach (GameObject spawnPos in spawnPositions)
+    //            {
+    //                // spawnPos가 활성화되어 있을 때만 소환
+    //                if (spawnPos.activeSelf)
+    //                {
+    //                    SpawnMagic(spawnPos);
+    //                }
+    //            }
     //        }
     //    }
     //    else
@@ -56,16 +66,16 @@ public class TowerSetting : MonoBehaviour
     //        }
     //    }
 
-    //    if (FlowingObject != null && enemyList.Count > 0)
+    //    if (enemyList.Count > 0) //FlowingObject != null && 
     //    {
     //        Vector2 targetPosition = enemyList[0].transform.position;
     //        FlowingObject.transform.position = Vector2.MoveTowards(FlowingObject.transform.position, targetPosition, followSpeed * Time.deltaTime);
     //    }
     //}
 
-    //private void SpawnMagic()
+    //private void SpawnMagic(GameObject spawnPosition)
     //{
-    //    Instantiate(MagicPrefab, spawnPos.transform.position, Quaternion.identity);
+    //    Instantiate(MagicPrefab, spawnPosition.transform.position, Quaternion.identity);
     //}
 
     //private bool IsWithinRadius(Vector2 position)
@@ -79,17 +89,23 @@ public class TowerSetting : MonoBehaviour
     //    Gizmos.DrawWireSphere(transform.position, detectionRadius);
     //}
 
+
+
     public GameObject MagicPrefab;
     public List<GameObject> spawnPositions = new List<GameObject>();
     public string enemyTag = "Enemy";
     public float detectionRadius = 5.0f;
-    public GameObject FlowingObject;
-    public float followSpeed = 1000f;
+    //public GameObject FlowingObject;
+    //public float followSpeed = 1000f;
 
     private List<GameObject> enemyList = new List<GameObject>();
     private bool canSpawn = false;
     private float spawnInterval = 1.5f;
     private float timeSinceLastSpawn = 0f;
+
+
+    public Vector2 MEnemyPos;
+    public bool itTimeToShot;
 
     private void Update()
     {
@@ -100,11 +116,6 @@ public class TowerSetting : MonoBehaviour
             if (collider.CompareTag(enemyTag) && !enemyList.Contains(collider.gameObject))
             {
                 enemyList.Add(collider.gameObject);
-                // 새로운 오브젝트가 리스트에 추가되면 FlowingObject를 활성화
-                if (FlowingObject != null)
-                {
-                    FlowingObject.SetActive(true);
-                }
             }
         }
 
@@ -130,23 +141,27 @@ public class TowerSetting : MonoBehaviour
         }
         else
         {
-            // 리스트가 비어 있으면 FlowingObject를 비활성화
-            if (FlowingObject != null)
-            {
-                FlowingObject.SetActive(false);
-            }
+
         }
 
-        if (FlowingObject != null && enemyList.Count > 0)
+        if (enemyList.Count > 0) //FlowingObject != null && 
         {
             Vector2 targetPosition = enemyList[0].transform.position;
-            FlowingObject.transform.position = Vector2.MoveTowards(FlowingObject.transform.position, targetPosition, followSpeed * Time.deltaTime);
+            MEnemyPos = targetPosition;
+            itTimeToShot = true;
+        }
+        else
+        {
+            itTimeToShot = false;
+            MEnemyPos = Vector2.zero;
         }
     }
 
     private void SpawnMagic(GameObject spawnPosition)
     {
-        Instantiate(MagicPrefab, spawnPosition.transform.position, Quaternion.identity);
+        var temp = Instantiate(MagicPrefab, spawnPosition.transform.position, Quaternion.identity).GetComponent<ThrowAndDamage>();
+
+        temp.MagicTower = GetComponent<TowerSetting>();
     }
 
     private bool IsWithinRadius(Vector2 position)

@@ -62,10 +62,9 @@ public class TrowingObject : MonoBehaviour
         //    finish = Vector2.zero;
         //}
 
-        Debug.Log(arrowTower.EnemyPos);
+
         if (arrowTower.nowShot != false)
         {
-            Debug.Log("finishLine »Æ¿Œ");
             finish = arrowTower.EnemyPos;
         }
 
