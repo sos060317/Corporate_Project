@@ -35,6 +35,16 @@ public class TowerNode : MonoBehaviour
         TowerBuildManager.Instance.ShowTowerWindow(this);
     }
 
+    public void BuildTower(GameObject towerPrefab)
+    {
+        tower = Instantiate(towerPrefab, transform.position, Quaternion.identity);
+
+        var srColor = spriteRenderer.color;
+        srColor.a = 0;
+        spriteRenderer.color = srColor;
+
+    }
+
     private void OnMouseEnter()
     {
         if (spriteRenderer.color.a != 0)

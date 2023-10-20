@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using System.Net.Sockets;
 
 public class TowerNodeBuildUI : MonoBehaviour
 {
@@ -11,10 +12,15 @@ public class TowerNodeBuildUI : MonoBehaviour
     public MagicPosCheck MTower;
     public Spawner UTower;
 
+    private GameManager playerCoin;
+
     public Image towerWindow;
+
     public RectTransform buttonImage;
 
     private RectTransform rectTransform;
+
+    private TowerNode selectedTowerNode;
 
     private bool isShowWindow = false;
 
@@ -46,6 +52,17 @@ public class TowerNodeBuildUI : MonoBehaviour
     {
         isShowWindow = false;
         buttonImage.rotation = Quaternion.Euler(0, 0, 0f);
-        rectTransform.DOAnchorPosY(-390, 0.3f).SetEase(Ease.Linear);
+        rectTransform.DOAnchorPosY(-270, 0.3f).SetEase(Ease.Linear);
+    }
+
+    public void BuildTower(GameObject towerPrefab)  // 타워 설치? 아마
+    {
+        if (playerCoin.currentGold >= ATower.StartingCost || playerCoin.currentGold >= BTower.Startcoin || playerCoin.currentGold >= MTower.Startingcoin || playerCoin.currentGold >= UTower.StartingCoin)
+        {
+            //selectedNode.BuildTower(towerPrefab);
+            selectedTowerNode.BuildTower(towerPrefab);
+
+            BuildManager.Instance.DeselectNode();
+        }
     }
 }
