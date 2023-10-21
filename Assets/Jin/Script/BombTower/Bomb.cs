@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Bomb : MonoBehaviour
 {
+    public BombTower bombTower;
+
     private EnemyBase enemybase;
     private float attackPower = 20;
 
     public AnimationCurve curve;
     public float duration = 1.0f;
     public float maxHeightY = 3.0f;
-    public string enemyTag = "FlowingPos"; // 적의 태그
+    //public string enemyTag = "FlowingPos"; // 적의 태그
 
     public string DamageTag = "Enemy";
     public float damageAreaRadius = 2.0f; // 공격 범위 반경
@@ -21,11 +23,10 @@ public class Bomb : MonoBehaviour
 
     private bool damageDealt = false; // 데미지를 이미 주었는지 여부 확인 변수
 
-    private void Awake()
+    private void Start()
     {
         Vector3 start = transform.position;
 
-        // 소환될 때 적의 좌표를 종료 위치로 설정
         SetEnemyPositionAsFinish();
 
         StartCoroutine(Curve(start, finish));
@@ -33,14 +34,9 @@ public class Bomb : MonoBehaviour
 
     private void SetEnemyPositionAsFinish()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
-        if (enemies.Length > 0)
+        if (bombTower.BombShot != false)
         {
-            finish = enemies[0].transform.position;
-        }
-        else
-        {
-            Destroy(gameObject);
+            finish = bombTower.BEnemyPos;
         }
     }
 

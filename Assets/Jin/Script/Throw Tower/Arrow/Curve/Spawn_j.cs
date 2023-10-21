@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Spawn_j : MonoBehaviour
 {
-
     public GameObject RoundObject;
     public ArrowTowerTemplate arrowTemplate;
     public UpgradeArrowTower sp;
@@ -24,17 +23,19 @@ public class Spawn_j : MonoBehaviour
 
     public Vector2 EnemyPos;
     public bool nowShot = false;
-    public GameObject RoundPos;
+    
     
 
     private void Start()
     {
         RoundObject.SetActive(false);
+        
     }
 
     private void Update()
     {
-        Debug.Log(enemyList.Count);
+
+        //Debug.Log(enemyList.Count); 적 수 확인
 
         alevel = sp.Arrowlevel;
 
@@ -70,6 +71,7 @@ public class Spawn_j : MonoBehaviour
 
         }
 
+        Debug.Log(isClicked);
         if (isClicked == true)
         {
             if (Input.GetMouseButtonDown(1))
@@ -78,6 +80,7 @@ public class Spawn_j : MonoBehaviour
                 isClicked = false;
             }
         }
+
 
         if (enemyList.Count > 0)
         {
@@ -92,9 +95,9 @@ public class Spawn_j : MonoBehaviour
             EnemyPos = Vector2.zero;
         }
 
+
         if (alevel == 3)
         {
-            
             detectionRadius = 9f;
         }
     }

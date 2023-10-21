@@ -98,7 +98,7 @@ public class TrowingObject : MonoBehaviour
             {
                 if (collider.CompareTag(damageTag))
                 {
-                    collider.GetComponent<EnemyBase>().OnDamage(attackPower, Damage);
+                    collider.GetComponent<EnemyBase>().OnDamage(attackPower, Damage);  // 물리? , 마법? 모르것다
                     Destroy(gameObject);
                     break;
                 }

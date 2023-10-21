@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb11df076c6c1c4fadf1b0c3262a4f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CDC: {fileID: 0}
   RoundObject: {fileID: 6973671608836731660}
   arrowTemplate: {fileID: 11400000, guid: 7ff9544debe48214a9d2cc8f3751d44a, type: 2}
   sp: {fileID: 6973671607574200811}
@@ -201,7 +202,6 @@ MonoBehaviour:
   isClicked: 0
   EnemyPos: {x: 0, y: 0}
   nowShot: 0
-  RoundPos: {fileID: 6973671609005318364}
 --- !u!60 &6973671607574200815
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -278,6 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UpGradeCanvas: {fileID: 6973671607799081009}
+  arrowTower: {fileID: 0}
 --- !u!1 &6973671607799081021
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,6 +839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb11df076c6c1c4fadf1b0c3262a4f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CDC: {fileID: 0}
   RoundObject: {fileID: 6973671608836731660}
   arrowTemplate: {fileID: 11400000, guid: 7ff9544debe48214a9d2cc8f3751d44a, type: 2}
   sp: {fileID: 6973671607574200811}
@@ -853,7 +855,6 @@ MonoBehaviour:
   isClicked: 0
   EnemyPos: {x: 0, y: 0}
   nowShot: 0
-  RoundPos: {fileID: 0}
 --- !u!1 &6973671609012610485
 GameObject:
   m_ObjectHideFlags: 0

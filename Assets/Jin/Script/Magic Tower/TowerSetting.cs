@@ -105,7 +105,7 @@ public class TowerSetting : MonoBehaviour
 
 
     public Vector2 MEnemyPos;
-    public bool itTimeToShot;
+    public bool itTimeToShot = false;
 
     private void Update()
     {

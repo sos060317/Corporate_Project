@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13a02b6b872fdcc488cb97afbf39de2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bombTower: {fileID: 687003374116531938, guid: 59391adc21e50684a994196bc86779da, type: 3}
   curve:
     serializedVersion: 2
     m_Curve:
@@ -132,7 +133,6 @@ MonoBehaviour:
     m_RotationOrder: 4
   duration: 0.78
   maxHeightY: 4
-  enemyTag: BombPos
   DamageTag: Enemy
   damageAreaRadius: 2
   Damage: 10
