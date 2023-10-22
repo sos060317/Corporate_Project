@@ -46,10 +46,8 @@ public class SoundManager : MonoBehaviour
 
     public void PlaySound(AudioClip clip, float pitch)
     {
-        //GameObject soundObj = PoolManager.Instance.GetGameObejct(soundEffectObj, transform.position, Quaternion.identity);
+        GameObject soundObj = PoolManager.Instance.GetGameObject(soundEffectObj, transform.position, Quaternion.identity);
 
-        GameObject soundObj = Instantiate(soundEffectObj, transform.position, Quaternion.identity);
-        
         soundObj.GetComponent<AudioSource>().pitch = pitch;
         soundObj.GetComponent<AudioSource>().volume = sfxVolume;
 
@@ -62,10 +60,8 @@ public class SoundManager : MonoBehaviour
 
     public void PlaySound(AudioClip clip)
     {
-        //GameObject soundObj = PoolManager.Instance.GetGameObejct(soundEffectObj, transform.position, Quaternion.identity);
+        GameObject soundObj = PoolManager.Instance.GetGameObject(soundEffectObj, transform.position, Quaternion.identity);
 
-        GameObject soundObj = Instantiate(soundEffectObj, transform.position, Quaternion.identity);
-        
         soundObj.GetComponent<AudioSource>().pitch = 1f;
         soundObj.GetComponent<AudioSource>().volume = sfxVolume;
 
