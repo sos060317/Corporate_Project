@@ -7,6 +7,8 @@ public class TowerBuildManager : MonoBehaviour
 {
     private static TowerBuildManager instance = null;
 
+    public bool isClick;
+
     public TowerNode selectedNode;
 
     public TowerNodeBuildUI towerNodeBuildUI;
