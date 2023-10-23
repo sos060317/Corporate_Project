@@ -13271,7 +13271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4ba305a85cfa9f4a8c7dfaff285124c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ATower: {fileID: 7312676021966909301, guid: 7f4446dcd0a13384bb36ae67b531094a, type: 3}
+  ATower: {fileID: 441431777796952194, guid: 7f4446dcd0a13384bb36ae67b531094a, type: 3}
   BTower: {fileID: 687003374116531938, guid: 59391adc21e50684a994196bc86779da, type: 3}
   MTower: {fileID: 3328191658679655886, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}
   UTower: {fileID: 4769305975782953964, guid: 21fe8a9a47f448543a37ba6783cec1c7, type: 3}
@@ -53485,7 +53485,7 @@ MonoBehaviour:
         m_MethodName: BuildTower
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7312676021966909292, guid: 7f4446dcd0a13384bb36ae67b531094a, type: 3}
+          m_ObjectArgument: {fileID: 441431777796952219, guid: 7f4446dcd0a13384bb36ae67b531094a, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0

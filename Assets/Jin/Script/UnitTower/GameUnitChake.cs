@@ -83,20 +83,10 @@ public class GameUnitChake : MonoBehaviour
 
     private void SelectUnitsInTower()
     {
-        //foreach (Transform child in Tower.transform)
-        //{
-        //    Unit unitRTS = child.GetComponent<Unit>();
-        //    if (unitRTS != null)
-        //    {
-        //        unitRTS.SetSelectedVisible(true);
-        //        selectedUnitRTSList.Add(unitRTS);
-        //    }
-        //}
-
         foreach (Transform child in Tower.transform)
         {
             Unit unitRTS = child.GetComponent<Unit>();
-            if (unitRTS != null && unitRTS.gameObject.activeSelf) // Check if the unit is active
+            if (unitRTS != null && unitRTS.gameObject.activeSelf)
             {
                 unitRTS.SetSelectedVisible(true);
                 selectedUnitRTSList.Add(unitRTS);
