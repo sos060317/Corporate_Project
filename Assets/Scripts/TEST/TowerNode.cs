@@ -8,6 +8,7 @@ public class TowerNode : MonoBehaviour
 {
     public Color overColor;                     // 마우스 오버 색상
     public Color nomalColor;                    // 기본 색상
+    public Color clickColor;                    // 클릭 색상
 
     private GameObject tower;                   // 설치 할 수 있는 타워
 
@@ -31,7 +32,6 @@ public class TowerNode : MonoBehaviour
 
             return;
         }
-
         TowerBuildManager.Instance.ShowTowerWindow(this);
     }
 
