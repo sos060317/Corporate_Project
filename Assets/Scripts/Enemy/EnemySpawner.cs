@@ -71,9 +71,13 @@ public class EnemySpawner : MonoBehaviour
                  enemySpawnCount < item.enemySpawnCount;
                  enemySpawnCount++)
             {
-                var enemy = Instantiate(item.enemyType.enemyPrefab, spawnPos, Quaternion.identity);
+                //var enemy = Instantiate(item.enemyType.enemyPrefab, spawnPos, Quaternion.identity);
+                
+                var enemy = PoolManager.Instance.GetGameObject(item.enemyType.enemyPrefab, spawnPos, Quaternion.identity);
                 
                 enemy.GetComponent<EnemyBase>().InitEnemy(path.path.CalculateEvenlySpacedPoints(0.1f), item.enemyType);
+                
+                enemy.SetActive(true);
 
                 yield return enemySpawnTimer;
             }

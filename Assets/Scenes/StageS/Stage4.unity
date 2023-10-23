@@ -50863,6 +50863,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3347543616739314970, guid: d16432bc131ab054ca5708ca89421b5b, type: 3}
   m_PrefabInstance: {fileID: 1497607671}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1498873035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1498873037}
+  - component: {fileID: 1498873036}
+  m_Layer: 0
+  m_Name: PoolManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1498873036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498873035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0919dc035f9ef41bb887c64b284339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolArray:
+  - poolSize: 30
+    prefab: {fileID: 1370586008307256899, guid: 72ef17e905f3f26428040f0f9c7abd5f, type: 3}
+  - poolSize: 30
+    prefab: {fileID: 6892805195981400713, guid: d36073761df0e294a9a51a078b3ec20a, type: 3}
+  - poolSize: 30
+    prefab: {fileID: 388473290193081027, guid: f88695b99f218d6499c24906e23267c2, type: 3}
+  - poolSize: 30
+    prefab: {fileID: 8669094408152069988, guid: 77d5a559fa90b634c9d78894b7578a48, type: 3}
+--- !u!4 &1498873037
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498873035}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!21 &1511785549
 Material:
   serializedVersion: 8
