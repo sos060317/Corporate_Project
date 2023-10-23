@@ -5,9 +5,13 @@ using UnityEngine;
 
 public class TowerBuildManager : MonoBehaviour
 {
-    private static TowerBuildManager instance = null;
+    public Color overColor;                     // 마우스 오버 색상
+    public Color nomalColor;                    // 기본 색상
+    public Color clickColor;                    // 클릭 색상
 
     public bool isClick;
+
+    private static TowerBuildManager instance = null;
 
     public TowerNode selectedNode;
 
@@ -42,6 +46,7 @@ public class TowerBuildManager : MonoBehaviour
     {
         if(selectedNode == towerNode)
         {
+            towerNode.GetComponent<SpriteRenderer>().color = nomalColor;
             DeselectNode();
             return;
         }
