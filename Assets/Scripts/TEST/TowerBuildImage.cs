@@ -10,5 +10,7 @@ public class TowerBuildImage : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         TowerBuildManager.Instance.selectedNode.BuildTower(ownTower);
+
+        TowerBuildManager.Instance.DeselectNode();
     }
 }
