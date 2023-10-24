@@ -34,43 +34,47 @@ public class GameUnitChake : MonoBehaviour
 
     private void Update()
     {
-
-        if (Input.GetMouseButtonDown(1))
+        if(clicked == true)
         {
-            RaycastHit2D hit = Physics2D.Raycast(UtilsClass.GetMouseWorldPosition(), Vector2.zero);
-            if (hit.collider != null && hit.collider.gameObject == Range)
+            if (Input.GetMouseButtonDown(1))
             {
-                lastRightClickPosition = UtilsClass.GetMouseWorldPosition(); // 우클릭한 위치 저장
-
-                List<Vector3> targetPositionList = GetPositionListAround(lastRightClickPosition, new float[] { 0.8f, 0.9f, 1f }, new int[] { 5, 10, 20 });
-                int targetPositionListIndex = 0;
-
-                foreach (Unit unitRTS in selectedUnitRTSList)
+                RaycastHit2D hit = Physics2D.Raycast(UtilsClass.GetMouseWorldPosition(), Vector2.zero);
+                if (hit.collider != null && hit.collider.gameObject == Range)
                 {
-                    unitRTS.MoveTo(targetPositionList[targetPositionListIndex]);
-                    targetPositionListIndex = (targetPositionListIndex + 1) % targetPositionList.Count;
+                    lastRightClickPosition = UtilsClass.GetMouseWorldPosition(); // 우클릭한 위치 저장
+
+                    List<Vector3> targetPositionList = GetPositionListAround(lastRightClickPosition, new float[] { 0.8f, 0.9f, 1f }, new int[] { 5, 10, 20 });
+                    int targetPositionListIndex = 0;
+
+                    foreach (Unit unitRTS in selectedUnitRTSList)
+                    {
+                        unitRTS.MoveTo(targetPositionList[targetPositionListIndex]);
+                        targetPositionListIndex = (targetPositionListIndex + 1) % targetPositionList.Count;
+                    }
+
+                    selectedUnitRTSList.Clear();
+                    clicked = false;
+
+                    foreach (Unit unitRTS in FindObjectsOfType<Unit>())
+                    {
+                        unitRTS.SetSelectedVisible(false);
+                    }
+
+                    Range.SetActive(false); // 우클릭 시 Range 비활성화
+
+                    Debug.Log("우클릭 위치값 : " + lastRightClickPosition);
                 }
-
-                selectedUnitRTSList.Clear();
-                clicked = false;
-
-                foreach (Unit unitRTS in FindObjectsOfType<Unit>())
+                else
                 {
-                    unitRTS.SetSelectedVisible(false);
+                    selectedUnitRTSList.Clear();
+                    Range.SetActive(false);
+                    Debug.Log("범위 밖");
+                    clicked = false;
                 }
-
-                Range.SetActive(false); // 우클릭 시 Range 비활성화
-
-                Debug.Log("우클릭 위치값 : " + lastRightClickPosition);
             }
-            else
-            {
-                selectedUnitRTSList.Clear();
-                Range.SetActive(false);
-                Debug.Log("범위 밖");
-                clicked = false;
-            }
+
         }
+
 
     }
 
