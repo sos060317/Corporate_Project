@@ -36,46 +36,118 @@ public class GameUnitChake : MonoBehaviour
     {
         if(clicked == true)
         {
+            //if (Input.GetMouseButtonDown(1))
+            //{
+            //    RaycastHit2D hit = Physics2D.Raycast(UtilsClass.GetMouseWorldPosition(), Vector2.up);
+              
+            //    if (hit.collider != null && hit.collider.gameObject == Range && hit.collider.CompareTag("Road"))
+            //    {
+            //        Debug.Log("Hit Object Tag: " + hit.collider.tag);
+            //        lastRightClickPosition = UtilsClass.GetMouseWorldPosition(); // 우클릭한 위치 저장
+
+            //        List<Vector3> targetPositionList = GetPositionListAround(lastRightClickPosition, new float[] { 0.8f, 0.9f, 1f }, new int[] { 5, 10, 20 });
+            //        int targetPositionListIndex = 0;
+
+            //        foreach (Unit unitRTS in selectedUnitRTSList)
+            //        {
+            //            unitRTS.MoveTo(targetPositionList[targetPositionListIndex]);
+            //            targetPositionListIndex = (targetPositionListIndex + 1) % targetPositionList.Count;
+            //        }
+
+            //        selectedUnitRTSList.Clear();
+            //        clicked = false;
+
+            //        foreach (Unit unitRTS in FindObjectsOfType<Unit>())
+            //        {
+            //            unitRTS.SetSelectedVisible(false);
+            //        }
+
+            //        Range.SetActive(false); // 우클릭 시 Range 비활성화
+
+            //        Debug.Log("우클릭 위치값 : " + lastRightClickPosition);
+            //    }
+            //    else
+            //    {
+            //        selectedUnitRTSList.Clear();
+            //        Range.SetActive(false);
+            //        Debug.Log("범위 밖");
+            //        clicked = false;
+            //    }
+            //}
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                RaycastHit2D[] hits = Physics2D.RaycastAll(UtilsClass.GetMouseWorldPosition(), Vector2.up);
+
+                foreach (var hit in hits)
+                {
+                    if (hit.collider.CompareTag("Road"))
+                    {
+                        Debug.Log("Road");
+                        break;
+                    }
+                    if (ReferenceEquals(hit.collider.gameObject, Range))
+                    {
+                        Debug.Log("Range");
+                        break;
+                    }
+                }
+            }
+
             if (Input.GetMouseButtonDown(1))
             {
-                RaycastHit2D hit = Physics2D.Raycast(UtilsClass.GetMouseWorldPosition(), Vector2.zero);
-                if (hit.collider != null && hit.collider.gameObject == Range)
-                {
-                    lastRightClickPosition = UtilsClass.GetMouseWorldPosition(); // 우클릭한 위치 저장
-
-                    List<Vector3> targetPositionList = GetPositionListAround(lastRightClickPosition, new float[] { 0.8f, 0.9f, 1f }, new int[] { 5, 10, 20 });
-                    int targetPositionListIndex = 0;
-
-                    foreach (Unit unitRTS in selectedUnitRTSList)
-                    {
-                        unitRTS.MoveTo(targetPositionList[targetPositionListIndex]);
-                        targetPositionListIndex = (targetPositionListIndex + 1) % targetPositionList.Count;
-                    }
-
-                    selectedUnitRTSList.Clear();
-                    clicked = false;
-
-                    foreach (Unit unitRTS in FindObjectsOfType<Unit>())
-                    {
-                        unitRTS.SetSelectedVisible(false);
-                    }
-
-                    Range.SetActive(false); // 우클릭 시 Range 비활성화
-
-                    Debug.Log("우클릭 위치값 : " + lastRightClickPosition);
-                }
-                else
-                {
-                    selectedUnitRTSList.Clear();
-                    Range.SetActive(false);
-                    Debug.Log("범위 밖");
-                    clicked = false;
-                }
+                Move();
             }
 
         }
 
 
+    }
+
+    private void Move()
+    {
+        bool isR = false;
+        bool isLod = false;
+
+        RaycastHit2D[] hits = Physics2D.RaycastAll(UtilsClass.GetMouseWorldPosition(), Vector2.up);
+
+        foreach (var hit in hits)
+        {
+            if (hit.collider.CompareTag("Road")) isLod = true;
+            if (hit.collider.gameObject == Range) isR = true;
+        }
+        if(isLod && isR)
+        {
+            lastRightClickPosition = UtilsClass.GetMouseWorldPosition(); // 우클릭한 위치 저장
+
+            List<Vector3> targetPositionList = GetPositionListAround(lastRightClickPosition, new float[] { 0.8f, 0.9f, 1f }, new int[] { 5, 10, 20 });
+            int targetPositionListIndex = 0;
+
+            foreach (Unit unitRTS in selectedUnitRTSList)
+            {
+                unitRTS.MoveTo(targetPositionList[targetPositionListIndex]);
+                targetPositionListIndex = (targetPositionListIndex + 1) % targetPositionList.Count;
+            }
+
+            selectedUnitRTSList.Clear();
+            clicked = false;
+
+            foreach (Unit unitRTS in FindObjectsOfType<Unit>())
+            {
+                unitRTS.SetSelectedVisible(false);
+            }
+
+            Range.SetActive(false); // 우클릭 시 Range 비활성화
+
+            Debug.Log("우클릭 위치값 : " + lastRightClickPosition);
+        }
+        else
+        {
+            selectedUnitRTSList.Clear();
+            Range.SetActive(false);
+            Debug.Log("범위 밖");
+            clicked = false;
+        }
     }
 
     private void OnDrawGizmos()
