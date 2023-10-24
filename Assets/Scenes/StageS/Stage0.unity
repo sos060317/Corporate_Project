@@ -10192,9 +10192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6cb3563f2cb2374f9eef0d2468e6a0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overColor: {r: 0.8117648, g: 0.8117648, b: 0.8117648, a: 1}
-  nomalColor: {r: 1, g: 1, b: 1, a: 1}
-  clickColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &601740390
 GameObject:
   m_ObjectHideFlags: 0
@@ -11656,9 +11653,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6cb3563f2cb2374f9eef0d2468e6a0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overColor: {r: 0.8117648, g: 0.8117648, b: 0.8117648, a: 1}
-  nomalColor: {r: 1, g: 1, b: 1, a: 1}
-  clickColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &711069329
 GameObject:
   m_ObjectHideFlags: 0
@@ -12155,9 +12149,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6cb3563f2cb2374f9eef0d2468e6a0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overColor: {r: 0.8117648, g: 0.8117648, b: 0.8117648, a: 1}
-  nomalColor: {r: 1, g: 1, b: 1, a: 1}
-  clickColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &760468160
 GameObject:
   m_ObjectHideFlags: 0
@@ -35656,7 +35647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e28515001571d93498934fda23c7e0c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ownTower: {fileID: 6973671607574200818, guid: 7f4446dcd0a13384bb36ae67b531094a, type: 3}
+  ownTower: {fileID: 441431777796952219, guid: 7f4446dcd0a13384bb36ae67b531094a, type: 3}
 --- !u!1 &1009579747
 GameObject:
   m_ObjectHideFlags: 0
@@ -35985,9 +35976,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6cb3563f2cb2374f9eef0d2468e6a0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overColor: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
-  nomalColor: {r: 1, g: 1, b: 1, a: 1}
-  clickColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!50 &1043057669
 Rigidbody2D:
   serializedVersion: 4
@@ -38165,9 +38153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6cb3563f2cb2374f9eef0d2468e6a0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overColor: {r: 0.8117648, g: 0.8117648, b: 0.8117648, a: 1}
-  nomalColor: {r: 1, g: 1, b: 1, a: 1}
-  clickColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1097455961
 GameObject:
   m_ObjectHideFlags: 0
@@ -43775,7 +43760,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1167855747}
-  - component: {fileID: 1167855748}
   - component: {fileID: 1167855749}
   m_Layer: 0
   m_Name: BuildManager
@@ -43799,20 +43783,6 @@ Transform:
   m_Father: {fileID: 1117417225}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1167855748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1167855746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc378403c93e6f44780e30bcd3d6f567, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectNode: {fileID: 0}
-  nodeBuildUI: {fileID: 913269404}
 --- !u!114 &1167855749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43825,6 +43795,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aad0b2402bdb1a44a7936dd78b750ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overColor: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
+  nomalColor: {r: 1, g: 1, b: 1, a: 1}
+  clickColor: {r: 1, g: 0, b: 0, a: 1}
   isClick: 0
   selectedNode: {fileID: 0}
   towerNodeBuildUI: {fileID: 1546049544}
@@ -61087,9 +61060,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6cb3563f2cb2374f9eef0d2468e6a0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overColor: {r: 0.8117648, g: 0.8117648, b: 0.8117648, a: 1}
-  nomalColor: {r: 1, g: 1, b: 1, a: 1}
-  clickColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1748936033
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,6 @@ public class BackGroundTest : MonoBehaviour
             return;
         }
 
-        BuildManager.Instance.DeselectNode();
+        TowerBuildManager.Instance.DeselectNode();
     }
 }
