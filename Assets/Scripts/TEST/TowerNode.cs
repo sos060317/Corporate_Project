@@ -6,6 +6,12 @@ using UnityEngine.EventSystems;
 
 public class TowerNode : MonoBehaviour
 {
+    public Color overColor;                     // 마우스 오버 색상
+    public Color nomalColor;                    // 기본 색상
+    public Color clickColor;                    // 클릭 색상
+
+    public bool isClick;
+
     private GameObject tower;                   // 설치 할 수 있는 타워
 
     private SpriteRenderer spriteRenderer;
@@ -28,9 +34,16 @@ public class TowerNode : MonoBehaviour
 
             return;
         }
+        isClick = true;
+        spriteRenderer.color = clickColor;
+
+        if(TowerBuildManager.Instance.selectedNode == this)
+        {
+            isClick = false;
+            spriteRenderer.color = overColor;
+        }
+
         TowerBuildManager.Instance.ShowTowerWindow(this);
-        spriteRenderer.color = TowerBuildManager.Instance.clickColor;
-        TowerBuildManager.Instance.isClick = true;
     }
 
     public void BuildTower(GameObject towerPrefab)
@@ -45,17 +58,17 @@ public class TowerNode : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if (spriteRenderer.color.a != 0)
+        if (spriteRenderer.color.a != 0 && !isClick)
         {
-            spriteRenderer.color = TowerBuildManager.Instance.overColor;
+            spriteRenderer.color = overColor;
         }
     }
 
     private void OnMouseExit()
     {
-        if (spriteRenderer.color.a != 0 && !TowerBuildManager.Instance.isClick)
+        if (spriteRenderer.color.a != 0 && !isClick)
         {
-            spriteRenderer.color = TowerBuildManager.Instance.nomalColor;
+            spriteRenderer.color = nomalColor;
         }
     }
 }
