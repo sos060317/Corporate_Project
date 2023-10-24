@@ -958,8 +958,8 @@ Transform:
   - {fileID: 704875798}
   - {fileID: 1746304274}
   - {fileID: 1093587630}
-  - {fileID: 913269405}
   - {fileID: 1043057667}
+  - {fileID: 913269405}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10195,6 +10195,7 @@ MonoBehaviour:
   overColor: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
   nomalColor: {r: 1, g: 1, b: 1, a: 1}
   clickColor: {r: 1, g: 0, b: 0, a: 1}
+  isClick: 0
 --- !u!1 &601740390
 GameObject:
   m_ObjectHideFlags: 0
@@ -11659,6 +11660,7 @@ MonoBehaviour:
   overColor: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
   nomalColor: {r: 1, g: 1, b: 1, a: 1}
   clickColor: {r: 1, g: 0, b: 0, a: 1}
+  isClick: 0
 --- !u!1 &711069329
 GameObject:
   m_ObjectHideFlags: 0
@@ -11894,7 +11896,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &747371735
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12158,6 +12160,7 @@ MonoBehaviour:
   overColor: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
   nomalColor: {r: 1, g: 1, b: 1, a: 1}
   clickColor: {r: 1, g: 0, b: 0, a: 1}
+  isClick: 0
 --- !u!1 &760468160
 GameObject:
   m_ObjectHideFlags: 0
@@ -12175,7 +12178,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &760468161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14003,7 +14006,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &913269404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14039,7 +14042,7 @@ Transform:
   m_Children:
   - {fileID: 1410116585}
   m_Father: {fileID: 128958274}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &920573572
 GameObject:
@@ -35971,7 +35974,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 128958274}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1043057668
 MonoBehaviour:
@@ -35988,6 +35991,7 @@ MonoBehaviour:
   overColor: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
   nomalColor: {r: 1, g: 1, b: 1, a: 1}
   clickColor: {r: 1, g: 0, b: 0, a: 1}
+  isClick: 0
 --- !u!50 &1043057669
 Rigidbody2D:
   serializedVersion: 4
@@ -38168,6 +38172,7 @@ MonoBehaviour:
   overColor: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
   nomalColor: {r: 1, g: 1, b: 1, a: 1}
   clickColor: {r: 1, g: 0, b: 0, a: 1}
+  isClick: 0
 --- !u!1 &1097455961
 GameObject:
   m_ObjectHideFlags: 0
@@ -61074,6 +61079,7 @@ MonoBehaviour:
   overColor: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
   nomalColor: {r: 1, g: 1, b: 1, a: 1}
   clickColor: {r: 1, g: 0, b: 0, a: 1}
+  isClick: 0
 --- !u!1 &1748936033
 GameObject:
   m_ObjectHideFlags: 0
