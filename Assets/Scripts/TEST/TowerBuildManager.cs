@@ -38,7 +38,7 @@ public class TowerBuildManager : MonoBehaviour
 
     public void ShowTowerWindow(TowerNode towerNode)
     {
-        if(selectedNode == towerNode)
+        if (selectedNode == towerNode)
         {
             DeselectNode();
             return;

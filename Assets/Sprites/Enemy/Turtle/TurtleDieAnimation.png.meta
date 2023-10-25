@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 225e717195ddffe4587cd229df205875
+guid: ffb094ec94527e341aaeb725dd9b79ff
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,316 +117,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Monkey_0
+      name: TurtleDieAnimation_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 214
-        width: 26
-        height: 22
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3535ef4b4fef4ca47a354ebd69617e4e
-      internalID: 146731222
+      spriteID: b94b3239c676a8c419fddafac04540fd
+      internalID: 798367938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monkey_1
+      name: TurtleDieAnimation_1
       rect:
         serializedVersion: 2
-        x: 86
-        y: 214
-        width: 26
-        height: 22
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67a1807ec2c2f084bb0aea228d291359
-      internalID: -1496683131
+      spriteID: 7f4d8cd0b23ecb149b73452eac575fab
+      internalID: -1486544625
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monkey_2
+      name: TurtleDieAnimation_2
       rect:
         serializedVersion: 2
-        x: 143
-        y: 214
-        width: 26
-        height: 22
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa6b4f946835b9741b24c4627ed1cd73
-      internalID: 1913281094
+      spriteID: 9db8f054076c0054baafbb9bc68633b3
+      internalID: 2090833406
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monkey_3
+      name: TurtleDieAnimation_3
       rect:
         serializedVersion: 2
-        x: 207
-        y: 214
-        width: 26
-        height: 22
+        x: 192
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48d225c5938b5744bb4d0c50cbb06db7
-      internalID: -259674794
+      spriteID: 328319b61afda624ba49dea20562461d
+      internalID: 514506385
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monkey_4
+      name: TurtleDieAnimation_4
       rect:
         serializedVersion: 2
-        x: 23
-        y: 153
-        width: 26
-        height: 22
+        x: 256
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ebe00d7cbf2ea04d97c71c6dea67b4d
-      internalID: -1427003451
+      spriteID: e61bff229f7b0b6459fef736790558ad
+      internalID: 1931329961
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monkey_5
+      name: TurtleDieAnimation_5
       rect:
         serializedVersion: 2
-        x: 85
-        y: 153
-        width: 26
-        height: 22
+        x: 320
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 494fb10c0945fef41b3efc4e3d92be0a
-      internalID: -1559724446
+      spriteID: 88f34badacd616948b1e44327631fea2
+      internalID: 1379266429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monkey_6
+      name: TurtleDieAnimation_6
       rect:
         serializedVersion: 2
-        x: 150
-        y: 153
-        width: 26
-        height: 22
+        x: 384
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44ee453f10a371a4bb7c321ebd60ce11
-      internalID: -476942183
+      spriteID: 07aa9707dddff074d8e5a60b4904b2da
+      internalID: -1251011296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monkey_7
+      name: TurtleDieAnimation_7
       rect:
         serializedVersion: 2
-        x: 214
-        y: 153
-        width: 26
-        height: 22
+        x: 448
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce815195adc34ab49960d80976dc700f
-      internalID: -837381908
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monkey_8
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 87
-        width: 26
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ba9cb259ad7295c4e963bd320424b07b
-      internalID: 2131388515
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monkey_9
-      rect:
-        serializedVersion: 2
-        x: 83
-        y: 87
-        width: 26
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 119cad73f79ed614293bd3ab9f2c263c
-      internalID: 134863345
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monkey_10
-      rect:
-        serializedVersion: 2
-        x: 151
-        y: 87
-        width: 26
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78c197c3753e68c4d91417dcb1e64ee6
-      internalID: 827631766
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monkey_11
-      rect:
-        serializedVersion: 2
-        x: 215
-        y: 87
-        width: 26
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9238b485aa1484a45b334a7e36642cec
-      internalID: 1770973741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monkey_12
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 38
-        width: 26
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d2d8986c61bd454d832edc666c31ea2
-      internalID: 706891411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monkey_13
-      rect:
-        serializedVersion: 2
-        x: 92
-        y: 38
-        width: 26
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 732f4fe5715962c4186178cfd7b6d2c1
-      internalID: -969738060
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monkey_14
-      rect:
-        serializedVersion: 2
-        x: 157
-        y: 38
-        width: 26
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d1853c08e4ba967418d3e0d32b05f040
-      internalID: 695118192
+      spriteID: 69bc062a9a0a87c47a572696fea5c002
+      internalID: 342328339
       vertices: []
       indices: 
       edges: []
@@ -442,21 +295,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Monkey_0: 146731222
-      Monkey_1: -1496683131
-      Monkey_10: 827631766
-      Monkey_11: 1770973741
-      Monkey_12: 706891411
-      Monkey_13: -969738060
-      Monkey_14: 695118192
-      Monkey_2: 1913281094
-      Monkey_3: -259674794
-      Monkey_4: -1427003451
-      Monkey_5: -1559724446
-      Monkey_6: -476942183
-      Monkey_7: -837381908
-      Monkey_8: 2131388515
-      Monkey_9: 134863345
+      TurtleDieAnimation_0: 798367938
+      TurtleDieAnimation_1: -1486544625
+      TurtleDieAnimation_2: 2090833406
+      TurtleDieAnimation_3: 514506385
+      TurtleDieAnimation_4: 1931329961
+      TurtleDieAnimation_5: 1379266429
+      TurtleDieAnimation_6: -1251011296
+      TurtleDieAnimation_7: 342328339
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
