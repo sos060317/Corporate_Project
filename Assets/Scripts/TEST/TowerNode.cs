@@ -12,7 +12,7 @@ public class TowerNode : MonoBehaviour
 
     public bool isClick;
 
-    private GameObject tower;                   // 설치 할 수 있는 타워
+    public GameObject tower;                   // 설치 할 수 있는 타워
 
     private SpriteRenderer spriteRenderer;
 
@@ -34,6 +34,7 @@ public class TowerNode : MonoBehaviour
 
             return;
         }
+
         isClick = true;
         spriteRenderer.color = clickColor;
 
