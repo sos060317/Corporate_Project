@@ -33,6 +33,11 @@ public class TowerNodeBuildUI : MonoBehaviour
     {
         if (isShowWindow)
         {
+            if(TowerBuildManager.Instance.selectedNode != null)
+            {
+                TowerBuildManager.Instance.selectedNode.GetComponent<TowerNode>().isClick = false;
+                TowerBuildManager.Instance.selectedNode.GetComponent<SpriteRenderer>().color = TowerBuildManager.Instance.selectedNode.GetComponent<TowerNode>().nomalColor;
+            }
             TowerBuildManager.Instance.HideTowerWindow();
         }
         else
