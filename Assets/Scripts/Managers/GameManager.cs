@@ -51,6 +51,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private float evolutionStoneMaxHealth;
 
+    [SerializeField] private int levelIndex;
+
     #endregion
 
     public int frame;
@@ -254,16 +256,19 @@ public class GameManager : MonoBehaviour
         if(evolutionStoneCurHealth > 0)
         {
             starCount++;
+            PlayerPrefs.SetInt("Lv" + levelIndex, starCount);
         }
 
         if (evolutionStoneCurHealth >= evolutionStoneMaxHealth * 0.7f)
         {
             starCount++;
+            PlayerPrefs.SetInt("Lv" + levelIndex, starCount);
         }
 
         if (evolutionStoneCurHealth == evolutionStoneMaxHealth)
         {
             starCount++;
+            PlayerPrefs.SetInt("Lv" + levelIndex, starCount);
         }
         
         gameClearMenu.gameObject.SetActive(true);

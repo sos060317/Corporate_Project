@@ -803,6 +803,8 @@ MonoBehaviour:
   enemyMoveSpeedMultiply: 0
   evolutionStoneHealthBar: {fileID: 1355495192}
   evolutionStoneMaxHealth: 100
+  levelIndex: 2
+  frame: 0
   isGameStop: 0
   currentGold: 0
 --- !u!1 &51487818
@@ -3413,6 +3415,7 @@ MonoBehaviour:
   nomalColor: {r: 1, g: 1, b: 1, a: 1}
   clickColor: {r: 1, g: 0, b: 0, a: 1}
   isClick: 0
+  tower: {fileID: 0}
 --- !u!1 &345883506
 GameObject:
   m_ObjectHideFlags: 0
@@ -9072,6 +9075,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpawnerCount: 0
+  enemyCount: 0
+  stageClear: 0
 --- !u!4 &390496836
 Transform:
   m_ObjectHideFlags: 0
@@ -10822,6 +10827,7 @@ MonoBehaviour:
   nomalColor: {r: 1, g: 1, b: 1, a: 1}
   clickColor: {r: 1, g: 0, b: 0, a: 1}
   isClick: 0
+  tower: {fileID: 0}
 --- !u!1 &605506941
 GameObject:
   m_ObjectHideFlags: 0
@@ -11629,6 +11635,7 @@ MonoBehaviour:
   nomalColor: {r: 1, g: 1, b: 1, a: 1}
   clickColor: {r: 1, g: 0, b: 0, a: 1}
   isClick: 0
+  tower: {fileID: 0}
 --- !u!1 &678763085
 GameObject:
   m_ObjectHideFlags: 0
@@ -11934,6 +11941,7 @@ MonoBehaviour:
   nomalColor: {r: 1, g: 1, b: 1, a: 1}
   clickColor: {r: 1, g: 0, b: 0, a: 1}
   isClick: 0
+  tower: {fileID: 0}
 --- !u!1 &711069329
 GameObject:
   m_ObjectHideFlags: 0
@@ -12462,6 +12470,7 @@ MonoBehaviour:
   nomalColor: {r: 1, g: 1, b: 1, a: 1}
   clickColor: {r: 1, g: 0, b: 0, a: 1}
   isClick: 0
+  tower: {fileID: 0}
 --- !u!1001 &758019642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16329,6 +16338,7 @@ MonoBehaviour:
   nomalColor: {r: 1, g: 1, b: 1, a: 1}
   clickColor: {r: 1, g: 0, b: 0, a: 1}
   isClick: 0
+  tower: {fileID: 0}
 --- !u!1 &1093587625
 GameObject:
   m_ObjectHideFlags: 0
@@ -16488,6 +16498,7 @@ MonoBehaviour:
   nomalColor: {r: 1, g: 1, b: 1, a: 1}
   clickColor: {r: 1, g: 0, b: 0, a: 1}
   isClick: 0
+  tower: {fileID: 0}
 --- !u!1 &1094204282
 GameObject:
   m_ObjectHideFlags: 0
@@ -38512,6 +38523,7 @@ MonoBehaviour:
   nomalColor: {r: 1, g: 1, b: 1, a: 1}
   clickColor: {r: 1, g: 0, b: 0, a: 1}
   isClick: 0
+  tower: {fileID: 0}
 --- !u!1 &1748936033
 GameObject:
   m_ObjectHideFlags: 0

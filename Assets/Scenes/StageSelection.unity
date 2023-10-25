@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a3041f7d814ce4098a033dab4eea40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlocked: 1
+  unlocked: 0
   unlockImage: {fileID: 1413666986}
   stars:
   - {fileID: 1559461668}
@@ -2109,7 +2109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a3041f7d814ce4098a033dab4eea40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlocked: 1
+  unlocked: 0
   unlockImage: {fileID: 1160380709}
   stars:
   - {fileID: 1025477112}
@@ -2495,7 +2495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a3041f7d814ce4098a033dab4eea40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlocked: 1
+  unlocked: 0
   unlockImage: {fileID: 1907102097}
   stars:
   - {fileID: 1023340064}
@@ -3396,7 +3396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a3041f7d814ce4098a033dab4eea40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlocked: 1
+  unlocked: 0
   unlockImage: {fileID: 1322158344}
   stars:
   - {fileID: 1646580971}
