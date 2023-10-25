@@ -109,7 +109,7 @@ public class GameUnitChake : MonoBehaviour
         bool isR = false;
         bool isLod = false;
 
-        RaycastHit2D[] hits = Physics2D.RaycastAll(UtilsClass.GetMouseWorldPosition(), Vector2.up);
+        RaycastHit2D[] hits = Physics2D.RaycastAll(UtilsClass.GetMouseWorldPosition(), Vector2.zero);
 
         foreach (var hit in hits)
         {
