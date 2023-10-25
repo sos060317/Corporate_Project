@@ -286,9 +286,7 @@ public class Spawn_j : MonoBehaviour
     }
 
     private void OnDrawGizmosSelected()
-    {
-        //Gizmos.color = Color.green;
-        //Gizmos.DrawWireSphere(transform.position, detectionRadius);
+    { 
 
         if (ArrowRound != null)
         {

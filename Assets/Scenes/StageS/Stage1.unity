@@ -415,6 +415,7 @@ MonoBehaviour:
   enemyMoveSpeedMultiply: 0
   evolutionStoneHealthBar: {fileID: 2054950755}
   evolutionStoneMaxHealth: 100
+  frame: 0
   isGameStop: 0
   currentGold: 0
 --- !u!4 &63026885 stripped
@@ -4366,6 +4367,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpawnerCount: 0
+  enemyCount: 0
+  stageClear: 0
 --- !u!4 &390496836
 Transform:
   m_ObjectHideFlags: 0
