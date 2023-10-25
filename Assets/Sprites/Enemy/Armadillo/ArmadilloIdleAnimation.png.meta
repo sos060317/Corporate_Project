@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 83db84955e35a9642b72471e6200c855
+guid: a2aa8fd6ea871244e8c1c7f28ba4502b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ArmadilloDieAnimation_0
+      name: ArmadilloIdleAnimation_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 141e3ae9cf7ff864cba1dc324e39eb4c
-      internalID: 1625864233
+      spriteID: e4314192b0d5da1429c370ed5853a85f
+      internalID: 273098058
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ArmadilloDieAnimation_1
+      name: ArmadilloIdleAnimation_1
       rect:
         serializedVersion: 2
         x: 64
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a39c6ae8ef1e334784bc8baab8f3a33
-      internalID: 488339125
+      spriteID: 805cbdaa4ee8e6a4389c353cce3efe8c
+      internalID: 1994770559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ArmadilloDieAnimation_2
+      name: ArmadilloIdleAnimation_2
       rect:
         serializedVersion: 2
         x: 128
@@ -173,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54805b2372f6b594fa6a1d0de1cc7dfa
-      internalID: -1690138413
+      spriteID: 12600076aa5db6a4a95ff6c225f470be
+      internalID: 692175903
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ArmadilloDieAnimation_3
+      name: ArmadilloIdleAnimation_3
       rect:
         serializedVersion: 2
         x: 192
@@ -194,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e40bdbddb9762864fa5fb44342efab49
-      internalID: -1252968374
+      spriteID: a6fff3133d6a18d4e9f0b8cf4bd59ec6
+      internalID: -2034713165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ArmadilloDieAnimation_4
+      name: ArmadilloIdleAnimation_4
       rect:
         serializedVersion: 2
         x: 256
@@ -215,71 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0dd3acd8a0d394a49ac61be4d356bfc0
-      internalID: 714836866
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ArmadilloDieAnimation_5
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.17}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 390907773f0cadc4da1027b24ba9388a
-      internalID: 1316848625
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ArmadilloDieAnimation_6
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.17}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc82f20d270df594caf8dbf55ec3f35e
-      internalID: -1959867561
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ArmadilloDieAnimation_7
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.17}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2b32f399156522f468e712ddd9e2fd53
-      internalID: -1175503912
+      spriteID: ff7ee739b6547e54f9bdca25897f5593
+      internalID: -269624733
       vertices: []
       indices: 
       edges: []
@@ -295,14 +232,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ArmadilloDieAnimation_0: 1625864233
-      ArmadilloDieAnimation_1: 488339125
-      ArmadilloDieAnimation_2: -1690138413
-      ArmadilloDieAnimation_3: -1252968374
-      ArmadilloDieAnimation_4: 714836866
-      ArmadilloDieAnimation_5: 1316848625
-      ArmadilloDieAnimation_6: -1959867561
-      ArmadilloDieAnimation_7: -1175503912
+      ArmadilloIdleAnimation_0: 273098058
+      ArmadilloIdleAnimation_1: 1994770559
+      ArmadilloIdleAnimation_2: 692175903
+      ArmadilloIdleAnimation_3: -2034713165
+      ArmadilloIdleAnimation_4: -269624733
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
