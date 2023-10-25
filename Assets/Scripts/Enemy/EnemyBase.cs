@@ -14,7 +14,7 @@ public abstract class EnemyBase : MonoBehaviour
     [SerializeField] private Image healthUiBg;
     [SerializeField] private Image healthUiBar;
 
-    [HideInInspector] public bool Targeting;
+    [HideInInspector] public bool Targeting = false;
     
     private int movePosIndex;
     
@@ -59,10 +59,7 @@ public abstract class EnemyBase : MonoBehaviour
 
     private void OnEnable()
     {
-        WaveManager.Instance.EnemyCountPlus();
-        attackTimer = 0f;
-        isDie = false;
-        Targeting = false;
+        
     }
 
     protected virtual void Update()
@@ -140,7 +137,7 @@ public abstract class EnemyBase : MonoBehaviour
             FlipFunction(false);
         }
 
-        if (Vector2.Distance(transform.position - (Vector3)(moveOffset), movePoints[movePosIndex]) <= 0.01f)
+        if (Vector2.Distance(transform.position - (Vector3)(moveOffset), movePoints[movePosIndex]) <= 0.3f)
         {
             movePosIndex++;
         }
@@ -223,10 +220,16 @@ public abstract class EnemyBase : MonoBehaviour
         
         targetAlly = ally;
 
-        ally.EnemyUnTargetingEvent += DeleteTarget;
+        targetAlly.EnemyUnTargetingEvent += DeleteTarget;
         
         isTargeting = true;
         Targeting = true;
+
+        if (isDie)
+        {
+            targetAlly.DeleteTarget();
+            targetAlly.EnemyUnTargetingEvent -= DeleteTarget;
+        }
     }
 
     protected void DeleteTarget()
@@ -262,6 +265,7 @@ public abstract class EnemyBase : MonoBehaviour
             if (targetAlly != null)
             {
                 targetAlly.DeleteTarget();
+                targetAlly.EnemyUnTargetingEvent -= DeleteTarget;
             }
             
             anim.SetTrigger("Die");
@@ -290,7 +294,8 @@ public abstract class EnemyBase : MonoBehaviour
         moveSpeed = this.enemyDetailsSo.enemyBaseMoveSpeed;
         attackRate = this.enemyDetailsSo.enemyBaseAttackRate;
         attackRange = this.enemyDetailsSo.enemyBaseAttackRange;
-
+        
+        WaveManager.Instance.EnemyCountPlus();
 
         curHealth = maxHealth;
         movePosIndex = 0;
@@ -300,6 +305,18 @@ public abstract class EnemyBase : MonoBehaviour
         transform.position = movePoints[movePosIndex] + moveOffset;
 
         canMove = true;
+        
+        // 모든 변수 초기화
+        attackTimer = 0f;
+        isDie = false;
+        Targeting = false;
+        isTargeting = false;
+        targetAlly = null;
+        isAttacking = false;
+        attack = false;
+        isMoveEnd = false;
+        Targeting = false;
+        transform.GetComponent<Collider2D>().enabled = true;
     }
 
     public void FaintEnemy(float faintTime)

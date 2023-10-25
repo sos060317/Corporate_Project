@@ -27,9 +27,9 @@ public class WaveManager : MonoBehaviour
 
     private int waveCompleteCount;
     private int waveEndCount;
-    private int enemyCount;
+    public int enemyCount;
 
-    private bool stageClear = false;
+    public bool stageClear = false;
 
     private WaitForSeconds nextWaveDelay;
 

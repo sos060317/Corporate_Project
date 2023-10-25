@@ -53,6 +53,8 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    public int frame;
+    
     [HideInInspector] public bool isGameStop;
 
     public float currentGold;
@@ -97,6 +99,8 @@ public class GameManager : MonoBehaviour
         allyHealthMultiply = 1;
         enemyAttackDamageMultiply = 1;
         enemyMoveSpeedMultiply = 1;
+
+        Application.targetFrameRate = 60;
     }
 
     private void Start()

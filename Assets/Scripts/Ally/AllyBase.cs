@@ -36,6 +36,7 @@ public class AllyBase : MonoBehaviour
     private bool isDie;
     private bool isRun;
     private bool attack;
+    private bool isTowerMove;
 
     private SpriteRenderer sr;
     private Animator anim;
@@ -48,7 +49,7 @@ public class AllyBase : MonoBehaviour
         attactTimer = 0f;
         isDie = false;
         
-        
+        transform.GetComponent<Collider2D>().enabled = true;
     }
 
     private void Start()
@@ -77,7 +78,7 @@ public class AllyBase : MonoBehaviour
 
     private void Update()
     {
-        if (isDie)
+        if (isDie || isTowerMove)
         {
             return;
         }
@@ -89,7 +90,7 @@ public class AllyBase : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isDie || !canMove)
+        if (isDie || !canMove || isTowerMove)
         {
             return;
         }
@@ -284,10 +285,12 @@ public class AllyBase : MonoBehaviour
             EnemyUnTargetingEvent?.Invoke();
             targetEnemy = null;
             isTargeting = false;
+            isTowerMove = true;
         }
         else
         {
             canMove = true;
+            isTowerMove = false;
         }
 
         isRun = isMoving;

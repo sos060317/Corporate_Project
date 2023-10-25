@@ -23,7 +23,7 @@ public class MovePositionDirect : MonoBehaviour, IMovePosition
         canMove = true;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (!canMove)
         {
