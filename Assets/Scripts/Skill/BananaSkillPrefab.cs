@@ -58,14 +58,18 @@ public class BananaSkillPrefab : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Road") || other.CompareTag("Enemy"))
         {
             sizeObj.color = ableColor;
             attackPossible = true;
         }
-        else
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Road") || other.CompareTag("Enemy"))
         {
             sizeObj.color = unableColor;
             attackPossible = false;
