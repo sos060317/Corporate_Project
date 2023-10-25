@@ -13893,8 +13893,6 @@ MonoBehaviour:
   poolArray:
   - poolSize: 30
     prefab: {fileID: 1370586008307256899, guid: 72ef17e905f3f26428040f0f9c7abd5f, type: 3}
-  - poolSize: 30
-    prefab: {fileID: 8669094408152069988, guid: 77d5a559fa90b634c9d78894b7578a48, type: 3}
 --- !u!4 &793300348
 Transform:
   m_ObjectHideFlags: 0
