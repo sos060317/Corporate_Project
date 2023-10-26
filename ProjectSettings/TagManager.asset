@@ -64,3 +64,9 @@ TagManager:
   - name: Skill
     uniqueID: 3524679541
     locked: 0
+  - name: Unit
+    uniqueID: 1369048461
+    locked: 0
+  - name: Front
+    uniqueID: 1093175155
+    locked: 0

@@ -67,6 +67,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6198729432645383529, guid: d9f359471f50e0840a9b1d951fcb3c82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6198729432645383530, guid: d9f359471f50e0840a9b1d951fcb3c82, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
@@ -74,6 +78,14 @@ PrefabInstance:
     - target: {fileID: 6198729432645383530, guid: d9f359471f50e0840a9b1d951fcb3c82, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198729432645383533, guid: d9f359471f50e0840a9b1d951fcb3c82, type: 3}
+      propertyPath: m_SortingOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198729432645383533, guid: d9f359471f50e0840a9b1d951fcb3c82, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1093175155
       objectReference: {fileID: 0}
     - target: {fileID: 6198729432699914603, guid: d9f359471f50e0840a9b1d951fcb3c82, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

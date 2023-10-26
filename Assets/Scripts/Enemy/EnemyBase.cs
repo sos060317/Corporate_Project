@@ -57,11 +57,6 @@ public abstract class EnemyBase : MonoBehaviour
         hitDelay = new WaitForSeconds(0.1f);
     }
 
-    private void OnEnable()
-    {
-        
-    }
-
     protected virtual void Update()
     {
         if (GameManager.Instance.isGameStop)
@@ -316,6 +311,7 @@ public abstract class EnemyBase : MonoBehaviour
         attack = false;
         isMoveEnd = false;
         Targeting = false;
+        isFaint = false;
         transform.GetComponent<Collider2D>().enabled = true;
     }
 

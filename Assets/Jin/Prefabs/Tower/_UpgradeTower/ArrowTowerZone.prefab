@@ -327,8 +327,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1093175155
+  m_SortingOrder: 15
   m_TargetDisplay: 0
 --- !u!114 &1032875238827537873
 MonoBehaviour:
@@ -555,6 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb11df076c6c1c4fadf1b0c3262a4f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ArrowRound: {fileID: 0}
   RoundObject: {fileID: 1032875239848767215}
   arrowTemplate: {fileID: 11400000, guid: 7ff9544debe48214a9d2cc8f3751d44a, type: 2}
   sp: {fileID: 1032875239123180552}
@@ -586,7 +587,7 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5030152, y: 0.118573815}
     oldSize: {x: 2, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -646,6 +647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UpGradeCanvas: {fileID: 1032875238827537874}
+  arrowTower: {fileID: 0}
 --- !u!1 &1032875239771977814
 GameObject:
   m_ObjectHideFlags: 0
