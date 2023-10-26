@@ -26,7 +26,7 @@ public class Banana : MonoBehaviour
 
             transform.position += nextPos;
 
-            if (Vector3.Distance(transform.position, endPos) < 0.1f)
+            if (Vector3.Distance(transform.position, endPos) < 0.3f)
             {
                 ableBanana = true;
                 

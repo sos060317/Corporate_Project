@@ -41,10 +41,17 @@ public class BananaSkillButton : MonoBehaviour
 
     public void UseBananaSkill()
     {
+        if (GameManager.Instance.isUseSkill)
+        {
+            return;
+        }
+        
         skillButton.interactable = false;
 
         skillTime = 0;
         
         Instantiate(bananaSkillPrefab, Vector3.zero, Quaternion.identity);
+
+        GameManager.Instance.isUseSkill = true;
     }
 }

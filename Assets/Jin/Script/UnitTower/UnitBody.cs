@@ -14,7 +14,7 @@ namespace JinCode.MonoBehaviours
         private Renderer myRenderer;
 
         private void Awake()
-        {
+        {   
             myRenderer = gameObject.GetComponent<Renderer>();
         }
 
@@ -24,7 +24,7 @@ namespace JinCode.MonoBehaviours
             if (timer <= 0f)
             {
                 timer = timerMax;
-                myRenderer.sortingOrder = (int)(sortingOrderBase - transform.position.y - offset);
+                //myRenderer.sortingOrder = (int)(sortingOrderBase - transform.position.y - offset);
                 if (runOnlyOnce)
                 {
                     Destroy(this);

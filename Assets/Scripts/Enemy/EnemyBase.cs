@@ -57,11 +57,6 @@ public abstract class EnemyBase : MonoBehaviour
         hitDelay = new WaitForSeconds(0.1f);
     }
 
-    private void OnEnable()
-    {
-        
-    }
-
     protected virtual void Update()
     {
         if (GameManager.Instance.isGameStop)
@@ -299,8 +294,8 @@ public abstract class EnemyBase : MonoBehaviour
 
         curHealth = maxHealth;
         movePosIndex = 0;
-        
-        moveOffset = new Vector3(0, Random.Range(-1f, 1f));
+
+        moveOffset = Random.insideUnitCircle * 0.7f;
 
         transform.position = movePoints[movePosIndex] + moveOffset;
 
@@ -316,6 +311,7 @@ public abstract class EnemyBase : MonoBehaviour
         attack = false;
         isMoveEnd = false;
         Targeting = false;
+        isFaint = false;
         transform.GetComponent<Collider2D>().enabled = true;
     }
 

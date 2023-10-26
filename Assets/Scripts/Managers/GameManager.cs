@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -29,6 +31,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameOverMenu gameOverMenu;
 
     [SerializeField] private GamePauseMenu gamePauseMenu;
+
+    [SerializeField] private GameObject evolutionUpgradeMenu;
 
     public Transform buffIconParent;
 
@@ -58,6 +62,7 @@ public class GameManager : MonoBehaviour
     public int frame;
     
     [HideInInspector] public bool isGameStop;
+    [HideInInspector] public bool isUseSkill;
 
     public float currentGold;
 
@@ -66,6 +71,8 @@ public class GameManager : MonoBehaviour
     private int starCount;
 
     private float evolutionStoneCurHealth;
+
+    private bool isShowEvolutionUpgradeMenu = false;
     
     private static GameManager instance = null; // 해당 스크립트를 변수로 받아옴
 
@@ -276,4 +283,19 @@ public class GameManager : MonoBehaviour
         gameClearMenu.Init(starCount);
     }
 
+    public void ShowEvolutionUpgradeMenu()
+    {
+        if (isShowEvolutionUpgradeMenu)
+        {
+            evolutionUpgradeMenu.GetComponent<RectTransform>().DOAnchorPosY(-500, 0.3f);
+
+            isShowEvolutionUpgradeMenu = false;
+        }
+        else if (!isShowEvolutionUpgradeMenu)
+        {
+            evolutionUpgradeMenu.GetComponent<RectTransform>().DOAnchorPosY(0, 0.3f);
+
+            isShowEvolutionUpgradeMenu = true;
+        }
+    }
 }

@@ -39,6 +39,8 @@ public class MeteorSkillPrefab : MonoBehaviour
 
             stop = true;
 
+            GameManager.Instance.isUseSkill = false;
+            
             StartCoroutine(MeteorRoutine());
         }
     }
@@ -57,7 +59,7 @@ public class MeteorSkillPrefab : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Road") || other.CompareTag("Enemy"))
         {

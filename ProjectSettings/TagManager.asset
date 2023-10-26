@@ -55,12 +55,18 @@ TagManager:
   - name: Decorate
     uniqueID: 1863012141
     locked: 0
-  - name: Evolution Stone
-    uniqueID: 2026474405
-    locked: 0
   - name: Node
     uniqueID: 2385504769
     locked: 0
   - name: Skill
     uniqueID: 3524679541
+    locked: 0
+  - name: Unit
+    uniqueID: 1369048461
+    locked: 0
+  - name: Front
+    uniqueID: 1093175155
+    locked: 0
+  - name: Evolution Stone
+    uniqueID: 2026474405
     locked: 0
