@@ -42,10 +42,17 @@ public class MeteorSkillButton : MonoBehaviour
 
     public void UseMeteorSkill()
     {
+        if (GameManager.Instance.isUseSkill)
+        {
+            return;
+        }
+        
         skillButton.interactable = false;
 
         skillTime = 0;
         
         Instantiate(meteorSkillPrefab, Vector3.zero, Quaternion.identity);
+        
+        GameManager.Instance.isUseSkill = true;
     }
 }

@@ -39,6 +39,8 @@ public class MeteorSkillPrefab : MonoBehaviour
 
             stop = true;
 
+            GameManager.Instance.isUseSkill = false;
+            
             StartCoroutine(MeteorRoutine());
         }
     }

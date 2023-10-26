@@ -40,6 +40,8 @@ public class BananaSkillPrefab : MonoBehaviour
 
             stop = true;
 
+            GameManager.Instance.isUseSkill = false;
+
             StartCoroutine(MeteorRoutine());
         }
     }

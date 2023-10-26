@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -61,6 +62,7 @@ public class GameManager : MonoBehaviour
     public int frame;
     
     [HideInInspector] public bool isGameStop;
+    [HideInInspector] public bool isUseSkill;
 
     public float currentGold;
 
