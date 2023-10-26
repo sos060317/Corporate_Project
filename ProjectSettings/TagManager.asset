@@ -55,9 +55,6 @@ TagManager:
   - name: Decorate
     uniqueID: 1863012141
     locked: 0
-  - name: Evolution Stone
-    uniqueID: 2026474405
-    locked: 0
   - name: Node
     uniqueID: 2385504769
     locked: 0
@@ -69,4 +66,7 @@ TagManager:
     locked: 0
   - name: Front
     uniqueID: 1093175155
+    locked: 0
+  - name: Evolution Stone
+    uniqueID: 2026474405
     locked: 0

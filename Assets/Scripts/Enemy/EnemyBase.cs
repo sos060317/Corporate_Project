@@ -294,8 +294,8 @@ public abstract class EnemyBase : MonoBehaviour
 
         curHealth = maxHealth;
         movePosIndex = 0;
-        
-        moveOffset = new Vector3(0, Random.Range(-1f, 1f));
+
+        moveOffset = Random.insideUnitCircle * 0.7f;
 
         transform.position = movePoints[movePosIndex] + moveOffset;
 
