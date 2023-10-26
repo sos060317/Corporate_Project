@@ -27,7 +27,7 @@ public class Meteor : MonoBehaviour
 
         transform.position += nextPos;
 
-        if (Vector3.Distance(transform.position, endPos) < 0.1f)
+        if (Vector3.Distance(transform.position, endPos) < 0.3f)
         {
             Instantiate(meteorEffectPrefab, transform.position, Quaternion.identity);
             
