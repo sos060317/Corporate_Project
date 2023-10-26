@@ -19,6 +19,7 @@ public abstract class EnemyBase : MonoBehaviour
     private int movePosIndex;
     
     private float moveSpeed;
+    private float baseSpeed;
 
     private bool isFaint = false;
     
@@ -72,6 +73,11 @@ public abstract class EnemyBase : MonoBehaviour
         if (isFaint)
         {
             return;
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            SpeedDownEnemy(3f);
         }
         
         MoveUpdate();
@@ -287,6 +293,7 @@ public abstract class EnemyBase : MonoBehaviour
 
         maxHealth = this.enemyDetailsSo.enemyBaseHealth;
         moveSpeed = this.enemyDetailsSo.enemyBaseMoveSpeed;
+        baseSpeed = moveSpeed;
         attackRate = this.enemyDetailsSo.enemyBaseAttackRate;
         attackRange = this.enemyDetailsSo.enemyBaseAttackRange;
         
@@ -331,5 +338,31 @@ public abstract class EnemyBase : MonoBehaviour
         isFaint = false;
         
         anim.SetBool("Faint", false);
+    }
+
+    private Coroutine speedDownCoroutine;
+    
+    public void SpeedDownEnemy(float speedDownTime)
+    {
+        if (speedDownCoroutine != null)
+        {
+            StopCoroutine(speedDownCoroutine);
+        }
+        
+        speedDownCoroutine = StartCoroutine(SpeedDownRoutine(speedDownTime));
+    }
+
+    private IEnumerator SpeedDownRoutine(float speedDownTime)
+    {
+        sr.color = Color.blue;
+        
+        // 이동속도 10% 감소
+        moveSpeed = baseSpeed * 0.9f;
+
+        yield return new WaitForSeconds(speedDownTime);
+
+        sr.color = new Color(1, 1, 1);
+
+        moveSpeed = baseSpeed;
     }
 }
