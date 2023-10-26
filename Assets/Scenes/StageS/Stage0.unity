@@ -1532,11 +1532,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buffDetails: {fileID: 11400000, guid: 899ddae9ebaa62b4f851becafbf8e146, type: 2}
   infoText: {fileID: 507317481}
-  infoBg: {fileID: 274112946}
   goldText: {fileID: 1586989897}
   levelMaxText: {fileID: 252620051}
   levelStarParent: {fileID: 1908407111}
-  levelUpEffect: {fileID: 920573575}
   levelStarPrefab: {fileID: 7066261491260931147, guid: 34c853f5a65273340b81cd58d40c2b11, type: 3}
   iconPrefab: {fileID: 6396079056183618436, guid: 224d312fc846b1c4e9247619e5076d0a, type: 3}
   canClick: 0
@@ -1887,12 +1885,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1dae82a95c96fa4b9f9ce4620cebc40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeButtons:
-  - {fileID: 601740390}
-  - {fileID: 1419234371}
-  - {fileID: 490943420}
-  - {fileID: 2037463452}
-  - {fileID: 149259068}
 --- !u!50 &179559236
 Rigidbody2D:
   serializedVersion: 4
@@ -9658,11 +9650,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buffDetails: {fileID: 11400000, guid: d2dfac40c21b0804bb2c9a5d5f00e17f, type: 2}
   infoText: {fileID: 1310083248}
-  infoBg: {fileID: 1428729964}
   goldText: {fileID: 1641026872}
   levelMaxText: {fileID: 1088233718}
   levelStarParent: {fileID: 650620000}
-  levelUpEffect: {fileID: 1152219277}
   levelStarPrefab: {fileID: 7066261491260931147, guid: 34c853f5a65273340b81cd58d40c2b11, type: 3}
   iconPrefab: {fileID: 6396079056183618436, guid: 2a3d32f4820f7c54aa3bb3be881110c7, type: 3}
   canClick: 0
@@ -9821,6 +9811,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507317479}
+  m_CullTransparentMesh: 1
+--- !u!1 &519893061
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 519893062}
+  - component: {fileID: 519893064}
+  - component: {fileID: 519893063}
+  m_Layer: 5
+  m_Name: StageEnemyCharacteristics
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &519893062
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519893061}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 783570670}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1100, y: 600}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &519893063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519893061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &519893064
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519893061}
   m_CullTransparentMesh: 1
 --- !u!1 &552051544
 GameObject:
@@ -10347,11 +10413,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buffDetails: {fileID: 11400000, guid: b4e0210841b09e347a7883b064e352c9, type: 2}
   infoText: {fileID: 1789301639}
-  infoBg: {fileID: 667324789}
   goldText: {fileID: 1474192220}
   levelMaxText: {fileID: 470363789}
   levelStarParent: {fileID: 2099856124}
-  levelUpEffect: {fileID: 1450564204}
   levelStarPrefab: {fileID: 7066261491260931147, guid: 34c853f5a65273340b81cd58d40c2b11, type: 3}
   iconPrefab: {fileID: 6396079056183618436, guid: 3cc84624663bdb1448586b392e9940eb, type: 3}
   canClick: 0
@@ -12547,6 +12611,7 @@ RectTransform:
   - {fileID: 841038056}
   - {fileID: 1546049540}
   - {fileID: 1687689572}
+  - {fileID: 519893062}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -44281,6 +44346,7 @@ MonoBehaviour:
   gameClearMenu: {fileID: 466374068}
   gameOverMenu: {fileID: 927627616}
   gamePauseMenu: {fileID: 79450910}
+  evolutionUpgradeMenu: {fileID: 0}
   buffIconParent: {fileID: 1554575937}
   getGoldMultiply: 0
   allyAttackDamageMultiply: 0
@@ -44292,6 +44358,7 @@ MonoBehaviour:
   levelIndex: 0
   frame: 0
   isGameStop: 0
+  isUseSkill: 0
   currentGold: 0
 --- !u!1 &1243807942
 GameObject:
@@ -45698,11 +45765,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buffDetails: {fileID: 11400000, guid: d421b7cb26b30f84fb256b203ac77a82, type: 2}
   infoText: {fileID: 14607418}
-  infoBg: {fileID: 1097455966}
   goldText: {fileID: 345444194}
   levelMaxText: {fileID: 255252020}
   levelStarParent: {fileID: 1064289074}
-  levelUpEffect: {fileID: 1719551105}
   levelStarPrefab: {fileID: 7066261491260931147, guid: 34c853f5a65273340b81cd58d40c2b11, type: 3}
   iconPrefab: {fileID: 6396079056183618436, guid: 55b27572b2ac4984caab01947fbca8ee, type: 3}
   canClick: 0
@@ -66552,11 +66617,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buffDetails: {fileID: 11400000, guid: ce3345d16e6206e43868fcb407767a1d, type: 2}
   infoText: {fileID: 119901463}
-  infoBg: {fileID: 586558630}
   goldText: {fileID: 1681153178}
   levelMaxText: {fileID: 1291468493}
   levelStarParent: {fileID: 1988788120}
-  levelUpEffect: {fileID: 462364599}
   levelStarPrefab: {fileID: 7066261491260931147, guid: 34c853f5a65273340b81cd58d40c2b11, type: 3}
   iconPrefab: {fileID: 6396079056183618436, guid: dd0ad51b636b162449ad661345d21197, type: 3}
   canClick: 0
