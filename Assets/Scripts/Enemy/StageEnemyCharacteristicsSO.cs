@@ -61,4 +61,13 @@ public class StageEnemyCharacteristicsSO : ScriptableObject
     #endregion
 
     public int coins;
+
+    #region Header
+
+    [Space(10)]
+    [Header("Ό³Έν±Ϋ")]
+
+    #endregion
+
+    public string changeStat;
 }
