@@ -52,7 +52,7 @@ public class TowerNodeBuildUI : MonoBehaviour
         buttonImage.rotation = Quaternion.Euler(0, 0, 180f);
         rectTransform.DOAnchorPosY(0, 0.3f).SetEase(Ease.Linear);
     }
-
+     
     public void HideTowerWindow()
     {
         isShowWindow = false;

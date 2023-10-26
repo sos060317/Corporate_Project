@@ -167,16 +167,16 @@ public class Spawn_j : MonoBehaviour
 
     public Vector2 EnemyPos;
     public bool nowShot = false;
-
+    public bool canToggle = true;
 
 
     private void Start()
     {
         RoundObject.SetActive(false);
 
-        if(ArrowRound != null)
+        if (ArrowRound != null)
         {
-            detectionRadius = ArrowRound.AroRound;  
+            detectionRadius = ArrowRound.AroRound;
         }
 
     }
@@ -220,13 +220,16 @@ public class Spawn_j : MonoBehaviour
 
         }
 
-        Debug.Log(isClicked);
-        if (isClicked == true)
+        StartCoroutine(DelayTm());
+
+        if (isClicked == true && canToggle == true)
         {
-            if (Input.GetMouseButtonDown(1))
+
+            if (Input.GetMouseButtonDown(0))
             {
-                RoundObject.SetActive(false);
                 isClicked = false;
+                RoundObject.SetActive(false);
+                canToggle = false;
             }
         }
 
@@ -251,10 +254,20 @@ public class Spawn_j : MonoBehaviour
         }
     }
 
+    private IEnumerator DelayTm()
+    {
+        yield return new WaitForSeconds(0.2f);
+        canToggle = true;
+    }
+
     private void OnMouseDown()
     {
-        isClicked = true;
-        RoundObject.SetActive(true);
+        if (!isClicked && canToggle == true)
+        {
+            isClicked = true;
+            RoundObject.SetActive(true);
+            canToggle = false;
+        }
     }
 
     private void UpdateFlowingObjectPosition()

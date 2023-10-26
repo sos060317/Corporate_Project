@@ -13558,6 +13558,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &865830873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 865830874}
+  - component: {fileID: 865830875}
+  m_Layer: 0
+  m_Name: TowerClickManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &865830874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865830873}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1117417225}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &865830875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865830873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ab3c8db57a3ac049a521d7538b05c38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &893233335
 GameObject:
   m_ObjectHideFlags: 0
@@ -14023,7 +14067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4ba305a85cfa9f4a8c7dfaff285124c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ATower: {fileID: 7312676021966909301, guid: 7f4446dcd0a13384bb36ae67b531094a, type: 3}
+  ATower: {fileID: 441431777796952194, guid: 7f4446dcd0a13384bb36ae67b531094a, type: 3}
   BTower: {fileID: 687003374116531938, guid: 59391adc21e50684a994196bc86779da, type: 3}
   MTower: {fileID: 3328191658679655886, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}
   UTower: {fileID: 4769305975782953964, guid: 21fe8a9a47f448543a37ba6783cec1c7, type: 3}
@@ -38489,6 +38533,7 @@ Transform:
   - {fileID: 794257298}
   - {fileID: 1238651194}
   - {fileID: 417100786}
+  - {fileID: 865830874}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -44244,6 +44289,7 @@ MonoBehaviour:
   enemyMoveSpeedMultiply: 0
   evolutionStoneHealthBar: {fileID: 2054950755}
   evolutionStoneMaxHealth: 100
+  levelIndex: 0
   frame: 0
   isGameStop: 0
   currentGold: 0
@@ -51765,10 +51811,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64d2d7781740bd74ba675058c61797d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ATower: {fileID: 3225689151435142053, guid: 196c68d09a1f2894a9ea9de35a54464c, type: 3}
-  BTower: {fileID: 3193333786985530759, guid: 0b60854e95af0e24285db74c20b21d57, type: 3}
-  MTower: {fileID: 6974473645572560366, guid: 6d9aefa49cf8c404b9085bf6273dbc39, type: 3}
-  UTower: {fileID: 6198729432191957988, guid: d9f359471f50e0840a9b1d951fcb3c82, type: 3}
+  ATower: {fileID: 441431777796952194, guid: 7f4446dcd0a13384bb36ae67b531094a, type: 3}
+  BTower: {fileID: 687003374116531938, guid: 59391adc21e50684a994196bc86779da, type: 3}
+  MTower: {fileID: 3328191658679655886, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}
+  UTower: {fileID: 4769305975782953964, guid: 21fe8a9a47f448543a37ba6783cec1c7, type: 3}
   towerWindow: {fileID: 1546049542}
   buttonImage: {fileID: 747371735}
 --- !u!1 &1554575936
@@ -55258,7 +55304,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: -370}
+  m_AnchoredPosition: {x: 0, y: -361}
   m_SizeDelta: {x: 0, y: 270}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1687689574

@@ -20,7 +20,6 @@ public class UpgradeArrowTower : MonoBehaviour
         StartingCost = arrowTemplate.aweapon[Arrowlevel].Acost;
         playerGold = FindObjectOfType<GameManager>(); 
 
-        Debug.Log("Null" + playerGold.currentGold);
 
         // 시작 시 모든 Pos 오브젝트를 비활성화
         Pos1.SetActive(false);
@@ -30,7 +29,6 @@ public class UpgradeArrowTower : MonoBehaviour
         // Testcoin 값만큼 PlayerGold를 처음 한 번만 감소시킵니다.
         if (!hasSubtractedGold)
         {
-            Debug.Log("d");
 
             playerGold.UseGold(arrowTemplate.aweapon[Arrowlevel].Acost);
             hasSubtractedGold = true;
