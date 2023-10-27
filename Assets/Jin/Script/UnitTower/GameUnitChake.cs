@@ -14,6 +14,7 @@ public class GameUnitChake : MonoBehaviour
     public List<Unit> selectedUnitRTSList;
 
     public bool clicked = false;
+    private bool UToggle = true;
 
     public Vector3 lastRightClickPosition; // 가장 최근 우클릭 위치 저장
 
@@ -30,8 +31,8 @@ public class GameUnitChake : MonoBehaviour
         {
             clicked = true;
             SelectUnitsInTower();
-
             Range.SetActive(true); // Tower 클릭 시 Range 활성화
+            UToggle = false;
         }
     }
 
@@ -42,7 +43,7 @@ public class GameUnitChake : MonoBehaviour
             //if (Input.GetMouseButtonDown(1))
             //{
             //    RaycastHit2D hit = Physics2D.Raycast(UtilsClass.GetMouseWorldPosition(), Vector2.up);
-              
+
             //    if (hit.collider != null && hit.collider.gameObject == Range && hit.collider.CompareTag("Road"))
             //    {
             //        Debug.Log("Hit Object Tag: " + hit.collider.tag);
@@ -78,11 +79,21 @@ public class GameUnitChake : MonoBehaviour
             //    }
             //}
 
-            if (Input.GetMouseButtonDown(0))
-            {
-                
+            StartCoroutine(DelayTm());
 
+            if(UToggle == true)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    if (!EventSystem.current.IsPointerOverGameObject())
+                    {
+                        clicked = false;
+                        Range.SetActive(false);
+                        UToggle = false;
+                    }
+                }
             }
+            
 
             if (UnitUI.buttonDown == true)
             {
@@ -93,15 +104,18 @@ public class GameUnitChake : MonoBehaviour
 
             if (Input.GetMouseButtonDown(1))
             {
-                //if (!EventSystem.current.IsPointerOverGameObject())
-                //{
-                    Move();
-                //}
+                Move();
             }
 
         }
 
 
+    }
+
+    private IEnumerator DelayTm()
+    {
+        yield return new WaitForSeconds(0.2f);
+        UToggle = true;
     }
 
     private void Move()

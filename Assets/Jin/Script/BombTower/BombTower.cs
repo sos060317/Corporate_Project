@@ -108,6 +108,7 @@ public class BombTower : MonoBehaviour
         }
 
 
+
         if (isClick == true && BToggle == true)
         {
             if (!EventSystem.current.IsPointerOverGameObject())
