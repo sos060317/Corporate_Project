@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 using UnityEngine;
 
 public class Spawn_j : MonoBehaviour
@@ -25,12 +26,17 @@ public class Spawn_j : MonoBehaviour
 
     //public Vector2 EnemyPos;
     //public bool nowShot = false;
-
+    //public bool canToggle = true;
 
 
     //private void Start()
     //{
     //    RoundObject.SetActive(false);
+
+    //    if (ArrowRound != null)
+    //    {
+    //        detectionRadius = ArrowRound.AroRound;
+    //    }
 
     //}
 
@@ -41,7 +47,7 @@ public class Spawn_j : MonoBehaviour
 
     //    alevel = sp.Arrowlevel;
 
-    //    Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, detectionRadius);
+    //    Collider2D[] colliders = Physics2D.OverlapCircleAll(ArrowRound.transform.position, ArrowRound.AroRound);
 
     //    float radius = arrowTemplate.aweapon[alevel].Aradius;
     //    RoundObject.transform.localScale = new Vector3(radius, radius, radius);
@@ -73,13 +79,16 @@ public class Spawn_j : MonoBehaviour
 
     //    }
 
-    //    Debug.Log(isClicked);
-    //    if (isClicked == true)
+    //    StartCoroutine(DelayTm());
+
+    //    if (isClicked == true && canToggle == true)
     //    {
-    //        if (Input.GetMouseButtonDown(1))
+
+    //        if (Input.GetMouseButtonDown(0))
     //        {
-    //            RoundObject.SetActive(false);
     //            isClicked = false;
+    //            RoundObject.SetActive(false);
+    //            canToggle = false;
     //        }
     //    }
 
@@ -104,10 +113,20 @@ public class Spawn_j : MonoBehaviour
     //    }
     //}
 
+    //private IEnumerator DelayTm()
+    //{
+    //    yield return new WaitForSeconds(0.2f);
+    //    canToggle = true;
+    //}
+
     //private void OnMouseDown()
     //{
-    //    isClicked = true;
-    //    RoundObject.SetActive(true);
+    //    if (!isClicked && canToggle == true)
+    //    {
+    //        isClicked = true;
+    //        RoundObject.SetActive(true);
+    //        canToggle = false;
+    //    }
     //}
 
     //private void UpdateFlowingObjectPosition()
@@ -135,18 +154,21 @@ public class Spawn_j : MonoBehaviour
 
     //private bool IsWithinRadius(Vector2 position)
     //{
-    //    return Vector2.Distance(transform.position, position) <= detectionRadius;  //  범위 안에 Enmey 위치 찾기?
+    //    return Vector2.Distance(ArrowRound.transform.position, position) <= detectionRadius;  //  범위 안에 Enmey 위치 찾기?
     //}
 
     //private void OnDrawGizmosSelected()
-    //{
-    //    Gizmos.color = Color.green;
-    //    Gizmos.DrawWireSphere(transform.position, detectionRadius);
+    //{ 
+
+    //    if (ArrowRound != null)
+    //    {
+    //        Gizmos.color = Color.green;
+    //        Gizmos.DrawWireSphere(ArrowRound.transform.position, ArrowRound.AroRound);
+    //    }
     //}
 
-
-
     public AroRoundCheck ArrowRound;
+    public ArrowWindow ArrowTowerUI;
 
     public GameObject RoundObject;
     public ArrowTowerTemplate arrowTemplate;
@@ -220,6 +242,13 @@ public class Spawn_j : MonoBehaviour
 
         }
 
+        if(ArrowTowerUI.buttonDown == true)
+        {
+            isClicked = false;
+            RoundObject.SetActive(false);
+            ArrowTowerUI.buttonDown = false;
+        }
+
         StartCoroutine(DelayTm());
 
         if (isClicked == true && canToggle == true)
@@ -227,12 +256,14 @@ public class Spawn_j : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                isClicked = false;
-                RoundObject.SetActive(false);
-                canToggle = false;
+                if (!EventSystem.current.IsPointerOverGameObject())
+                {
+                    isClicked = false;
+                    RoundObject.SetActive(false);
+                    canToggle = false;
+                }
             }
         }
-
 
         if (enemyList.Count > 0)
         {
@@ -299,7 +330,7 @@ public class Spawn_j : MonoBehaviour
     }
 
     private void OnDrawGizmosSelected()
-    { 
+    {
 
         if (ArrowRound != null)
         {
