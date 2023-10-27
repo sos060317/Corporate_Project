@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1369048461
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: 7
   m_Sprite: {fileID: 4723107735738678597, guid: efcce9b9312267649ad3455ccfbc0dd6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -161,6 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitMaterial: {fileID: 2100000, guid: 5c4fc3ca9002333428abb9fa150391d9, type: 2}
   defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  iceMaterial: {fileID: 2100000, guid: e53e51e321a7af94cb68fb0b27655e60, type: 2}
   healthUiBg: {fileID: 3927143001955413002}
   healthUiBar: {fileID: 7462625816331178221}
   Targeting: 0
