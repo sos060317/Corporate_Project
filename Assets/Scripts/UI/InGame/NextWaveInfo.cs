@@ -10,6 +10,12 @@ public class NextWaveInfo : MonoBehaviour
     [SerializeField] private Text infoText;
     [SerializeField] private Image infoBg;
 
+    [SerializeField] private GameObject indicatorObj;
+    [SerializeField] private LayerMask indicatorLayer;
+
+    [SerializeField] private SpriteRenderer renderer;
+    [SerializeField] private Camera camera;
+
     private float fadeAmount = 0f;
 
     private void Start()
@@ -24,6 +30,11 @@ public class NextWaveInfo : MonoBehaviour
         infoBg.color = infoBgColor;
     }
 
+    private void Update()
+    {
+        IndicatorUpdate();
+    }
+
     public void InitInfo(List<string> enemyNameList, List<int> enemyCountList)
     {   
         infoText.text = "정보\n\n";
@@ -35,6 +46,36 @@ public class NextWaveInfo : MonoBehaviour
             if (enemyNameList.Count - i - 1 > 0)
             {
                 infoText.text += "\n";
+            }
+        }
+    }
+
+    private void IndicatorUpdate()
+    {
+        // 화면 밖으로 나가면 카메라 쪽으로 이동
+        if (renderer.isVisible == false)
+        {
+            if (indicatorObj.activeSelf == false)
+            {
+                indicatorObj.SetActive(true);
+            }
+            
+            Vector2 direction = GameManager.Instance.cameraObj.transform.position - transform.position;
+
+            RaycastHit2D ray = Physics2D.Raycast(transform.position, direction, Mathf.Infinity, indicatorLayer);
+            
+            if (ray.collider != null)
+            {
+                Vector2 pos = camera.WorldToScreenPoint(ray.point);
+                
+                indicatorObj.transform.position = pos;
+            }
+        }
+        else
+        {
+            if (indicatorObj.activeSelf)
+            {
+                indicatorObj.SetActive(false);
             }
         }
     }
@@ -58,7 +99,7 @@ public class NextWaveInfo : MonoBehaviour
             return;
         }
         
-        WaveManager.Instance.WaveStart();
+        WaveStart();
     }
 
     private IEnumerator ShowInfo()
@@ -121,5 +162,10 @@ public class NextWaveInfo : MonoBehaviour
         infoBg.color = infoBgColor;
         
         fadeAmount = 0f;
+    }
+    
+    public void WaveStart()
+    {
+        WaveManager.Instance.WaveStart();
     }
 }

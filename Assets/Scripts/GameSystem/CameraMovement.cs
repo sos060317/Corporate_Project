@@ -14,8 +14,11 @@ public class CameraMovement : MonoBehaviour
 
     [SerializeField] private SpriteRenderer mapRenderer;
 
+    [SerializeField] private GameObject indicatorColObj;
+
     private float tempValue; // 최대 최소 값을 벗어나지 못하게 해주는 변수
     private float mapMinX, mapMaxX, mapMinY, mapMaxY; // 맵의 가로 세로 최소 최대 크기
+    private float baseSize;
 
     private Vector3 dragOrigin; // 마우스가 처음 클릭 됐을 때의 벡터 받아오기
     private Vector3 tempOrigin;
@@ -28,6 +31,8 @@ public class CameraMovement : MonoBehaviour
 
         mapMinY = mapRenderer.transform.position.y - mapRenderer.bounds.size.y / 2f;
         mapMaxY = mapRenderer.transform.position.y + mapRenderer.bounds.size.y / 2f;
+
+        baseSize = cam.orthographicSize;
     }
 
     private void Update()
@@ -94,6 +99,10 @@ public class CameraMovement : MonoBehaviour
         else
         {
             cam.orthographicSize -= scroll * 0.5f; // scroll 값만큼 카메라 크기에 적용
+            
+            // 인디케이터 콜라이더의 크기를 고정하기 위한 수식
+            indicatorColObj.transform.localScale = new Vector3(cam.orthographicSize / baseSize,
+                cam.orthographicSize / baseSize, cam.orthographicSize / baseSize);
         }
         cam.transform.position = ClampCamera(cam.transform.position);
     }
