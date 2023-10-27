@@ -75,11 +75,6 @@ public abstract class EnemyBase : MonoBehaviour
         {
             return;
         }
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            SpeedDownEnemy(3f);
-        }
         
         MoveUpdate();
         AttackUpdate();
