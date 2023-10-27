@@ -237,6 +237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitMaterial: {fileID: 2100000, guid: 5c4fc3ca9002333428abb9fa150391d9, type: 2}
   defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  iceMaterial: {fileID: 2100000, guid: e53e51e321a7af94cb68fb0b27655e60, type: 2}
   healthUiBg: {fileID: 56147406949248163}
   healthUiBar: {fileID: 7053703022624280111}
   Targeting: 0

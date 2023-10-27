@@ -11,6 +11,7 @@ public abstract class EnemyBase : MonoBehaviour
 {
     [SerializeField] private Material hitMaterial;
     [SerializeField] private Material defaultMaterial;
+    [SerializeField] private Material iceMaterial;
     [SerializeField] private Image healthUiBg;
     [SerializeField] private Image healthUiBar;
 
@@ -354,14 +355,20 @@ public abstract class EnemyBase : MonoBehaviour
 
     private IEnumerator SpeedDownRoutine(float speedDownTime)
     {
-        sr.color = Color.blue;
+        // 색상 변경
+        sr.material = iceMaterial;
         
-        // 이동속도 10% 감소
-        moveSpeed = baseSpeed * 0.9f;
+        // 애니메이션 스피드 감소
+        anim.SetFloat("animSpeed", 0.7f);
+        
+        // 이동속도 30% 감소
+        moveSpeed = baseSpeed * 0.7f;
 
         yield return new WaitForSeconds(speedDownTime);
+        
+        anim.SetFloat("animSpeed", 1f);
 
-        sr.color = new Color(1, 1, 1);
+        sr.material = defaultMaterial;
 
         moveSpeed = baseSpeed;
     }
