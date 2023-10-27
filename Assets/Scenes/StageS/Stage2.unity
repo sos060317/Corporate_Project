@@ -10813,7 +10813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e28515001571d93498934fda23c7e0c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ownTower: {fileID: 3328191658679655875, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}
+  ownTower: {fileID: 2120653621244148619, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}
 --- !u!114 &499362594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26139,7 +26139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ATower: {fileID: 8267170808375101381, guid: 7f4446dcd0a13384bb36ae67b531094a, type: 3}
   BTower: {fileID: 687003374116531938, guid: 59391adc21e50684a994196bc86779da, type: 3}
-  MTower: {fileID: 3328191658679655886, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}
+  MTower: {fileID: 2120653621244148614, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}
   UTower: {fileID: 3333731717320339946, guid: 21fe8a9a47f448543a37ba6783cec1c7, type: 3}
   towerWindow: {fileID: 1458856410}
   buttonImage: {fileID: 1709587637}
