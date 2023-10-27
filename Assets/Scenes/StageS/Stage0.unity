@@ -9927,7 +9927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -1700, y: 0}
   m_SizeDelta: {x: 1100, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &519893063
@@ -9984,6 +9984,15 @@ MonoBehaviour:
   chEnemyImage: {fileID: 494731136}
   chEnemyName: {fileID: 914731018}
   chEnemyEffect: {fileID: 550084335}
+  health: 0
+  moveSpeed: 0
+  attackRate: 0
+  attackRange: 0
+  defnse: 0
+  magicResistance: 0
+  attackPower: 0
+  spellPower: 0
+  coin: 0
 --- !u!1 &550084333
 GameObject:
   m_ObjectHideFlags: 0
@@ -44722,7 +44731,7 @@ MonoBehaviour:
   evolutionStoneHealthBar: {fileID: 2054950755}
   evolutionStoneMaxHealth: 100
   levelIndex: 0
-  frame: 0
+  cameraObj: {fileID: 0}
   isGameStop: 0
   isUseSkill: 0
   currentGold: 0
@@ -52242,10 +52251,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64d2d7781740bd74ba675058c61797d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ATower: {fileID: 441431777796952194, guid: 7f4446dcd0a13384bb36ae67b531094a, type: 3}
+  ATower: {fileID: 8267170808375101381, guid: 7f4446dcd0a13384bb36ae67b531094a, type: 3}
   BTower: {fileID: 687003374116531938, guid: 59391adc21e50684a994196bc86779da, type: 3}
-  MTower: {fileID: 3328191658679655886, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}
-  UTower: {fileID: 4769305975782953964, guid: 21fe8a9a47f448543a37ba6783cec1c7, type: 3}
+  MTower: {fileID: 2120653621244148614, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}
+  UTower: {fileID: 3333731717320339946, guid: 21fe8a9a47f448543a37ba6783cec1c7, type: 3}
   towerWindow: {fileID: 1546049542}
   buttonImage: {fileID: 747371735}
 --- !u!1 &1554575936
