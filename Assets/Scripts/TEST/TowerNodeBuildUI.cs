@@ -62,12 +62,13 @@ public class TowerNodeBuildUI : MonoBehaviour
 
     public void BuildTower(GameObject towerPrefab)  // 타워 설치? 아마
     {
-        if (playerCoin.currentGold >= ATower.StartingCost || playerCoin.currentGold >= BTower.Startcoin || playerCoin.currentGold >= MTower.Startingcoin || playerCoin.currentGold >= UTower.StartingCoin)
+        if (playerCoin.currentGold >= ATower.StartingCost || playerCoin.currentGold >= BTower.Startcoin ||
+            playerCoin.currentGold >= MTower.Startingcoin || playerCoin.currentGold >= UTower.StartingCoin)
         {
-            //selectedNode.BuildTower(towerPrefab);
-            selectedTowerNode.BuildTower(towerPrefab);
+            Debug.Log("tower install");
+            TowerBuildManager.Instance.selectedNode.BuildTower(towerPrefab);
 
-            BuildManager.Instance.DeselectNode();
+            TowerBuildManager.Instance.DeselectNode();
         }
     }
 }
