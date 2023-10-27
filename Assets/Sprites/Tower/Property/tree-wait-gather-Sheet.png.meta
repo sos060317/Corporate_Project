@@ -129,7 +129,7 @@ TextureImporter:
       name: tree-wait-gather-Sheet_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 247
         width: 64
         height: 64
@@ -150,7 +150,7 @@ TextureImporter:
       name: tree-wait-gather-Sheet_4
       rect:
         serializedVersion: 2
-        x: 320
+        x: 256
         y: 247
         width: 64
         height: 64
@@ -171,7 +171,7 @@ TextureImporter:
       name: tree-wait-gather-Sheet_5
       rect:
         serializedVersion: 2
-        x: 384
+        x: 320
         y: 247
         width: 64
         height: 64
@@ -192,8 +192,8 @@ TextureImporter:
       name: tree-wait-gather-Sheet_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 183
+        x: 384
+        y: 247
         width: 64
         height: 64
       alignment: 9
@@ -213,7 +213,7 @@ TextureImporter:
       name: tree-wait-gather-Sheet_7
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 183
         width: 64
         height: 64
@@ -234,7 +234,7 @@ TextureImporter:
       name: tree-wait-gather-Sheet_8
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 183
         width: 64
         height: 64
@@ -255,7 +255,7 @@ TextureImporter:
       name: tree-wait-gather-Sheet_9
       rect:
         serializedVersion: 2
-        x: 192
+        x: 128
         y: 183
         width: 64
         height: 64
@@ -276,7 +276,7 @@ TextureImporter:
       name: tree-wait-gather-Sheet_10
       rect:
         serializedVersion: 2
-        x: 256
+        x: 192
         y: 183
         width: 64
         height: 64
@@ -297,8 +297,8 @@ TextureImporter:
       name: tree-wait-gather-Sheet_11
       rect:
         serializedVersion: 2
-        x: 64
-        y: 247
+        x: 256
+        y: 183
         width: 64
         height: 64
       alignment: 9
@@ -507,12 +507,12 @@ TextureImporter:
       name: tree-wait-gather-Sheet_21
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 58
         width: 64
         height: 61
       alignment: 9
-      pivot: {x: 0.5, y: 0.15}
+      pivot: {x: 0.5, y: 0.14}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -528,12 +528,12 @@ TextureImporter:
       name: tree-wait-gather-Sheet_22
       rect:
         serializedVersion: 2
-        x: 0
+        x: 64
         y: 58
         width: 64
         height: 61
       alignment: 9
-      pivot: {x: 0.5, y: 0.15}
+      pivot: {x: 0.5, y: 0.14}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -554,7 +554,7 @@ TextureImporter:
         width: 64
         height: 61
       alignment: 9
-      pivot: {x: 0.5, y: 0.15}
+      pivot: {x: 0.5, y: 0.14}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -575,7 +575,7 @@ TextureImporter:
         width: 64
         height: 61
       alignment: 9
-      pivot: {x: 0.5, y: 0.15}
+      pivot: {x: 0.5, y: 0.14}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -591,7 +591,7 @@ TextureImporter:
       name: tree-wait-gather-Sheet_2
       rect:
         serializedVersion: 2
-        x: 192
+        x: 128
         y: 247
         width: 64
         height: 64
@@ -612,7 +612,7 @@ TextureImporter:
       name: tree-wait-gather-Sheet_3
       rect:
         serializedVersion: 2
-        x: 256
+        x: 192
         y: 247
         width: 64
         height: 64
@@ -638,7 +638,7 @@ TextureImporter:
         width: 64
         height: 61
       alignment: 9
-      pivot: {x: 0.5, y: 0.15}
+      pivot: {x: 0.5, y: 0.14}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -659,7 +659,7 @@ TextureImporter:
         width: 64
         height: 61
       alignment: 9
-      pivot: {x: 0.5, y: 0.15}
+      pivot: {x: 0.5, y: 0.14}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -675,12 +675,12 @@ TextureImporter:
       name: tree-wait-gather-Sheet_27
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 384
+        y: 58
         width: 64
-        height: 58
+        height: 61
       alignment: 9
-      pivot: {x: 0.5, y: 0.15}
+      pivot: {x: 0.5, y: 0.14}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -696,12 +696,12 @@ TextureImporter:
       name: tree-wait-gather-Sheet_28
       rect:
         serializedVersion: 2
-        x: 384
-        y: 58
+        x: 0
+        y: 0
         width: 64
-        height: 61
+        height: 58
       alignment: 9
-      pivot: {x: 0.5, y: 0.15}
+      pivot: {x: 0.5, y: 0.14}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -722,7 +722,7 @@ TextureImporter:
         width: 64
         height: 58
       alignment: 9
-      pivot: {x: 0.5, y: 0.15}
+      pivot: {x: 0.5, y: 0.14}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -743,7 +743,7 @@ TextureImporter:
         width: 64
         height: 58
       alignment: 9
-      pivot: {x: 0.5, y: 0.15}
+      pivot: {x: 0.5, y: 0.14}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -764,7 +764,7 @@ TextureImporter:
         width: 64
         height: 58
       alignment: 9
-      pivot: {x: 0.5, y: 0.15}
+      pivot: {x: 0.5, y: 0.14}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -785,7 +785,7 @@ TextureImporter:
         width: 64
         height: 58
       alignment: 9
-      pivot: {x: 0.5, y: 0.15}
+      pivot: {x: 0.5, y: 0.14}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -806,7 +806,7 @@ TextureImporter:
         width: 64
         height: 58
       alignment: 9
-      pivot: {x: 0.5, y: 0.15}
+      pivot: {x: 0.5, y: 0.14}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -827,7 +827,7 @@ TextureImporter:
         width: 64
         height: 58
       alignment: 9
-      pivot: {x: 0.5, y: 0.15}
+      pivot: {x: 0.5, y: 0.14}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
