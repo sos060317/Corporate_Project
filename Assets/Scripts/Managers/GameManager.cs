@@ -59,8 +59,14 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
-    public int frame;
-    
+    #region 게임 관련 중요 오브젝트
+
+    [Space(10)]
+    [Header("게임 관련 중요 오브젝트")]
+    public GameObject cameraObj;
+
+    #endregion
+
     [HideInInspector] public bool isGameStop;
     [HideInInspector] public bool isUseSkill;
 
