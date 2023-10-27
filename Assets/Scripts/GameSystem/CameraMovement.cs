@@ -88,13 +88,13 @@ public class CameraMovement : MonoBehaviour
 
         if (cam.orthographicSize <= maxZoomIn && scroll > 0) // 최대 줌일 때, 확대하는 것 방지 
         {
-            tempValue = cam.orthographicSize; // 현재 자신의 크기를 tempValue에 담아두고
-            cam.orthographicSize = tempValue; // 계속해서 크기를 고정
+            // 크기를 고정
+            cam.orthographicSize = maxZoomIn;
         }
         else if (cam.orthographicSize >= maxZoomOut && scroll < 0) // 최소 줌 일 때, 축소하는 것 방지
         {
-            tempValue = cam.orthographicSize; // 현재 자신의 크기를 tempValue에 담아두고
-            cam.orthographicSize = tempValue; // 계속해서 크기를 고정
+            // 크기를 고정
+            cam.orthographicSize = maxZoomOut;
         }
         else
         {
