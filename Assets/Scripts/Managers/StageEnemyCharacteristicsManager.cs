@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class StageEnemyCharacteristicsManager : MonoBehaviour
 {
@@ -12,15 +13,17 @@ public class StageEnemyCharacteristicsManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI chEnemyName;
     [SerializeField] private TextMeshProUGUI chEnemyEffect;
 
-    float health;          //체력
-    float moveSpeed;       //이동 속도
-    float attackRate;      //공격을 가하는 속도
-    float attackRange;     //공격을 가하는 범위
-    float defnse;          //물리 방어력
-    float magicResistance; //마법 방어력
-    float attackPower;     //공격력
-    float spellPower;      //마법력
-    float coin;            //코인 감소
+    private RectTransform rect;
+
+    public float health;          //체력
+    public float moveSpeed;       //이동 속도
+    public float attackRate;      //공격을 가하는 속도
+    public float attackRange;     //공격을 가하는 범위
+    public float defnse;          //물리 방어력
+    public float magicResistance; //마법 방어력
+    public float attackPower;     //공격력
+    public float spellPower;      //마법력
+    public float coin;            //코인 감소
 
     private static StageEnemyCharacteristicsManager instance = null;
 
@@ -50,6 +53,7 @@ public class StageEnemyCharacteristicsManager : MonoBehaviour
 
     private void Start()
     {
+        // 모든 변수 현제 씬에 맞는 버프로 초기화
         health = ch.enemyBaseHealth;
         moveSpeed = ch.enemyBaseMoveSpeed;
         attackRate = ch.enemyBaseAttackRate;
@@ -60,8 +64,21 @@ public class StageEnemyCharacteristicsManager : MonoBehaviour
         spellPower = ch.spellPower;
         coin = ch.coins;
 
+        // 패널 초기화
         chEnemyImage.sprite = ch.profileImage;
         chEnemyName.text = ch.enemyName + " Characteristics";
         chEnemyEffect.text = ch.changeStat;
+
+        //StartCoroutine(ShowChWindow());
+
+        rect = GetComponent<RectTransform>();
+
+        rect.DOAnchorPosX(0, 0.5f).SetEase(Ease.OutBack);
+        rect.DOAnchorPosX(1700, 0.5f).SetDelay(3f).SetEase(Ease.InBack);
+    }
+
+    IEnumerator ShowChWindow()
+    {
+        yield return null;
     }
 }
