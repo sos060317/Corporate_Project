@@ -46,7 +46,6 @@ public class ThrowAndDamage : MonoBehaviour
                 {
                     if (collider.CompareTag(DamageTag))
                     {
-                        Debug.Log("How");
                         collider.GetComponent<EnemyBase>().OnDamage(0, spellPower);
                         break;
                     }
