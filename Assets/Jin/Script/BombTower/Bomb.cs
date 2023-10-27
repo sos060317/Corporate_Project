@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Bomb : MonoBehaviour
 {
+    public BombTowerTemplate BombTemplate;
+
     public BombTower bombTower;
 
     private EnemyBase enemybase;
-    private float attackPower = 20;
+    private float attackPower;
 
     public AnimationCurve curve;
     public float duration = 1.0f;
@@ -16,7 +18,7 @@ public class Bomb : MonoBehaviour
 
     public string DamageTag = "Enemy";
     public float damageAreaRadius = 2.0f; // 공격 범위 반경
-    public float Damage = 50f;
+    public float Damage;
 
     private Vector2 finish; // 종료 위치
     private bool reachedEnd = false;
@@ -89,7 +91,6 @@ public class Bomb : MonoBehaviour
                     {
                         if (collider.CompareTag(DamageTag))
                         {
-                            Debug.Log("How");
                             collider.GetComponent<EnemyBase>().OnDamage(attackPower, Damage);
                             damageDealt = true; // 데미지 주었음을 표시
                         }
@@ -101,6 +102,11 @@ public class Bomb : MonoBehaviour
 
             Destroy(gameObject);
         }
+    }
+
+    private void FixedUpdate() 
+    {
+        Damage = BombTemplate.Bweapon[bombTower.BombLevel].damage; 
     }
 
     private void OnDrawGizmosSelected()

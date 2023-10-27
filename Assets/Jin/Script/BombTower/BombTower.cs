@@ -24,7 +24,7 @@ public class BombTower : MonoBehaviour
     private bool canSpawn = false;
     private float timeSinceLastSpawn = 0.7f;
 
-    private int BombLevel = 0;
+    public int BombLevel = 0;
 
     private bool checkCoin = false;
 

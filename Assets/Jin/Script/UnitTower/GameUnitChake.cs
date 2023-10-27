@@ -80,7 +80,7 @@ public class GameUnitChake : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                //RaycastHit2D[] hits = Physics2D.RaycastAll(UtilsClass.GetMouseWorldPosition(), Vector2.up);
+                
 
             }
 
