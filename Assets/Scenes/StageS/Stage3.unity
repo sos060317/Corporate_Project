@@ -534,7 +534,7 @@ MonoBehaviour:
   evolutionStoneHealthBar: {fileID: 2030288438}
   evolutionStoneMaxHealth: 100
   levelIndex: 3
-  cameraObj: {fileID: 0}
+  cameraObj: {fileID: 1451707420}
   isGameStop: 0
   isUseSkill: 0
   currentGold: 0
@@ -48354,7 +48354,7 @@ MonoBehaviour:
   maxZoomIn: 5
   maxZoomOut: 10
   mapRenderer: {fileID: 678763086}
-  indicatorColObj: {fileID: 0}
+  indicatorColObj: {fileID: 447576446}
 --- !u!1 &1457975773
 GameObject:
   m_ObjectHideFlags: 0
@@ -63683,6 +63683,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4323829001148095386, guid: 9c9ec31d946929c4288e52509993275f, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 1451707422}
     - target: {fileID: 4323829001148095390, guid: 9c9ec31d946929c4288e52509993275f, type: 3}
       propertyPath: m_Name
       value: NextWaveInfo
