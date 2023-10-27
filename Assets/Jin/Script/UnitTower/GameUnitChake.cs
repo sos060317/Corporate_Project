@@ -139,13 +139,13 @@ public class GameUnitChake : MonoBehaviour
 
             Range.SetActive(false); // 우클릭 시 Range 비활성화
 
-            Debug.Log("우클릭 위치값 : " + lastRightClickPosition);
+            //Debug.Log("우클릭 위치값 : " + lastRightClickPosition);
         }
         else
         {
             selectedUnitRTSList.Clear();
             Range.SetActive(false);
-            Debug.Log("범위 밖");
+            //Debug.Log("범위 밖");
             clicked = false;
         }
     }

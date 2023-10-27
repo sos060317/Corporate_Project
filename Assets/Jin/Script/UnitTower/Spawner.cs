@@ -32,7 +32,6 @@ public class Spawner : MonoBehaviour
         // Testcoin 값만큼 PlayerGold를 처음 한 번만 감소시킴
         if (!SpawncostCheck)
         {
-            Debug.Log("d");
             playerGold.UseGold(towerTemplate.weapon[level].cost);
             SpawncostCheck = true;
         }
