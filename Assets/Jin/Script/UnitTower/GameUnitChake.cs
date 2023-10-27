@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 using UnityEngine;
 using UnityEditor;
 using JinCode.Utils;
 
 public class GameUnitChake : MonoBehaviour
 {
+    public UnitWindow UnitUI;
+
     public GameObject Tower;
     public GameObject Range;
     public List<Unit> selectedUnitRTSList;
@@ -77,26 +80,23 @@ public class GameUnitChake : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                RaycastHit2D[] hits = Physics2D.RaycastAll(UtilsClass.GetMouseWorldPosition(), Vector2.up);
+                //RaycastHit2D[] hits = Physics2D.RaycastAll(UtilsClass.GetMouseWorldPosition(), Vector2.up);
 
-                foreach (var hit in hits)
-                {
-                    if (hit.collider.CompareTag("Road"))
-                    {
-                        Debug.Log("Road");
-                        break;
-                    }
-                    if (ReferenceEquals(hit.collider.gameObject, Range))
-                    {
-                        Debug.Log("Range");
-                        break;
-                    }
-                }
+            }
+
+            if (UnitUI.buttonDown == true)
+            {
+                clicked = false;
+                Range.SetActive(false);
+                UnitUI.buttonDown = false;
             }
 
             if (Input.GetMouseButtonDown(1))
             {
-                Move();
+                //if (!EventSystem.current.IsPointerOverGameObject())
+                //{
+                    Move();
+                //}
             }
 
         }
@@ -139,13 +139,13 @@ public class GameUnitChake : MonoBehaviour
 
             Range.SetActive(false); // 우클릭 시 Range 비활성화
 
-            Debug.Log("우클릭 위치값 : " + lastRightClickPosition);
+            //Debug.Log("우클릭 위치값 : " + lastRightClickPosition);
         }
         else
         {
             selectedUnitRTSList.Clear();
             Range.SetActive(false);
-            Debug.Log("범위 밖");
+            //Debug.Log("범위 밖");
             clicked = false;
         }
     }

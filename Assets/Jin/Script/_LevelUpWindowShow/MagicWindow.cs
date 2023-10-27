@@ -5,9 +5,9 @@ using UnityEngine.UI;
 using DG.Tweening;
 using System.Net.Sockets;
 
-public class ArrowWindow : MonoBehaviour
+public class MagicWindow : MonoBehaviour
 {
-    public Spawn_j arrowClick;
+    public MagicPosCheck MagicClick;
     private RectTransform rectTransform;
     public bool buttonDown = false;
 
@@ -25,7 +25,7 @@ public class ArrowWindow : MonoBehaviour
 
     private void ShowTowerWindow()
     {
-        if (arrowClick.isClicked == true)
+        if (MagicClick.isclick == true)
         {
             rectTransform.DOAnchorPosY(0, 0.3f).SetEase(Ease.Linear);
         }
@@ -33,7 +33,7 @@ public class ArrowWindow : MonoBehaviour
 
     private void HideTowerWindow()
     {
-        if (arrowClick.isClicked == false)
+        if (MagicClick.isclick == false)
         {
             rectTransform.DOAnchorPosY(-360, 0.3f).SetEase(Ease.Linear);
         }
