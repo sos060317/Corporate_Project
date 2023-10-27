@@ -47,7 +47,7 @@ public class BombTower : MonoBehaviour
         // Testcoin 값만큼 PlayerGold를 처음 한 번만 감소시킵니다.
         if (!checkCoin)
         {
-            Debug.Log("d");
+            //Debug.Log("d");
             playerGold.UseGold(bombTemplate.Bweapon[BombLevel].Bcost);
             checkCoin = true;
         }
