@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36ad6b7eee2f0a4b90a1d6adba7d060, type: 3}
   m_Name: ArrowTower
   m_EditorClassIdentifier: 
-  ArrowTower: {fileID: 6028409906046367015, guid: c6c56a3b9d0ae554b90d4298df18b61e, type: 3}
+  ArrowTower: {fileID: 8267170808375101404, guid: 7f4446dcd0a13384bb36ae67b531094a, type: 3}
   aweapon:
   - PosLevel: 1
     aDamage: 25
