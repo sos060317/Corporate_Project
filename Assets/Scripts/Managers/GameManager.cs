@@ -135,7 +135,6 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         //goldText.text = currentGold.ToString();
-
         EvolutionHealthBarUpdate();
         GamePauseUpdate();
     }

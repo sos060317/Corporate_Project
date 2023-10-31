@@ -5,7 +5,7 @@ using UnityEngine;
 public class UpgradeArrowTower : MonoBehaviour
 {
     public ArrowTowerTemplate arrowTemplate;
-    private GameManager playerGold;
+    //private GameManager playerGold;
 
     public int Arrowlevel = 0; // 아마? 만렙은 3?
     public GameObject Pos1;
@@ -13,12 +13,12 @@ public class UpgradeArrowTower : MonoBehaviour
     public GameObject Pos3;
 
     private bool hasSubtractedGold = false; // 이미 감소했는지 여부를 나타내는 변수
-    public int StartingCost = 120; // 설치할때 코인
+    public int StartingCost; // 설치할때 코인
 
     private void Start()
     {
         StartingCost = arrowTemplate.aweapon[Arrowlevel].Acost;
-        playerGold = FindObjectOfType<GameManager>(); 
+        //playerGold = FindObjectOfType<GameManager>(); 
 
 
         // 시작 시 모든 Pos 오브젝트를 비활성화
@@ -29,10 +29,9 @@ public class UpgradeArrowTower : MonoBehaviour
         // Testcoin 값만큼 PlayerGold를 처음 한 번만 감소시킵니다.
         if (!hasSubtractedGold)
         {
-
-            playerGold.UseGold(arrowTemplate.aweapon[Arrowlevel].Acost);
+            //GameManager.Instance.UseGold(arrowTemplate.aweapon[Arrowlevel].Acost);
+            GameManager.Instance.UseGold(StartingCost);
             hasSubtractedGold = true;
-
         }
     }
 
@@ -46,11 +45,11 @@ public class UpgradeArrowTower : MonoBehaviour
     {
         if (Arrowlevel < arrowTemplate.aweapon.Length - 1)
         {
-            if (playerGold.currentGold >= arrowTemplate.aweapon[Arrowlevel + 1].Acost)
+            if (GameManager.Instance.currentGold >= arrowTemplate.aweapon[Arrowlevel + 1].Acost)
             {
                 // Acost만큼의 골드를 소비하는 부분을 UseGold 함수를 호출하여 수정하도록 바꿈
                 float cost = arrowTemplate.aweapon[Arrowlevel + 1].Acost;
-                playerGold.UseGold(cost);
+                GameManager.Instance.UseGold(cost);
 
                 Arrowlevel++;
                 Debug.Log("타워 업그레이드: 레벨 " + Arrowlevel);

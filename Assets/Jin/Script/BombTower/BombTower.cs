@@ -7,7 +7,7 @@ public class BombTower : MonoBehaviour
 {
     public BombWindow BombTowerUI;
 
-    private GameManager playerGold;
+    //private GameManager playerGold;
     public BombTowerTemplate bombTemplate;
 
 
@@ -43,12 +43,12 @@ public class BombTower : MonoBehaviour
 
         bombRound.SetActive(false);
 
-        playerGold = FindObjectOfType<GameManager>();
+        //playerGold = FindObjectOfType<GameManager>();
         // Testcoin 값만큼 PlayerGold를 처음 한 번만 감소시킵니다.
         if (!checkCoin)
         {
             //Debug.Log("d");
-            playerGold.UseGold(bombTemplate.Bweapon[BombLevel].Bcost);
+            GameManager.Instance.UseGold(bombTemplate.Bweapon[BombLevel].Bcost);
             checkCoin = true;
         }
     }
@@ -136,10 +136,10 @@ public class BombTower : MonoBehaviour
         {
             if(BombLevel < bombTemplate.Bweapon.Length - 1)
             {
-                if(playerGold.currentGold >= bombTemplate.Bweapon[BombLevel + 1].Bcost)
+                if(GameManager.Instance.currentGold >= bombTemplate.Bweapon[BombLevel + 1].Bcost)
                 {
                     float cost = bombTemplate.Bweapon[BombLevel + 1].Bcost;
-                    playerGold.UseGold(cost);
+                    GameManager.Instance.UseGold(cost);
                     BombLevel++;
                     Debug.Log("타워 업그레이드 : 레벨 " + BombLevel);
                 }

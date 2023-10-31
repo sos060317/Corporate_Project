@@ -65,7 +65,6 @@ public class TowerNodeBuildUI : MonoBehaviour
         if (GameManager.Instance.currentGold >= ATower.StartingCost || GameManager.Instance.currentGold >= BTower.Startcoin ||
             GameManager.Instance.currentGold >= MTower.Startingcoin || GameManager.Instance.currentGold >= UTower.StartingCoin)
         {
-            Debug.Log("tower install");
             TowerBuildManager.Instance.selectedNode.BuildTower(towerPrefab);
 
             TowerBuildManager.Instance.DeselectNode();

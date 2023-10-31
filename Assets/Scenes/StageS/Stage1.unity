@@ -401,7 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91be9013e4adf444abaf3f42852904ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startGoldCount: 1000
+  startGoldCount: 500
   goldText: {fileID: 1132474588}
   waveText: {fileID: 1332969625}
   gameClearMenu: {fileID: 466374068}
@@ -24045,7 +24045,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1000
+  m_text: 500
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56344944e974d8e45a4d3bd94760a5cc, type: 2}
   m_sharedMaterial: {fileID: -8761995855794216833, guid: 56344944e974d8e45a4d3bd94760a5cc, type: 2}
@@ -24054,8 +24054,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4289396729
-  m_fontColor: {r: 0.97539544, g: 1, b: 0.6650944, a: 1}
+    rgba: 4278255597
+  m_fontColor: {r: 0.92941177, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
