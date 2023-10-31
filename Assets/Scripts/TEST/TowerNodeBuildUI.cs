@@ -12,7 +12,7 @@ public class TowerNodeBuildUI : MonoBehaviour
     public MagicPosCheck MTower;
     public Spawner UTower;
 
-    private GameManager playerCoin;
+    //private GameManager playerCoin;
 
     public Image towerWindow;
 
@@ -62,8 +62,8 @@ public class TowerNodeBuildUI : MonoBehaviour
 
     public void BuildTower(GameObject towerPrefab)  // 타워 설치? 아마
     {
-        // if (playerCoin.currentGold >= ATower.StartingCost || playerCoin.currentGold >= BTower.Startcoin ||
-        //     playerCoin.currentGold >= MTower.Startingcoin || playerCoin.currentGold >= UTower.StartingCoin)
+        if (GameManager.Instance.currentGold >= ATower.StartingCost || GameManager.Instance.currentGold >= BTower.Startcoin ||
+            GameManager.Instance.currentGold >= MTower.Startingcoin || GameManager.Instance.currentGold >= UTower.StartingCoin)
         {
             Debug.Log("tower install");
             TowerBuildManager.Instance.selectedNode.BuildTower(towerPrefab);
