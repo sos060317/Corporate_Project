@@ -116,6 +116,11 @@ public class MagicPosCheck : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+        
         //Debug.Log("Å¬¸¯ Ã½Å©");
         isclick = true;
         RoundObj.SetActive(true);

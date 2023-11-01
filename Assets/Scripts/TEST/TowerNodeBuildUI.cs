@@ -60,7 +60,7 @@ public class TowerNodeBuildUI : MonoBehaviour
         rectTransform.DOAnchorPosY(-270, 0.3f).SetEase(Ease.Linear);
     }
 
-    public void BuildTower(GameObject towerPrefab)  // 타워 설치? 아마
+    public void BuildTower(GameObject towerPrefab)  // 타워설치
     {
         if (GameManager.Instance.currentGold >= ATower.StartingCost || GameManager.Instance.currentGold >= BTower.Startcoin ||
             GameManager.Instance.currentGold >= MTower.Startingcoin || GameManager.Instance.currentGold >= UTower.StartingCoin)

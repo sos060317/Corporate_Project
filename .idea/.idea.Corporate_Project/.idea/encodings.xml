@@ -2,6 +2,7 @@
 <project version="4">
   <component name="Encoding" addBOMForNewFiles="with BOM under Windows, with no BOM otherwise">
     <file url="file://$PROJECT_DIR$/Assets/Jin/Script/BombTower/Bomb.cs" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/Assets/Jin/Script/Magic Tower/MagicPosCheck.cs" charset="x-windows-949" />
     <file url="file://$PROJECT_DIR$/Assets/Jin/Script/Magic Tower/ThrowAndDamage.cs" charset="x-windows-949" />
     <file url="file://$PROJECT_DIR$/Assets/Jin/Script/Magic Tower/TowerSetting.cs" charset="x-windows-949" />
     <file url="file://$PROJECT_DIR$/Assets/Jin/Script/MoveCharacter/Spawner.cs" charset="x-windows-949" />
@@ -9,9 +10,11 @@
     <file url="file://$PROJECT_DIR$/Assets/Jin/Script/Throw Tower/Arrow/Curve/TrowingObject.cs" charset="x-windows-949" />
     <file url="file://$PROJECT_DIR$/Assets/Jin/Script/Throw Tower/Arrow/FuckingCurve/Spawn_j.cs" charset="x-windows-949" />
     <file url="file://$PROJECT_DIR$/Assets/Jin/Script/Throw Tower/Arrow/FuckingCurve/TrowingObject.cs" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/Assets/Jin/Script/TowerTemplateS/TowerTemplate.cs" charset="x-windows-949" />
     <file url="file://$PROJECT_DIR$/Assets/Jin/Script/UnitTower/GameUnitChake.cs" charset="x-windows-949" />
     <file url="file://$PROJECT_DIR$/Assets/Jin/Script/UnitTower/Spawner.cs" charset="x-windows-949" />
     <file url="file://$PROJECT_DIR$/Assets/Jin/Script/UnitTower/Unit.cs" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/TEST/TowerNode.cs" charset="x-windows-949" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/TEST/TowerNodeBuildUI.cs" charset="x-windows-949" />
   </component>
 </project>

@@ -5122,6 +5122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownTower: {fileID: 4186010935434785113, guid: 59391adc21e50684a994196bc86779da, type: 3}
+  towerInstallGold: 220
 --- !u!114 &392136262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14787,7 +14788,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &783570670
 RectTransform:
@@ -41329,6 +41330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownTower: {fileID: 3333731717320339949, guid: 21fe8a9a47f448543a37ba6783cec1c7, type: 3}
+  towerInstallGold: 100
 --- !u!114 &1419394871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46910,6 +46912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownTower: {fileID: 8267170808375101404, guid: 7f4446dcd0a13384bb36ae67b531094a, type: 3}
+  towerInstallGold: 120
 --- !u!114 &1455292880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51048,6 +51051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownTower: {fileID: 2120653621244148619, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}
+  towerInstallGold: 150
 --- !u!114 &1675108067
 MonoBehaviour:
   m_ObjectHideFlags: 0
