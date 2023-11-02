@@ -7,7 +7,7 @@ public class BombTower : MonoBehaviour
 {
     public BombWindow BombTowerUI;
 
-    private GameManager playerGold;
+    //private GameManager playerGold;
     public BombTowerTemplate bombTemplate;
 
 
@@ -17,7 +17,7 @@ public class BombTower : MonoBehaviour
     public GameObject spawnPos;
     public string enemyTag = "Enemy";
     public float detectionRadius = 5.0f;
-    public float spawnInterval = 1.5f; // ¹ß»ç ¼Óµµ?
+    public float spawnInterval = 1.5f; // ë°œì‚¬ ì†ë„?
 
     [SerializeField]
     private List<GameObject> enemyList = new List<GameObject>();
@@ -43,12 +43,12 @@ public class BombTower : MonoBehaviour
 
         bombRound.SetActive(false);
 
-        playerGold = FindObjectOfType<GameManager>();
-        // Testcoin °ª¸¸Å­ PlayerGold¸¦ Ã³À½ ÇÑ ¹ø¸¸ °¨¼Ò½ÃÅµ´Ï´Ù.
+        //playerGold = FindObjectOfType<GameManager>();
+        // Testcoin ê°’ë§Œí¼ PlayerGoldë¥¼ ì²˜ìŒ í•œ ë²ˆë§Œ ê°ì†Œì‹œí‚µë‹ˆë‹¤.
         if (!checkCoin)
         {
             //Debug.Log("d");
-            playerGold.UseGold(bombTemplate.Bweapon[BombLevel].Bcost);
+            GameManager.Instance.UseGold(bombTemplate.Bweapon[BombLevel].Bcost);
             checkCoin = true;
         }
     }
@@ -136,31 +136,36 @@ public class BombTower : MonoBehaviour
         {
             if(BombLevel < bombTemplate.Bweapon.Length - 1)
             {
-                if(playerGold.currentGold >= bombTemplate.Bweapon[BombLevel + 1].Bcost)
+                if(GameManager.Instance.currentGold >= bombTemplate.Bweapon[BombLevel + 1].Bcost)
                 {
                     float cost = bombTemplate.Bweapon[BombLevel + 1].Bcost;
-                    playerGold.UseGold(cost);
+                    GameManager.Instance.UseGold(cost);
                     BombLevel++;
-                    Debug.Log("Å¸¿ö ¾÷±×·¹ÀÌµå : ·¹º§ " + BombLevel);
+                    Debug.Log("íƒ€ì›Œ ì—…ê·¸ë ˆì´ë“œ : ë ˆë²¨ " + BombLevel);
                 }
                 else
                 {
-                    Debug.Log("µ·ÀÌ ¾ø¾î");
+                    Debug.Log("ëˆì´ ì—†ì–´");
                 }
             }
             else
             {
-                Debug.Log("ÃÖ´ë ¾÷±×·¹ÀÌµå »óÅÂÀÔ´Ï´Ù");
+                Debug.Log("ìµœëŒ€ ì—…ê·¸ë ˆì´ë“œ ìƒíƒœì…ë‹ˆë‹¤");
             }
         }
         else
         {
-            Debug.Log("TemplatÀÌ ¾ø¾î");
+            Debug.Log("Templatì´ ì—†ì–´");
         }
     }
 
     private void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+        
         if (!isClick && BToggle == true)
         {
             isClick = true;

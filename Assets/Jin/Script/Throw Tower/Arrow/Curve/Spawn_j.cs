@@ -44,7 +44,7 @@ public class Spawn_j : MonoBehaviour
     private void Update()
     {
 
-        //Debug.Log(enemyList.Count); Àû ¼ö È®ÀÎ
+        //Debug.Log(enemyList.Count); ï¿½ï¿½ ï¿½ï¿½ È®ï¿½ï¿½
 
         alevel = sp.Arrowlevel;
 
@@ -131,6 +131,11 @@ public class Spawn_j : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+        
         if (!isClicked && canToggle == true)
         {
             isClicked = true;
@@ -164,7 +169,7 @@ public class Spawn_j : MonoBehaviour
 
     private bool IsWithinRadius(Vector2 position)
     {
-        return Vector2.Distance(ArrowRound.transform.position, position) <= detectionRadius;  //  ¹üÀ§ ¾È¿¡ Enmey À§Ä¡ Ã£±â?
+        return Vector2.Distance(ArrowRound.transform.position, position) <= detectionRadius;  //  ï¿½ï¿½ï¿½ï¿½ ï¿½È¿ï¿½ Enmey ï¿½ï¿½Ä¡ Ã£ï¿½ï¿½?
     }
 
     private void OnDrawGizmosSelected()

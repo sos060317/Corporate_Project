@@ -26,6 +26,10 @@ public class GameUnitChake : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
 
         if (gameObject.CompareTag("SpawnTower"))
         {

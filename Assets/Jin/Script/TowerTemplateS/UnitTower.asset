@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 341266600dabcaa49b837723be10791b, type: 3}
   m_Name: UnitTower
   m_EditorClassIdentifier: 
-  UnitTowerPrefab: {fileID: 6657359522095291632, guid: 91d91b332021c7f49946aca91da58446, type: 3}
+  UnitTowerPrefab: {fileID: 4186010935434785113, guid: 59391adc21e50684a994196bc86779da, type: 3}
   weapon:
   - Unitdamage: 20
     UnitHp: 100

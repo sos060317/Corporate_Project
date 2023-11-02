@@ -8,7 +8,7 @@ public class MagicPosCheck : MonoBehaviour
     public MagicWindow MagicUI;
 
     public MagicTowerTemplate magicTemplate;
-    private GameManager playerGold;
+    //private GameManager playerGold;
 
     public GameObject RoundObj;
 
@@ -29,7 +29,7 @@ public class MagicPosCheck : MonoBehaviour
     {
         RoundObj.SetActive(false);
 
-        playerGold = FindObjectOfType<GameManager>();
+        //playerGold = FindObjectOfType<GameManager>();
         //Debug.Log("Null" + playerGold.currentGold);
 
         // 시작 시 모든 Pos 오브젝트를 비활성화
@@ -42,7 +42,7 @@ public class MagicPosCheck : MonoBehaviour
         if (!checkCoin)
         {
             //Debug.Log("d");
-            playerGold.UseGold(magicTemplate.mweapon[Magiclevel].Mcost);
+            GameManager.Instance.UseGold(magicTemplate.mweapon[Magiclevel].Mcost);
             checkCoin = true;
         }
     }
@@ -88,13 +88,13 @@ public class MagicPosCheck : MonoBehaviour
         {
             if (Magiclevel < magicTemplate.mweapon.Length - 1)
             {
-                if (playerGold.currentGold >= magicTemplate.mweapon[Magiclevel + 1].Mcost)
+                if (GameManager.Instance.currentGold >= magicTemplate.mweapon[Magiclevel + 1].Mcost)
                 {
                     //playerGold.currentGold -= magicTemplate.mweapon[Magiclevel + 1].Mcost;
                     //Magiclevel++;
 
                     float cost = magicTemplate.mweapon[Magiclevel + 1].Mcost;
-                    playerGold.UseGold(cost);
+                    GameManager.Instance.UseGold(cost);
                     Magiclevel++;
                     Debug.Log("타워 업그레이드: 레벨 " + Magiclevel);
                 }
@@ -116,6 +116,11 @@ public class MagicPosCheck : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+        
         //Debug.Log("클릭 첵크");
         isclick = true;
         RoundObj.SetActive(true);
