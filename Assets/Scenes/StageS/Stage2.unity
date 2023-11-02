@@ -53428,7 +53428,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3333731717320339949, guid: 21fe8a9a47f448543a37ba6783cec1c7, type: 3}
       propertyPath: m_Name
-      value: UnitTower (1)
+      value: UnitTower
       objectReference: {fileID: 0}
     - target: {fileID: 3333731717320339949, guid: 21fe8a9a47f448543a37ba6783cec1c7, type: 3}
       propertyPath: m_IsActive

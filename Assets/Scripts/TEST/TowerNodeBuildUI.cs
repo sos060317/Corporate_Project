@@ -27,13 +27,18 @@ public class TowerNodeBuildUI : MonoBehaviour
     private void Start()
     {
         rectTransform = GetComponent<RectTransform>();
+
+        ATower = GetComponent<UpgradeArrowTower>();
+        BTower = GetComponent<BombTower>();
+        MTower = GetComponent<MagicPosCheck>();
+        UTower = GetComponent<Spawner>();
     }
 
     public void ButtonShowFunction()
     {
         if (isShowWindow)
         {
-            if(TowerBuildManager.Instance.selectedNode != null)
+            if (TowerBuildManager.Instance.selectedNode != null)
             {
                 TowerBuildManager.Instance.selectedNode.GetComponent<TowerNode>().isClick = false;
                 TowerBuildManager.Instance.selectedNode.GetComponent<SpriteRenderer>().color = TowerBuildManager.Instance.selectedNode.GetComponent<TowerNode>().nomalColor;
@@ -52,7 +57,7 @@ public class TowerNodeBuildUI : MonoBehaviour
         buttonImage.rotation = Quaternion.Euler(0, 0, 180f);
         rectTransform.DOAnchorPosY(0, 0.3f).SetEase(Ease.Linear);
     }
-     
+
     public void HideTowerWindow()
     {
         isShowWindow = false;
@@ -62,6 +67,8 @@ public class TowerNodeBuildUI : MonoBehaviour
 
     public void BuildTower(GameObject towerPrefab)  // 타워 설치? 아마
     {
+        Debug.Log($"{playerCoin == null} {ATower == null} ");
+
         if (playerCoin.currentGold >= ATower.StartingCost || playerCoin.currentGold >= BTower.Startcoin ||
             playerCoin.currentGold >= MTower.Startingcoin || playerCoin.currentGold >= UTower.StartingCoin)
         {
