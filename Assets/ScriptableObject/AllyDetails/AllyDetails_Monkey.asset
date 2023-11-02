@@ -17,7 +17,7 @@ MonoBehaviour:
   allyBaseMoveSpeed: 1
   allyBaseAttackDelay: 1
   allyBaseAttackRange: 0.4
-  allyBaseAttackDamage: 20
+  allyBaseAttackDamage: 10
   defense: 0
   magicResistance: 0
   attackPower: 20

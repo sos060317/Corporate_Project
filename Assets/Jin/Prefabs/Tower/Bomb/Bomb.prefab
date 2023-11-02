@@ -136,4 +136,4 @@ MonoBehaviour:
   maxHeightY: 4
   DamageTag: Enemy
   damageAreaRadius: 2
-  Damage: 10
+  Damage: 20
