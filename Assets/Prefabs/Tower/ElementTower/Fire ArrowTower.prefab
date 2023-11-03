@@ -664,8 +664,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4465740853892227343}
-        m_TargetAssemblyTypeName: UpgradeArrowTower, Assembly-CSharp
+      - m_Target: {fileID: 4465740853892227344}
+        m_TargetAssemblyTypeName: Spawn_j, Assembly-CSharp
         m_MethodName: DestroyTower
         m_Mode: 1
         m_Arguments:
