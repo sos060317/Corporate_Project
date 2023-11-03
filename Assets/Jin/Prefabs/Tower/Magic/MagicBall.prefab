@@ -97,9 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3228024999f35ee4094fb9c63d88bda1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyTag: MagicPos
+  MagicTower: {fileID: 0}
   speed: 17
-  initialDelay: 0.1
   DamageTag: Enemy
   damageAreaRadius: 0.7
-  Damage: 30
+  Damage: 15
