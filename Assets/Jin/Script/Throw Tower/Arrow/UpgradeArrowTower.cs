@@ -41,6 +41,11 @@ public class UpgradeArrowTower : MonoBehaviour
         UpdatePosObjects();
     }
 
+    public void DestroyTower()
+    {
+        Destroy(gameObject);
+    }
+
     public void UpgradeTower()
     {
         if (Arrowlevel < arrowTemplate.aweapon.Length - 1)
