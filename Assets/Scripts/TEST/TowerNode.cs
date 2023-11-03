@@ -22,6 +22,16 @@ public class TowerNode : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    private void FixedUpdate()
+    {
+        if (tower == null)
+        {
+            var srColor = spriteRenderer.color;
+            srColor.a = 1;
+            spriteRenderer.color = srColor;
+        }
+    }
+
     private void OnMouseDown()
     {
         if (EventSystem.current.IsPointerOverGameObject())
