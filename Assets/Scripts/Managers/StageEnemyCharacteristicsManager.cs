@@ -15,15 +15,15 @@ public class StageEnemyCharacteristicsManager : MonoBehaviour
 
     private RectTransform rect;
 
-    public float health;          //체력
-    public float moveSpeed;       //이동 속도
-    public float attackRate;      //공격을 가하는 속도
-    public float attackRange;     //공격을 가하는 범위
-    public float defnse;          //물리 방어력
-    public float magicResistance; //마법 방어력
-    public float attackPower;     //공격력
-    public float spellPower;      //마법력
-    public float coin;            //코인 감소
+    [HideInInspector] public float health;          //체력
+    [HideInInspector] public float moveSpeed;       //이동 속도
+    [HideInInspector] public float attackRate;      //공격을 가하는 속도
+    [HideInInspector] public float attackRange;     //공격을 가하는 범위
+    [HideInInspector] public float defnse;          //물리 방어력
+    [HideInInspector] public float magicResistance; //마법 방어력
+    [HideInInspector] public float attackPower;     //공격력
+    [HideInInspector] public float spellPower;      //마법력
+    [HideInInspector] public float coin;            //코인 감소
 
     private static StageEnemyCharacteristicsManager instance = null;
 
