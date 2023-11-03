@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8267170808375101402}
   - component: {fileID: 8267170808375101377}
   - component: {fileID: 8267170808375101381}
+  - component: {fileID: 6067660289650928959}
   m_Layer: 0
   m_Name: ArrowTower
   m_TagString: Untagged
@@ -82,7 +83,7 @@ SpriteRenderer:
   m_SortingLayerID: 1093175155
   m_SortingLayer: 5
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 64c5811d285d5bc4c8eb85a253269019, type: 3}
+  m_Sprite: {fileID: 78845843, guid: db67a079fda4a3e46a4a4c32a323c516, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -139,8 +140,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0.77}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5030152, y: 0.118573815}
-    oldSize: {x: 2, y: 2}
+    pivot: {x: 0.5, y: 0.14}
+    oldSize: {x: 2.2068965, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -186,6 +187,27 @@ MonoBehaviour:
   Pos2: {fileID: 8267170809595290950}
   Pos3: {fileID: 8267170809693280433}
   StartingCost: 120
+--- !u!95 &6067660289650928959
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8267170808375101404}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e8268f6a73d643449bb0a6d96b05dbb2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8267170809595290950
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,8 +554,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8267170808375101402}
-        m_TargetAssemblyTypeName: Spawn_j, Assembly-CSharp
+      - m_Target: {fileID: 8267170808375101381}
+        m_TargetAssemblyTypeName: UpgradeArrowTower, Assembly-CSharp
         m_MethodName: DestroyTower
         m_Mode: 1
         m_Arguments:
