@@ -664,8 +664,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4465740853892227344}
-        m_TargetAssemblyTypeName: Spawn_j, Assembly-CSharp
+      - m_Target: {fileID: 4465740853892227343}
+        m_TargetAssemblyTypeName: UpgradeArrowTower, Assembly-CSharp
         m_MethodName: DestroyTower
         m_Mode: 1
         m_Arguments:
@@ -1121,7 +1121,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.15}
-    oldSize: {x: 2, y: 2}
+    oldSize: {x: 2.2068965, y: 2.2068965}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
