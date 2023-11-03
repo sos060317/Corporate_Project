@@ -123,11 +123,6 @@ public class Spawn_j : MonoBehaviour
         }
     }
 
-    public void DestroyTower()
-    {
-        Destroy(gameObject);
-    }
-
     private IEnumerator DelayTm()
     {
         yield return new WaitForSeconds(0.2f);
