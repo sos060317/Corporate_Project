@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3664074602238888378}
   - component: {fileID: 3664074602238888357}
   - component: {fileID: 3664074602238888356}
-  - component: {fileID: 3664074602238888379}
+  - component: {fileID: 1599769695180238873}
   m_Layer: 5
   m_Name: TowerUpgradeWindow
   m_TagString: Untagged
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3664074602238888379
+--- !u!114 &1599769695180238873
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,10 +89,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3664074602238888377}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d23ee8503af2dd4fa1e4bf6547b61f4, type: 3}
+  m_Script: {fileID: 11500000, guid: afad2b9100068b94691980c632f0167c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowClick: {fileID: 4465740853892227344}
+  arrowClick: {fileID: 6153249028278512573}
   buttonDown: 0
 --- !u!1 &3664074602476641938
 GameObject:
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3664074602238888379}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ArrowWindow, Assembly-CSharp
         m_MethodName: HideTowerWindowButton
         m_Mode: 1
@@ -990,7 +990,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4465740853892227349}
   - component: {fileID: 4465740853892227347}
-  - component: {fileID: 4465740853892227344}
+  - component: {fileID: 6153249028278512573}
   - component: {fileID: 4465740853892227339}
   - component: {fileID: 4465740853892227343}
   - component: {fileID: 4465740853892227351}
@@ -1074,7 +1074,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4465740853892227344
+--- !u!114 &6153249028278512573
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1083,15 +1083,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4465740853892227350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bb11df076c6c1c4fadf1b0c3262a4f5, type: 3}
+  m_Script: {fileID: 11500000, guid: 54504771ceacba0469a3a2c79958c864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ArrowRound: {fileID: 4465740853745890376}
-  ArrowTowerUI: {fileID: 3664074602238888379}
+  fireArrowTowerUI: {fileID: 1599769695180238873}
   RoundObject: {fileID: 4465740853007258600}
   arrowTemplate: {fileID: 11400000, guid: 7ff9544debe48214a9d2cc8f3751d44a, type: 2}
   sp: {fileID: 4465740853892227343}
-  arrowPrefab: {fileID: 319043655286286928, guid: 3063a3fbb8dd8fb4c84e750ac0b60d50, type: 3}
+  arrowPrefab: {fileID: 3509285886030511256, guid: 3c9d1de250a9a1247862de07dca4ee3f, type: 3}
   spawnPositions:
   - {fileID: 4465740853132805457}
   - {fileID: 4465740852948927372}

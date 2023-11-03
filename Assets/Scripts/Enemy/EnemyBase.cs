@@ -318,6 +318,49 @@ public abstract class EnemyBase : MonoBehaviour
         transform.GetComponent<Collider2D>().enabled = true;
     }
 
+    public void FireEnemy(float fireTime, float attackPower, int repetitions) // 몇초동안, 얼마의 데미지를, 몇틱을 때릴지
+    {
+        StartCoroutine(FireRoutine(fireTime, attackPower, repetitions));
+    }
+
+    //private IEnumerator FireRoutine(float fireTime, float attackPower, int repetitions)
+    //{
+    //    int count = 0;
+    //    float interval = 1.0f;
+
+    //    while (count < repetitions)
+    //    {
+    //        GameManager.Instance.OnEvolutionStoneDamaged(attackPower, 0);
+
+    //        count++;
+
+    //        yield return new WaitForSeconds(interval);
+    //    }
+
+    //    yield return new WaitForSeconds(fireTime - (repetitions * interval));
+    //}
+
+    private IEnumerator FireRoutine(float fireTime, float attackPower, int repetitions)
+    {
+        int count = 0;
+        float interval = 1.0f; // Interval of 1 second
+
+        while (count < repetitions)
+        {
+            // Calculate the spellPower, set it to 0 as in your code
+            float spellPower = 0.0f;
+
+            // Perform the action here (e.g., using the attackPower)
+            OnDamage(attackPower, spellPower); // Apply damage
+
+            count++;
+
+            yield return new WaitForSeconds(interval);
+        }
+
+        yield return new WaitForSeconds(fireTime - (repetitions * interval));
+    }
+
     public void FaintEnemy(float faintTime)
     {
         StartCoroutine(FaintRoutine(faintTime));
