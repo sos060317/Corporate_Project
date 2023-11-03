@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f0926adb76011c41881c4703cc9ab9e, type: 3}
-  m_Name: StageDogCharacteristics
+  m_Name: StageHedgehogCharacteristics
   m_EditorClassIdentifier: 
-  enemyName: Dog
+  enemyName: Hedgehog
   enemyBaseHealth: 1
-  enemyBaseMoveSpeed: 5
-  enemyBaseAttackRate: 1
+  enemyBaseMoveSpeed: 1
+  enemyBaseAttackRate: 10
   enemyBaseAttackRange: 1
   defense: 1
   magicResistance: 1
-  attackPower: 5
-  spellPower: 5
-  profileImage: {fileID: 4723107735738678597, guid: efcce9b9312267649ad3455ccfbc0dd6, type: 3}
+  attackPower: 1
+  spellPower: 1
+  profileImage: {fileID: -191180504, guid: f8e07bb904fae6b4eb2123e1f203e218, type: 3}
   coins: 1
-  changeStat: Every Enemy's Power and Speed Rises 5%
+  changeStat: Every Enemy's Attack Rate Rises 10%

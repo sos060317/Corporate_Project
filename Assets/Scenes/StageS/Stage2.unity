@@ -17849,7 +17849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 717b2e10556d8b6418b89e1c87d6bc5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ch: {fileID: 11400000, guid: e5e32e66030f70d48aa61345a279717c, type: 2}
+  ch: {fileID: 11400000, guid: 5f22c1da3af97174f9145d7638046787, type: 2}
   chEnemyImage: {fileID: 449013329}
   chEnemyName: {fileID: 909908323}
   chEnemyEffect: {fileID: 1432784099}
