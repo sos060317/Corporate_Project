@@ -8442,7 +8442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 717b2e10556d8b6418b89e1c87d6bc5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ch: {fileID: 11400000, guid: e5e32e66030f70d48aa61345a279717c, type: 2}
+  ch: {fileID: 11400000, guid: 2609ca2c2849e8240aac22bc097f7170, type: 2}
   chEnemyImage: {fileID: 225991676}
   chEnemyName: {fileID: 1453858221}
   chEnemyEffect: {fileID: 674743789}

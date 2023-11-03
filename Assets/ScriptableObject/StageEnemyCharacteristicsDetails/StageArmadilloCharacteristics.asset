@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0926adb76011c41881c4703cc9ab9e, type: 3}
+  m_Name: StageArmadilloCharacteristics
+  m_EditorClassIdentifier: 
+  enemyName: Armadillo
+  enemyBaseHealth: 1
+  enemyBaseMoveSpeed: 1
+  enemyBaseAttackRate: 1
+  enemyBaseAttackRange: 1
+  defense: 1
+  magicResistance: 40
+  attackPower: 1
+  spellPower: 1
+  profileImage: {fileID: 273098058, guid: a2aa8fd6ea871244e8c1c7f28ba4502b, type: 3}
+  coins: 1
+  changeStat: Every Enemy's Magic Resistance Rises 10%

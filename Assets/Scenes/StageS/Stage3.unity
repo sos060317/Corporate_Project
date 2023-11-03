@@ -10812,7 +10812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 717b2e10556d8b6418b89e1c87d6bc5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ch: {fileID: 11400000, guid: e5e32e66030f70d48aa61345a279717c, type: 2}
+  ch: {fileID: 11400000, guid: e2cf48dff7ec2c8498fc3a0873db53ac, type: 2}
   chEnemyImage: {fileID: 686417507}
   chEnemyName: {fileID: 13196480}
   chEnemyEffect: {fileID: 365220901}
