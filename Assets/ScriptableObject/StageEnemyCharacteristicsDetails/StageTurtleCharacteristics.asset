@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0926adb76011c41881c4703cc9ab9e, type: 3}
+  m_Name: StageTurtleCharacteristics
+  m_EditorClassIdentifier: 
+  enemyName: Turtle
+  enemyBaseHealth: 1
+  enemyBaseMoveSpeed: 1
+  enemyBaseAttackRate: 1
+  enemyBaseAttackRange: 1
+  defense: 40
+  magicResistance: 1
+  attackPower: 1
+  spellPower: 1
+  profileImage: {fileID: -899140742, guid: 598e7f778b082a9409e20d3c69c3a5ce, type: 3}
+  coins: 1
+  changeStat: Every Enemy's Defensive Power Rises 10%
