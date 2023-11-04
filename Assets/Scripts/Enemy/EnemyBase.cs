@@ -51,6 +51,7 @@ public abstract class EnemyBase : MonoBehaviour
 
     private bool burningNow = false; // 타고 있는지 확인
     private Coroutine burningCoroutine;
+    private float burningTimeLeft;
 
     private bool PoisoingNow = false;
     private Coroutine PoisoingCoroutine;
@@ -325,11 +326,21 @@ public abstract class EnemyBase : MonoBehaviour
     }
 
 
-    // 화염
+    //화염
     public void FireEnemy(float fireTime, float attackPower, int repetitions)
     {
         if (!burningNow)
         {
+            burningCoroutine = StartCoroutine(BurningEffect(fireTime, attackPower, repetitions));
+        }
+        else // 시간만 초기화 어케하누
+        {
+            // 코루틴 재설정
+            StopCoroutine(burningCoroutine);
+            burningNow = false;
+            burningCoroutine = null;
+
+            // 코루틴 다시 시작하기
             burningCoroutine = StartCoroutine(BurningEffect(fireTime, attackPower, repetitions));
         }
     }
@@ -344,11 +355,11 @@ public abstract class EnemyBase : MonoBehaviour
             float spellPower = 0.0f;
 
             OnDamage(attackPower, spellPower); // 데미지
-
-            //Debug.Log(attackPower);
             //Debug.Log(spellPower);
 
-            yield return new WaitForSeconds(1.0f); // 1초 기다리기
+            //yield return new WaitForSeconds(1.0f); // 1초 기다리기
+
+            yield return new WaitForSeconds(fireTime / repetitions);
         }
 
         yield return new WaitForSeconds(fireTime - repetitions);
@@ -366,6 +377,14 @@ public abstract class EnemyBase : MonoBehaviour
         {
             PoisoingCoroutine = StartCoroutine(PoisoningEffect(PoisonTime, attackPower, repetitions));
         }
+        else
+        {
+            StopCoroutine(PoisoingCoroutine);
+            PoisoingNow = false;
+            PoisoingCoroutine = null;
+
+            PoisoingCoroutine = StartCoroutine(PoisoningEffect(PoisonTime, attackPower, repetitions));
+        }
     }
 
     private IEnumerator PoisoningEffect(float PoisonTime, float spellPower, int repetitions)
@@ -378,7 +397,7 @@ public abstract class EnemyBase : MonoBehaviour
 
             OnDamage(attackPower, spellPower);
 
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(PoisonTime / repetitions);
         }
 
         yield return new WaitForSeconds(PoisonTime - repetitions);
