@@ -52,6 +52,9 @@ public abstract class EnemyBase : MonoBehaviour
     private bool burningNow = false; // 타고 있는지 확인
     private Coroutine burningCoroutine;
 
+    private bool PoisoingNow = false;
+    private Coroutine PoisoingCoroutine;
+
     protected virtual void Start()
     {
         // 컴포넌트 할당
@@ -321,30 +324,8 @@ public abstract class EnemyBase : MonoBehaviour
         transform.GetComponent<Collider2D>().enabled = true;
     }
 
-    //public void FireEnemy(float fireTime, float attackPower, int repetitions) // 몇초동안, 얼마의 데미지를, 몇틱을 때릴지
-    //{
-    //    StartCoroutine(FireRoutine(fireTime, attackPower, repetitions));
-    //}
 
-    //private IEnumerator FireRoutine(float fireTime, float attackPower, int repetitions)
-    //{
-    //    int count = 0;
-    //    float interval = 1.0f;
-
-    //    while (count < repetitions)
-    //    {
-    //        float spellPower = 0.0f;
-
-    //        OnDamage(attackPower, spellPower);
-
-    //        count++;
-
-    //        yield return new WaitForSeconds(interval);
-    //    }
-
-    //    yield return new WaitForSeconds(fireTime - (repetitions * interval));
-    //}
-
+    // 화염
     public void FireEnemy(float fireTime, float attackPower, int repetitions)
     {
         if (!burningNow)
@@ -378,6 +359,36 @@ public abstract class EnemyBase : MonoBehaviour
     }
 
 
+    // 독
+    public void PoisonEnemy(float PoisonTime, float attackPower, int repetitions)
+    {
+        if (!PoisoingNow)
+        {
+            PoisoingCoroutine = StartCoroutine(PoisoningEffect(PoisonTime, attackPower, repetitions));
+        }
+    }
+
+    private IEnumerator PoisoningEffect(float PoisonTime, float spellPower, int repetitions)
+    {
+        PoisoingNow = true;
+
+        for (int count = 0; count < repetitions; count++)
+        {
+            float attackPower = 0.0f;
+
+            OnDamage(attackPower, spellPower);
+
+            yield return new WaitForSeconds(1.0f);
+        }
+
+        yield return new WaitForSeconds(PoisonTime - repetitions);
+
+        PoisoingNow = false;
+        PoisoingCoroutine = null;
+    }
+
+
+    // 기절?
     public void FaintEnemy(float faintTime)
     {
         StartCoroutine(FaintRoutine(faintTime));
@@ -398,6 +409,8 @@ public abstract class EnemyBase : MonoBehaviour
 
     private Coroutine speedDownCoroutine;
     
+
+    // 슬로우?
     public void SpeedDownEnemy(float speedDownTime)
     {
         if (speedDownCoroutine != null)

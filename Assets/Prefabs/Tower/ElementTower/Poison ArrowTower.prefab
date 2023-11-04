@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 234689298837136986}
   - component: {fileID: 234689298837136985}
   - component: {fileID: 234689298837136984}
-  - component: {fileID: 234689298837136991}
+  - component: {fileID: 7659436514974313445}
   m_Layer: 5
   m_Name: TowerUpgradeWindow
   m_TagString: Untagged
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &234689298837136991
+--- !u!114 &7659436514974313445
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,10 +89,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 234689298837136990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d23ee8503af2dd4fa1e4bf6547b61f4, type: 3}
+  m_Script: {fileID: 11500000, guid: 064ee0a808958f4488071f8c4f88d102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowClick: {fileID: 234689298849204884}
+  arrowClick: {fileID: 762447630167398888}
   buttonDown: 0
 --- !u!1 &234689298849204872
 GameObject:
@@ -104,7 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 234689298849204886}
   - component: {fileID: 234689298849204885}
-  - component: {fileID: 234689298849204884}
+  - component: {fileID: 762447630167398888}
   - component: {fileID: 234689298849204875}
   - component: {fileID: 234689298849204874}
   - component: {fileID: 234689298849204887}
@@ -188,7 +188,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &234689298849204884
+--- !u!114 &762447630167398888
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,15 +197,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 234689298849204872}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bb11df076c6c1c4fadf1b0c3262a4f5, type: 3}
+  m_Script: {fileID: 11500000, guid: b3539289c91d2fa47b9a7081f7b79b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ArrowRound: {fileID: 234689299149804565}
-  ArrowTowerUI: {fileID: 234689298837136991}
+  poisonArrowTowerUI: {fileID: 7659436514974313445}
   RoundObject: {fileID: 234689300227573375}
   arrowTemplate: {fileID: 11400000, guid: 7ff9544debe48214a9d2cc8f3751d44a, type: 2}
   sp: {fileID: 234689298849204874}
-  arrowPrefab: {fileID: 319043655286286928, guid: 3063a3fbb8dd8fb4c84e750ac0b60d50, type: 3}
+  arrowPrefab: {fileID: 5315040342755800430, guid: 12c9b069dd7a8a647aab4ce57538d403, type: 3}
   spawnPositions:
   - {fileID: 234689300911817165}
   - {fileID: 234689299558626554}
@@ -550,7 +550,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 234689298837136991}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ArrowWindow, Assembly-CSharp
         m_MethodName: HideTowerWindowButton
         m_Mode: 1
