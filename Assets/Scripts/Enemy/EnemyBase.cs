@@ -49,6 +49,9 @@ public abstract class EnemyBase : MonoBehaviour
 
     protected AllyBase targetAlly;
 
+    private bool burningNow = false; // 타고 있는지 확인
+    private Coroutine burningCoroutine;
+
     protected virtual void Start()
     {
         // 컴포넌트 할당
@@ -318,10 +321,10 @@ public abstract class EnemyBase : MonoBehaviour
         transform.GetComponent<Collider2D>().enabled = true;
     }
 
-    public void FireEnemy(float fireTime, float attackPower, int repetitions) // 몇초동안, 얼마의 데미지를, 몇틱을 때릴지
-    {
-        StartCoroutine(FireRoutine(fireTime, attackPower, repetitions));
-    }
+    //public void FireEnemy(float fireTime, float attackPower, int repetitions) // 몇초동안, 얼마의 데미지를, 몇틱을 때릴지
+    //{
+    //    StartCoroutine(FireRoutine(fireTime, attackPower, repetitions));
+    //}
 
     //private IEnumerator FireRoutine(float fireTime, float attackPower, int repetitions)
     //{
@@ -330,7 +333,9 @@ public abstract class EnemyBase : MonoBehaviour
 
     //    while (count < repetitions)
     //    {
-    //        GameManager.Instance.OnEvolutionStoneDamaged(attackPower, 0);
+    //        float spellPower = 0.0f;
+
+    //        OnDamage(attackPower, spellPower);
 
     //        count++;
 
@@ -340,26 +345,38 @@ public abstract class EnemyBase : MonoBehaviour
     //    yield return new WaitForSeconds(fireTime - (repetitions * interval));
     //}
 
-    private IEnumerator FireRoutine(float fireTime, float attackPower, int repetitions)
+    public void FireEnemy(float fireTime, float attackPower, int repetitions)
     {
-        int count = 0;
-        float interval = 1.0f; // Interval of 1 second
-
-        while (count < repetitions)
+        if (!burningNow)
         {
-            // Calculate the spellPower, set it to 0 as in your code
+            burningCoroutine = StartCoroutine(BurningEffect(fireTime, attackPower, repetitions));
+        }
+    }
+
+    private IEnumerator BurningEffect(float fireTime, float attackPower, int repetitions)
+    {
+        burningNow = true; // bool burningNow값 true로 바꾸기
+
+        for (int count = 0; count < repetitions; count++)
+        {
+            // 마법 데미지 0으로 넣기
             float spellPower = 0.0f;
 
-            // Perform the action here (e.g., using the attackPower)
-            OnDamage(attackPower, spellPower); // Apply damage
+            OnDamage(attackPower, spellPower); // 데미지
 
-            count++;
+            //Debug.Log(attackPower);
+            //Debug.Log(spellPower);
 
-            yield return new WaitForSeconds(interval);
+            yield return new WaitForSeconds(1.0f); // 1초 기다리기
         }
 
-        yield return new WaitForSeconds(fireTime - (repetitions * interval));
+        yield return new WaitForSeconds(fireTime - repetitions);
+
+        // 코루틴 재설정후 중지
+        burningNow = false;
+        burningCoroutine = null;
     }
+
 
     public void FaintEnemy(float faintTime)
     {
