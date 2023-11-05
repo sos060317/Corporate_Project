@@ -663,7 +663,7 @@ GameObject:
   - component: {fileID: 4999052530446116872}
   - component: {fileID: 4999052530446116875}
   - component: {fileID: 4999052530446116874}
-  - component: {fileID: 4999052530446116877}
+  - component: {fileID: 6713306646475916329}
   m_Layer: 5
   m_Name: TowerUpgradeWindow
   m_TagString: Untagged
@@ -732,7 +732,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4999052530446116877
+--- !u!114 &6713306646475916329
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -741,10 +741,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4999052530446116876}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d23ee8503af2dd4fa1e4bf6547b61f4, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f880a3abf8843442913cb7b9c48cd19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowClick: {fileID: 4999052530675375390}
+  lightningArrowClick: {fileID: 5395093095422962808}
   buttonDown: 0
 --- !u!1 &4999052530475679204
 GameObject:
@@ -867,7 +867,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4999052530446116877}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ArrowWindow, Assembly-CSharp
         m_MethodName: HideTowerWindowButton
         m_Mode: 1
@@ -889,7 +889,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4999052530675375388}
   - component: {fileID: 4999052530675375391}
-  - component: {fileID: 4999052530675375390}
+  - component: {fileID: 5395093095422962808}
   - component: {fileID: 4999052530675375361}
   - component: {fileID: 4999052530675375360}
   - component: {fileID: 4999052530675375389}
@@ -973,7 +973,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4999052530675375390
+--- !u!114 &5395093095422962808
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -982,15 +982,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4999052530675375363}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bb11df076c6c1c4fadf1b0c3262a4f5, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f62b84f6c7bf2a45951879e222efb09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ArrowRound: {fileID: 4999052530105991131}
-  ArrowTowerUI: {fileID: 4999052530446116877}
+  LightningArrowTowerUI: {fileID: 6713306646475916329}
   RoundObject: {fileID: 4999052530350736165}
   arrowTemplate: {fileID: 11400000, guid: 7ff9544debe48214a9d2cc8f3751d44a, type: 2}
   sp: {fileID: 4999052530675375360}
-  arrowPrefab: {fileID: 319043655286286928, guid: 3063a3fbb8dd8fb4c84e750ac0b60d50, type: 3}
+  arrowPrefab: {fileID: 1073867226919816586, guid: 323a8d08895f5254e9bf2802a2adb294, type: 3}
   spawnPositions:
   - {fileID: 4999052530101351137}
   - {fileID: 4999052529108729351}

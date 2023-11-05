@@ -273,7 +273,7 @@ public abstract class EnemyBase : MonoBehaviour
             }
             
             anim.SetTrigger("Die");
-            return;
+            //return;
         }
         
         StartCoroutine(HitRoutine());
@@ -333,7 +333,7 @@ public abstract class EnemyBase : MonoBehaviour
         {
             burningCoroutine = StartCoroutine(BurningEffect(fireTime, attackPower, repetitions));
         }
-        else if(curHealth <= 0)
+        else if(isDie)
         {
             StopCoroutine(burningCoroutine);
             burningNow = false;
@@ -383,7 +383,7 @@ public abstract class EnemyBase : MonoBehaviour
         {
             PoisoingCoroutine = StartCoroutine(PoisoningEffect(PoisonTime, attackPower, repetitions));
         }
-        else if (curHealth <= 0)
+        else if(isDie)
         {
             StopCoroutine(PoisoingCoroutine);
             PoisoingNow = false;
