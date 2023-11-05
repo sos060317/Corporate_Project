@@ -51,7 +51,7 @@ public abstract class EnemyBase : MonoBehaviour
 
     private bool burningNow = false; // 타고 있는지 확인
     private Coroutine burningCoroutine;
-    private float burningTimeLeft;
+    //private float burningTimeLeft;
 
     private bool PoisoingNow = false;
     private Coroutine PoisoingCoroutine;
@@ -333,7 +333,13 @@ public abstract class EnemyBase : MonoBehaviour
         {
             burningCoroutine = StartCoroutine(BurningEffect(fireTime, attackPower, repetitions));
         }
-        else // 시간만 초기화 어케하누
+        else if(curHealth <= 0)
+        {
+            StopCoroutine(burningCoroutine);
+            burningNow = false;
+            burningCoroutine = null;
+        }
+        else
         {
             // 코루틴 재설정
             StopCoroutine(burningCoroutine);
@@ -376,6 +382,12 @@ public abstract class EnemyBase : MonoBehaviour
         if (!PoisoingNow)
         {
             PoisoingCoroutine = StartCoroutine(PoisoningEffect(PoisonTime, attackPower, repetitions));
+        }
+        else if (curHealth <= 0)
+        {
+            StopCoroutine(PoisoingCoroutine);
+            PoisoingNow = false;
+            PoisoingCoroutine = null;
         }
         else
         {
