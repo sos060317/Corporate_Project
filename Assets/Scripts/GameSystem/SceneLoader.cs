@@ -7,74 +7,14 @@ public class SceneLoader : MonoBehaviour
 {
     [SerializeField] private GameObject loaderUI;    // 로딩 UI 창
     [SerializeField] private Slider progressSlider;  // 로딩 바
-    [SerializeField] private GameObject exitPanel;   // Exit 창
-    [SerializeField] private GameObject creditPanel; // Credit 창
 
     [HideInInspector] public bool isCredit = false;
 
     private bool isExit = false;
 
-    private void Update()
-    {
-        GamePanelUpdate();
-    }
-
     public void LoadScene(int index)
     {
         StartCoroutine(LoadScene_Coroutine(index)); // 코루틴 호줄
-    }
-
-    public void Eixt()
-    {
-        Application.Quit();     // 게임 종료
-    }
-
-    public void GamePanelUpdate()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (!isExit && !isCredit)
-            {
-                ShowExitPanel();
-            }
-            else if (isExit)
-            {
-                HideExitPanel();
-            }
-
-            if(isCredit)
-            {
-                HideCreditPanel();
-            }
-        }
-    }
-
-    public void ShowExitPanel()
-    {
-        isExit = true;
-
-        exitPanel.SetActive(true);  
-    }
-
-    public void HideExitPanel()
-    {
-        isExit = false;
-
-        exitPanel.SetActive(false);
-    }
-
-    public void ShowCreditPanel()
-    {
-        isCredit = true;
-
-        creditPanel.SetActive(true);
-    }
-
-    public void HideCreditPanel()
-    {
-        isCredit = false;
-
-        creditPanel.SetActive(false);
     }
 
     public IEnumerator LoadScene_Coroutine(int index)
