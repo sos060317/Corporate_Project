@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Dog
   enemyBaseHealth: 1
-  enemyBaseMoveSpeed: 5
+  enemyBaseMoveSpeed: 1.05
   enemyBaseAttackRate: 1
   enemyBaseAttackRange: 1
-  defense: 1
-  magicResistance: 1
-  attackPower: 5
-  spellPower: 5
+  defense: 0
+  magicResistance: 0
+  attackPower: 1.05
+  spellPower: 1.05
   profileImage: {fileID: 4723107735738678597, guid: efcce9b9312267649ad3455ccfbc0dd6, type: 3}
   coins: 1
   changeStat: Every Enemy's Power and Speed Rises 5%

@@ -135,8 +135,8 @@ public class Enemy_Hedgehog : EnemyBase
     {
         curHealth = 
             Mathf.Max(
-                curHealth - ((attackPower - (attackPower * (enemyDetailsSo.defense * 0.01f))) + 
-                             (spellPower - (spellPower * (enemyDetailsSo.magicResistance * 0.01f)))), 0);
+                curHealth - ((attackPower - (attackPower * (defense * 0.01f))) + 
+                             (spellPower - (spellPower * (magicResistance * 0.01f)))), 0);
 
         if (curHealth <= 0)
         {

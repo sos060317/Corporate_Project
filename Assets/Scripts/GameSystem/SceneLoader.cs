@@ -7,8 +7,8 @@ public class SceneLoader : MonoBehaviour
 {
     [SerializeField] private GameObject loaderUI;    // 로딩 UI 창
     [SerializeField] private Slider progressSlider;  // 로딩 바
-    [SerializeField] private GameObject ExitPanel;   // Exit 창
-    [SerializeField] private GameObject CreditPanel; // Credit 창
+    [SerializeField] private GameObject exitPanel;   // Exit 창
+    [SerializeField] private GameObject creditPanel; // Credit 창
 
     [HideInInspector] public bool isCredit = false;
 
@@ -35,29 +35,46 @@ public class SceneLoader : MonoBehaviour
         {
             if (!isExit && !isCredit)
             {
-                isExit = true;
-
-                ExitPanel.SetActive(true);
+                ShowExitPanel();
             }
             else if (isExit)
             {
-                isExit = false;
-
-                ExitPanel.SetActive(false);
+                HideExitPanel();
             }
 
             if(isCredit)
             {
-                isCredit = false;
-
-                CreditPanel.SetActive(false);
+                HideCreditPanel();
             }
         }
     }
 
-    public void CheckCreditPanel()
+    public void ShowExitPanel()
+    {
+        isExit = true;
+
+        exitPanel.SetActive(true);  
+    }
+
+    public void HideExitPanel()
+    {
+        isExit = false;
+
+        exitPanel.SetActive(false);
+    }
+
+    public void ShowCreditPanel()
     {
         isCredit = true;
+
+        creditPanel.SetActive(true);
+    }
+
+    public void HideCreditPanel()
+    {
+        isCredit = false;
+
+        creditPanel.SetActive(false);
     }
 
     public IEnumerator LoadScene_Coroutine(int index)

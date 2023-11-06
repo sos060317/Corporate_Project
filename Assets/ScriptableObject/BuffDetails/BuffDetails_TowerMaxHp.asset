@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2823345f16521b447be8efde90c356fe, type: 3}
-  m_Name: BuffDetails_EnemyAttackDamage
+  m_Name: BuffDetails_TowerMaxHp
   m_EditorClassIdentifier: 
   buffDatas:
+  - buffForce: 0.99
+    needGold: 100
+    buffExplanation: "\uD0C0\uC6D0 \uCCB4\uB825\n99%"
   - buffForce: 0.98
     needGold: 100
-    buffExplanation: "\uC801\uAD70 \uACF5\uACA9\uB825\n98%"
+    buffExplanation: "\uD0C0\uC6D0 \uCCB4\uB825\n98%"
   - buffForce: 0.97
     needGold: 100
-    buffExplanation: "\uC801\uAD70 \uACF5\uACA9\uB825\n97%"
+    buffExplanation: "\uD0C0\uC6D0 \uCCB4\uB825\n97%"
   - buffForce: 0.96
     needGold: 100
-    buffExplanation: "\uC801\uAD70 \uACF5\uACA9\uB825\n96%"
-  - buffForce: 0.95
-    needGold: 100
-    buffExplanation: "\uC801\uAD70 \uACF5\uACA9\uB825\n95%"
+    buffExplanation: "\uD0C0\uC6D0 \uCCB4\uB825\n96%"
   - buffForce: 0.94
     needGold: 100
-    buffExplanation: "\uC801\uAD70 \uACF5\uACA9\uB825\n94%"
+    buffExplanation: "\uD0C0\uC6D0 \uCCB4\uB825\n94%"

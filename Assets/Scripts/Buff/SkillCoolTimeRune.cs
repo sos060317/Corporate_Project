@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyAttackDamageRune : EvolutionStoneButton
+public class SkillCoolTimeRune : EvolutionStoneButton
 {
     public override void LevelUp()
     {
