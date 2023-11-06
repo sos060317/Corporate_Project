@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AllyAttackDamageRune : EvolutionStoneButton
-{ 
+public class SkillAttackDamageRune : EvolutionStoneButton
+{
     public override void LevelUp()
     {
         if (buffDetails.buffDatas[curLevel].needGold > GameManager.Instance.currentGold)
@@ -13,15 +13,13 @@ public class AllyAttackDamageRune : EvolutionStoneButton
         }
         
         // 효과 적용 로직
-        GameManager.Instance.allyAttackDamageMultiply = buffDetails.buffDatas[curLevel].buffForce;
+        GameManager.Instance.allyHealthMultiply = buffDetails.buffDatas[curLevel].buffForce;
         
         GameManager.Instance.UseGold(buffDetails.buffDatas[curLevel].needGold);
-        
+            
         infoText.text = buffDetails.buffDatas[curLevel].buffExplanation;
 
         curLevel++;
-        
-        // 아직 만랩이 아니라면
         if (curLevel < buffDetails.buffDatas.Length)
         {
             Instantiate(levelStarPrefab, levelStarParent);
@@ -33,7 +31,6 @@ public class AllyAttackDamageRune : EvolutionStoneButton
             
             icon.TextChange(curLevel.ToString());
         }
-        // 만약 만랩이라면
         else
         {
             levelStarParent.gameObject.SetActive(false);

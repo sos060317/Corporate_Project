@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2823345f16521b447be8efde90c356fe, type: 3}
-  m_Name: BuffDetails_AllyHealth
+  m_Name: BuffDetails_SkillCololTime
   m_EditorClassIdentifier: 
   buffDatas:
-  - buffForce: 1.02
+  - buffForce: 0.98
     needGold: 100
-    buffExplanation: "\uC544\uAD70 \uCCB4\uB825\n102%"
-  - buffForce: 1.03
+    buffExplanation: "\uC2A4\uD0AC \uCFE8\uD0C0\uC784\n98%"
+  - buffForce: 0.97
     needGold: 100
-    buffExplanation: "\uC544\uAD70 \uCCB4\uB825\n103%"
-  - buffForce: 1.04
+    buffExplanation: "\uC2A4\uD0AC \uCFE8\uD0C0\uC784\n97%"
+  - buffForce: 0.96
     needGold: 100
-    buffExplanation: "\uC544\uAD70 \uCCB4\uB825\n104%"
-  - buffForce: 1.05
+    buffExplanation: "\uC2A4\uD0AC \uCFE8\uD0C0\uC784\n96%"
+  - buffForce: 0.95
     needGold: 100
-    buffExplanation: "\uC544\uAD70 \uCCB4\uB825\n105%"
-  - buffForce: 1.06
+    buffExplanation: "\uC2A4\uD0AC \uCFE8\uD0C0\uC784\n95%"
+  - buffForce: 0.94
     needGold: 100
-    buffExplanation: "\uC544\uAD70 \uCCB4\uB825\n106%"
+    buffExplanation: "\uC2A4\uD0AC \uCFE8\uD0C0\uC784\n94%"

@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2823345f16521b447be8efde90c356fe, type: 3}
-  m_Name: BuffDetails_AllyAttackDamage
+  m_Name: BuffDetails_TowerAttackDamage
   m_EditorClassIdentifier: 
   buffDatas:
   - buffForce: 1.02
     needGold: 100
-    buffExplanation: "\uC544\uAD70 \uACF5\uACA9\uB825\n102%"
+    buffExplanation: "\uD0C0\uC6CC \uACF5\uACA9\uB825\n102%"
   - buffForce: 1.03
     needGold: 100
-    buffExplanation: "\uC544\uAD70 \uACF5\uACA9\uB825\n103%"
+    buffExplanation: "\uD0C0\uC6CC \uACF5\uACA9\uB825\n103%"
   - buffForce: 1.04
     needGold: 100
-    buffExplanation: "\uC544\uAD70 \uACF5\uACA9\uB825\n104%"
+    buffExplanation: "\uD0C0\uC6CC \uACF5\uACA9\uB825\n104%"
   - buffForce: 1.05
     needGold: 100
-    buffExplanation: "\uC544\uAD70 \uACF5\uACA9\uB825\n105%"
+    buffExplanation: "\uD0C0\uC6CC \uACF5\uACA9\uB825\n105%"
   - buffForce: 1.06
     needGold: 100
-    buffExplanation: "\uC544\uAD70 \uACF5\uACA9\uB825\n106%"
+    buffExplanation: "\uD0C0\uC6CC \uACF5\uACA9\uB825\n106%"
