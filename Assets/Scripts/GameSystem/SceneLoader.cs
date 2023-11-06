@@ -5,12 +5,59 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    [SerializeField] private GameObject loaderUI;   // 로딩 UI 창
-    [SerializeField] private Slider progressSlider; // 로딩 바
+    [SerializeField] private GameObject loaderUI;    // 로딩 UI 창
+    [SerializeField] private Slider progressSlider;  // 로딩 바
+    [SerializeField] private GameObject ExitPanel;   // Exit 창
+    [SerializeField] private GameObject CreditPanel; // Credit 창
+
+    [HideInInspector] public bool isCredit = false;
+
+    private bool isExit = false;
+
+    private void Update()
+    {
+        GamePanelUpdate();
+    }
 
     public void LoadScene(int index)
     {
         StartCoroutine(LoadScene_Coroutine(index)); // 코루틴 호줄
+    }
+
+    public void Eixt()
+    {
+        Application.Quit();     // 게임 종료
+    }
+
+    public void GamePanelUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!isExit && !isCredit)
+            {
+                isExit = true;
+
+                ExitPanel.SetActive(true);
+            }
+            else if (isExit)
+            {
+                isExit = false;
+
+                ExitPanel.SetActive(false);
+            }
+
+            if(isCredit)
+            {
+                isCredit = false;
+
+                CreditPanel.SetActive(false);
+            }
+        }
+    }
+
+    public void CheckCreditPanel()
+    {
+        isCredit = true;
     }
 
     public IEnumerator LoadScene_Coroutine(int index)

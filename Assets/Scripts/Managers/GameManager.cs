@@ -128,8 +128,8 @@ public class GameManager : MonoBehaviour
         gameClearMenu.gameObject.SetActive(false);
         gameOverMenu.gameObject.SetActive(false);
         gamePauseMenu.gameObject.SetActive(false);
-        
-        
+
+        goldText.text = currentGold.ToString();
     }
 
     private void Update()
