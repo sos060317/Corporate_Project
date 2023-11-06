@@ -383,11 +383,12 @@ public abstract class EnemyBase : MonoBehaviour
         {
             PoisoingCoroutine = StartCoroutine(PoisoningEffect(PoisonTime, attackPower, repetitions));
         }
-        else if(isDie)
+        else if (curHealth <= 0)
         {
+            Debug.Log("응애");
             StopCoroutine(PoisoingCoroutine);
             PoisoingNow = false;
-            PoisoingCoroutine = null;
+        PoisoingCoroutine = null;
         }
         else
         {

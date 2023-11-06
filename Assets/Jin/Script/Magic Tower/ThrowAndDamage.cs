@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class ThrowAndDamage : MonoBehaviour
 {
-
     public TowerSetting MagicTower;
 
-    private EnemyBase enemybase;
     private float spellPower = 20;
 
     public float speed = 10f;
@@ -21,8 +19,7 @@ public class ThrowAndDamage : MonoBehaviour
 
     private void Start()
     {
-        // MagicTower에서 MEnemyPos 값을 가져와서 목표 위치로 설정
-        targetPosition = MagicTower.MEnemyPos;
+
     }
 
     private void Update()

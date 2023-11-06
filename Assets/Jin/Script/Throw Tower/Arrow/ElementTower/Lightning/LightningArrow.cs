@@ -85,7 +85,7 @@ public class LightningArrow : MonoBehaviour
                 if (collider.CompareTag(damageTag))
                 {
                     collider.GetComponent<EnemyBase>().OnDamage(attackPower, Damage);  // 물리? , 마법? 모르것다
-                    collider.GetComponent<EnemyBase>().FaintEnemy(1.0f);
+                    collider.GetComponent<EnemyBase>().FaintEnemy(0.3f);
                     Destroy(gameObject);
                     break;
                 }

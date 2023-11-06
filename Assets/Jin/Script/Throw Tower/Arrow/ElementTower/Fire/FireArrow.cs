@@ -19,7 +19,7 @@ public class FireArrow : MonoBehaviour
 
     public string damageTag = "Enemy"; // 데미지를 줄 옵젝
     public float damageAreaRadius = 2.0f; // 공격 범위
-    public float Damage = 25;
+    private float Damage;
 
     private Vector2 finish; // 종료 위치
     private bool reachedEnd = false;
@@ -39,10 +39,8 @@ public class FireArrow : MonoBehaviour
     {
         aLevel = ArrowUpgrade.Arrowlevel;
 
-        if (aLevel == 3)
-        {
-            Damage = arrowTemplate.aweapon[aLevel].aDamage;
-        }
+        Damage = arrowTemplate.aweapon[aLevel].aDamage;
+
 
 
     }

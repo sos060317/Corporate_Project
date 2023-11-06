@@ -755,6 +755,7 @@ GameObject:
   - component: {fileID: 2120653621244148618}
   - component: {fileID: 2120653621244148612}
   - component: {fileID: 2120653621244148614}
+  - component: {fileID: 9127300887890029699}
   - component: {fileID: 728506241010966810}
   m_Layer: 0
   m_Name: MagicTower
@@ -858,6 +859,26 @@ MonoBehaviour:
   Pos3: {fileID: 2120653622944900352}
   isclick: 0
   Startingcoin: 150
+--- !u!114 &9127300887890029699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120653621244148619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e83f6bd6881da498bfff62b9d7db6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magicRoundCheck: {fileID: 8206745352350480081}
+  MagicPrefab: {fileID: 327585374298066498, guid: 1a491bc5c6c310a49b6bbc47b7d0b490, type: 3}
+  spawnPositions: []
+  enemyTag: Enemy
+  detectionRadius: 5
+  enemyList: []
+  MEnemyPos: {x: 0, y: 0}
+  itTimeToShot: 0
 --- !u!60 &728506241010966810
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -15509,7 +15530,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9047193271694319532}
-  - component: {fileID: 9047193271694319533}
+  - component: {fileID: 8206745352350480081}
   m_Layer: 0
   m_Name: RoundPos
   m_TagString: Untagged
@@ -15532,7 +15553,7 @@ Transform:
   m_Father: {fileID: 2120653621244148618}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9047193271694319533
+--- !u!114 &8206745352350480081
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15541,18 +15562,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 9047193271694319535}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34e83f6bd6881da498bfff62b9d7db6c, type: 3}
+  m_Script: {fileID: 11500000, guid: dfddd5256ae82234887f6d81f603c7b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MagicPrefab: {fileID: 327585374298066498, guid: 1a491bc5c6c310a49b6bbc47b7d0b490, type: 3}
-  spawnPositions:
-  - {fileID: 2120653621651190923}
-  - {fileID: 2120653621337681939}
-  - {fileID: 2120653622944900352}
-  enemyTag: Enemy
-  detectionRadius: 5
-  MEnemyPos: {x: 0, y: 0}
-  itTimeToShot: 0
+  MTTemplate: {fileID: 11400000, guid: 5670774e8af21c045b191e342e0caafd, type: 2}
+  UpMTower: {fileID: 2120653621244148614}
+  MgcRound: 5
 --- !u!1 &9047193272525395648
 GameObject:
   m_ObjectHideFlags: 0

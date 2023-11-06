@@ -2,103 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//public MagicRoundCheck magicRoundCheck;
 public class TowerSetting : MonoBehaviour
 {
-    //public GameObject MagicPrefab;
-    //public List<GameObject> spawnPositions = new List<GameObject>();
-    //public string enemyTag = "Enemy";
-    //public float detectionRadius = 5.0f;
-    //public GameObject FlowingObject;
-    //public float followSpeed = 1000f;
-
-    //private List<GameObject> enemyList = new List<GameObject>();
-    //private bool canSpawn = false;
-    //private float spawnInterval = 1.5f;
-    //private float timeSinceLastSpawn = 0f;
-
-
-    //public Vector2 EnemyPos;
-    //public bool itTimeToShot;
-
-    //private void Update()
-    //{
-    //    Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, detectionRadius);
-
-    //    foreach (Collider2D collider in colliders)
-    //    {
-    //        if (collider.CompareTag(enemyTag) && !enemyList.Contains(collider.gameObject))
-    //        {
-    //            enemyList.Add(collider.gameObject);
-    //            // 새로운 오브젝트가 리스트에 추가되면 FlowingObject를 활성화
-    //            if (FlowingObject != null)
-    //            {
-    //                FlowingObject.SetActive(true);
-    //            }
-    //        }
-    //    }
-
-    //    enemyList.RemoveAll(enemy => enemy == null || !IsWithinRadius(enemy.transform.position) || !enemy.activeSelf);
-
-    //    canSpawn = enemyList.Count > 0;
-
-    //    if (canSpawn)
-    //    {
-    //        timeSinceLastSpawn += Time.deltaTime;
-    //        if (timeSinceLastSpawn >= spawnInterval)
-    //        {
-    //            timeSinceLastSpawn = 0f;
-    //            foreach (GameObject spawnPos in spawnPositions)
-    //            {
-    //                // spawnPos가 활성화되어 있을 때만 소환
-    //                if (spawnPos.activeSelf)
-    //                {
-    //                    SpawnMagic(spawnPos);
-    //                }
-    //            }
-    //        }
-    //    }
-    //    else
-    //    {
-    //        // 리스트가 비어 있으면 FlowingObject를 비활성화
-    //        if (FlowingObject != null)
-    //        {
-    //            FlowingObject.SetActive(false);
-    //        }
-    //    }
-
-    //    if (enemyList.Count > 0) //FlowingObject != null && 
-    //    {
-    //        Vector2 targetPosition = enemyList[0].transform.position;
-    //        FlowingObject.transform.position = Vector2.MoveTowards(FlowingObject.transform.position, targetPosition, followSpeed * Time.deltaTime);
-    //    }
-    //}
-
-    //private void SpawnMagic(GameObject spawnPosition)
-    //{
-    //    Instantiate(MagicPrefab, spawnPosition.transform.position, Quaternion.identity);
-    //}
-
-    //private bool IsWithinRadius(Vector2 position)
-    //{
-    //    return Vector2.Distance(transform.position, position) <= detectionRadius;
-    //}
-
-    //private void OnDrawGizmosSelected()
-    //{
-    //    Gizmos.color = Color.green;
-    //    Gizmos.DrawWireSphere(transform.position, detectionRadius);
-    //}
-
-
+    public MagicRoundCheck magicRoundCheck;
 
     public GameObject MagicPrefab;
     public List<GameObject> spawnPositions = new List<GameObject>();
     public string enemyTag = "Enemy";
     public float detectionRadius = 5.0f;
-    //public GameObject FlowingObject;
-    //public float followSpeed = 1000f;
 
-    private List<GameObject> enemyList = new List<GameObject>();
+    public List<GameObject> enemyList = new List<GameObject>();
     private bool canSpawn = false;
     private float spawnInterval = 1.5f;
     private float timeSinceLastSpawn = 0f;
@@ -107,9 +21,17 @@ public class TowerSetting : MonoBehaviour
     public Vector2 MEnemyPos;
     public bool itTimeToShot = false;
 
+    private void Start()
+    {
+        if(magicRoundCheck != null)
+        {
+            detectionRadius = magicRoundCheck.MgcRound;
+        }
+    }
+
     private void Update()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, detectionRadius);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(magicRoundCheck.transform.position, magicRoundCheck.MgcRound);
 
         foreach (Collider2D collider in colliders)
         {
@@ -131,11 +53,9 @@ public class TowerSetting : MonoBehaviour
                 timeSinceLastSpawn = 0f;
                 foreach (GameObject spawnPos in spawnPositions)
                 {
-                    // spawnPos가 활성화되어 있을 때만 소환
-                    if (spawnPos.activeSelf)
-                    {
-                        SpawnMagic(spawnPos);
-                    }
+                    UpdateFlowingObjectPosition();
+                    SpawnMagic(spawnPos);
+                    
                 }
             }
         }
@@ -164,14 +84,28 @@ public class TowerSetting : MonoBehaviour
         temp.MagicTower = GetComponent<TowerSetting>();
     }
 
+    private void UpdateFlowingObjectPosition()
+    {
+        if (enemyList.Count > 0)
+        {
+
+            GameObject firstEnemy = enemyList[0];
+            Vector2 targetPosition = firstEnemy.transform.position;
+        }
+    }
+
     private bool IsWithinRadius(Vector2 position)
     {
-        return Vector2.Distance(transform.position, position) <= detectionRadius;
+        return Vector2.Distance(magicRoundCheck.transform.position, position) <= detectionRadius;
     }
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, detectionRadius);
+        if(magicRoundCheck != null)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(magicRoundCheck.transform.position, magicRoundCheck.MgcRound);
+        }
+        
     }
 }
