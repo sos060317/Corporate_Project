@@ -812,6 +812,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: MagicTower (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2120653621244148619, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127300887890029699, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}
+      propertyPath: spawnPositions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127300887890029699, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}
+      propertyPath: spawnPositions.Array.data[0]
+      value: 
+      objectReference: {fileID: 1253479582}
+    - target: {fileID: 9127300887890029699, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}
+      propertyPath: spawnPositions.Array.data[1]
+      value: 
+      objectReference: {fileID: 2090387117}
+    - target: {fileID: 9127300887890029699, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}
+      propertyPath: spawnPositions.Array.data[2]
+      value: 
+      objectReference: {fileID: 782677002}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}
 --- !u!1001 &492834367
@@ -1193,6 +1213,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72ef17e905f3f26428040f0f9c7abd5f, type: 3}
+--- !u!1 &782677002 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2120653622944900352, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}
+  m_PrefabInstance: {fileID: 484560972}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &789826521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1401,6 +1426,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3333731717898520038, guid: 21fe8a9a47f448543a37ba6783cec1c7, type: 3}
   m_PrefabInstance: {fileID: 4769305975923975504}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1253479582 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2120653621651190923, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}
+  m_PrefabInstance: {fileID: 484560972}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1351304601
 GameObject:
@@ -2039,6 +2069,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightningArrowClick: {fileID: 0}
   buttonDown: 0
+--- !u!1 &2090387117 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2120653621337681939, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}
+  m_PrefabInstance: {fileID: 484560972}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2108464658 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2120653621244148618, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}

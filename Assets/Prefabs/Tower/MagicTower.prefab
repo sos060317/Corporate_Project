@@ -873,7 +873,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magicRoundCheck: {fileID: 8206745352350480081}
   MagicPrefab: {fileID: 327585374298066498, guid: 1a491bc5c6c310a49b6bbc47b7d0b490, type: 3}
-  spawnPositions: []
+  spawnPositions:
+  - {fileID: 2120653621651190923}
+  - {fileID: 2120653621337681939}
+  - {fileID: 2120653622944900352}
   enemyTag: Enemy
   detectionRadius: 5
   enemyList: []

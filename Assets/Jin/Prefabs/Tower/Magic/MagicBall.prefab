@@ -98,11 +98,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3228024999f35ee4094fb9c63d88bda1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MagicTower: {fileID: 0}
+  MagicTw: {fileID: 0}
+  MagicTower: {fileID: 9127300887890029699, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}
+  magicTemplate: {fileID: 11400000, guid: 5670774e8af21c045b191e342e0caafd, type: 2}
+  magicLevel: {fileID: 2120653621244148614, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}
   speed: 17
-  DamageTag: Enemy
-  damageAreaRadius: 0.7
-  Damage: 15
 --- !u!58 &7830803516823536791
 CircleCollider2D:
   m_ObjectHideFlags: 0

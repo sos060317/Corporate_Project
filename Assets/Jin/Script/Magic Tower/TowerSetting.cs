@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//public MagicRoundCheck magicRoundCheck;
+
 public class TowerSetting : MonoBehaviour
 {
     public MagicRoundCheck magicRoundCheck;
@@ -53,9 +53,12 @@ public class TowerSetting : MonoBehaviour
                 timeSinceLastSpawn = 0f;
                 foreach (GameObject spawnPos in spawnPositions)
                 {
-                    UpdateFlowingObjectPosition();
-                    SpawnMagic(spawnPos);
-                    
+                    if(spawnPos.activeSelf)
+                    {
+                        SpawnMagic(spawnPos);
+                        UpdateFlowingObjectPosition();
+                        //SpawnMagicsAtPositions();
+                    }
                 }
             }
         }
@@ -98,6 +101,19 @@ public class TowerSetting : MonoBehaviour
     {
         return Vector2.Distance(magicRoundCheck.transform.position, position) <= detectionRadius;
     }
+
+    //private void SpawnMagicsAtPositions()
+    //{
+    //    foreach (GameObject spawnPosition in spawnPositions)
+    //    {
+    //        if (spawnPosition.activeSelf)
+    //        {
+    //            var temp = Instantiate(MagicPrefab, spawnPosition.transform.position, Quaternion.identity).GetComponent<ThrowAndDamage>();
+
+    //            temp.MagicTw = GetComponent<TowerSetting>();
+    //        }
+    //    }
+    //}
 
     private void OnDrawGizmosSelected()
     {

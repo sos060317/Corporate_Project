@@ -4,22 +4,30 @@ using UnityEngine;
 
 public class ThrowAndDamage : MonoBehaviour
 {
+    [HideInInspector] public TowerSetting MagicTw;
     public TowerSetting MagicTower;
+    public MagicTowerTemplate magicTemplate;
+    public MagicPosCheck magicLevel;
 
-    private float spellPower = 20;
-
+    private int mLevel;
     public float speed = 10f;
 
-    public string DamageTag = "Enemy";
-    public float damageAreaRadius = 2.0f; // 공격 범위 반경
-    public float Damage = 30;
+    private string DamageTag = "Enemy";
+    private float damageAreaRadius = 2.0f; // 공격 범위 반경
+    private float Damage;
 
     private Vector2 targetPosition; // 목표 위치를 Vector2로 변경
     private bool isFollowing = true;
 
     private void Start()
     {
+        mLevel = magicLevel.Magiclevel;
+        Damage = magicTemplate.mweapon[mLevel].damage;
 
+        if (MagicTower != null && MagicTower.MEnemyPos != Vector2.zero)
+        {
+            targetPosition = MagicTower.MEnemyPos;
+        }
     }
 
     private void Update()
@@ -29,6 +37,8 @@ public class ThrowAndDamage : MonoBehaviour
             Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
             Vector2 moveDirection = (targetPosition - currentPosition).normalized;
             transform.position += new Vector3(moveDirection.x, moveDirection.y, 0) * speed * Time.deltaTime;
+
+            
 
             float distanceToTarget = Vector2.Distance(currentPosition, targetPosition);
 
@@ -43,7 +53,7 @@ public class ThrowAndDamage : MonoBehaviour
                 {
                     if (collider.CompareTag(DamageTag))
                     {
-                        collider.GetComponent<EnemyBase>().OnDamage(0, spellPower);
+                        collider.GetComponent<EnemyBase>().OnDamage(0, Damage);
                         break;
                     }
                 }
