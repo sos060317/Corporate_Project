@@ -19,7 +19,7 @@ public abstract class EnemyBase : MonoBehaviour
     
     private int movePosIndex;
     
-    private float moveSpeed;
+    
     private float baseSpeed;
 
     private bool isFaint = false;
@@ -39,6 +39,11 @@ public abstract class EnemyBase : MonoBehaviour
     
     [HideInInspector] public float maxHealth;
     [HideInInspector] public float curHealth;
+    [HideInInspector] public float defense;
+    [HideInInspector] public float magicResistance;
+    [HideInInspector] public float attackPower;
+    [HideInInspector] public float spellPower;
+    [HideInInspector] public float moveSpeed;
     protected float attackRate;
     protected float attackTimer;
     protected float attackRange;
@@ -109,7 +114,7 @@ public abstract class EnemyBase : MonoBehaviour
         if (isTargeting)
         {
             Vector3 dir = targetAlly.transform.position - transform.position;
-            transform.position += dir.normalized * (moveSpeed * Time.deltaTime * GameManager.Instance.enemyMoveSpeedMultiply);
+            transform.position += dir.normalized * (moveSpeed * Time.deltaTime);
             
             if (dir.normalized.x < 0)
             {
@@ -130,7 +135,7 @@ public abstract class EnemyBase : MonoBehaviour
         }
         
         Vector3 nextPos = (Vector3)movePoints[movePosIndex] - transform.position + (Vector3)moveOffset;
-        transform.position += nextPos.normalized * (moveSpeed * Time.deltaTime * GameManager.Instance.enemyMoveSpeedMultiply);
+        transform.position += nextPos.normalized * (moveSpeed * Time.deltaTime);
         
         if (nextPos.normalized.x < 0)
         {
@@ -179,8 +184,8 @@ public abstract class EnemyBase : MonoBehaviour
         if (isMoveEnd)
         {
             GameManager.Instance.OnEvolutionStoneDamaged(
-                enemyDetailsSo.attackPower * GameManager.Instance.enemyAttackDamageMultiply,
-                enemyDetailsSo.spellPower * GameManager.Instance.enemyAttackDamageMultiply);
+                attackPower * GameManager.Instance.enemyAttackDamageMultiply,
+                spellPower * GameManager.Instance.enemyAttackDamageMultiply);
             return;
         }
         
@@ -189,8 +194,8 @@ public abstract class EnemyBase : MonoBehaviour
             return;
         }
 
-        targetAlly.OnDamage(enemyDetailsSo.attackPower * GameManager.Instance.enemyAttackDamageMultiply,
-            enemyDetailsSo.spellPower * GameManager.Instance.enemyAttackDamageMultiply);
+        targetAlly.OnDamage(attackPower * GameManager.Instance.enemyAttackDamageMultiply,
+            spellPower * GameManager.Instance.enemyAttackDamageMultiply);
     }
     
     protected IEnumerator HitRoutine()
@@ -252,14 +257,14 @@ public abstract class EnemyBase : MonoBehaviour
     {
         curHealth =
             Mathf.Max(
-                curHealth - ((attackPower - (attackPower * (enemyDetailsSo.defense * 0.01f))) +
-                (spellPower - (spellPower * (enemyDetailsSo.magicResistance * 0.01f)))), 0);
+                curHealth - ((attackPower - (attackPower * (defense * 0.01f))) +
+                (spellPower - (spellPower * (magicResistance * 0.01f)))), 0);
 
         if (curHealth <= 0)
         {
             // 죽는 로직
 
-            GameManager.Instance.GetGold(enemyDetailsSo.coins);
+            GameManager.Instance.GetGold(enemyDetailsSo.coins * StageEnemyCharacteristicsManager.Instance.coin);
             
             transform.GetComponent<Collider2D>().enabled = false;
             
@@ -294,11 +299,16 @@ public abstract class EnemyBase : MonoBehaviour
         this.movePoints = movePoints;
         this.enemyDetailsSo = enemyDetailsSo;
 
-        maxHealth = this.enemyDetailsSo.enemyBaseHealth;
-        moveSpeed = this.enemyDetailsSo.enemyBaseMoveSpeed;
+        // 기본 스탯 초기화
+        maxHealth = this.enemyDetailsSo.enemyBaseHealth * StageEnemyCharacteristicsManager.Instance.health;
+        moveSpeed = this.enemyDetailsSo.enemyBaseMoveSpeed * StageEnemyCharacteristicsManager.Instance.moveSpeed;
         baseSpeed = moveSpeed;
-        attackRate = this.enemyDetailsSo.enemyBaseAttackRate;
+        attackRate = this.enemyDetailsSo.enemyBaseAttackRate * StageEnemyCharacteristicsManager.Instance.attackRate;
         attackRange = this.enemyDetailsSo.enemyBaseAttackRange;
+        defense = this.enemyDetailsSo.defense + StageEnemyCharacteristicsManager.Instance.defnse;
+        magicResistance = this.enemyDetailsSo.magicResistance + StageEnemyCharacteristicsManager.Instance.magicResistance;
+        attackPower = this.enemyDetailsSo.attackPower * StageEnemyCharacteristicsManager.Instance.attackPower;
+        spellPower = this.enemyDetailsSo.spellPower * StageEnemyCharacteristicsManager.Instance.spellPower;
         
         WaveManager.Instance.EnemyCountPlus();
 
