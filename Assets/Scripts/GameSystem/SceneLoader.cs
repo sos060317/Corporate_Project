@@ -13,6 +13,11 @@ public class SceneLoader : MonoBehaviour
         StartCoroutine(LoadScene_Coroutine(index)); // 코루틴 호줄
     }
 
+    public void Eixt()
+    {
+        Application.Quit();     // 게임 종료
+    }
+
     public IEnumerator LoadScene_Coroutine(int index)
     {
         progressSlider.value = 0; // 로딩 바 초기화
