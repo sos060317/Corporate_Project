@@ -5568,6 +5568,7 @@ MonoBehaviour:
   evolutionStoneMaxHealth: 1000
   levelIndex: 5
   cameraObj: {fileID: 1451707420}
+  gameSound: {fileID: 8300000, guid: 469ffd86c3cb7d74593d2b106d43d187, type: 3}
   isGameStop: 0
   isUseSkill: 0
   currentGold: 0
