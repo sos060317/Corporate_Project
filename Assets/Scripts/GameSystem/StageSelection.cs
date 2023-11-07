@@ -63,11 +63,11 @@ public class StageSelection : MonoBehaviour
     }
 
     // 스테이지를 선택했을 때의 씬 이동
-    public void PressSelection(int stageId)
-    {
-        if (unlocked)
-        {
-            sceneLoader.GetComponent<SceneLoader>().LoadScene(stageId + 2); // 로딩 창 불러오기
-        }
-    }
+    //public void PressSelection(int stageId)
+    //{
+    //    if (unlocked)
+    //    {
+    //        sceneLoader.GetComponent<SceneLoader>().LoadScene(stageId + 2); // 로딩 창 불러오기
+    //    }
+    //}
 }
