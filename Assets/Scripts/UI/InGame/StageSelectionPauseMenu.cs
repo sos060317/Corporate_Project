@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TitlePauseMenu : MonoBehaviour
+public class StageSelectionPauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject mainMenu;
+    [SerializeField] private GameObject settingMenu;
 
     private bool isShow = false;
 
     private void Start()
     {
         mainMenu.SetActive(false);
+        settingMenu.SetActive(false);
     }
 
     private void Update()
@@ -28,6 +30,7 @@ public class TitlePauseMenu : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Escape) && isShow)
         {
             HidePauseMenu();
+            HideSettingMenu();
         }
     }
 
@@ -50,18 +53,23 @@ public class TitlePauseMenu : MonoBehaviour
         SceneManager.LoadScene("Title");
     }
 
-    public void SettingButton()
+    public void ShowSettingMenu()
     {
-        
+        settingMenu.SetActive(true);
+    }
+
+    public void HideSettingMenu()
+    {
+        settingMenu.SetActive(false);
     }
     
     public void ExitButton()
     {
-
+        Application.Quit();
     }
     
     public void ResetButton()
     {
-        
+        PlayerPrefs.DeleteAll();
     }
 }
