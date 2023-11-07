@@ -41,8 +41,6 @@ public class FireArrow : MonoBehaviour
 
         Damage = arrowTemplate.aweapon[aLevel].aDamage;
 
-
-
     }
 
     private void SetEnemyPositionAsFinish()

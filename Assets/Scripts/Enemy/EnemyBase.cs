@@ -398,7 +398,7 @@ public abstract class EnemyBase : MonoBehaviour
             Debug.Log("응애");
             StopCoroutine(PoisoingCoroutine);
             PoisoingNow = false;
-        PoisoingCoroutine = null;
+            PoisoingCoroutine = null;
         }
         else
         {
