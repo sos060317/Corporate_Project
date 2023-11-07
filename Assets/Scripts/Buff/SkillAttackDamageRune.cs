@@ -13,7 +13,7 @@ public class SkillAttackDamageRune : EvolutionStoneButton
         }
         
         // 효과 적용 로직
-        GameManager.Instance.allyHealthMultiply = buffDetails.buffDatas[curLevel].buffForce;
+        GameManager.Instance.skillAttackDamageMultiply = buffDetails.buffDatas[curLevel].buffForce;
         
         GameManager.Instance.UseGold(buffDetails.buffDatas[curLevel].needGold);
             

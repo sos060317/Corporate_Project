@@ -66,7 +66,7 @@ public class AllyBase : MonoBehaviour
         isRun = false;
         hitDelay = new WaitForSeconds(0.1f);
         
-        maxHealth = allyDetailsSo.allyBaseHealth * GameManager.Instance.allyHealthMultiply;
+        maxHealth = allyDetailsSo.allyBaseHealth;
         curHealth = maxHealth;
 
         moveSpeed = allyDetailsSo.allyBaseMoveSpeed;
@@ -223,8 +223,7 @@ public class AllyBase : MonoBehaviour
             return;
         }
 
-        targetEnemy.OnDamage(allyDetailsSo.attackPower * GameManager.Instance.allyAttackDamageMultiply,
-            allyDetailsSo.spellPower * GameManager.Instance.allyAttackDamageMultiply);
+        targetEnemy.OnDamage(allyDetailsSo.attackPower, allyDetailsSo.spellPower);
     }
     
     private IEnumerator HitRoutine()

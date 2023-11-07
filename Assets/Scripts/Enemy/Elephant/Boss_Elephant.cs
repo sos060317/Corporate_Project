@@ -110,13 +110,11 @@ public class Boss_Elephant : EnemyBase
         {
             if(target.CompareTag("Ally"))
             {
-                target.GetComponent<AllyBase>().OnDamage(specialAttackDamage * GameManager.Instance.enemyAttackDamageMultiply, 0);
+                target.GetComponent<AllyBase>().OnDamage(specialAttackDamage, 0);
             }
             else if (target.CompareTag("Evolution Stone"))
             {
-                GameManager.Instance.OnEvolutionStoneDamaged(
-                    enemyDetailsSo.attackPower * GameManager.Instance.enemyAttackDamageMultiply,
-                    enemyDetailsSo.spellPower * GameManager.Instance.enemyAttackDamageMultiply);
+                GameManager.Instance.OnEvolutionStoneDamaged(enemyDetailsSo.attackPower, enemyDetailsSo.spellPower);
             }
         }
     }

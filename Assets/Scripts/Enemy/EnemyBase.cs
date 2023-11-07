@@ -183,9 +183,7 @@ public abstract class EnemyBase : MonoBehaviour
     {
         if (isMoveEnd)
         {
-            GameManager.Instance.OnEvolutionStoneDamaged(
-                attackPower * GameManager.Instance.enemyAttackDamageMultiply,
-                spellPower * GameManager.Instance.enemyAttackDamageMultiply);
+            GameManager.Instance.OnEvolutionStoneDamaged(attackPower, spellPower);
             return;
         }
         
@@ -194,8 +192,7 @@ public abstract class EnemyBase : MonoBehaviour
             return;
         }
 
-        targetAlly.OnDamage(attackPower * GameManager.Instance.enemyAttackDamageMultiply,
-            spellPower * GameManager.Instance.enemyAttackDamageMultiply);
+        targetAlly.OnDamage(attackPower, spellPower);
     }
     
     protected IEnumerator HitRoutine()
