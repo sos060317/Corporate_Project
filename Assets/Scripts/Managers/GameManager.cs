@@ -41,10 +41,9 @@ public class GameManager : MonoBehaviour
     #region 버프 관련 변수들
 
     [HideInInspector] public float getGoldMultiply = 1;
-    [HideInInspector] public float allyAttackDamageMultiply = 1;
-    [HideInInspector] public float allyHealthMultiply = 1;
-    [HideInInspector] public float enemyAttackDamageMultiply = 1;
-    [HideInInspector] public float enemyMoveSpeedMultiply = 1;
+    [HideInInspector] public float towerAttackDamageMultiply = 1;
+    [HideInInspector] public float skillAttackDamageMultiply = 1;
+    [HideInInspector] public float skillCoolTimeMultiply = 1;
 
     #endregion
 
@@ -112,10 +111,9 @@ public class GameManager : MonoBehaviour
         
         // 변수 초기화
         getGoldMultiply = 1;
-        allyAttackDamageMultiply = 1;
-        allyHealthMultiply = 1;
-        enemyAttackDamageMultiply = 1;
-        enemyMoveSpeedMultiply = 1;
+        towerAttackDamageMultiply = 1;
+        skillAttackDamageMultiply = 1;
+        skillCoolTimeMultiply = 1;
 
         Application.targetFrameRate = 60;
     }

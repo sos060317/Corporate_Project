@@ -13,7 +13,7 @@ public class TowerHealthRune : EvolutionStoneButton
         }
         
         // 효과 적용 로직
-        GameManager.Instance.enemyMoveSpeedMultiply = buffDetails.buffDatas[curLevel].buffForce;
+        //GameManager.Instance.enemyMoveSpeedMultiply = buffDetails.buffDatas[curLevel].buffForce;
         
         GameManager.Instance.UseGold(buffDetails.buffDatas[curLevel].needGold);
         

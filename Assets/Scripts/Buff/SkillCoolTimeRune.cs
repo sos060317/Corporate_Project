@@ -13,7 +13,7 @@ public class SkillCoolTimeRune : EvolutionStoneButton
         }
         
         // 효과 적용 로직
-        GameManager.Instance.enemyAttackDamageMultiply = buffDetails.buffDatas[curLevel].buffForce;
+        GameManager.Instance.skillCoolTimeMultiply = buffDetails.buffDatas[curLevel].buffForce;
         
         GameManager.Instance.UseGold(buffDetails.buffDatas[curLevel].needGold);
         

@@ -13,7 +13,7 @@ public class TowerAttackDamageRune : EvolutionStoneButton
         }
         
         // 효과 적용 로직
-        GameManager.Instance.allyAttackDamageMultiply = buffDetails.buffDatas[curLevel].buffForce;
+        GameManager.Instance.towerAttackDamageMultiply = buffDetails.buffDatas[curLevel].buffForce;
         
         GameManager.Instance.UseGold(buffDetails.buffDatas[curLevel].needGold);
         
