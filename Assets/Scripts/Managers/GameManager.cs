@@ -65,6 +65,8 @@ public class GameManager : MonoBehaviour
     [Header("게임 관련 중요 오브젝트")]
     public GameObject cameraObj;
 
+    public AudioClip gameSound;
+
     #endregion
 
     [HideInInspector] public bool isGameStop;
@@ -130,6 +132,8 @@ public class GameManager : MonoBehaviour
         gamePauseMenu.gameObject.SetActive(false);
 
         goldText.text = currentGold.ToString();
+        
+        SoundManager.Instance.PlayMusic(gameSound);
     }
 
     private void Update()
