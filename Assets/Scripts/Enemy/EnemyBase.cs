@@ -69,6 +69,7 @@ public abstract class EnemyBase : MonoBehaviour
         
         // 변수 초기화
         hitDelay = new WaitForSeconds(0.1f);
+        sr.material = defaultMaterial;
     }
 
     protected virtual void Update()
@@ -252,6 +253,11 @@ public abstract class EnemyBase : MonoBehaviour
 
     public virtual void OnDamage(float attackPower, float spellPower) // 물리 , 마법
     {
+        if (isDie)
+        {
+            return;
+        }
+        
         curHealth =
             Mathf.Max(
                 curHealth - ((attackPower - (attackPower * (defense * 0.01f))) +
