@@ -1,0 +1,894 @@
+fileFormatVersion: 2
+guid: 5e912620bc82a1f4780fe672a3318cd3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 29
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 266
+        width: 58
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b306ae4c93d1792498469a7e2ac4b6d4
+      internalID: -1451131783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 266
+        width: 58
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44dc4a0232e8e824aa66634c71249a56
+      internalID: -922916134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 266
+        width: 58
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09af039c593e89147962f6ca2237c3c3
+      internalID: -796088260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 266
+        width: 58
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da3b5794defe2040962aaddcdb47c9d
+      internalID: -2055192248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 266
+        width: 58
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51e3f7ee960754440a28dfb7f24c4a64
+      internalID: 368912119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 266
+        width: 58
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c9ab3b3513ddb24e9d1ae4fbfbece16
+      internalID: -108826708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 266
+        width: 58
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48f9b2cc29841ea438e7cd8bef845f0e
+      internalID: -627162889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 202
+        width: 55
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96188cf04e4c64643a8ebbe623444bb0
+      internalID: 1345159156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 202
+        width: 55
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e11ca710e3898b488da0ead8ca2e81d
+      internalID: 1437663304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 202
+        width: 55
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa14c3fe7fee37e4d8b09b9ab9397b1d
+      internalID: -2062568850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 202
+        width: 55
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa5d90316b0e27c42abb0ff993e81800
+      internalID: 1037843438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 202
+        width: 55
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a44e497088302d4faf9bee6475478df
+      internalID: -2053760082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 202
+        width: 55
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4babd0ab3e04b1a4b96e5d3eeb46b110
+      internalID: -1257494594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 202
+        width: 55
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1cf1a57392939642a8b6911059958b0
+      internalID: -1688512880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 138
+        width: 56
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e195bc31a0290394887487b86856ceb1
+      internalID: -367307006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 138
+        width: 56
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c9334cef7577344f9da740a2b1b2178
+      internalID: -1307091870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 138
+        width: 56
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d95e509eef7736f4dad5219429c7f62b
+      internalID: 848577260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 138
+        width: 56
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b31d88c0b44c4f4a99fa25e302b698d
+      internalID: 520185838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 138
+        width: 56
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e05c04812f920f6469cd6df64665b484
+      internalID: -870266850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 138
+        width: 56
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f1c32799b16f544bb6aa73a79d01fa
+      internalID: -922249255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 138
+        width: 56
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec43022e274137f4a90c83924f12ac9e
+      internalID: -608695518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 74
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8544151815dcb8d468321a9a117d21f9
+      internalID: -798562458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 74
+        width: 53
+        height: 58
+      alignment: 9
+      pivot: {x: 0.52, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2b991e801f6b049a8c2b1ed8f75766
+      internalID: 145048109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 74
+        width: 53
+        height: 58
+      alignment: 9
+      pivot: {x: 0.52, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c752923ac79bc454a8c3368c3161a4a2
+      internalID: 1197195169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 74
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68be79003a023ac4899b4358509b24be
+      internalID: -839268392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 74
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b3356b56b037114faaa32a60c3d4b11
+      internalID: -962537407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 74
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab99a132c5b7841489b60d405745623b
+      internalID: 632748291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 74
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79b94ef7bac95f94daafbae3a038fc4b
+      internalID: -441430589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 10
+        width: 52
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 821812adf8949844980a3d4791dd0181
+      internalID: 1332824499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 10
+        width: 52
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 323c6c5fca499084591f414c1caed633
+      internalID: 625555827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 10
+        width: 52
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cb6ef55c091f714f89c137802c7b049
+      internalID: 804603325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 10
+        width: 52
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36077d52485225241b2067d9d7e32caf
+      internalID: 1569423971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 10
+        width: 52
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa74dfe3bea6154094adeaec7835a35
+      internalID: 184255060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 10
+        width: 52
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8812ba99b9461f40b61b8ae7b219662
+      internalID: -552863702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-wait-all-lv2-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 10
+        width: 52
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 791b20047dee2754bb22e56e8656506d
+      internalID: -2058725149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      tree-wait-all-lv2-Sheet_0: -1451131783
+      tree-wait-all-lv2-Sheet_1: -922916134
+      tree-wait-all-lv2-Sheet_10: 1037843438
+      tree-wait-all-lv2-Sheet_11: 154123839
+      tree-wait-all-lv2-Sheet_12: -2053760082
+      tree-wait-all-lv2-Sheet_13: -1257494594
+      tree-wait-all-lv2-Sheet_14: -1688512880
+      tree-wait-all-lv2-Sheet_15: -367307006
+      tree-wait-all-lv2-Sheet_16: -1307091870
+      tree-wait-all-lv2-Sheet_17: 848577260
+      tree-wait-all-lv2-Sheet_18: 520185838
+      tree-wait-all-lv2-Sheet_19: -870266850
+      tree-wait-all-lv2-Sheet_2: -796088260
+      tree-wait-all-lv2-Sheet_20: -922249255
+      tree-wait-all-lv2-Sheet_21: -608695518
+      tree-wait-all-lv2-Sheet_22: -798562458
+      tree-wait-all-lv2-Sheet_23: 145048109
+      tree-wait-all-lv2-Sheet_24: 1197195169
+      tree-wait-all-lv2-Sheet_25: -839268392
+      tree-wait-all-lv2-Sheet_26: -962537407
+      tree-wait-all-lv2-Sheet_27: 632748291
+      tree-wait-all-lv2-Sheet_28: -441430589
+      tree-wait-all-lv2-Sheet_29: 1332824499
+      tree-wait-all-lv2-Sheet_3: -2055192248
+      tree-wait-all-lv2-Sheet_30: 625555827
+      tree-wait-all-lv2-Sheet_31: 804603325
+      tree-wait-all-lv2-Sheet_32: 1569423971
+      tree-wait-all-lv2-Sheet_33: 184255060
+      tree-wait-all-lv2-Sheet_34: -552863702
+      tree-wait-all-lv2-Sheet_35: -2058725149
+      tree-wait-all-lv2-Sheet_4: 368912119
+      tree-wait-all-lv2-Sheet_5: -108826708
+      tree-wait-all-lv2-Sheet_6: -627162889
+      tree-wait-all-lv2-Sheet_7: 1345159156
+      tree-wait-all-lv2-Sheet_8: 1437663304
+      tree-wait-all-lv2-Sheet_9: -2062568850
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
