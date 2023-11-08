@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f0926adb76011c41881c4703cc9ab9e, type: 3}
   m_Name: StageTurtleCharacteristics
   m_EditorClassIdentifier: 
-  enemyName: Turtle
+  enemyName: "\uAC70\uBD81\uC774"
   enemyBaseHealth: 1
   enemyBaseMoveSpeed: 1
   enemyBaseAttackRate: 1
@@ -23,4 +23,5 @@ MonoBehaviour:
   spellPower: 1
   profileImage: {fileID: -899140742, guid: 598e7f778b082a9409e20d3c69c3a5ce, type: 3}
   coins: 1
-  changeStat: Every Enemy's Defensive Power Rises 10%
+  changeStat: "\uBAA8\uB4E0 \uC801\uAD70\uC758 \uBB3C\uB9AC \uBC29\uC5B4\uB825 10%
+    \uC99D\uAC00"

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f0926adb76011c41881c4703cc9ab9e, type: 3}
   m_Name: StageHedgehogCharacteristics
   m_EditorClassIdentifier: 
-  enemyName: Hedgehog
+  enemyName: "\uACE0\uC2B4\uB3C4\uCE58"
   enemyBaseHealth: 1
   enemyBaseMoveSpeed: 1
   enemyBaseAttackRate: 10
@@ -23,4 +23,4 @@ MonoBehaviour:
   spellPower: 1
   profileImage: {fileID: -191180504, guid: f8e07bb904fae6b4eb2123e1f203e218, type: 3}
   coins: 1
-  changeStat: Every Enemy's Attack Rate Rises 10%
+  changeStat: "\uBAA8\uB4E0 \uC801\uAD70\uC758 \uACF5\uACA9\uC18D\uB3C4 10% \uC99D\uAC00"
