@@ -122,11 +122,6 @@ public class GameUnitChake : MonoBehaviour
         UToggle = true;
     }
 
-    public void DestroyTower()
-    {
-        Destroy(gameObject);
-    }
-
     private void Move()
     {
         bool isR = false;
