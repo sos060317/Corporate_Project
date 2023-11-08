@@ -1091,8 +1091,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TitlePauseMenu, Assembly-CSharp
+      - m_Target: {fileID: 183846126}
+        m_TargetAssemblyTypeName: StageSelectionPauseMenu, Assembly-CSharp
         m_MethodName: HidePauseMenu
         m_Mode: 1
         m_Arguments:
