@@ -275,7 +275,7 @@ public abstract class EnemyBase : MonoBehaviour
             }
             
             anim.SetTrigger("Die");
-            //return;
+            return;
         }
         
         StartCoroutine(HitRoutine());
@@ -333,6 +333,49 @@ public abstract class EnemyBase : MonoBehaviour
     }
 
 
+    // 독
+    public void PoisonEnemy(float PoisonTime, float attackPower, int repetitions)
+    {
+        if (!PoisoingNow)
+        {
+            PoisoingCoroutine = StartCoroutine(PoisoningEffect(PoisonTime, attackPower, repetitions));
+        }
+        else if (curHealth <= 0)
+        {
+            Debug.Log("응애");
+            StopCoroutine(PoisoingCoroutine);
+            PoisoingNow = false;
+            PoisoingCoroutine = null;
+        }
+        else
+        {
+            StopCoroutine(PoisoingCoroutine);
+            PoisoingNow = false;
+            PoisoingCoroutine = null;
+
+            PoisoingCoroutine = StartCoroutine(PoisoningEffect(PoisonTime, attackPower, repetitions));
+        }
+    }
+
+    private IEnumerator PoisoningEffect(float PoisonTime, float spellPower, int repetitions)
+    {
+        PoisoingNow = true;
+
+        for (int count = 0; count < repetitions; count++)
+        {
+            float attackPower = 0.0f;
+
+            OnDamage(attackPower, spellPower);
+
+            yield return new WaitForSeconds(PoisonTime / repetitions);
+        }
+
+        yield return new WaitForSeconds(PoisonTime - repetitions);
+
+        PoisoingNow = false;
+        PoisoingCoroutine = null;
+    }
+
     //화염
     public void FireEnemy(float fireTime, float attackPower, int repetitions)
     {
@@ -383,48 +426,7 @@ public abstract class EnemyBase : MonoBehaviour
     }
 
 
-    // 독
-    public void PoisonEnemy(float PoisonTime, float attackPower, int repetitions)
-    {
-        if (!PoisoingNow)
-        {
-            PoisoingCoroutine = StartCoroutine(PoisoningEffect(PoisonTime, attackPower, repetitions));
-        }
-        else if (curHealth <= 0)
-        {
-            Debug.Log("응애");
-            StopCoroutine(PoisoingCoroutine);
-            PoisoingNow = false;
-            PoisoingCoroutine = null;
-        }
-        else
-        {
-            StopCoroutine(PoisoingCoroutine);
-            PoisoingNow = false;
-            PoisoingCoroutine = null;
-
-            PoisoingCoroutine = StartCoroutine(PoisoningEffect(PoisonTime, attackPower, repetitions));
-        }
-    }
-
-    private IEnumerator PoisoningEffect(float PoisonTime, float spellPower, int repetitions)
-    {
-        PoisoingNow = true;
-
-        for (int count = 0; count < repetitions; count++)
-        {
-            float attackPower = 0.0f;
-
-            OnDamage(attackPower, spellPower);
-
-            yield return new WaitForSeconds(PoisonTime / repetitions);
-        }
-
-        yield return new WaitForSeconds(PoisonTime - repetitions);
-
-        PoisoingNow = false;
-        PoisoingCoroutine = null;
-    }
+    
 
 
     // 기절?

@@ -96,6 +96,11 @@ public class Spawner : MonoBehaviour
         }
     }
 
+    public void DestroyTower()
+    {
+        Destroy(gameObject);
+    }
+
     private void SpawnPrefab(GameObject prefab)
     {
         GameObject spawnedObject = Instantiate(prefab, transform.position, Quaternion.identity);
