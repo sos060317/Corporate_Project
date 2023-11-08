@@ -27,7 +27,7 @@ public class BananaSkillButton : MonoBehaviour
 
     private void SKillCooldownUpdate()
     {
-        if (skillTime >= skillCooldownTime)
+        if (skillTime / (skillCooldownTime * GameManager.Instance.skillCoolTimeMultiply) >= 1)
         {
             skillButton.interactable = true;
             
@@ -36,7 +36,7 @@ public class BananaSkillButton : MonoBehaviour
 
         skillTime += Time.deltaTime;
 
-        skillImage.fillAmount = skillTime / skillCooldownTime;
+        skillImage.fillAmount = skillTime / (skillCooldownTime * GameManager.Instance.skillCoolTimeMultiply);
     }
 
     public void UseBananaSkill()

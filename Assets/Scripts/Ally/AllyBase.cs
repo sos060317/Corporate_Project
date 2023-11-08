@@ -74,6 +74,8 @@ public class AllyBase : MonoBehaviour
         attactRate = allyDetailsSo.allyBaseAttackDelay;
         xScale = transform.localScale.x;
         healthBgXScale = healthUiBar.rectTransform.localScale.x;
+
+        sr.material = defaultMaterial;
     }
 
     private void Update()
