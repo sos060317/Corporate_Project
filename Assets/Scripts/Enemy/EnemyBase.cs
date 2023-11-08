@@ -275,7 +275,7 @@ public abstract class EnemyBase : MonoBehaviour
             }
             
             anim.SetTrigger("Die");
-            return;
+            //return;
         }
         
         StartCoroutine(HitRoutine());
