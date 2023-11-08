@@ -1162,6 +1162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowTemplate: {fileID: 11400000, guid: 7ff9544debe48214a9d2cc8f3751d44a, type: 2}
+  animation: {fileID: 4465740853892227351}
   Arrowlevel: 0
   Pos1: {fileID: 4465740853132805457}
   Pos2: {fileID: 4465740852948927372}

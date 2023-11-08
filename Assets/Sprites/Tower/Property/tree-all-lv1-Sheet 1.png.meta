@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: db67a079fda4a3e46a4a4c32a323c516
+guid: d292984ab00400c478103ed7a8bb59db
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,11 +105,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_0
+      name: tree-all-lv1-Sheet 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 247
+        x: 114
+        y: 186
         width: 64
         height: 64
       alignment: 9
@@ -119,18 +119,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8530cbd6dcfc9ab4ca969a676d3c57aa
-      internalID: 1055279663
+      spriteID: 1895f1949d09bee45937406326d33fa2
+      internalID: -1007289601
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_1
+      name: tree-all-lv1-Sheet 1_1
       rect:
         serializedVersion: 2
         x: 64
-        y: 247
+        y: 256
         width: 64
         height: 64
       alignment: 9
@@ -140,18 +140,60 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 076a33727729e3241acb07752964f7e4
-      internalID: 482323552
+      spriteID: 0b65bde22ba5aa1478cca5ea509e5e89
+      internalID: 433032636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_4
+      name: tree-all-lv1-Sheet 1_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c52f979da15bcd4e9010a708d8310d8
+      internalID: -1688959682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-all-lv1-Sheet 1_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dfa7f4685808ee4e95db8d4990f148e
+      internalID: 1993659510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-all-lv1-Sheet 1_4
       rect:
         serializedVersion: 2
         x: 256
-        y: 247
+        y: 256
         width: 64
         height: 64
       alignment: 9
@@ -161,18 +203,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e09935560eddd7498f972fd1b0a79ab
-      internalID: 870159030
+      spriteID: 5dc9dd0d3ea897140a3983d736ecca94
+      internalID: 571855041
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_5
+      name: tree-all-lv1-Sheet 1_5
       rect:
         serializedVersion: 2
         x: 320
-        y: 247
+        y: 256
         width: 64
         height: 64
       alignment: 9
@@ -182,39 +224,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78e1be26ab372f54db3b5011befc004a
-      internalID: 549154043
+      spriteID: 0fe8fffe5ef67dc42b8f537ef5878596
+      internalID: -1427108008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 247
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.15}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 44db02431cde11d458fab4801be553a2
-      internalID: 1357023765
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tree-wait-gather-Sheet_7
+      name: tree-all-lv1-Sheet 1_6
       rect:
         serializedVersion: 2
         x: 0
-        y: 183
+        y: 192
         width: 64
         height: 64
       alignment: 9
@@ -224,18 +245,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51b72b57c5024e548b6059f138f6be69
-      internalID: 1975047198
+      spriteID: 2e22fd132cdbb894f8a80fdaaf5731e3
+      internalID: -1073462127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_8
+      name: tree-all-lv1-Sheet 1_7
       rect:
         serializedVersion: 2
         x: 64
-        y: 183
+        y: 192
         width: 64
         height: 64
       alignment: 9
@@ -245,18 +266,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27abc00de397c2349af5aadbb08be46e
-      internalID: 516944866
+      spriteID: a171ea297de58e7408e6ab584c8558eb
+      internalID: -1052465015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_9
+      name: tree-all-lv1-Sheet 1_8
       rect:
         serializedVersion: 2
         x: 128
-        y: 183
+        y: 192
         width: 64
         height: 64
       alignment: 9
@@ -266,18 +287,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c2d991c85ac07d429344171e6d2fb63
-      internalID: -936331709
+      spriteID: 5225bec5a73883543b4fac53cbfe8e1c
+      internalID: -781094976
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_10
+      name: tree-all-lv1-Sheet 1_9
       rect:
         serializedVersion: 2
         x: 192
-        y: 183
+        y: 192
         width: 64
         height: 64
       alignment: 9
@@ -287,18 +308,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 538c1acf7d2e1d84bb42105b87ba865c
-      internalID: 1899779049
+      spriteID: 2589bf2acaef00640bcf383a0b32a336
+      internalID: -957024042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_11
+      name: tree-all-lv1-Sheet 1_10
       rect:
         serializedVersion: 2
         x: 256
-        y: 183
+        y: 192
         width: 64
         height: 64
       alignment: 9
@@ -308,18 +329,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76771a060eadb7443930065e2a0a7d7e
-      internalID: -712515650
+      spriteID: a18d9afbf6740b24fb99473b486c5b08
+      internalID: 1126399082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_12
+      name: tree-all-lv1-Sheet 1_11
       rect:
         serializedVersion: 2
         x: 320
-        y: 183
+        y: 192
         width: 64
         height: 64
       alignment: 9
@@ -329,39 +350,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22e24ec354f5aa34f9c3d52528fd998b
-      internalID: 926159486
+      spriteID: b4133a630f535ba4681e9ed5c1db38ca
+      internalID: -12825427
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_13
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 183
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.15}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 084e8225acb2eff46b77bcc5098fe30f
-      internalID: -1713810572
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tree-wait-gather-Sheet_14
+      name: tree-all-lv1-Sheet 1_12
       rect:
         serializedVersion: 2
         x: 0
-        y: 119
+        y: 128
         width: 64
         height: 64
       alignment: 9
@@ -371,18 +371,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64db01b8e4662b6409f17ffc8be1f0e1
-      internalID: -2015936088
+      spriteID: e019b7d5b352e494095c6b406d5d17a4
+      internalID: 789450163
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_15
+      name: tree-all-lv1-Sheet 1_13
       rect:
         serializedVersion: 2
         x: 64
-        y: 119
+        y: 128
         width: 64
         height: 64
       alignment: 9
@@ -392,18 +392,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e7e6e41a1123c74bbdf2a1fa122637f
-      internalID: 1451152711
+      spriteID: 7e511de2a47aca14385e231659acdbb5
+      internalID: -219319757
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_16
+      name: tree-all-lv1-Sheet 1_14
       rect:
         serializedVersion: 2
         x: 128
-        y: 119
+        y: 128
         width: 64
         height: 64
       alignment: 9
@@ -413,18 +413,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e61011d0f84745947aad6a25bbaa11a7
-      internalID: -394614719
+      spriteID: e48cd71e9b402d742a6d835d499e9cd6
+      internalID: -987659591
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_17
+      name: tree-all-lv1-Sheet 1_15
       rect:
         serializedVersion: 2
         x: 192
-        y: 119
+        y: 128
         width: 64
         height: 64
       alignment: 9
@@ -434,18 +434,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 741a36f5d29f8a9438be809d6f4788ed
-      internalID: 821180527
+      spriteID: 6a79f060e69f7aa4b9c2f85e6727e63c
+      internalID: 1818016553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_18
+      name: tree-all-lv1-Sheet 1_16
       rect:
         serializedVersion: 2
         x: 256
-        y: 119
+        y: 128
         width: 64
         height: 64
       alignment: 9
@@ -455,18 +455,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8ccc24b29679ad4ab2aa513e3eb365a
-      internalID: -906246075
+      spriteID: 4f049215a862d8f46a3b496eb9e78fbc
+      internalID: 430004331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_19
+      name: tree-all-lv1-Sheet 1_17
       rect:
         serializedVersion: 2
         x: 320
-        y: 119
+        y: 128
         width: 64
         height: 64
       alignment: 9
@@ -476,123 +476,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33041435413e0024ebd6c60d1e51b7a5
-      internalID: 1465236004
+      spriteID: e87f7a7e2c2f74e4883e5d6b6c839a2e
+      internalID: -1772745414
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_20
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 119
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.15}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e3eeb75575451542afeb70105f732d6
-      internalID: -1866359528
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tree-wait-gather-Sheet_21
+      name: tree-all-lv1-Sheet 1_18
       rect:
         serializedVersion: 2
         x: 0
-        y: 58
+        y: 64
         width: 64
-        height: 61
+        height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.14}
+      pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e94913f436450d449049a155ad0f03a
-      internalID: 2009945336
+      spriteID: 623f448c30b57a64a96bb395d6274647
+      internalID: -560068070
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_22
+      name: tree-all-lv1-Sheet 1_19
       rect:
         serializedVersion: 2
         x: 64
-        y: 58
-        width: 64
-        height: 61
-      alignment: 9
-      pivot: {x: 0.5, y: 0.14}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 147ccd4f23356e644905988f3bbe0804
-      internalID: -732104056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tree-wait-gather-Sheet_23
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 58
-        width: 64
-        height: 61
-      alignment: 9
-      pivot: {x: 0.5, y: 0.14}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4eeadb4db271c33429e39b75e1672f29
-      internalID: -189595213
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tree-wait-gather-Sheet_24
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 58
-        width: 64
-        height: 61
-      alignment: 9
-      pivot: {x: 0.5, y: 0.14}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd220e981cb5f88438ff2ce6bf9c9dbb
-      internalID: -391241095
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tree-wait-gather-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 247
+        y: 64
         width: 64
         height: 64
       alignment: 9
@@ -602,18 +518,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69d22a847472ff9468350c2cfc0e0874
-      internalID: -499061474
+      spriteID: 98edb58603360da4cb539f5ae634d3d1
+      internalID: 1953416567
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_3
+      name: tree-all-lv1-Sheet 1_20
       rect:
         serializedVersion: 2
-        x: 192
-        y: 247
+        x: 128
+        y: 64
         width: 64
         height: 64
       alignment: 9
@@ -623,218 +539,197 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d0da52a6bbff0d4e9ff8207d7cb50bc
-      internalID: -810944598
+      spriteID: a5bdd08fc551a6c448f8e4dee238256b
+      internalID: -2097622172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_25
+      name: tree-all-lv1-Sheet 1_21
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc770c23d377cea41a47a97d6af26ba7
+      internalID: -1309757443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-all-lv1-Sheet 1_22
       rect:
         serializedVersion: 2
         x: 256
-        y: 58
+        y: 64
         width: 64
-        height: 61
+        height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.14}
+      pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fee5b6a9b199d1d499da729d0f76c02a
-      internalID: 1733198269
+      spriteID: 9d19aad213ec93f4a9dd06b4c9f217bd
+      internalID: 1072734778
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_26
+      name: tree-all-lv1-Sheet 1_23
       rect:
         serializedVersion: 2
         x: 320
-        y: 58
+        y: 64
         width: 64
-        height: 61
+        height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.14}
+      pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ca1209354f931a4e96f8d4295ac8fd4
-      internalID: 846206858
+      spriteID: b7d209050c029dd48a9b3c214b805ed5
+      internalID: 1005573035
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_27
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 58
-        width: 64
-        height: 61
-      alignment: 9
-      pivot: {x: 0.5, y: 0.14}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b8586b500daf7d43b3e2885c1ed9b53
-      internalID: -1971177110
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tree-wait-gather-Sheet_28
+      name: tree-all-lv1-Sheet 1_24
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
-        height: 58
+        height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.14}
+      pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e59b441a4b92b374cad0cf22db345c2a
-      internalID: 78845843
+      spriteID: 338c7a06f8ef1c2479a68aaa09ec1250
+      internalID: 1148781683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_29
+      name: tree-all-lv1-Sheet 1_25
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 64
-        height: 58
+        height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.14}
+      pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 888e044aacf7098448ee6764af3f8107
-      internalID: -1634489124
+      spriteID: 3e174e191819bcc4a956cf968a9f612e
+      internalID: -1741766164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_30
+      name: tree-all-lv1-Sheet 1_26
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 64
-        height: 58
+        height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.14}
+      pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f11964d953aca4439bd0327c9edc23a
-      internalID: -1280632241
+      spriteID: 23c2517cd91e8a340944eb5ff786f177
+      internalID: -467511808
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_31
+      name: tree-all-lv1-Sheet 1_27
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 64
-        height: 58
+        height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.14}
+      pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdbf7a1c3553022479b4e784ef806008
-      internalID: 903448042
+      spriteID: 6349eb6fb3732414cba4885311851774
+      internalID: -1030699960
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_32
+      name: tree-all-lv1-Sheet 1_28
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 64
-        height: 58
+        height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.14}
+      pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0f4b528518ba5244a983748f8368dac
-      internalID: 1798929740
+      spriteID: 677ab90612e49094aaa7cf8b2a42f0c8
+      internalID: -2122654457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-wait-gather-Sheet_33
+      name: tree-all-lv1-Sheet 1_29
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 64
-        height: 58
+        height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.14}
+      pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73a1c0fef63911a4aaf639e0c723424f
-      internalID: 293983514
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tree-wait-gather-Sheet_34
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 58
-      alignment: 9
-      pivot: {x: 0.5, y: 0.14}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 604387b6b5f91bd47be90a47cc1c9b45
-      internalID: 1436753698
+      spriteID: ee6c77040f65453489edacad17f0930c
+      internalID: 283427279
       vertices: []
       indices: 
       edges: []
@@ -850,42 +745,36 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tree-wait-gather-Sheet_0: 1055279663
-      tree-wait-gather-Sheet_1: 482323552
-      tree-wait-gather-Sheet_10: 1899779049
-      tree-wait-gather-Sheet_11: -712515650
-      tree-wait-gather-Sheet_12: 926159486
-      tree-wait-gather-Sheet_13: -1713810572
-      tree-wait-gather-Sheet_14: -2015936088
-      tree-wait-gather-Sheet_15: 1451152711
-      tree-wait-gather-Sheet_16: -394614719
-      tree-wait-gather-Sheet_17: 821180527
-      tree-wait-gather-Sheet_18: -906246075
-      tree-wait-gather-Sheet_19: 1465236004
-      tree-wait-gather-Sheet_2: -499061474
-      tree-wait-gather-Sheet_20: -1866359528
-      tree-wait-gather-Sheet_21: 2009945336
-      tree-wait-gather-Sheet_22: -732104056
-      tree-wait-gather-Sheet_23: -189595213
-      tree-wait-gather-Sheet_24: -391241095
-      tree-wait-gather-Sheet_25: 1733198269
-      tree-wait-gather-Sheet_26: 846206858
-      tree-wait-gather-Sheet_27: -1971177110
-      tree-wait-gather-Sheet_28: 78845843
-      tree-wait-gather-Sheet_29: -1634489124
-      tree-wait-gather-Sheet_3: -810944598
-      tree-wait-gather-Sheet_30: -1280632241
-      tree-wait-gather-Sheet_31: 903448042
-      tree-wait-gather-Sheet_32: 1798929740
-      tree-wait-gather-Sheet_33: 293983514
-      tree-wait-gather-Sheet_34: 1436753698
-      tree-wait-gather-Sheet_35: 546821623
-      tree-wait-gather-Sheet_4: 870159030
-      tree-wait-gather-Sheet_5: 549154043
-      tree-wait-gather-Sheet_6: 1357023765
-      tree-wait-gather-Sheet_7: 1975047198
-      tree-wait-gather-Sheet_8: 516944866
-      tree-wait-gather-Sheet_9: -936331709
+      tree-all-lv1-Sheet 1_0: -1007289601
+      tree-all-lv1-Sheet 1_1: 433032636
+      tree-all-lv1-Sheet 1_10: 1126399082
+      tree-all-lv1-Sheet 1_11: -12825427
+      tree-all-lv1-Sheet 1_12: 789450163
+      tree-all-lv1-Sheet 1_13: -219319757
+      tree-all-lv1-Sheet 1_14: -987659591
+      tree-all-lv1-Sheet 1_15: 1818016553
+      tree-all-lv1-Sheet 1_16: 430004331
+      tree-all-lv1-Sheet 1_17: -1772745414
+      tree-all-lv1-Sheet 1_18: -560068070
+      tree-all-lv1-Sheet 1_19: 1953416567
+      tree-all-lv1-Sheet 1_2: -1688959682
+      tree-all-lv1-Sheet 1_20: -2097622172
+      tree-all-lv1-Sheet 1_21: -1309757443
+      tree-all-lv1-Sheet 1_22: 1072734778
+      tree-all-lv1-Sheet 1_23: 1005573035
+      tree-all-lv1-Sheet 1_24: 1148781683
+      tree-all-lv1-Sheet 1_25: -1741766164
+      tree-all-lv1-Sheet 1_26: -467511808
+      tree-all-lv1-Sheet 1_27: -1030699960
+      tree-all-lv1-Sheet 1_28: -2122654457
+      tree-all-lv1-Sheet 1_29: 283427279
+      tree-all-lv1-Sheet 1_3: 1993659510
+      tree-all-lv1-Sheet 1_4: 571855041
+      tree-all-lv1-Sheet 1_5: -1427108008
+      tree-all-lv1-Sheet 1_6: -1073462127
+      tree-all-lv1-Sheet 1_7: -1052465015
+      tree-all-lv1-Sheet 1_8: -781094976
+      tree-all-lv1-Sheet 1_9: -957024042
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
