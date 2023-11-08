@@ -112,10 +112,6 @@ public class Enemy_Hedgehog : EnemyBase
                 // 원거리 공격
                 
                 anim.SetTrigger("Attack");
-
-                var thorn = Instantiate(thornPrefab, transform.position, Quaternion.identity);
-
-                thorn.StartShot(transform.position, targetAlly.transform.position, targetAlly, enemyDetailsSo.attackPower);
             }
             
             attackTimer = 0f;
@@ -129,6 +125,13 @@ public class Enemy_Hedgehog : EnemyBase
         }
         
         attackTimer += Time.deltaTime;
+    }
+
+    private void ShotThorn()
+    {
+        var thorn = Instantiate(thornPrefab, transform.position, Quaternion.identity);
+
+        thorn.StartShot(transform.position, targetAlly.transform.position, targetAlly, enemyDetailsSo.attackPower);
     }
 
     public override void OnDamage(float attackPower, float spellPower)
