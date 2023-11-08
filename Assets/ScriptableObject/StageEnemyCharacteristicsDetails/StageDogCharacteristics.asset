@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f0926adb76011c41881c4703cc9ab9e, type: 3}
   m_Name: StageDogCharacteristics
   m_EditorClassIdentifier: 
-  enemyName: Dog
+  enemyName: "\uAC15\uC544\uC9C0"
   enemyBaseHealth: 1
   enemyBaseMoveSpeed: 1.05
   enemyBaseAttackRate: 1
@@ -23,4 +23,5 @@ MonoBehaviour:
   spellPower: 1.05
   profileImage: {fileID: 4723107735738678597, guid: efcce9b9312267649ad3455ccfbc0dd6, type: 3}
   coins: 1
-  changeStat: Every Enemy's Power and Speed Rises 5%
+  changeStat: "\uBAA8\uB4E0 \uC801\uAD70\uC758 \uACF5\uACA9\uB825 \uBC0F \uC774\uB3D9\uC18D\uB3C4
+    5% \uC99D\uAC00"
