@@ -395,6 +395,7 @@ GameObject:
   - component: {fileID: 9006877800072723542}
   - component: {fileID: 4311964728616317756}
   - component: {fileID: 5114689813463296297}
+  - component: {fileID: 6256170077978351950}
   m_Layer: 0
   m_Name: ArrowShape
   m_TagString: Untagged
@@ -526,6 +527,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6256170077978351950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4027347504476238595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c162f270d2a96449bfff53a33d8166a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 5114689813463296297}
 --- !u!1 &6765110923598128074
 GameObject:
   m_ObjectHideFlags: 0
