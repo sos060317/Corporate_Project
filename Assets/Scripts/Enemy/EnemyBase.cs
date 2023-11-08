@@ -336,6 +336,20 @@ public abstract class EnemyBase : MonoBehaviour
         Targeting = false;
         isFaint = false;
         transform.GetComponent<Collider2D>().enabled = true;
+        
+        // 체력바 업데이트
+        if (defense > magicResistance)
+        {
+            healthUiBar.color = Color.blue;
+        }
+        else if (magicResistance > defense)
+        {
+            healthUiBar.color = Color.cyan;
+        }
+        else
+        {
+            healthUiBar.color = Color.red;
+        }
     }
 
 
