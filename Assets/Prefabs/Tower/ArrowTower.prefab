@@ -111,7 +111,7 @@ MonoBehaviour:
   RoundObject: {fileID: 8267170809805403426}
   arrowTemplate: {fileID: 11400000, guid: 7ff9544debe48214a9d2cc8f3751d44a, type: 2}
   sp: {fileID: 8267170808375101381}
-  arrowPrefab: {fileID: 319043655286286928, guid: 3063a3fbb8dd8fb4c84e750ac0b60d50, type: 3}
+  arrowPrefab: {fileID: 5725064070826472992, guid: 6c2a4987db62d614e8fa54baeb2cdf5c, type: 3}
   spawnPositions:
   - {fileID: 8267170809881109403}
   - {fileID: 8267170809595290950}

@@ -410,14 +410,14 @@ MonoBehaviour:
   evolutionUpgradeMenu: {fileID: 531690074}
   buffIconParent: {fileID: 1554575937}
   getGoldMultiply: 0
-  allyAttackDamageMultiply: 0
-  allyHealthMultiply: 0
-  enemyAttackDamageMultiply: 0
-  enemyMoveSpeedMultiply: 0
+  towerAttackDamageMultiply: 1
+  skillAttackDamageMultiply: 1
+  skillCoolTimeMultiply: 1
   evolutionStoneHealthBar: {fileID: 2054950755}
   evolutionStoneMaxHealth: 100
   levelIndex: 1
   cameraObj: {fileID: 1451707420}
+  gameSound: {fileID: 0}
   isGameStop: 0
   isUseSkill: 0
   currentGold: 0
@@ -2784,6 +2784,7 @@ GameObject:
   - component: {fileID: 212976361}
   - component: {fileID: 212976363}
   - component: {fileID: 212976362}
+  - component: {fileID: 212976364}
   m_Layer: 5
   m_Name: Image (4)
   m_TagString: Untagged
@@ -2831,7 +2832,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 64c5811d285d5bc4c8eb85a253269019, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2849,6 +2850,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212976360}
   m_CullTransparentMesh: 1
+--- !u!114 &212976364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212976360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e28515001571d93498934fda23c7e0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownTower: {fileID: 3639177885408315495, guid: f562a338962dcfc43866faf244d2c4b7, type: 3}
+  towerInstallGold: 10
 --- !u!43 &217814415
 Mesh:
   m_ObjectHideFlags: 0
