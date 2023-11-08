@@ -28,7 +28,7 @@ public class MeteorSkillButton : MonoBehaviour
 
     private void SKillCooldownUpdate()
     {
-        if (skillTime >= skillCooldownTime)
+        if (skillTime / (skillCooldownTime * GameManager.Instance.skillCoolTimeMultiply) >= 1)
         {
             skillButton.interactable = true;
             
@@ -37,7 +37,7 @@ public class MeteorSkillButton : MonoBehaviour
 
         skillTime += Time.deltaTime;
 
-        skillImage.fillAmount = skillTime / skillCooldownTime;
+        skillImage.fillAmount = skillTime / (skillCooldownTime * GameManager.Instance.skillCoolTimeMultiply);
     }
 
     public void UseMeteorSkill()
