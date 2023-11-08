@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d292984ab00400c478103ed7a8bb59db
+guid: ef1939f35016f644eb2faa4cd6cf09b1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_0
+      name: TreeLevel1_idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1895f1949d09bee45937406326d33fa2
-      internalID: -1007289601
+      spriteID: eef0b0fe5efb9de4da68d1c24e88be68
+      internalID: -2000108842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_1
+      name: TreeLevel1_idle_1
       rect:
         serializedVersion: 2
         x: 64
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b65bde22ba5aa1478cca5ea509e5e89
-      internalID: 433032636
+      spriteID: 621f3e84db71ff540808f304597ad76d
+      internalID: 1003721438
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_2
+      name: TreeLevel1_idle_2
       rect:
         serializedVersion: 2
         x: 128
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c52f979da15bcd4e9010a708d8310d8
-      internalID: -1688959682
+      spriteID: e7990aea82b7f0445b8702a9eb992806
+      internalID: 548252505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_3
+      name: TreeLevel1_idle_3
       rect:
         serializedVersion: 2
         x: 192
@@ -182,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dfa7f4685808ee4e95db8d4990f148e
-      internalID: 1993659510
+      spriteID: 0ab2b68876fa55545840f0c672d056ae
+      internalID: -1156869599
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_4
+      name: TreeLevel1_idle_4
       rect:
         serializedVersion: 2
         x: 256
@@ -203,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dc9dd0d3ea897140a3983d736ecca94
-      internalID: 571855041
+      spriteID: b9b2697b7d7b8e04f84b42e7302ae21a
+      internalID: 578328504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_5
+      name: TreeLevel1_idle_5
       rect:
         serializedVersion: 2
         x: 320
@@ -224,14 +224,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fe8fffe5ef67dc42b8f537ef5878596
-      internalID: -1427108008
+      spriteID: ac13f2d472713594fab5f94bc69af585
+      internalID: -300099878
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_6
+      name: TreeLevel1_idle_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af57641d273ce964bb492d357a0d70c6
+      internalID: 382324248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreeLevel1_idle_7
       rect:
         serializedVersion: 2
         x: 0
@@ -245,14 +266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e22fd132cdbb894f8a80fdaaf5731e3
-      internalID: -1073462127
+      spriteID: f0328d2db97dd8445ae4d9eeded16ff2
+      internalID: -1247927084
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_7
+      name: TreeLevel1_idle_8
       rect:
         serializedVersion: 2
         x: 64
@@ -266,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a171ea297de58e7408e6ab584c8558eb
-      internalID: -1052465015
+      spriteID: 017a64d3174cf104a99a06bb854cf4db
+      internalID: 1335753235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_8
+      name: TreeLevel1_idle_9
       rect:
         serializedVersion: 2
         x: 128
@@ -287,14 +308,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5225bec5a73883543b4fac53cbfe8e1c
-      internalID: -781094976
+      spriteID: a906178f5497e0a45a6a9f83968d5e88
+      internalID: -1518433441
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_9
+      name: TreeLevel1_idle_10
       rect:
         serializedVersion: 2
         x: 192
@@ -308,14 +329,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2589bf2acaef00640bcf383a0b32a336
-      internalID: -957024042
+      spriteID: e3ecc9406b40a6745bc6bee9dacb5bea
+      internalID: -683067252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_10
+      name: TreeLevel1_idle_11
       rect:
         serializedVersion: 2
         x: 256
@@ -329,14 +350,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a18d9afbf6740b24fb99473b486c5b08
-      internalID: 1126399082
+      spriteID: 50d976afc0bc54147b9b53dd13509452
+      internalID: 1327941623
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_11
+      name: TreeLevel1_idle_12
       rect:
         serializedVersion: 2
         x: 320
@@ -350,14 +371,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4133a630f535ba4681e9ed5c1db38ca
-      internalID: -12825427
+      spriteID: 6d4545f02e2666643b933f4c196839e7
+      internalID: 1601076642
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_12
+      name: TreeLevel1_idle_13
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 219acb44d9592ff4384304a6733268ab
+      internalID: -508922273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreeLevel1_idle_14
       rect:
         serializedVersion: 2
         x: 0
@@ -371,14 +413,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e019b7d5b352e494095c6b406d5d17a4
-      internalID: 789450163
+      spriteID: 76afa8c3d0b25a642941f97e41f222a3
+      internalID: 1484369320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_13
+      name: TreeLevel1_idle_15
       rect:
         serializedVersion: 2
         x: 64
@@ -392,14 +434,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e511de2a47aca14385e231659acdbb5
-      internalID: -219319757
+      spriteID: f757ed10f0fda32448bfb41e04f27e27
+      internalID: -1341765144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_14
+      name: TreeLevel1_idle_16
       rect:
         serializedVersion: 2
         x: 128
@@ -413,14 +455,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e48cd71e9b402d742a6d835d499e9cd6
-      internalID: -987659591
+      spriteID: 5b14a2c664be70c478f0e5b4821ebfd0
+      internalID: 1844718132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_15
+      name: TreeLevel1_idle_17
       rect:
         serializedVersion: 2
         x: 192
@@ -434,14 +476,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a79f060e69f7aa4b9c2f85e6727e63c
-      internalID: 1818016553
+      spriteID: 808809568650b9a4d9d59669e9552a1c
+      internalID: 886114023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_16
+      name: TreeLevel1_idle_18
       rect:
         serializedVersion: 2
         x: 256
@@ -455,14 +497,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f049215a862d8f46a3b496eb9e78fbc
-      internalID: 430004331
+      spriteID: a4c0c9bd5fd875143804d13262d1b7fb
+      internalID: -1188077810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_17
+      name: TreeLevel1_idle_19
       rect:
         serializedVersion: 2
         x: 320
@@ -476,14 +518,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e87f7a7e2c2f74e4883e5d6b6c839a2e
-      internalID: -1772745414
+      spriteID: 0adecbe72a9990e4192e51bd0e4125f2
+      internalID: 472386799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_18
+      name: TreeLevel1_idle_20
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5226e665423d8634687f3fa58d15bb6d
+      internalID: 1326746755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreeLevel1_idle_21
       rect:
         serializedVersion: 2
         x: 0
@@ -497,14 +560,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 623f448c30b57a64a96bb395d6274647
-      internalID: -560068070
+      spriteID: 4cfcec37c197a774f97bf2e87b2571c3
+      internalID: -1745534628
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_19
+      name: TreeLevel1_idle_22
       rect:
         serializedVersion: 2
         x: 64
@@ -518,14 +581,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98edb58603360da4cb539f5ae634d3d1
-      internalID: 1953416567
+      spriteID: 46d6b16f1dd909f4589480add79a16ef
+      internalID: -1627426743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_20
+      name: TreeLevel1_idle_23
       rect:
         serializedVersion: 2
         x: 128
@@ -539,14 +602,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5bdd08fc551a6c448f8e4dee238256b
-      internalID: -2097622172
+      spriteID: a9d4403dc0709d440a390258cc70510d
+      internalID: -1008098206
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_21
+      name: TreeLevel1_idle_24
       rect:
         serializedVersion: 2
         x: 192
@@ -560,14 +623,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc770c23d377cea41a47a97d6af26ba7
-      internalID: -1309757443
+      spriteID: 9e3b1a744df6e884c960f903de98d0c5
+      internalID: 1059119152
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_22
+      name: TreeLevel1_idle_25
       rect:
         serializedVersion: 2
         x: 256
@@ -581,14 +644,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d19aad213ec93f4a9dd06b4c9f217bd
-      internalID: 1072734778
+      spriteID: 5ebbadfc2241b924ab427874763670c1
+      internalID: -54888034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_23
+      name: TreeLevel1_idle_26
       rect:
         serializedVersion: 2
         x: 320
@@ -602,14 +665,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7d209050c029dd48a9b3c214b805ed5
-      internalID: 1005573035
+      spriteID: 2e714828ba6ae1c4e8175f3f1bcf18cf
+      internalID: 462634310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_24
+      name: TreeLevel1_idle_27
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 577357c4bb9c37e4491e8201de7a1616
+      internalID: -1818416845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreeLevel1_idle_28
       rect:
         serializedVersion: 2
         x: 0
@@ -623,14 +707,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 338c7a06f8ef1c2479a68aaa09ec1250
-      internalID: 1148781683
+      spriteID: 2f6a35b33c59db14f85d6a025f26ee90
+      internalID: 1226654279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_25
+      name: TreeLevel1_idle_29
       rect:
         serializedVersion: 2
         x: 64
@@ -644,14 +728,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e174e191819bcc4a956cf968a9f612e
-      internalID: -1741766164
+      spriteID: e742f691d9a6fd14ea47864c5af35e74
+      internalID: 1899806072
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_26
+      name: TreeLevel1_idle_30
       rect:
         serializedVersion: 2
         x: 128
@@ -665,14 +749,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23c2517cd91e8a340944eb5ff786f177
-      internalID: -467511808
+      spriteID: 741b07635fcde744ba882921edf2bd13
+      internalID: 584771271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_27
+      name: TreeLevel1_idle_31
       rect:
         serializedVersion: 2
         x: 192
@@ -686,14 +770,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6349eb6fb3732414cba4885311851774
-      internalID: -1030699960
+      spriteID: a7e6c4d0dd3201344bb4c6073c51982f
+      internalID: -1167463064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_28
+      name: TreeLevel1_idle_32
       rect:
         serializedVersion: 2
         x: 256
@@ -707,14 +791,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 677ab90612e49094aaa7cf8b2a42f0c8
-      internalID: -2122654457
+      spriteID: d642f2527d8f98d46a18f1da68b32c89
+      internalID: 1255581926
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree-all-lv1-Sheet 1_29
+      name: TreeLevel1_idle_33
       rect:
         serializedVersion: 2
         x: 320
@@ -728,8 +812,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee6c77040f65453489edacad17f0930c
-      internalID: 283427279
+      spriteID: 4fb73371e5f706e42aeb25ca770155a6
+      internalID: -209809049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreeLevel1_idle_34
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f0c9c1c203df7c40ada5f6f5a926cc8
+      internalID: -672965062
       vertices: []
       indices: 
       edges: []
@@ -745,36 +850,41 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tree-all-lv1-Sheet 1_0: -1007289601
-      tree-all-lv1-Sheet 1_1: 433032636
-      tree-all-lv1-Sheet 1_10: 1126399082
-      tree-all-lv1-Sheet 1_11: -12825427
-      tree-all-lv1-Sheet 1_12: 789450163
-      tree-all-lv1-Sheet 1_13: -219319757
-      tree-all-lv1-Sheet 1_14: -987659591
-      tree-all-lv1-Sheet 1_15: 1818016553
-      tree-all-lv1-Sheet 1_16: 430004331
-      tree-all-lv1-Sheet 1_17: -1772745414
-      tree-all-lv1-Sheet 1_18: -560068070
-      tree-all-lv1-Sheet 1_19: 1953416567
-      tree-all-lv1-Sheet 1_2: -1688959682
-      tree-all-lv1-Sheet 1_20: -2097622172
-      tree-all-lv1-Sheet 1_21: -1309757443
-      tree-all-lv1-Sheet 1_22: 1072734778
-      tree-all-lv1-Sheet 1_23: 1005573035
-      tree-all-lv1-Sheet 1_24: 1148781683
-      tree-all-lv1-Sheet 1_25: -1741766164
-      tree-all-lv1-Sheet 1_26: -467511808
-      tree-all-lv1-Sheet 1_27: -1030699960
-      tree-all-lv1-Sheet 1_28: -2122654457
-      tree-all-lv1-Sheet 1_29: 283427279
-      tree-all-lv1-Sheet 1_3: 1993659510
-      tree-all-lv1-Sheet 1_4: 571855041
-      tree-all-lv1-Sheet 1_5: -1427108008
-      tree-all-lv1-Sheet 1_6: -1073462127
-      tree-all-lv1-Sheet 1_7: -1052465015
-      tree-all-lv1-Sheet 1_8: -781094976
-      tree-all-lv1-Sheet 1_9: -957024042
+      TreeLevel1_idle_0: -2000108842
+      TreeLevel1_idle_1: 1003721438
+      TreeLevel1_idle_10: -683067252
+      TreeLevel1_idle_11: 1327941623
+      TreeLevel1_idle_12: 1601076642
+      TreeLevel1_idle_13: -508922273
+      TreeLevel1_idle_14: 1484369320
+      TreeLevel1_idle_15: -1341765144
+      TreeLevel1_idle_16: 1844718132
+      TreeLevel1_idle_17: 886114023
+      TreeLevel1_idle_18: -1188077810
+      TreeLevel1_idle_19: 472386799
+      TreeLevel1_idle_2: 548252505
+      TreeLevel1_idle_20: 1326746755
+      TreeLevel1_idle_21: -1745534628
+      TreeLevel1_idle_22: -1627426743
+      TreeLevel1_idle_23: -1008098206
+      TreeLevel1_idle_24: 1059119152
+      TreeLevel1_idle_25: -54888034
+      TreeLevel1_idle_26: 462634310
+      TreeLevel1_idle_27: -1818416845
+      TreeLevel1_idle_28: 1226654279
+      TreeLevel1_idle_29: 1899806072
+      TreeLevel1_idle_3: -1156869599
+      TreeLevel1_idle_30: 584771271
+      TreeLevel1_idle_31: -1167463064
+      TreeLevel1_idle_32: 1255581926
+      TreeLevel1_idle_33: -209809049
+      TreeLevel1_idle_34: -672965062
+      TreeLevel1_idle_4: 578328504
+      TreeLevel1_idle_5: -300099878
+      TreeLevel1_idle_6: 382324248
+      TreeLevel1_idle_7: -1247927084
+      TreeLevel1_idle_8: 1335753235
+      TreeLevel1_idle_9: -1518433441
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

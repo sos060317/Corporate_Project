@@ -993,7 +993,7 @@ GameObject:
   - component: {fileID: 6153249028278512573}
   - component: {fileID: 4465740853892227339}
   - component: {fileID: 4465740853892227343}
-  - component: {fileID: 4465740853892227351}
+  - component: {fileID: 2448012366278824789}
   m_Layer: 0
   m_Name: Fire ArrowTower
   m_TagString: Untagged
@@ -1008,10 +1008,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4465740853892227350}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.220001, y: -3.699997, z: -0.02842927}
-  m_LocalScale: {x: 1.8, y: 1.8, z: 1.8}
-  m_ConstrainProportionsScale: 1
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4465740853132805456}
   - {fileID: 4465740852948927371}
@@ -1063,12 +1063,12 @@ SpriteRenderer:
   m_SortingLayerID: 1093175155
   m_SortingLayer: 5
   m_SortingOrder: 10
-  m_Sprite: {fileID: 1055279663, guid: db67a079fda4a3e46a4a4c32a323c516, type: 3}
+  m_Sprite: {fileID: 1484369320, guid: 962d73b9eeadd2b46b62582172feaff2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.2068965, y: 2.2068965}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1122,7 +1122,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.15}
     oldSize: {x: 2.2068965, y: 2.2068965}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 2.2068965, y: 2.2068965}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1162,13 +1162,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowTemplate: {fileID: 11400000, guid: 7ff9544debe48214a9d2cc8f3751d44a, type: 2}
-  animation: {fileID: 4465740853892227351}
+  animation: {fileID: 0}
   Arrowlevel: 0
   Pos1: {fileID: 4465740853132805457}
   Pos2: {fileID: 4465740852948927372}
   Pos3: {fileID: 4465740853043822203}
   StartingCost: 120
---- !u!95 &4465740853892227351
+--- !u!95 &2448012366278824789
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -1178,7 +1178,7 @@ Animator:
   m_GameObject: {fileID: 4465740853892227350}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d3480d913ddfd614d8a5413c322d7a95, type: 2}
+  m_Controller: {fileID: 9100000, guid: 999a9366d224c6a46a6e02917ed45524, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
