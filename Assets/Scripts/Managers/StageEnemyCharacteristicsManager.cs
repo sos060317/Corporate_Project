@@ -66,7 +66,7 @@ public class StageEnemyCharacteristicsManager : MonoBehaviour
 
         // 패널 초기화
         chEnemyImage.sprite = ch.profileImage;
-        chEnemyName.text = ch.enemyName + " Characteristics";
+        chEnemyName.text = ch.enemyName + " 특성";
         chEnemyEffect.text = ch.changeStat;
 
         //StartCoroutine(ShowChWindow());

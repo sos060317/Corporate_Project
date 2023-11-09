@@ -17,13 +17,13 @@ public class TipSystem : MonoBehaviour
 
     public void NextTip()
     {
-        tipText.text = tipPrefabs[tipNumber].text;
-
         tipNumber++;
 
         if(tipNumber >= tipPrefabs.Length)
         {
             tipNumber = 0;
         }
+
+        tipText.text = tipPrefabs[tipNumber].text;
     }
 }

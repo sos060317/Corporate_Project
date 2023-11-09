@@ -225,7 +225,7 @@ public class GameManager : MonoBehaviour
     
     private void SetWaveText()
     {
-        waveText.text = curWave + " / " + curStageMaxWave;
+        waveText.text = curWave + "/" + curStageMaxWave;
     }
     
     private void EvolutionHealthBarUpdate()
