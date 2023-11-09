@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class FireArrow : MonoBehaviour
 {
+    public Animator NextArrow;
+
     private EnemyBase enemybase;
     private float attackPower;
 
     [HideInInspector] public FireArrowTower fireArrowTower;
     public ArrowTowerTemplate arrowTemplate;
     public UpgradeArrowTower ArrowUpgrade;
-    private int aLevel = 0;
+    private int arowLevel = 0;
 
 
     public AnimationCurve curve;
@@ -37,9 +39,16 @@ public class FireArrow : MonoBehaviour
 
     private void Update()
     {
-        aLevel = ArrowUpgrade.Arrowlevel;
+        arowLevel = fireArrowTower.alevel;
 
-        Damage = arrowTemplate.aweapon[aLevel].aDamage;
+        Damage = arrowTemplate.aweapon[arowLevel].aDamage;
+
+        Debug.Log(arowLevel);
+
+        if (arowLevel == 1)
+        {
+            NextArrow.SetBool("NextLevel1", true);
+        }
 
     }
 

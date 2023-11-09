@@ -273,6 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfc3fd8600275e84a986a79b92d54310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NextArrow: {fileID: 5114689813463296297}
   fireArrowTower: {fileID: 0}
   arrowTemplate: {fileID: 11400000, guid: 7ff9544debe48214a9d2cc8f3751d44a, type: 2}
   ArrowUpgrade: {fileID: 4465740853892227343, guid: 7c290c43461c1d04589cc990ea065c6d, type: 3}

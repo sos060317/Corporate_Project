@@ -5,7 +5,8 @@ using UnityEngine;
 public class UpgradeArrowTower : MonoBehaviour
 {
     public ArrowTowerTemplate arrowTemplate;
-    public Animator FireArrowAnim;
+    public Animator ArrowTowerAnim;
+
     //private GameManager playerGold;
 
     public int Arrowlevel = 0; // 아마? 만렙은 3?
@@ -38,6 +39,10 @@ public class UpgradeArrowTower : MonoBehaviour
 
     private void Update()
     {
+        if (Arrowlevel == 1)
+        {
+            ArrowTowerAnim.SetBool("LevelUp_2", true);
+        }
         // 레벨이 오를 때마다 Pos 오브젝트의 상태를 업데이트
         UpdatePosObjects();
     }

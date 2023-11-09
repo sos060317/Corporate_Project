@@ -1098,7 +1098,6 @@ MonoBehaviour:
   - {fileID: 4465740852948927372}
   - {fileID: 4465740853043822203}
   enemyTag: Enemy
-  detectionRadius: 7
   spawnInterval: 1.5
   enemyList: []
   isClicked: 0
@@ -1163,7 +1162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowTemplate: {fileID: 11400000, guid: 7ff9544debe48214a9d2cc8f3751d44a, type: 2}
-  FireArrowAnim: {fileID: 2448012366278824789}
+  ArrowTowerAnim: {fileID: 2448012366278824789}
+  ArrowShape: {fileID: 0}
   Arrowlevel: 0
   Pos1: {fileID: 4465740853132805457}
   Pos2: {fileID: 4465740852948927372}

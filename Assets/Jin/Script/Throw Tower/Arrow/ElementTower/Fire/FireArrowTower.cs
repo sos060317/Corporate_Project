@@ -13,7 +13,7 @@ public class FireArrowTower : MonoBehaviour
     public GameObject RoundObject;
     public ArrowTowerTemplate arrowTemplate;
     public UpgradeArrowTower sp;
-    private int alevel = 0;
+    public int alevel = 0;
 
     public GameObject arrowPrefab;
     public List<GameObject> spawnPositions;
