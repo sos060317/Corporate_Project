@@ -5,7 +5,7 @@ using UnityEngine;
 public class UpgradeArrowTower : MonoBehaviour
 {
     public ArrowTowerTemplate arrowTemplate;
-    public Animator animation;
+    public Animator FireArrowAnim;
     //private GameManager playerGold;
 
     public int Arrowlevel = 0; // 아마? 만렙은 3?
@@ -41,14 +41,14 @@ public class UpgradeArrowTower : MonoBehaviour
         // 레벨이 오를 때마다 Pos 오브젝트의 상태를 업데이트
         UpdatePosObjects();
 
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            animation.SetBool("ItShot", true);
-        }
-        else
-        {
-            animation.SetBool("ItShot", false);
-        }
+        //if (Input.GetKeyDown(KeyCode.T))
+        //{
+        //    FireArrowAnim.SetBool("ItShot", true);
+        //}
+        //else
+        //{
+        //    FireArrowAnim.SetBool("ItShot", false);
+        //}
     }
 
     public void DestroyTower()

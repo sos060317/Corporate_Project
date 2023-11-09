@@ -1086,6 +1086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54504771ceacba0469a3a2c79958c864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FireArrowAnim: {fileID: 2448012366278824789}
   ArrowRound: {fileID: 4465740853745890376}
   fireArrowTowerUI: {fileID: 1599769695180238873}
   RoundObject: {fileID: 4465740853007258600}
@@ -1162,7 +1163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowTemplate: {fileID: 11400000, guid: 7ff9544debe48214a9d2cc8f3751d44a, type: 2}
-  animation: {fileID: 2448012366278824789}
+  FireArrowAnim: {fileID: 2448012366278824789}
   Arrowlevel: 0
   Pos1: {fileID: 4465740853132805457}
   Pos2: {fileID: 4465740852948927372}
@@ -1178,7 +1179,7 @@ Animator:
   m_GameObject: {fileID: 4465740853892227350}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 999a9366d224c6a46a6e02917ed45524, type: 2}
+  m_Controller: {fileID: 9100000, guid: d3480d913ddfd614d8a5413c322d7a95, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

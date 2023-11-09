@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class FireArrowTower : MonoBehaviour
 {
+    public Animator FireArrowAnim;
+
     public AroRoundCheck ArrowRound;
     public FireArrowWindow fireArrowTowerUI;
 
@@ -44,7 +46,6 @@ public class FireArrowTower : MonoBehaviour
     private void Update()
     {
 
-        //Debug.Log(enemyList.Count); ?? ?? ???
 
         alevel = sp.Arrowlevel;
 
@@ -72,12 +73,13 @@ public class FireArrowTower : MonoBehaviour
             {
                 timeSinceLastSpawn = 0f;
                 UpdateFlowingObjectPosition();
-                SpawnArrowsAtPositions();
+                FireArrowAnim.SetBool("ItShot", true);
+                //SpawnArrowsAtPositions();
             }
         }
         else
         {
-
+            FireArrowAnim.SetBool("ItShot", false);
         }
 
         if (fireArrowTowerUI.buttonDown == true)
@@ -148,7 +150,6 @@ public class FireArrowTower : MonoBehaviour
     {
         if (enemyList.Count > 0)
         {
-
             GameObject firstEnemy = enemyList[0];
             Vector2 targetPosition = firstEnemy.transform.position;
         }
