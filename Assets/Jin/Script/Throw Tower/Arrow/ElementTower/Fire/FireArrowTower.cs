@@ -73,13 +73,14 @@ public class FireArrowTower : MonoBehaviour
             {
                 timeSinceLastSpawn = 0f;
                 UpdateFlowingObjectPosition();
-                FireArrowAnim.SetBool("ItShot", true);
-                //SpawnArrowsAtPositions();
+                //FireArrowAnim.SetBool("ItShot", true);
+                StartCoroutine(AttackAnimation());
+                Debug.Log("»Æ¿Œ");
             }
         }
         else
         {
-            FireArrowAnim.SetBool("ItShot", false);
+            
         }
 
         if (fireArrowTowerUI.buttonDown == true)
@@ -125,6 +126,13 @@ public class FireArrowTower : MonoBehaviour
         }
     }
 
+    private IEnumerator AttackAnimation()
+    {
+        FireArrowAnim.SetBool("ItShot", true);
+        yield return new WaitForSeconds(0.1f);
+        FireArrowAnim.SetBool("ItShot", false);
+    }
+
     private IEnumerator DelayTm()
     {
         yield return new WaitForSeconds(0.2f);
@@ -152,6 +160,10 @@ public class FireArrowTower : MonoBehaviour
         {
             GameObject firstEnemy = enemyList[0];
             Vector2 targetPosition = firstEnemy.transform.position;
+        }
+        else
+        {
+            FireArrowAnim.SetBool("ItShot", false);
         }
     }
 

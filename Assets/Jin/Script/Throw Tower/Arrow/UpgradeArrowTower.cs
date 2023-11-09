@@ -40,15 +40,6 @@ public class UpgradeArrowTower : MonoBehaviour
     {
         // 레벨이 오를 때마다 Pos 오브젝트의 상태를 업데이트
         UpdatePosObjects();
-
-        //if (Input.GetKeyDown(KeyCode.T))
-        //{
-        //    FireArrowAnim.SetBool("ItShot", true);
-        //}
-        //else
-        //{
-        //    FireArrowAnim.SetBool("ItShot", false);
-        //}
     }
 
     public void DestroyTower()
