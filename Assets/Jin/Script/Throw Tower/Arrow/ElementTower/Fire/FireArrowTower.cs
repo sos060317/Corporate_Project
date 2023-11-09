@@ -18,7 +18,7 @@ public class FireArrowTower : MonoBehaviour
     public GameObject arrowPrefab;
     public List<GameObject> spawnPositions;
     public string enemyTag = "Enemy";
-    public float detectionRadius = 5.0f;
+    private float detectionRadius;
     public float spawnInterval = 1.5f;
 
     [SerializeField]
@@ -52,7 +52,7 @@ public class FireArrowTower : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(ArrowRound.transform.position, ArrowRound.AroRound);
 
         float radius = arrowTemplate.aweapon[alevel].Aradius;
-        RoundObject.transform.localScale = new Vector3(radius, radius, radius);
+        RoundObject.transform.localScale = new Vector3(radius * 2, radius * 2, radius * 2);
 
         foreach (Collider2D collider in colliders)
         {

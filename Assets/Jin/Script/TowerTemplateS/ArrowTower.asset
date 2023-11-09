@@ -17,20 +17,20 @@ MonoBehaviour:
   - PosLevel: 1
     aDamage: 25
     Acost: 120
-    Aradius: 8
+    Aradius: 7
     ResellCoset: 50
   - PosLevel: 2
     aDamage: 25
     Acost: 150
-    Aradius: 8
+    Aradius: 7
     ResellCoset: 60
   - PosLevel: 3
     aDamage: 25
     Acost: 200
-    Aradius: 8
+    Aradius: 7
     ResellCoset: 75
   - PosLevel: 4
     aDamage: 25
     Acost: 320
-    Aradius: 10
+    Aradius: 9
     ResellCoset: 100
