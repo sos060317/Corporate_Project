@@ -5,13 +5,15 @@ using UnityEngine;
 
 public class PoisonArrowTower : MonoBehaviour
 {
+    public Animator PoisonArrowAnim;
+
     public AroRoundCheck ArrowRound;
     public PisnArrowWindow poisonArrowTowerUI;
 
     public GameObject RoundObject;
     public ArrowTowerTemplate arrowTemplate;
     public UpgradeArrowTower sp;
-    private int alevel = 0;
+    public int alevel = 0;
 
     public GameObject arrowPrefab;
     public List<GameObject> spawnPositions;
@@ -51,7 +53,7 @@ public class PoisonArrowTower : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(ArrowRound.transform.position, ArrowRound.AroRound);
 
         float radius = arrowTemplate.aweapon[alevel].Aradius;
-        RoundObject.transform.localScale = new Vector3(radius, radius, radius);
+        RoundObject.transform.localScale = new Vector3(radius * 2, radius * 2, radius * 2);
 
         foreach (Collider2D collider in colliders)
         {
@@ -72,7 +74,9 @@ public class PoisonArrowTower : MonoBehaviour
             {
                 timeSinceLastSpawn = 0f;
                 UpdateFlowingObjectPosition();
-                SpawnArrowsAtPositions();
+                //SpawnArrowsAtPositions();
+
+                StartCoroutine(AttackAnimation());
             }
         }
         else
@@ -121,6 +125,13 @@ public class PoisonArrowTower : MonoBehaviour
         {
             detectionRadius = 9f;
         }
+    }
+
+    private IEnumerator AttackAnimation()
+    {
+        PoisonArrowAnim.SetBool("ItShot", true);
+        yield return new WaitForSeconds(0.1f);
+        PoisonArrowAnim.SetBool("ItShot", false);
     }
 
     private IEnumerator DelayTm()

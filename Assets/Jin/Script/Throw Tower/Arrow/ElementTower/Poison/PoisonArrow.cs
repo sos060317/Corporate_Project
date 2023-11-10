@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class PoisonArrow : MonoBehaviour
 {
+    public Animator NextArrow;
+
     private EnemyBase enemybase;
     private float attackPower;
 
     [HideInInspector] public PoisonArrowTower poisonArrowTower;
     public ArrowTowerTemplate arrowTemplate;
     public UpgradeArrowTower ArrowUpgrade;
-    private int aLevel = 0;
+    private int arrowLevel = 0;
 
 
     public AnimationCurve curve;
@@ -37,14 +39,14 @@ public class PoisonArrow : MonoBehaviour
 
     private void Update()
     {
-        aLevel = ArrowUpgrade.Arrowlevel;
+        arrowLevel = poisonArrowTower.alevel;
 
-        if (aLevel == 3)
+        Damage = arrowTemplate.aweapon[arrowLevel].aDamage;
+
+        if (arrowLevel >= 1)
         {
-            Damage = arrowTemplate.aweapon[aLevel].aDamage;
+            NextArrow.SetBool("NexrLevel1", true);
         }
-
-
     }
 
     private void SetEnemyPositionAsFinish()

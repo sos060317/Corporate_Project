@@ -362,7 +362,6 @@ public abstract class EnemyBase : MonoBehaviour
         }
         else if (curHealth <= 0)
         {
-            Debug.Log("응애");
             StopCoroutine(PoisoingCoroutine);
             PoisoingNow = false;
             PoisoingCoroutine = null;

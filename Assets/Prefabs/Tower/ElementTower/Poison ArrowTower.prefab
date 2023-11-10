@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 762447630167398888}
   - component: {fileID: 234689298849204875}
   - component: {fileID: 234689298849204874}
-  - component: {fileID: 234689298849204887}
+  - component: {fileID: 7056176372265326544}
   m_Layer: 0
   m_Name: Poison ArrowTower
   m_TagString: Untagged
@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3539289c91d2fa47b9a7081f7b79b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PoisonArrowAnim: {fileID: 7056176372265326544}
   ArrowRound: {fileID: 234689299149804565}
   poisonArrowTowerUI: {fileID: 7659436514974313445}
   RoundObject: {fileID: 234689300227573375}
@@ -235,7 +236,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.15}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 2.2068965, y: 2.2068965}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -276,13 +277,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowTemplate: {fileID: 11400000, guid: 7ff9544debe48214a9d2cc8f3751d44a, type: 2}
-  animation: {fileID: 0}
+  ArrowTowerAnim: {fileID: 7056176372265326544}
   Arrowlevel: 0
   Pos1: {fileID: 234689300911817165}
   Pos2: {fileID: 234689299558626554}
   Pos3: {fileID: 234689300561448470}
   StartingCost: 120
---- !u!95 &234689298849204887
+--- !u!95 &7056176372265326544
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
