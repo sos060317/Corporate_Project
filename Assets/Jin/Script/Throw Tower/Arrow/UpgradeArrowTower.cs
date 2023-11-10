@@ -47,10 +47,7 @@ public class UpgradeArrowTower : MonoBehaviour
         UpdatePosObjects();
     }
 
-    public void DestroyTower()
-    {
-        Destroy(gameObject);
-    }
+    
 
     public void UpgradeTower()
     {
@@ -74,6 +71,12 @@ public class UpgradeArrowTower : MonoBehaviour
         {
             Debug.Log("최대 업그레이드 상태 입니다.");
         }
+    }
+
+    public void DestroyTower()
+    {
+        Destroy(gameObject);
+        GameManager.Instance.GetGold(arrowTemplate.aweapon[Arrowlevel].ResellCoset);
     }
 
     private void UpdatePosObjects()
