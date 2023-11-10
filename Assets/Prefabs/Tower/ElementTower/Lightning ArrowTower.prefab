@@ -985,6 +985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f62b84f6c7bf2a45951879e222efb09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LightningArrowAnim: {fileID: 4999052530675375389}
   ArrowRound: {fileID: 4999052530105991131}
   LightningArrowTowerUI: {fileID: 6713306646475916329}
   RoundObject: {fileID: 4999052530350736165}
@@ -1061,7 +1062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowTemplate: {fileID: 11400000, guid: 7ff9544debe48214a9d2cc8f3751d44a, type: 2}
-  animation: {fileID: 0}
+  ArrowTowerAnim: {fileID: 4999052530675375389}
   Arrowlevel: 0
   Pos1: {fileID: 4999052530101351137}
   Pos2: {fileID: 4999052529108729351}

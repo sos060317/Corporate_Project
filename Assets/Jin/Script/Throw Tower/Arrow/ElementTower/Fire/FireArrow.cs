@@ -45,7 +45,7 @@ public class FireArrow : MonoBehaviour
 
         Debug.Log(arowLevel);
 
-        if (arowLevel == 1)
+        if (arowLevel >= 1)
         {
             NextArrow.SetBool("NextLevel1", true);
         }

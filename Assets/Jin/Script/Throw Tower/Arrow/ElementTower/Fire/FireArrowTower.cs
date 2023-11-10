@@ -75,7 +75,7 @@ public class FireArrowTower : MonoBehaviour
                 UpdateFlowingObjectPosition();
                 //FireArrowAnim.SetBool("ItShot", true);
                 StartCoroutine(AttackAnimation());
-                Debug.Log("확인");
+                //Debug.Log("확인");
             }
         }
         else

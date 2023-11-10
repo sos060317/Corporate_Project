@@ -43,9 +43,9 @@ public class IceArrow : MonoBehaviour
 
         Damage = arrowTemplate.aweapon[arrowLevel].aDamage;
 
-        Debug.Log(arrowLevel);
+        //Debug.Log(arrowLevel);
 
-        if (arrowLevel == 1)
+        if (arrowLevel >= 1)
         {
             NextArrow.SetBool("NexrLevel1", true);
         }
