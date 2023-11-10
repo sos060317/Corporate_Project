@@ -3586,7 +3586,6 @@ GameObject:
   - component: {fileID: 264602405}
   - component: {fileID: 264602404}
   - component: {fileID: 264602403}
-  - component: {fileID: 264602406}
   m_Layer: 5
   m_Name: Ice Arrow Tower
   m_TagString: Untagged
@@ -3650,7 +3649,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2009945336, guid: db67a079fda4a3e46a4a4c32a323c516, type: 3}
+  m_Sprite: {fileID: -2000108842, guid: 962d73b9eeadd2b46b62582172feaff2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3668,27 +3667,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 264602401}
   m_CullTransparentMesh: 1
---- !u!95 &264602406
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 264602401}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bf5b5d2e9961da342ba742ac4bcefca6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &274112941
 GameObject:
   m_ObjectHideFlags: 0
@@ -12935,7 +12913,6 @@ GameObject:
   - component: {fileID: 561400745}
   - component: {fileID: 561400744}
   - component: {fileID: 561400743}
-  - component: {fileID: 561400746}
   m_Layer: 5
   m_Name: Lighting Arrow Tower
   m_TagString: Untagged
@@ -12999,7 +12976,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2015936088, guid: db67a079fda4a3e46a4a4c32a323c516, type: 3}
+  m_Sprite: {fileID: 1226654279, guid: 962d73b9eeadd2b46b62582172feaff2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13017,27 +12994,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561400741}
   m_CullTransparentMesh: 1
---- !u!95 &561400746
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 561400741}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38d6ee444203b634a850c5ebe60524e7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &562986858 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3347543616739314970, guid: cfcdd90acd280dc4bb804a4d1d482156, type: 3}
@@ -39857,7 +39813,6 @@ GameObject:
   - component: {fileID: 1164929263}
   - component: {fileID: 1164929262}
   - component: {fileID: 1164929261}
-  - component: {fileID: 1164929264}
   m_Layer: 5
   m_Name: Poison Arrow Tower
   m_TagString: Untagged
@@ -39921,7 +39876,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1975047198, guid: db67a079fda4a3e46a4a4c32a323c516, type: 3}
+  m_Sprite: {fileID: -1247927084, guid: 962d73b9eeadd2b46b62582172feaff2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -39939,27 +39894,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164929259}
   m_CullTransparentMesh: 1
---- !u!95 &1164929264
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1164929259}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4420f9a755feeeb4ca7f9eced17b62a0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1181703507
 GameObject:
   m_ObjectHideFlags: 0
@@ -48869,7 +48803,6 @@ GameObject:
   - component: {fileID: 1455292881}
   - component: {fileID: 1455292880}
   - component: {fileID: 1455292879}
-  - component: {fileID: 1455292882}
   m_Layer: 5
   m_Name: Fire Arrow Tower
   m_TagString: Untagged
@@ -48933,7 +48866,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1055279663, guid: db67a079fda4a3e46a4a4c32a323c516, type: 3}
+  m_Sprite: {fileID: 1484369320, guid: 962d73b9eeadd2b46b62582172feaff2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -48951,27 +48884,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1455292877}
   m_CullTransparentMesh: 1
---- !u!95 &1455292882
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1455292877}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e99a372ebbfceac458f5b434de527e69, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1457975773
 GameObject:
   m_ObjectHideFlags: 0

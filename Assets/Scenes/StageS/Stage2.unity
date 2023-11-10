@@ -2221,7 +2221,6 @@ GameObject:
   - component: {fileID: 194968244}
   - component: {fileID: 194968243}
   - component: {fileID: 194968242}
-  - component: {fileID: 194968241}
   m_Layer: 5
   m_Name: Ice Arrow Tower
   m_TagString: Untagged
@@ -2251,27 +2250,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &194968241
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194968239}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bf5b5d2e9961da342ba742ac4bcefca6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &194968242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2306,7 +2284,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2009945336, guid: db67a079fda4a3e46a4a4c32a323c516, type: 3}
+  m_Sprite: {fileID: -2000108842, guid: 962d73b9eeadd2b46b62582172feaff2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11758,7 +11736,6 @@ GameObject:
   - component: {fileID: 552721813}
   - component: {fileID: 552721812}
   - component: {fileID: 552721811}
-  - component: {fileID: 552721810}
   m_Layer: 5
   m_Name: Poison Arrow Tower
   m_TagString: Untagged
@@ -11788,27 +11765,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &552721810
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 552721808}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4420f9a755feeeb4ca7f9eced17b62a0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &552721811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11843,7 +11799,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1975047198, guid: db67a079fda4a3e46a4a4c32a323c516, type: 3}
+  m_Sprite: {fileID: -1247927084, guid: 962d73b9eeadd2b46b62582172feaff2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -24900,7 +24856,6 @@ GameObject:
   - component: {fileID: 1144377590}
   - component: {fileID: 1144377589}
   - component: {fileID: 1144377588}
-  - component: {fileID: 1144377587}
   m_Layer: 5
   m_Name: Lighting Arrow Tower
   m_TagString: Untagged
@@ -24930,27 +24885,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &1144377587
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1144377585}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38d6ee444203b634a850c5ebe60524e7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1144377588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24985,7 +24919,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2015936088, guid: db67a079fda4a3e46a4a4c32a323c516, type: 3}
+  m_Sprite: {fileID: 1226654279, guid: 962d73b9eeadd2b46b62582172feaff2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -27020,7 +26954,6 @@ GameObject:
   - component: {fileID: 1348407676}
   - component: {fileID: 1348407675}
   - component: {fileID: 1348407674}
-  - component: {fileID: 1348407673}
   m_Layer: 5
   m_Name: Fire Arrow Tower
   m_TagString: Untagged
@@ -27050,27 +26983,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &1348407673
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1348407671}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e99a372ebbfceac458f5b434de527e69, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1348407674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27105,7 +27017,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1055279663, guid: db67a079fda4a3e46a4a4c32a323c516, type: 3}
+  m_Sprite: {fileID: 1484369320, guid: 962d73b9eeadd2b46b62582172feaff2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
