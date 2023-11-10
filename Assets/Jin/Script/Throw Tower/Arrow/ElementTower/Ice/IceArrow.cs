@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class IceArrow : MonoBehaviour
 {
+    public Animator NextArrow;
+
     private EnemyBase enemybase;
     private float attackPower;
 
     [HideInInspector] public IceArrowTower IceArrowTower;
     public ArrowTowerTemplate arrowTemplate;
     public UpgradeArrowTower ArrowUpgrade;
-    private int aLevel = 0;
+    private int arrowLevel = 0;
 
 
     public AnimationCurve curve;
@@ -19,7 +21,7 @@ public class IceArrow : MonoBehaviour
 
     public string damageTag = "Enemy"; // 데미지를 줄 옵젝
     public float damageAreaRadius = 2.0f; // 공격 범위
-    public float Damage = 25;
+    private float Damage;
 
     private Vector2 finish; // 종료 위치
     private bool reachedEnd = false;
@@ -37,11 +39,15 @@ public class IceArrow : MonoBehaviour
 
     private void Update()
     {
-        aLevel = ArrowUpgrade.Arrowlevel;
+        arrowLevel = IceArrowTower.alevel;
 
-        if (aLevel == 3)
+        Damage = arrowTemplate.aweapon[arrowLevel].aDamage;
+
+        Debug.Log(arrowLevel);
+
+        if (arrowLevel == 1)
         {
-            Damage = arrowTemplate.aweapon[aLevel].aDamage;
+            NextArrow.SetBool("NexrLevel1", true);
         }
 
 

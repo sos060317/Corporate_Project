@@ -32,5 +32,5 @@ MonoBehaviour:
   - PosLevel: 4
     aDamage: 25
     Acost: 320
-    Aradius: 9
+    Aradius: 7
     ResellCoset: 100

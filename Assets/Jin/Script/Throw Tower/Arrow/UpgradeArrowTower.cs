@@ -41,7 +41,7 @@ public class UpgradeArrowTower : MonoBehaviour
     {
         if (Arrowlevel == 1)
         {
-            ArrowTowerAnim.SetBool("LevelUp_2", true);
+            ArrowTowerAnim.SetBool("LevelUp_1", true);
         }
         // 레벨이 오를 때마다 Pos 오브젝트의 상태를 업데이트
         UpdatePosObjects();
