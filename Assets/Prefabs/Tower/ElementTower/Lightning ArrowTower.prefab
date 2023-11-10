@@ -867,8 +867,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ArrowWindow, Assembly-CSharp
+      - m_Target: {fileID: 6713306646475916329}
+        m_TargetAssemblyTypeName: LightningArrowWindow, Assembly-CSharp
         m_MethodName: HideTowerWindowButton
         m_Mode: 1
         m_Arguments:
@@ -991,6 +991,7 @@ MonoBehaviour:
   RoundObject: {fileID: 4999052530350736165}
   arrowTemplate: {fileID: 11400000, guid: 7ff9544debe48214a9d2cc8f3751d44a, type: 2}
   sp: {fileID: 4999052530675375360}
+  alevel: 0
   arrowPrefab: {fileID: 1073867226919816586, guid: 323a8d08895f5254e9bf2802a2adb294, type: 3}
   spawnPositions:
   - {fileID: 4999052530101351137}

@@ -121,8 +121,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ArrowWindow, Assembly-CSharp
+      - m_Target: {fileID: 5619637106870321736}
+        m_TargetAssemblyTypeName: IceArrowWindow, Assembly-CSharp
         m_MethodName: HideTowerWindowButton
         m_Mode: 1
         m_Arguments:
@@ -1092,6 +1092,7 @@ MonoBehaviour:
   RoundObject: {fileID: 3639177884234791707}
   arrowTemplate: {fileID: 11400000, guid: 7ff9544debe48214a9d2cc8f3751d44a, type: 2}
   sp: {fileID: 3639177885408315513}
+  alevel: 0
   arrowPrefab: {fileID: 4661693665546546784, guid: 6ef5b302b24bc30418fed61494dc7894, type: 3}
   spawnPositions:
   - {fileID: 3639177884728418807}
