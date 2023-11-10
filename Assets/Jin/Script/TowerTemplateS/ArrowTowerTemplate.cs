@@ -16,6 +16,12 @@ public class ArrowTowerTemplate : ScriptableObject
         public int Acost;
         public float Aradius;
         public int ResellCoset;
+        public float AttackSpeed;
+
+        [Space(10)]
+        [Header("บา")]
+        public float dotDamage;
+        public float dotTime;
     }
 
 }

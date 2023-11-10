@@ -19,7 +19,6 @@ public class LightningArrowTower : MonoBehaviour
     public List<GameObject> spawnPositions;
     public string enemyTag = "Enemy";
     public float detectionRadius = 5.0f;
-    public float spawnInterval = 1.5f;
 
     [SerializeField]
     private List<GameObject> enemyList = new List<GameObject>();
@@ -70,7 +69,7 @@ public class LightningArrowTower : MonoBehaviour
         if (nowShot)
         {
             timeSinceLastSpawn += Time.deltaTime;
-            if (timeSinceLastSpawn >= spawnInterval)
+            if (timeSinceLastSpawn >= arrowTemplate.aweapon[alevel].AttackSpeed)
             {
                 timeSinceLastSpawn = 0f;
                 UpdateFlowingObjectPosition();

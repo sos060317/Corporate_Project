@@ -19,7 +19,6 @@ public class FireArrowTower : MonoBehaviour
     public List<GameObject> spawnPositions;
     public string enemyTag = "Enemy";
     private float detectionRadius;
-    public float spawnInterval = 1.5f;
 
     [SerializeField]
     private List<GameObject> enemyList = new List<GameObject>();
@@ -69,7 +68,7 @@ public class FireArrowTower : MonoBehaviour
         if (nowShot)
         {
             timeSinceLastSpawn += Time.deltaTime;
-            if (timeSinceLastSpawn >= spawnInterval)
+            if (timeSinceLastSpawn >= arrowTemplate.aweapon[alevel].AttackSpeed)
             {
                 timeSinceLastSpawn = 0f;
                 UpdateFlowingObjectPosition();

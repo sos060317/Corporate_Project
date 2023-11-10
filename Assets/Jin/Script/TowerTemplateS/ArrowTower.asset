@@ -19,18 +19,30 @@ MonoBehaviour:
     Acost: 120
     Aradius: 7
     ResellCoset: 50
+    AttackSpeed: 1.5
+    dotDamage: 3
+    dotTime: 3
   - PosLevel: 2
     aDamage: 25
     Acost: 150
     Aradius: 7
     ResellCoset: 60
+    AttackSpeed: 1.5
+    dotDamage: 3
+    dotTime: 3
   - PosLevel: 3
     aDamage: 25
     Acost: 200
     Aradius: 7
     ResellCoset: 75
+    AttackSpeed: 1.5
+    dotDamage: 3
+    dotTime: 3
   - PosLevel: 4
     aDamage: 25
     Acost: 320
     Aradius: 7
     ResellCoset: 100
+    AttackSpeed: 1.5
+    dotDamage: 3
+    dotTime: 3

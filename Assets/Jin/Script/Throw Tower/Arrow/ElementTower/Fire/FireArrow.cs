@@ -90,7 +90,7 @@ public class FireArrow : MonoBehaviour
                 if (collider.CompareTag(damageTag))
                 {
                     collider.GetComponent<EnemyBase>().OnDamage(attackPower, Damage);  // 물리? , 마법? 모르것다
-                    collider.GetComponent<EnemyBase>().FireEnemy(3, 3, 5); // 몇초, 몇뎀, 몇틱
+                    collider.GetComponent<EnemyBase>().FireEnemy(arrowTemplate.aweapon[arowLevel].dotTime, arrowTemplate.aweapon[arowLevel].dotTime, 5); // 몇초, 몇뎀, 몇틱
                     Destroy(gameObject);
                     break;
                 }
