@@ -33268,6 +33268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 690209893}
   - component: {fileID: 690209894}
+  - component: {fileID: 690209895}
   m_Layer: 5
   m_Name: SFXSilder
   m_TagString: Untagged
@@ -33350,6 +33351,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &690209895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690209892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f25cb5d058be3498c26ce1321c9389, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 690209894}
 --- !u!1 &698699115
 GameObject:
   m_ObjectHideFlags: 0
@@ -44763,8 +44777,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -21, y: 0}
-  m_SizeDelta: {x: 15, y: 15}
+  m_AnchoredPosition: {x: -22.3, y: 0}
+  m_SizeDelta: {x: 17, y: 17}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1088532439
 MonoBehaviour:
@@ -44786,7 +44800,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b49a1e39ddf8afd40aa831c53fdddf53, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2ae2f93d2af1dc244990488cb83aa61e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -45377,6 +45391,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1107427316}
   - component: {fileID: 1107427317}
+  - component: {fileID: 1107427318}
   m_Layer: 5
   m_Name: MusicSilder
   m_TagString: Untagged
@@ -45459,6 +45474,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1107427318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107427315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8ca01a9728c13b409bef7c3102d89ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 1107427317}
 --- !u!1 &1115050672
 GameObject:
   m_ObjectHideFlags: 0
@@ -45707,8 +45735,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -21, y: 0}
-  m_SizeDelta: {x: 15, y: 15}
+  m_AnchoredPosition: {x: -22.3, y: 0}
+  m_SizeDelta: {x: 17, y: 17}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1122960592
 MonoBehaviour:
@@ -45730,7 +45758,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a1c9747154871cc4bb97250c5e54adf2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f7f4f72ae2b8dc5458abe0892a16ce80, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
