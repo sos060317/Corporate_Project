@@ -15,7 +15,7 @@ MonoBehaviour:
   enemyName: "\uACE0\uC2B4\uB3C4\uCE58"
   enemyBaseHealth: 1
   enemyBaseMoveSpeed: 1
-  enemyBaseAttackRate: 10
+  enemyBaseAttackRate: 0.9
   enemyBaseAttackRange: 1
   defense: 1
   magicResistance: 1

@@ -212,8 +212,6 @@ public class AllyBase : MonoBehaviour
     // 애니메이션 이벤트에서 사용할 함수
     private void AttackEnd()
     {
-        Debug.Log("공격 끝");
-        
         attack = false;
     }
     

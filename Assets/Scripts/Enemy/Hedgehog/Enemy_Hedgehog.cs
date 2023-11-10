@@ -58,7 +58,8 @@ public class Enemy_Hedgehog : EnemyBase
 
     protected override void AttackUpdate()
     {
-        // 진화석 공격
+        #region 진화석 공격 로직
+
         if (isMoveEnd)
         {
             if (attackTimer >= attackRate && !isDie)
@@ -82,6 +83,8 @@ public class Enemy_Hedgehog : EnemyBase
             return;
         }
         
+        #endregion
+        
         if (!isAttacking || targetAlly == null)
         {
             return;
@@ -94,6 +97,8 @@ public class Enemy_Hedgehog : EnemyBase
             isTargeting = false;
             targetAlly = null;
         }
+
+        #region 일반 공격 로직
 
         if (attackTimer >= attackRate && !isDie)
         {
@@ -112,12 +117,16 @@ public class Enemy_Hedgehog : EnemyBase
                 // 원거리 공격
                 
                 anim.SetTrigger("Attack");
+                
+                Debug.Log("원거리 공격");
             }
             
             attackTimer = 0f;
 
             attack = true;
         }
+        
+        #endregion
 
         if (attack)
         {
@@ -125,6 +134,8 @@ public class Enemy_Hedgehog : EnemyBase
         }
         
         attackTimer += Time.deltaTime;
+        
+        Debug.Log(attackTimer);
     }
 
     private void ShotThorn()
@@ -136,6 +147,11 @@ public class Enemy_Hedgehog : EnemyBase
 
     public override void OnDamage(float attackPower, float spellPower)
     {
+        if (isDie)
+        {
+            return;
+        }
+        
         curHealth = 
             Mathf.Max(
                 curHealth - ((attackPower - (attackPower * (defense * 0.01f))) + 

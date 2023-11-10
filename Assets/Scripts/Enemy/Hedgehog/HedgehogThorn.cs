@@ -23,7 +23,7 @@ public class HedgehogThorn : MonoBehaviour
 
         while (timePassed < duration)
         {
-            if (Vector2.Distance(transform.position, ally.transform.position) <= 0.1f && timePassed > duration / 2)
+            if (Vector2.Distance(transform.position, ally.transform.position) <= 0.3f && timePassed > duration / 2)
             {
                 StopAllCoroutines();
                 ally.OnDamage(damage, 0);
