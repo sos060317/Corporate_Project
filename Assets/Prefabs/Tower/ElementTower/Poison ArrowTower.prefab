@@ -206,6 +206,7 @@ MonoBehaviour:
   RoundObject: {fileID: 234689300227573375}
   arrowTemplate: {fileID: 11400000, guid: 7ff9544debe48214a9d2cc8f3751d44a, type: 2}
   sp: {fileID: 234689298849204874}
+  alevel: 0
   arrowPrefab: {fileID: 5315040342755800430, guid: 12c9b069dd7a8a647aab4ce57538d403, type: 3}
   spawnPositions:
   - {fileID: 234689300911817165}
@@ -552,8 +553,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ArrowWindow, Assembly-CSharp
+      - m_Target: {fileID: 7659436514974313445}
+        m_TargetAssemblyTypeName: PisnArrowWindow, Assembly-CSharp
         m_MethodName: HideTowerWindowButton
         m_Mode: 1
         m_Arguments:
