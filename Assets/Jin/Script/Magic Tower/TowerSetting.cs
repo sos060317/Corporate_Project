@@ -15,7 +15,7 @@ public class TowerSetting : MonoBehaviour
     public List<GameObject> enemyList = new List<GameObject>();
     private bool canSpawn = false;
     private float spawnInterval = 1.5f;
-    private float timeSinceLastSpawn = 0f;
+    private float timeSinceLastSpawn = 1f;
 
 
     public Vector2 MEnemyPos;
@@ -101,19 +101,6 @@ public class TowerSetting : MonoBehaviour
     {
         return Vector2.Distance(magicRoundCheck.transform.position, position) <= detectionRadius;
     }
-
-    //private void SpawnMagicsAtPositions()
-    //{
-    //    foreach (GameObject spawnPosition in spawnPositions)
-    //    {
-    //        if (spawnPosition.activeSelf)
-    //        {
-    //            var temp = Instantiate(MagicPrefab, spawnPosition.transform.position, Quaternion.identity).GetComponent<ThrowAndDamage>();
-
-    //            temp.MagicTw = GetComponent<TowerSetting>();
-    //        }
-    //    }
-    //}
 
     private void OnDrawGizmosSelected()
     {

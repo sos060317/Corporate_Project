@@ -26,7 +26,8 @@ public class FireArrow : MonoBehaviour
     private Vector2 finish; // 종료 위치
     private bool reachedEnd = false;
 
-
+    public float TickDamage;
+    public float TickTime;
 
     private void Start()
     {
@@ -35,10 +36,14 @@ public class FireArrow : MonoBehaviour
 
         SetEnemyPositionAsFinish();
         StartCoroutine(Curve(start, finish));
+
+        
     }
 
     private void Update()
     {
+
+        
         arowLevel = fireArrowTower.alevel;
 
         Damage = arrowTemplate.aweapon[arowLevel].aDamage;
@@ -90,7 +95,8 @@ public class FireArrow : MonoBehaviour
                 if (collider.CompareTag(damageTag))
                 {
                     collider.GetComponent<EnemyBase>().OnDamage(attackPower, Damage);  // 물리? , 마법? 모르것다
-                    collider.GetComponent<EnemyBase>().FireEnemy(arrowTemplate.aweapon[arowLevel].dotTime, arrowTemplate.aweapon[arowLevel].dotTime, 5); // 몇초, 몇뎀, 몇틱
+                    collider.GetComponent<EnemyBase>().FireEnemy(arrowTemplate.aweapon[arowLevel].fireTime, arrowTemplate.aweapon[arowLevel].fireDamage, arrowTemplate.aweapon[arowLevel].fireCount); // 몇초, 몇뎀, 몇틱
+                    
                     Destroy(gameObject);
                     break;
                 }
