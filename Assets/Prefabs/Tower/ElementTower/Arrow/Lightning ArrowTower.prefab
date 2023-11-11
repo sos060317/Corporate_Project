@@ -1004,7 +1004,7 @@ MonoBehaviour:
   EnemyPos: {x: 0, y: 0}
   nowShot: 0
   canToggle: 1
-  attackSound: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
+  attackSound: {fileID: 8300000, guid: a15c0f3fe74004cf89b51cfd5604f582, type: 3}
 --- !u!60 &4999052530675375361
 PolygonCollider2D:
   m_ObjectHideFlags: 0
