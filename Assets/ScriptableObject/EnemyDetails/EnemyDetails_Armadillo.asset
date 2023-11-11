@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EnemyDetails_Armadillo
   m_EditorClassIdentifier: 
   enemyName: "\uC544\uB974\uB9C8\uB51C\uB85C"
-  enemyBaseHealth: 200
+  enemyBaseHealth: 300
   enemyBaseMoveSpeed: 2
   enemyBaseAttackRate: 1
   enemyBaseAttackRange: 0.4

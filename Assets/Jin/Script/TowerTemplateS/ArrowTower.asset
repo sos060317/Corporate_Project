@@ -17,7 +17,7 @@ MonoBehaviour:
   - PosLevel: 1
     aDamage: 25
     Acost: 120
-    Aradius: 7
+    Aradius: 4
     ResellCoset: 50
     AttackSpeed: 1.5
     dotDamage: 3

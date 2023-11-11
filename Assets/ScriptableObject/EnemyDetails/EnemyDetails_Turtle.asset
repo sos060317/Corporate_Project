@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EnemyDetails_Turtle
   m_EditorClassIdentifier: 
   enemyName: "\uAC70\uBD81\uC774"
-  enemyBaseHealth: 200
+  enemyBaseHealth: 300
   enemyBaseMoveSpeed: 1
   enemyBaseAttackRate: 2
   enemyBaseAttackRange: 0.4

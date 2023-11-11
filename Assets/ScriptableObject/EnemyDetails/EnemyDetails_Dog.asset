@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EnemyDetails_Dog
   m_EditorClassIdentifier: 
   enemyName: "\uAC15\uC544\uC9C0"
-  enemyBaseHealth: 100
+  enemyBaseHealth: 150
   enemyBaseMoveSpeed: 3
   enemyBaseAttackRate: 1.5
   enemyBaseAttackRange: 0.4
