@@ -1154,6 +1154,7 @@ GameObject:
   - component: {fileID: 370167186}
   - component: {fileID: 370167185}
   - component: {fileID: 370167184}
+  - component: {fileID: 370167187}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -1226,7 +1227,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 571330625}
+      - m_Target: {fileID: 370167187}
         m_TargetAssemblyTypeName: GamePauseMenu, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
@@ -1276,6 +1277,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370167182}
   m_CullTransparentMesh: 1
+--- !u!114 &370167187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370167182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5081ef5f92c7b164099b011866c9cccb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transition: {fileID: 11400000, guid: b0126e1e0c6c2a04895d564bd230dfb9, type: 2}
 --- !u!1 &444173006
 GameObject:
   m_ObjectHideFlags: 0
@@ -1641,7 +1655,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &475828795
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1686,7 +1700,7 @@ MonoBehaviour:
   - {fileID: 247809374}
   - {fileID: 2078701068}
   starSprite: {fileID: -1008867147, guid: 8fd732bd974bf1245b6adb2376e6ae57, type: 3}
-  sceneLoader: {fileID: 112893030}
+  transition: {fileID: 0}
 --- !u!114 &475828797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1731,7 +1745,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 571330625}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GamePauseMenu, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
@@ -2063,7 +2077,6 @@ GameObject:
   - component: {fileID: 571330623}
   - component: {fileID: 571330622}
   - component: {fileID: 571330621}
-  - component: {fileID: 571330625}
   m_Layer: 5
   m_Name: StageCanvas
   m_TagString: Untagged
@@ -2157,19 +2170,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &571330625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 571330620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5081ef5f92c7b164099b011866c9cccb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transition: {fileID: 11400000, guid: b0126e1e0c6c2a04895d564bd230dfb9, type: 2}
 --- !u!1 &581724002
 GameObject:
   m_ObjectHideFlags: 0
@@ -4144,7 +4144,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -500, y: 0}
+  m_AnchoredPosition: {x: -300, y: 0}
   m_SizeDelta: {x: 120, y: 216}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1016499458
@@ -4166,7 +4166,7 @@ MonoBehaviour:
   - {fileID: 2119354089}
   - {fileID: 873506156}
   starSprite: {fileID: -1008867147, guid: 8fd732bd974bf1245b6adb2376e6ae57, type: 3}
-  sceneLoader: {fileID: 112893030}
+  transition: {fileID: 11400000, guid: b0126e1e0c6c2a04895d564bd230dfb9, type: 2}
 --- !u!114 &1016499459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4211,9 +4211,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 571330625}
-        m_TargetAssemblyTypeName: GamePauseMenu, Assembly-CSharp
-        m_MethodName: LoadScene
+      - m_Target: {fileID: 1016499458}
+        m_TargetAssemblyTypeName: StageSelection, Assembly-CSharp
+        m_MethodName: PressSelection
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4778,7 +4778,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1130483656
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4823,7 +4823,7 @@ MonoBehaviour:
   - {fileID: 2145032499}
   - {fileID: 949472090}
   starSprite: {fileID: -1008867147, guid: 8fd732bd974bf1245b6adb2376e6ae57, type: 3}
-  sceneLoader: {fileID: 112893030}
+  transition: {fileID: 0}
 --- !u!114 &1130483658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4868,7 +4868,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 571330625}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GamePauseMenu, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
@@ -6082,7 +6082,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 300, y: 0}
   m_SizeDelta: {x: 120, y: 216}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1476355904
@@ -6104,7 +6104,7 @@ MonoBehaviour:
   - {fileID: 692638003}
   - {fileID: 1759106457}
   starSprite: {fileID: -1008867147, guid: 8fd732bd974bf1245b6adb2376e6ae57, type: 3}
-  sceneLoader: {fileID: 112893030}
+  transition: {fileID: 11400000, guid: b0126e1e0c6c2a04895d564bd230dfb9, type: 2}
 --- !u!114 &1476355905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6149,9 +6149,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 571330625}
-        m_TargetAssemblyTypeName: GamePauseMenu, Assembly-CSharp
-        m_MethodName: LoadScene
+      - m_Target: {fileID: 1476355904}
+        m_TargetAssemblyTypeName: StageSelection, Assembly-CSharp
+        m_MethodName: PressSelection
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6977,6 +6977,7 @@ GameObject:
   - component: {fileID: 1775969719}
   - component: {fileID: 1775969718}
   - component: {fileID: 1775969717}
+  - component: {fileID: 1775969720}
   m_Layer: 5
   m_Name: Reset
   m_TagString: Untagged
@@ -7061,6 +7062,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1775969720}
+        m_TargetAssemblyTypeName: GamePauseMenu, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Title
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1775969718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7099,6 +7112,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775969715}
   m_CullTransparentMesh: 1
+--- !u!114 &1775969720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775969715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5081ef5f92c7b164099b011866c9cccb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transition: {fileID: 11400000, guid: b0126e1e0c6c2a04895d564bd230dfb9, type: 2}
 --- !u!1 &1791350402
 GameObject:
   m_ObjectHideFlags: 0
@@ -8299,7 +8325,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -250, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 120, y: 216}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2030391627
@@ -8321,7 +8347,7 @@ MonoBehaviour:
   - {fileID: 1939178367}
   - {fileID: 944895419}
   starSprite: {fileID: -1008867147, guid: 8fd732bd974bf1245b6adb2376e6ae57, type: 3}
-  sceneLoader: {fileID: 112893030}
+  transition: {fileID: 11400000, guid: b0126e1e0c6c2a04895d564bd230dfb9, type: 2}
 --- !u!114 &2030391628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8366,9 +8392,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 571330625}
-        m_TargetAssemblyTypeName: GamePauseMenu, Assembly-CSharp
-        m_MethodName: LoadScene
+      - m_Target: {fileID: 2030391627}
+        m_TargetAssemblyTypeName: StageSelection, Assembly-CSharp
+        m_MethodName: PressSelection
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

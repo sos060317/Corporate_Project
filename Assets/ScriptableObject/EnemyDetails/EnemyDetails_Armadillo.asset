@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: "\uC544\uB974\uB9C8\uB51C\uB85C"
   enemyBaseHealth: 300
-  enemyBaseMoveSpeed: 2
+  enemyBaseMoveSpeed: 1
   enemyBaseAttackRate: 1
   enemyBaseAttackRange: 0.4
   defense: 0
   magicResistance: 100
-  attackPower: 15
+  attackPower: 13
   spellPower: 0
   enemyPrefab: {fileID: 6892805195981400713, guid: d36073761df0e294a9a51a078b3ec20a, type: 3}
   profileImage: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  coins: 20
+  coins: 17

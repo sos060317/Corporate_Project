@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: BuffDetails_Gold
   m_EditorClassIdentifier: 
   buffDatas:
-  - buffForce: 1.02
+  - buffForce: 1.2
     needGold: 100
-    buffExplanation: "\uACE8\uB4DC \uD68D\uB4DD\uB7C9\n102%"
-  - buffForce: 1.03
+    buffExplanation: "\uACE8\uB4DC \uD68D\uB4DD\uB7C9\n120%"
+  - buffForce: 1.4
     needGold: 100
-    buffExplanation: "\uACE8\uB4DC \uD68D\uB4DD\uB7C9\n103%"
-  - buffForce: 1.04
+    buffExplanation: "\uACE8\uB4DC \uD68D\uB4DD\uB7C9\n140%"
+  - buffForce: 1.6
     needGold: 100
-    buffExplanation: "\uACE8\uB4DC \uD68D\uB4DD\uB7C9\n104%"
-  - buffForce: 1.05
+    buffExplanation: "\uACE8\uB4DC \uD68D\uB4DD\uB7C9\n160%"
+  - buffForce: 1.8
     needGold: 100
-    buffExplanation: "\uACE8\uB4DC \uD68D\uB4DD\uB7C9\n105%"
-  - buffForce: 1.07
+    buffExplanation: "\uACE8\uB4DC \uD68D\uB4DD\uB7C9\n180%"
+  - buffForce: 2
     needGold: 100
-    buffExplanation: "\uACE8\uB4DC \uD68D\uB4DD\uB7C9\n107%"
+    buffExplanation: "\uACE8\uB4DC \uD68D\uB4DD\uB7C9\n200%"
