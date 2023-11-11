@@ -30,6 +30,8 @@ public class LightningArrowTower : MonoBehaviour
     public bool nowShot = false;
     public bool canToggle = true;
 
+    public AudioClip attackSound;
+
 
     private void Start()
     {
@@ -166,6 +168,8 @@ public class LightningArrowTower : MonoBehaviour
 
     private void SpawnArrowsAtPositions()
     {
+        SoundManager.Instance.PlaySound(attackSound);
+        
         foreach (GameObject spawnPosition in spawnPositions)
         {
             if (spawnPosition.activeSelf)

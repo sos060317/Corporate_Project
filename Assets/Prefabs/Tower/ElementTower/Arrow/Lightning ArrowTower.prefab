@@ -999,12 +999,12 @@ MonoBehaviour:
   - {fileID: 4999052529108886085}
   enemyTag: Enemy
   detectionRadius: 7
-  spawnInterval: 1.5
   enemyList: []
   isClicked: 0
   EnemyPos: {x: 0, y: 0}
   nowShot: 0
   canToggle: 1
+  attackSound: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
 --- !u!60 &4999052530675375361
 PolygonCollider2D:
   m_ObjectHideFlags: 0
