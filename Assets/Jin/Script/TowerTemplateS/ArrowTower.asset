@@ -20,29 +20,57 @@ MonoBehaviour:
     Aradius: 7
     ResellCoset: 50
     AttackSpeed: 1.5
-    dotDamage: 3
-    dotTime: 3
+    fireDamage: 3
+    fireTime: 3
+    fireCount: 5
+    poisonDamage: 7
+    poisonTime: 3
+    poisonCount: 5
+    sllowTime: 1.5
+    sllowextent: 0.7
+    timeStopTime: 1
   - PosLevel: 2
     aDamage: 25
     Acost: 150
     Aradius: 7
     ResellCoset: 60
     AttackSpeed: 1.5
-    dotDamage: 3
-    dotTime: 3
+    fireDamage: 3
+    fireTime: 3
+    fireCount: 5
+    poisonDamage: 7
+    poisonTime: 3
+    poisonCount: 5
+    sllowTime: 1.5
+    sllowextent: 0.7
+    timeStopTime: 1
   - PosLevel: 3
     aDamage: 25
     Acost: 200
     Aradius: 7
     ResellCoset: 75
     AttackSpeed: 1.5
-    dotDamage: 3
-    dotTime: 3
+    fireDamage: 3
+    fireTime: 3
+    fireCount: 5
+    poisonDamage: 7
+    poisonTime: 3
+    poisonCount: 5
+    sllowTime: 1.5
+    sllowextent: 0.7
+    timeStopTime: 1
   - PosLevel: 4
     aDamage: 25
     Acost: 320
     Aradius: 7
     ResellCoset: 100
     AttackSpeed: 1.5
-    dotDamage: 3
-    dotTime: 3
+    fireDamage: 3
+    fireTime: 3
+    fireCount: 5
+    poisonDamage: 7
+    poisonTime: 3
+    poisonCount: 5
+    sllowTime: 1.5
+    sllowextent: 0.7
+    timeStopTime: 1

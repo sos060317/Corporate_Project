@@ -87,7 +87,7 @@ public class PoisonArrow : MonoBehaviour
                 if (collider.CompareTag(damageTag))
                 {
                     collider.GetComponent<EnemyBase>().OnDamage(attackPower, Damage);
-                    collider.GetComponent<EnemyBase>().PoisonEnemy(3, 3, 7); // 초, 뎀지, 틱사이 시간
+                    collider.GetComponent<EnemyBase>().PoisonEnemy(arrowTemplate.aweapon[arrowLevel].poisonTime, arrowTemplate.aweapon[arrowLevel].poisonDamage, arrowTemplate.aweapon[arrowLevel].poisonCount); // 초, 뎀지, 틱사이 시간
                     Destroy(gameObject);
                     break;
                 }

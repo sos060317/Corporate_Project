@@ -91,7 +91,7 @@ public class IceArrow : MonoBehaviour
                 if (collider.CompareTag(damageTag))
                 {
                     collider.GetComponent<EnemyBase>().OnDamage(attackPower, Damage);  // 물리? , 마법? 모르것다
-                    collider.GetComponent<EnemyBase>().SpeedDownEnemy(1.5f);
+                    collider.GetComponent<EnemyBase>().SpeedDownEnemy(arrowTemplate.aweapon[arrowLevel].sllowTime, arrowTemplate.aweapon[arrowLevel].sllowextent); //1.5f ,0.7
                     Destroy(gameObject);
                     break;
                 }

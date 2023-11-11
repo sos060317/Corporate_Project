@@ -471,26 +471,26 @@ public abstract class EnemyBase : MonoBehaviour
     
 
     // 슬로우?
-    public void SpeedDownEnemy(float speedDownTime)
+    public void SpeedDownEnemy(float speedDownTime, float speedDownExtend)
     {
         if (speedDownCoroutine != null)
         {
             StopCoroutine(speedDownCoroutine);
         }
         
-        speedDownCoroutine = StartCoroutine(SpeedDownRoutine(speedDownTime));
+        speedDownCoroutine = StartCoroutine(SpeedDownRoutine(speedDownTime, speedDownExtend));
     }
 
-    private IEnumerator SpeedDownRoutine(float speedDownTime)
+    private IEnumerator SpeedDownRoutine(float speedDownTime, float speedDownExtend)
     {
         // 색상 변경
         sr.material = iceMaterial;
         
         // 애니메이션 스피드 감소
-        anim.SetFloat("animSpeed", 0.7f);
+        anim.SetFloat("animSpeed", speedDownExtend);
         
         // 이동속도 30% 감소
-        moveSpeed = baseSpeed * 0.7f;
+        moveSpeed = baseSpeed * speedDownExtend;
 
         yield return new WaitForSeconds(speedDownTime);
         
