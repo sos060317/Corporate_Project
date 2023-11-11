@@ -15,14 +15,14 @@ MonoBehaviour:
   ArrowTower: {fileID: 8267170808375101404, guid: 7f4446dcd0a13384bb36ae67b531094a, type: 3}
   aweapon:
   - PosLevel: 1
-    aDamage: 25
+    aDamage: 20
     Acost: 120
     Aradius: 4.5
     ResellCoset: 50
     AttackSpeed: 1.5
-    fireDamage: 10
+    fireDamage: 5
     fireTime: 3
-    fireCount: 5
+    fireCount: 3
     poisonDamage: 10
     poisonTime: 3
     poisonCount: 5

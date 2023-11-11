@@ -15,26 +15,26 @@ MonoBehaviour:
   UnitTowerPrefab: {fileID: 4186010935434785113, guid: 59391adc21e50684a994196bc86779da, type: 3}
   weapon:
   - Unitdamage: 20
-    UnitHp: 100
-    radius: 7
+    UnitHp: 200
+    radius: 5
     SpawnTime: 5
     MaxUnit: 3
     cost: 100
-  - Unitdamage: 30
-    UnitHp: 150
-    radius: 7
+  - Unitdamage: 25
+    UnitHp: 250
+    radius: 5
     SpawnTime: 5
     MaxUnit: 3
     cost: 150
-  - Unitdamage: 30
-    UnitHp: 150
-    radius: 8.5
-    SpawnTime: 4
-    MaxUnit: 3
+  - Unitdamage: 25
+    UnitHp: 250
+    radius: 5
+    SpawnTime: 5
+    MaxUnit: 4
     cost: 220
   - Unitdamage: 30
-    UnitHp: 170
-    radius: 8.5
+    UnitHp: 300
+    radius: 5
     SpawnTime: 4
-    MaxUnit: 4
+    MaxUnit: 5
     cost: 300
