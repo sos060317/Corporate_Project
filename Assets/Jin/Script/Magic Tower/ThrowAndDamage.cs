@@ -13,11 +13,15 @@ public class ThrowAndDamage : MonoBehaviour
     public float speed = 10f;
 
     private string DamageTag = "Enemy";
-    private float damageAreaRadius = 2.0f; // 공격 범위 반경
+    public float damageAreaRadius = 2.0f; // 공격 범위 반경
     private float Damage;
 
     private Vector2 targetPosition; // 목표 위치를 Vector2로 변경
     private bool isFollowing = true;
+
+    private float delayTimer = 0.5f;
+
+    public Animator MagicAnim;
 
     private void Start()
     {
@@ -34,32 +38,67 @@ public class ThrowAndDamage : MonoBehaviour
     {
         if (isFollowing)
         {
-            Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
-            Vector2 moveDirection = (targetPosition - currentPosition).normalized;
-            transform.position += new Vector3(moveDirection.x, moveDirection.y, 0) * speed * Time.deltaTime;
+            delayTimer -= Time.deltaTime; // Decrease the timer
 
-            
-
-            float distanceToTarget = Vector2.Distance(currentPosition, targetPosition);
-
-            if (distanceToTarget < 0.1f)
+            if (delayTimer <= 0f)
             {
-                // 도착 지점에 도달하면 멈춤
-                isFollowing = false;
+                MagicAnim.SetBool("Shot", true);
 
-                Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, damageAreaRadius);
+                Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
+                Vector2 moveDirection = (targetPosition - currentPosition).normalized;
+                transform.position += new Vector3(moveDirection.x, moveDirection.y, 0) * speed * Time.deltaTime;
 
-                foreach (Collider2D collider in colliders)
+                float distanceToTarget = Vector2.Distance(currentPosition, targetPosition);
+
+                if (distanceToTarget < 0.1f)
                 {
-                    if (collider.CompareTag(DamageTag))
-                    {
-                        collider.GetComponent<EnemyBase>().OnDamage(0, Damage);
-                        break;
-                    }
-                }
+                    // 도착 지점에 도달하면 멈춤
+                    isFollowing = false;
 
-                Destroy(gameObject);
+                    Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, damageAreaRadius);
+
+                    foreach (Collider2D collider in colliders)
+                    {
+                        if (collider.CompareTag(DamageTag))
+                        {
+                            collider.GetComponent<EnemyBase>().OnDamage(0, Damage);
+                            break;
+                        }
+                    }
+
+                    Destroy(gameObject);
+                }
             }
+
+            //if (isFollowing)
+            //{
+            //    Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
+            //    Vector2 moveDirection = (targetPosition - currentPosition).normalized;
+            //    transform.position += new Vector3(moveDirection.x, moveDirection.y, 0) * speed * Time.deltaTime;
+
+
+
+            //    float distanceToTarget = Vector2.Distance(currentPosition, targetPosition);
+
+            //    if (distanceToTarget < 0.1f)
+            //    {
+            //        // 도착 지점에 도달하면 멈춤
+            //        isFollowing = false;
+
+            //        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, damageAreaRadius);
+
+            //        foreach (Collider2D collider in colliders)
+            //        {
+            //            if (collider.CompareTag(DamageTag))
+            //            {
+            //                collider.GetComponent<EnemyBase>().OnDamage(0, Damage);
+            //                break;
+            //            }
+            //        }
+
+            //        Destroy(gameObject);
+            //    }
+            //}
         }
     }
 
