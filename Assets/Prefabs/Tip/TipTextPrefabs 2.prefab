@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uCD08\uB85D\uC0C9 \uCCB4\uB825\uB97C \uAC00\uC9C4 \uC801\uAD70\uC740
+  m_text: "\uD30C\uB780\uC0C9 \uCCB4\uB825\uB97C \uAC00\uC9C4 \uC801\uAD70\uC740
     \uB9C8\uBC95 \uC800\uD56D\uB825\uBCF4\uB2E4 \uBC29\uC5B4\uB825\uC774 \uB354 \uB192\uC2B5\uB2C8\uB2E4"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b62873f6e1601af4cb8211656fa41a93, type: 2}
