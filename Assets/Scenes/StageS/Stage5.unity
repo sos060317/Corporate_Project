@@ -49204,7 +49204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e28515001571d93498934fda23c7e0c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ownTower: {fileID: 4186010935434785113, guid: 59391adc21e50684a994196bc86779da, type: 3}
+  ownTower: {fileID: 1175795425284595786, guid: 9f167c380725ffc4484c600a553a9fe7, type: 3}
   towerInstallGold: 220
 --- !u!114 &1899783392
 MonoBehaviour:
@@ -49226,7 +49226,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -505036920, guid: 3d40d1bb4b85c4542aa27a27898c4b13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
