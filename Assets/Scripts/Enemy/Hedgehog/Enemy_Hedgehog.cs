@@ -170,8 +170,10 @@ public class Enemy_Hedgehog : EnemyBase
             if (targetAlly != null)
             {
                 targetAlly.DeleteTarget();
-                targetAlly.targeting = false;
+                targetAlly.targeting = false; 
             }
+            
+            SoundManager.Instance.PlaySound(dieSound);
             
             anim.SetTrigger("Die");
             return;

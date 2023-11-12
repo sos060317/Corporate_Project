@@ -14,6 +14,7 @@ public abstract class EnemyBase : MonoBehaviour
     [SerializeField] private Material iceMaterial;
     [SerializeField] private Image healthUiBg;
     [SerializeField] private Image healthUiBar;
+    [SerializeField] protected AudioClip dieSound;
 
     [HideInInspector] public bool Targeting = false;
     
@@ -23,6 +24,7 @@ public abstract class EnemyBase : MonoBehaviour
     private float baseSpeed;
 
     private bool isFaint = false;
+    private bool isIce = false;
     
     protected bool canMove = true;
     protected bool isTargeting = false;
@@ -202,7 +204,7 @@ public abstract class EnemyBase : MonoBehaviour
 
         yield return hitDelay;
 
-        sr.material = defaultMaterial;
+        sr.material = isIce ? iceMaterial : defaultMaterial;
     }
     
     // 적이 죽는 애니메이션을 다 실행하고 호출되는 애니메이션 이벤트 함수
@@ -280,6 +282,8 @@ public abstract class EnemyBase : MonoBehaviour
                 targetAlly.EnemyUnTargetingEvent -= DeleteTarget;
             }
             
+            SoundManager.Instance.PlaySound(dieSound);
+
             anim.SetTrigger("Die");
             //return;
         }
@@ -483,6 +487,8 @@ public abstract class EnemyBase : MonoBehaviour
 
     private IEnumerator SpeedDownRoutine(float speedDownTime, float speedDownExtend)
     {
+        isIce = true;
+        
         // 색상 변경
         sr.material = iceMaterial;
         
@@ -493,6 +499,8 @@ public abstract class EnemyBase : MonoBehaviour
         moveSpeed = baseSpeed * speedDownExtend;
 
         yield return new WaitForSeconds(speedDownTime);
+
+        isIce = false;
         
         anim.SetFloat("animSpeed", 1f);
 

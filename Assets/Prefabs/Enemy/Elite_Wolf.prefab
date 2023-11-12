@@ -437,6 +437,7 @@ MonoBehaviour:
   iceMaterial: {fileID: 2100000, guid: e53e51e321a7af94cb68fb0b27655e60, type: 2}
   healthUiBg: {fileID: 8696831599368524058}
   healthUiBar: {fileID: 8696831600622272891}
+  dieSound: {fileID: 8300000, guid: 01d8f09bcdcd8d14c86e73d1b1c50b9f, type: 3}
   Targeting: 0
   maxHealth: 0
   curHealth: 0
