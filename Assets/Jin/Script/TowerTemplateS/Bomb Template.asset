@@ -17,15 +17,19 @@ MonoBehaviour:
     damage: 25
     round: 7
     shotSpeed: 2
+    damageRound: 2
   - Bcost: 270
     damage: 30
     round: 7
     shotSpeed: 2
+    damageRound: 2
   - Bcost: 330
     damage: 35
     round: 7
     shotSpeed: 2
+    damageRound: 2
   - Bcost: 400
     damage: 40
     round: 7
     shotSpeed: 3
+    damageRound: 3

@@ -15,6 +15,7 @@ public class Bomb : MonoBehaviour
     public float duration = 1.0f;
     public float maxHeightY = 3.0f;
     //public string enemyTag = "FlowingPos"; // 적의 태그
+    private int Blaval;
 
     public string DamageTag = "Enemy";
     public float damageAreaRadius = 2.0f; // 공격 범위 반경
@@ -36,6 +37,10 @@ public class Bomb : MonoBehaviour
 
     private void SetEnemyPositionAsFinish()
     {
+        Blaval = bombTower.BombLevel;
+
+        damageAreaRadius = BombTemplate.Bweapon[Blaval].damageRound;
+
         if (bombTower.BombShot != false)
         {
             finish = bombTower.BEnemyPos;
