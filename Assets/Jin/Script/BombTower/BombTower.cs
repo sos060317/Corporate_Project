@@ -127,6 +127,12 @@ public class BombTower : MonoBehaviour
         }
     }
 
+    public void DestroyTower()
+    {
+        GameManager.Instance.GetGold(bombTemplate.Bweapon[BombLevel].ResellCost);
+        Destroy(gameObject);
+    }
+
     private IEnumerator DelayTm()
     {
         yield return new WaitForSeconds(0.2f);

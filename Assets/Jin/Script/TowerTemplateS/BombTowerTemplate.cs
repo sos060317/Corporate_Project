@@ -15,5 +15,6 @@ public class BombTowerTemplate : ScriptableObject
         public float round;
         public float shotSpeed;
         public float damageRound;
+        public int ResellCost;
     }
 }

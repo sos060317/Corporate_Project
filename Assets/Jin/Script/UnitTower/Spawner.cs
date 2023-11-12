@@ -99,6 +99,7 @@ public class Spawner : MonoBehaviour
     public void DestroyTower()
     {
         Destroy(gameObject);
+        GameManager.Instance.GetGold(towerTemplate.weapon[level].ResellCost);
     }
 
     private void SpawnPrefab(GameObject prefab)

@@ -18,6 +18,7 @@ public class TowerTemplate : ScriptableObject
         public float SpawnTime;             // 스폰 시간
         public int MaxUnit;                 // 아마도 유닛?
         public int cost;                    // 비용
+        public int ResellCost;
     }
 
 }

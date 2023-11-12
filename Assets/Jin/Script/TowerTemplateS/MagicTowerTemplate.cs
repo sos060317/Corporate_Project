@@ -14,5 +14,6 @@ public class MagicTowerTemplate : ScriptableObject
         public float damage;
         public int Mcost;
         public float Mradius;
+        public int ResellCost;
     }
 }

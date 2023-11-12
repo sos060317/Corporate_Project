@@ -85,7 +85,12 @@ public class MagicPosCheck : MonoBehaviour
         }
     }
 
-    
+    public void DestroyTower()
+    {
+        Destroy(gameObject);
+        GameManager.Instance.GetGold(magicTemplate.mweapon[Magiclevel].ResellCost);
+        Debug.Log(magicTemplate.mweapon[Magiclevel].ResellCost);
+    }
 
 
     public void UpgradeTower()

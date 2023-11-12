@@ -17,15 +17,19 @@ MonoBehaviour:
     damage: 50
     Mcost: 130
     Mradius: 10
+    ResellCost: 30
   - LeveL: 2
     damage: 50
     Mcost: 200
     Mradius: 10
+    ResellCost: 0
   - LeveL: 3
     damage: 50
     Mcost: 260
     Mradius: 10
+    ResellCost: 0
   - LeveL: 4
     damage: 60
     Mcost: 300
     Mradius: 10
+    ResellCost: 0
