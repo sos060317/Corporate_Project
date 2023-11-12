@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1b5160107acfa4943946d84ea6402d0b
+guid: 21d51c524a2f0144b935f7f2875720c4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,91 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wizard_tower-all-bullet-Sheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 288
-        width: 96
-        height: 96
-      alignment: 9
-      pivot: {x: 0.72, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56900acc48068f0469700d0ee426aaad
-      internalID: -1825284539
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard_tower-all-bullet-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 288
-        width: 96
-        height: 96
-      alignment: 9
-      pivot: {x: 0.72, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e668e0d9b25b3c429a31853929423d1
-      internalID: 1191297035
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard_tower-all-bullet-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 192
-        width: 96
-        height: 96
-      alignment: 9
-      pivot: {x: 0.72, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4fa2b76e357ce414a802285b0cbfbe45
-      internalID: -1475963763
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard_tower-all-bullet-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 192
-        width: 96
-        height: 96
-      alignment: 9
-      pivot: {x: 0.72, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 16da5135bcba29448a485901aa3d75b6
-      internalID: 1690727332
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard_tower-all-bullet-Sheet_4
+      name: wizard_tower-all-bullet-Sheet 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -197,20 +113,20 @@ TextureImporter:
         width: 96
         height: 96
       alignment: 9
-      pivot: {x: 0.72, y: 0.5}
+      pivot: {x: 0.5, y: 0.28}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e1c5d84771fa0c438ad73bcbbd657a3
-      internalID: -2011274202
+      spriteID: 9c3954a362ebb7440bf020dc21dceeac
+      internalID: -1148012791
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_tower-all-bullet-Sheet_5
+      name: wizard_tower-all-bullet-Sheet 1_1
       rect:
         serializedVersion: 2
         x: 96
@@ -218,20 +134,62 @@ TextureImporter:
         width: 96
         height: 96
       alignment: 9
-      pivot: {x: 0.72, y: 0.5}
+      pivot: {x: 0.5, y: 0.28}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2374e37440467246adab74789b177e6
-      internalID: -1834694076
+      spriteID: 6725514a19149fd40876b8a2c331e175
+      internalID: 793457147
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_tower-all-bullet-Sheet_6
+      name: wizard_tower-all-bullet-Sheet 1_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.28}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7fe9befa90302248a16b6479909688a
+      internalID: -1506194291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_tower-all-bullet-Sheet 1_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.28}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea626a8c8334b8a41a1cdc00d8297d3f
+      internalID: 1598624070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_tower-all-bullet-Sheet 1_4
       rect:
         serializedVersion: 2
         x: 0
@@ -239,20 +197,20 @@ TextureImporter:
         width: 96
         height: 96
       alignment: 9
-      pivot: {x: 0.72, y: 0.5}
+      pivot: {x: 0.5, y: 0.28}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b8dd84d9049cf0498ccde1eefb356e6
-      internalID: 325353282
+      spriteID: 8cded6401b6aa5e4a840a34e9cee9bde
+      internalID: -1863937590
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_tower-all-bullet-Sheet_7
+      name: wizard_tower-all-bullet-Sheet 1_5
       rect:
         serializedVersion: 2
         x: 96
@@ -260,14 +218,56 @@ TextureImporter:
         width: 96
         height: 96
       alignment: 9
-      pivot: {x: 0.72, y: 0.5}
+      pivot: {x: 0.5, y: 0.28}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08123c0146b5f9f4ebdb620e1e846938
-      internalID: 2138361283
+      spriteID: 9dc4d121f67e2364981e5807a0dda9fd
+      internalID: -581156635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_tower-all-bullet-Sheet 1_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.28}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc9ad1250bc1ca4882523a0828df0e0
+      internalID: -483002628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_tower-all-bullet-Sheet 1_7
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.28}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b66c4e850d390499927daf6dcd9cf1
+      internalID: 165647637
       vertices: []
       indices: 
       edges: []
@@ -283,14 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      wizard_tower-all-bullet-Sheet_0: -1825284539
-      wizard_tower-all-bullet-Sheet_1: 1191297035
-      wizard_tower-all-bullet-Sheet_2: -1475963763
-      wizard_tower-all-bullet-Sheet_3: 1690727332
-      wizard_tower-all-bullet-Sheet_4: -2011274202
-      wizard_tower-all-bullet-Sheet_5: -1834694076
-      wizard_tower-all-bullet-Sheet_6: 325353282
-      wizard_tower-all-bullet-Sheet_7: 2138361283
+      wizard_tower-all-bullet-Sheet 1_0: -1148012791
+      wizard_tower-all-bullet-Sheet 1_1: 793457147
+      wizard_tower-all-bullet-Sheet 1_2: -1506194291
+      wizard_tower-all-bullet-Sheet 1_3: 1598624070
+      wizard_tower-all-bullet-Sheet 1_4: -1863937590
+      wizard_tower-all-bullet-Sheet 1_5: -581156635
+      wizard_tower-all-bullet-Sheet 1_6: -483002628
+      wizard_tower-all-bullet-Sheet 1_7: 165647637
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
