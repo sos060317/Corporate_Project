@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MagicTw: {fileID: 0}
-  MagicTower: {fileID: 9127300887890029699, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}
+  MagicTower: {fileID: 5475444835065626825, guid: b9827b557978c6a4d9114ec5d95c9fe5, type: 3}
   magicTemplate: {fileID: 11400000, guid: 5670774e8af21c045b191e342e0caafd, type: 2}
   magicLevel: {fileID: 2120653621244148614, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}
   speed: 17

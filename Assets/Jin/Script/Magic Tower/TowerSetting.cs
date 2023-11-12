@@ -21,6 +21,8 @@ public class TowerSetting : MonoBehaviour
     public Vector2 MEnemyPos;
     public bool itTimeToShot = false;
 
+    public Animator MagicTowerAnim;
+
     private void Start()
     {
         if(magicRoundCheck != null)
@@ -38,15 +40,20 @@ public class TowerSetting : MonoBehaviour
             if (collider.CompareTag(enemyTag) && !enemyList.Contains(collider.gameObject))
             {
                 enemyList.Add(collider.gameObject);
+                
             }
         }
 
         enemyList.RemoveAll(enemy => enemy == null || !IsWithinRadius(enemy.transform.position) || !enemy.activeSelf);
 
+        
+
         canSpawn = enemyList.Count > 0;
 
         if (canSpawn)
         {
+            
+
             timeSinceLastSpawn += Time.deltaTime;
             if (timeSinceLastSpawn >= spawnInterval)
             {
@@ -55,7 +62,9 @@ public class TowerSetting : MonoBehaviour
                 {
                     if(spawnPos.activeSelf)
                     {
+                        StartCoroutine(AttackAnimation());
                         SpawnMagic(spawnPos);
+                        
                         UpdateFlowingObjectPosition();
                         //SpawnMagicsAtPositions();
                     }
@@ -78,6 +87,13 @@ public class TowerSetting : MonoBehaviour
             itTimeToShot = false;
             MEnemyPos = Vector2.zero;
         }
+    }
+
+    private IEnumerator AttackAnimation()
+    {
+        MagicTowerAnim.SetBool("ItShot", true);
+        yield return new WaitForSeconds(0.1f);
+        MagicTowerAnim.SetBool("ItShot", false);
     }
 
     private void SpawnMagic(GameObject spawnPosition)

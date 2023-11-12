@@ -819,6 +819,7 @@ GameObject:
   - component: {fileID: 2898080542873901004}
   - component: {fileID: 5475444835065626825}
   - component: {fileID: 4560513977154686288}
+  - component: {fileID: 6804441226766675247}
   m_Layer: 0
   m_Name: MagicTower
   m_TagString: Untagged
@@ -944,6 +945,7 @@ MonoBehaviour:
   enemyList: []
   MEnemyPos: {x: 0, y: 0}
   itTimeToShot: 0
+  MagicTowerAnim: {fileID: 6804441226766675247}
 --- !u!60 &4560513977154686288
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -980,6 +982,27 @@ PolygonCollider2D:
       - {x: -0.19630098, y: -0.37660623}
       - {x: 0.20487118, y: -0.37576723}
       - {x: 0.56690407, y: -0.09708679}
+--- !u!95 &6804441226766675247
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2898080542873900993}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b02db282525924f418a5ac077d9815b1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2898080542981692505
 GameObject:
   m_ObjectHideFlags: 0
