@@ -23,9 +23,9 @@ MonoBehaviour:
     fireDamage: 5
     fireTime: 3
     fireCount: 3
-    poisonDamage: 10
+    poisonDamage: 5
     poisonTime: 3
-    poisonCount: 5
+    poisonCount: 3
     sllowTime: 1.5
     sllowextent: 0.7
     timeStopTime: 1

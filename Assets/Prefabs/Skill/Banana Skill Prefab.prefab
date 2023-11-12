@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13191930e4f24f4cb5f6a5fa298d360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bananaCount: 5
+  bananaCount: 4
   bananaPrefab: {fileID: 8500101995977562653, guid: 95dd004c66a3e9041b5b1bfba7736b48, type: 3}
   sizeObj: {fileID: 8384630656995614076}
   ableColor: {r: 0.4862745, g: 0.84313726, b: 1, a: 0.7019608}
