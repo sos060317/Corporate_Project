@@ -34,7 +34,7 @@ public class AllyBase : MonoBehaviour
     private bool canMove;
     private bool isAttacking;
     private bool isDie;
-    private bool isRun;
+    public bool isRun;
     private bool attack;
     private bool isTowerMove;
 
@@ -80,7 +80,7 @@ public class AllyBase : MonoBehaviour
 
     private void Update()
     {
-        if (isDie || isTowerMove)
+        if (isDie)
         {
             return;
         }
@@ -112,7 +112,7 @@ public class AllyBase : MonoBehaviour
 
     private void MoveUpdate()
     {
-        if (!canMove)
+        if (!canMove || isTowerMove)
         {
             return;
         }
@@ -154,7 +154,7 @@ public class AllyBase : MonoBehaviour
     
     private void AttackUpdate()
     {
-        if (!isAttacking || targetEnemy == null)
+        if (!isAttacking || targetEnemy == null || isTowerMove)
         {
             return;
         }
@@ -179,7 +179,7 @@ public class AllyBase : MonoBehaviour
     }
 
     private void AnimationUpdate()
-    {
+    { 
         anim.SetBool("IsRun", isRun);
     }
 
@@ -287,14 +287,14 @@ public class AllyBase : MonoBehaviour
             targetEnemy = null;
             isTargeting = false;
             isTowerMove = true;
+            isRun = true;
         }
         else
         {
             canMove = true;
             isTowerMove = false;
+            isRun = false;
         }
-
-        isRun = isMoving;
         
         if (dir.x < 0)
         {
@@ -323,12 +323,3 @@ public class AllyBase : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, scanRange);
     }
 }
-
-
-
-
-
-
-
-
-

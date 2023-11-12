@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: EnemyDetails_Hedgehog
   m_EditorClassIdentifier: 
   enemyName: "\uACE0\uC2B4\uB3C4\uCE58"
-  enemyBaseHealth: 70
-  enemyBaseMoveSpeed: 1
+  enemyBaseHealth: 100
+  enemyBaseMoveSpeed: 1.5
   enemyBaseAttackRate: 2
   enemyBaseAttackRange: 3
   defense: 0
   magicResistance: 0
-  attackPower: 20
+  attackPower: 25
   spellPower: 0
   enemyPrefab: {fileID: 388473290193081027, guid: f88695b99f218d6499c24906e23267c2, type: 3}
   profileImage: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}

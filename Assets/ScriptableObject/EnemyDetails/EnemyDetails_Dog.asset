@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: EnemyDetails_Dog
   m_EditorClassIdentifier: 
   enemyName: "\uAC15\uC544\uC9C0"
-  enemyBaseHealth: 100
+  enemyBaseHealth: 150
   enemyBaseMoveSpeed: 3
   enemyBaseAttackRate: 1.5
   enemyBaseAttackRange: 0.4
   defense: 0
   magicResistance: 0
-  attackPower: 17
+  attackPower: 20
   spellPower: 0
   enemyPrefab: {fileID: 1370586008307256899, guid: 72ef17e905f3f26428040f0f9c7abd5f, type: 3}
   profileImage: {fileID: 4723107735738678597, guid: efcce9b9312267649ad3455ccfbc0dd6, type: 3}

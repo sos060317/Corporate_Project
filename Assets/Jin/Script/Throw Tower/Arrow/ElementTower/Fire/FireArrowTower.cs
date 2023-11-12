@@ -30,6 +30,8 @@ public class FireArrowTower : MonoBehaviour
     public bool nowShot = false;
     public bool canToggle = true;
 
+    public AudioClip attackSound;
+
 
     private void Start()
     {
@@ -74,7 +76,7 @@ public class FireArrowTower : MonoBehaviour
                 UpdateFlowingObjectPosition();
                 //FireArrowAnim.SetBool("ItShot", true);
                 StartCoroutine(AttackAnimation());
-                //Debug.Log("È®ÀÎ");
+                //Debug.Log("È®ï¿½ï¿½");
             }
         }
         else
@@ -168,6 +170,8 @@ public class FireArrowTower : MonoBehaviour
 
     private void SpawnArrowsAtPositions()
     {
+        SoundManager.Instance.PlaySound(attackSound);
+        
         foreach (GameObject spawnPosition in spawnPositions)
         {
             if (spawnPosition.activeSelf)

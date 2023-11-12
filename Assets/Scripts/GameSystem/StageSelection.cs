@@ -1,3 +1,4 @@
+using EasyTransition;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,7 +13,8 @@ public class StageSelection : MonoBehaviour
     [SerializeField] private Sprite starSprite;  // 스테이지의 클리어 정도를 알려주는 별의 그림
     
     [Header("씬 로딩")]
-    [SerializeField] private SceneLoader sceneLoader;
+    [SerializeField] private TransitionSettings transition;
+    //[SerializeField] private SceneLoader sceneLoader;
 
     private void Update()
     {
@@ -62,12 +64,13 @@ public class StageSelection : MonoBehaviour
         }
     }
 
-    // 스테이지를 선택했을 때의 씬 이동
-    //public void PressSelection(int stageId)
-    //{
-    //    if (unlocked)
-    //    {
-    //        sceneLoader.GetComponent<SceneLoader>().LoadScene(stageId + 2); // 로딩 창 불러오기
-    //    }
-    //}
+    //스테이지를 선택했을 때의 씬 이동
+    public void PressSelection(string sceneName)
+    {
+        if (unlocked)
+        {
+            //sceneLoader.GetComponent<SceneLoader>().LoadScene(stageId + 2); // 로딩 창 불러오기
+            TransitionManager.Instance().Transition(sceneName, transition, 0f);
+        }
+    }
 }

@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: EnemyDetails_Turtle
   m_EditorClassIdentifier: 
   enemyName: "\uAC70\uBD81\uC774"
-  enemyBaseHealth: 200
+  enemyBaseHealth: 300
   enemyBaseMoveSpeed: 1
   enemyBaseAttackRate: 2
   enemyBaseAttackRange: 0.4
   defense: 100
   magicResistance: 0
-  attackPower: 15
+  attackPower: 13
   spellPower: 0
   enemyPrefab: {fileID: 8669094408152069988, guid: 77d5a559fa90b634c9d78894b7578a48, type: 3}
   profileImage: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  coins: 20
+  coins: 17

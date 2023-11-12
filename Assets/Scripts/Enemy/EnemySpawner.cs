@@ -71,7 +71,13 @@ public class EnemySpawner : MonoBehaviour
                  enemySpawnCount < item.enemySpawnCount;
                  enemySpawnCount++)
             {
-                //var enemy = Instantiate(item.enemyType.enemyPrefab, spawnPos, Quaternion.identity);
+                // 게임이 멈춰있는 상태라면 작동을 멈춤
+                if (GameManager.Instance.isGameStop)
+                {
+                    enemySpawnCount--;
+                    yield return null;
+                    continue;
+                }
                 
                 var enemy = PoolManager.Instance.GetGameObject(item.enemyType.enemyPrefab, spawnPos, Quaternion.identity);
                 
