@@ -7178,7 +7178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e28515001571d93498934fda23c7e0c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ownTower: {fileID: 2120653621244148619, guid: 92cf120cc10a2734cbdac612119aa457, type: 3}
+  ownTower: {fileID: 2898080542873900993, guid: b9827b557978c6a4d9114ec5d95c9fe5, type: 3}
   towerInstallGold: 150
 --- !u!114 &521559958
 MonoBehaviour:
