@@ -14,18 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mweapon:
   - LeveL: 1
-    damage: 30
+    damage: 50
     Mcost: 130
     Mradius: 10
   - LeveL: 2
-    damage: 30
+    damage: 50
     Mcost: 200
     Mradius: 10
   - LeveL: 3
-    damage: 30
+    damage: 50
     Mcost: 260
     Mradius: 10
   - LeveL: 4
-    damage: 30
+    damage: 60
     Mcost: 300
     Mradius: 10

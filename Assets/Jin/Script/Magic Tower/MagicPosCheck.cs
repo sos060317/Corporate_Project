@@ -6,6 +6,7 @@ using UnityEngine;
 public class MagicPosCheck : MonoBehaviour
 {
     public MagicWindow MagicUI;
+    public Animator MagicAnimation;
 
     public MagicTowerTemplate magicTemplate;
     //private GameManager playerGold;
@@ -49,6 +50,11 @@ public class MagicPosCheck : MonoBehaviour
 
     private void Update()
     {
+        if (Magiclevel == 1)
+        {
+            MagicAnimation.SetBool("Level1", true);
+        }
+
         float roundSize = magicTemplate.mweapon[Magiclevel].Mradius;
         RoundObj.transform.localScale = new Vector3(roundSize, roundSize, roundSize);
 
