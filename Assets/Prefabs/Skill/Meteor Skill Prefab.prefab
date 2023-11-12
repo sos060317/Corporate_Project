@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3380115303332928258}
-  - component: {fileID: 3380115303332928256}
   - component: {fileID: 92602289}
   - component: {fileID: 92602290}
+  - component: {fileID: 3380115303332928256}
   m_Layer: 0
   m_Name: Meteor Skill Prefab
   m_TagString: Untagged
@@ -35,23 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3380115303332928256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3380115303332928257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 494a72a31707ddf4b8f6d944cd50648b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  meteorCount: 10
-  meteorPrefab: {fileID: 4003976488600463856, guid: f7267ccbbbf7c8345a21e3b18d00ac7e, type: 3}
-  sizeObj: {fileID: 3380115303703579012}
-  ableColor: {r: 0.4862745, g: 0.84313726, b: 1, a: 0.7019608}
-  unableColor: {r: 1, g: 0.2216981, b: 0.2216981, a: 0.7019608}
 --- !u!50 &92602289
 Rigidbody2D:
   serializedVersion: 4
@@ -89,6 +72,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.05
+--- !u!114 &3380115303332928256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3380115303332928257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494a72a31707ddf4b8f6d944cd50648b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meteorCount: 10
+  meteorPrefab: {fileID: 4003976488600463856, guid: f7267ccbbbf7c8345a21e3b18d00ac7e, type: 3}
+  sizeObj: {fileID: 3380115303703579012}
+  ableColor: {r: 0.4862745, g: 0.84313726, b: 1, a: 0.7019608}
+  unableColor: {r: 1, g: 0.2216981, b: 0.2216981, a: 0.7019608}
 --- !u!1 &3380115303703579018
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,7 +160,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1093175155
-  m_SortingLayer: 6
+  m_SortingLayer: 5
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 8142b3efe82b5904397d3e29ec3e5a1e, type: 3}
   m_Color: {r: 1, g: 0.22352941, b: 0.22352941, a: 0.7019608}

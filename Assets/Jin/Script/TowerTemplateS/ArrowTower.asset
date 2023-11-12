@@ -15,7 +15,7 @@ MonoBehaviour:
   ArrowTower: {fileID: 8267170808375101404, guid: 7f4446dcd0a13384bb36ae67b531094a, type: 3}
   aweapon:
   - PosLevel: 1
-    aDamage: 20
+    aDamage: 25
     Acost: 120
     Aradius: 4.5
     ResellCoset: 50
@@ -45,7 +45,7 @@ MonoBehaviour:
     sllowextent: 0.7
     timeStopTime: 1
   - PosLevel: 3
-    aDamage: 25
+    aDamage: 30
     Acost: 200
     Aradius: 4.5
     ResellCoset: 75
@@ -60,7 +60,7 @@ MonoBehaviour:
     sllowextent: 0.7
     timeStopTime: 1
   - PosLevel: 4
-    aDamage: 25
+    aDamage: 35
     Acost: 320
     Aradius: 4.5
     ResellCoset: 100

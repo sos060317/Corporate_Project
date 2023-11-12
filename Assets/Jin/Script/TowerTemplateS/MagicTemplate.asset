@@ -15,7 +15,7 @@ MonoBehaviour:
   mweapon:
   - LeveL: 1
     damage: 30
-    Mcost: 150
+    Mcost: 130
     Mradius: 10
   - LeveL: 2
     damage: 30
