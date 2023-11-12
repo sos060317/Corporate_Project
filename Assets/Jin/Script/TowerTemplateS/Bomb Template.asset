@@ -14,18 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bweapon:
   - Bcost: 220
-    damage: 10
+    damage: 50
     round: 7
     shotSpeed: 2
   - Bcost: 270
-    damage: 20
+    damage: 50
     round: 7
     shotSpeed: 2
   - Bcost: 330
-    damage: 20
+    damage: 50
     round: 7
     shotSpeed: 2
   - Bcost: 400
-    damage: 20
+    damage: 50
     round: 7
     shotSpeed: 3

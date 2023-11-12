@@ -61,47 +61,63 @@ public class Bomb : MonoBehaviour
             yield return null;
         }
 
-        if (!reachedEnd)
+        if (!damageDealt)
         {
-            reachedEnd = true;
-            float scaleFactor = 0.1f; // 시작할 작아짐 비율
-            float scaleTime = 0f;
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, damageAreaRadius);
 
-            while (scaleTime < 0.2f) // 0.2초 동안 작아지는 동안의 루프
+            foreach (Collider2D collider in colliders)
             {
-                scaleTime += Time.deltaTime;
-                float shrinkFactor = Mathf.Lerp(1f, scaleFactor, scaleTime / 0.2f);
-                transform.localScale = originalScale * shrinkFactor;
-                yield return null;
-            }
-
-            scaleTime = 0f;
-            while (scaleTime < 0.3f) // 0.3초 동안 커지는 동안의 루프
-            {
-                scaleTime += Time.deltaTime;
-                float growthFactor = Mathf.Lerp(scaleFactor, 3f, scaleTime / 0.3f);
-                transform.localScale = originalScale * growthFactor;
-
-                // 데미지를 아직 주지 않았다면
-                if (!damageDealt)
+                if (collider.CompareTag(DamageTag))
                 {
-                    Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, damageAreaRadius);
-
-                    foreach (Collider2D collider in colliders)
-                    {
-                        if (collider.CompareTag(DamageTag))
-                        {
-                            collider.GetComponent<EnemyBase>().OnDamage(attackPower, Damage);
-                            damageDealt = true; // 데미지 주었음을 표시
-                        }
-                    }
+                    collider.GetComponent<EnemyBase>().OnDamage(attackPower, Damage);
+                    damageDealt = true; // 데미지 주었음을 표시
                 }
-
-                yield return null;
             }
-
-            Destroy(gameObject);
         }
+
+        Destroy(gameObject);
+
+        //if (!reachedEnd)
+        //{
+        //    reachedEnd = true;
+        //    float scaleFactor = 0.1f; // 시작할 작아짐 비율
+        //    float scaleTime = 0f;
+
+        //    while (scaleTime < 0.2f) // 0.2초 동안 작아지는 동안의 루프
+        //    {
+        //        scaleTime += Time.deltaTime;
+        //        float shrinkFactor = Mathf.Lerp(1f, scaleFactor, scaleTime / 0.2f);
+        //        transform.localScale = originalScale * shrinkFactor;
+        //        yield return null;
+        //    }
+
+        //    scaleTime = 0f;
+        //    while (scaleTime < 0.3f) // 0.3초 동안 커지는 동안의 루프
+        //    {
+        //        scaleTime += Time.deltaTime;
+        //        float growthFactor = Mathf.Lerp(scaleFactor, 3f, scaleTime / 0.3f);
+        //        transform.localScale = originalScale * growthFactor;
+
+        //        // 데미지를 아직 주지 않았다면
+        //        if (!damageDealt)
+        //        {
+        //            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, damageAreaRadius);
+
+        //            foreach (Collider2D collider in colliders)
+        //            {
+        //                if (collider.CompareTag(DamageTag))
+        //                {
+        //                    collider.GetComponent<EnemyBase>().OnDamage(attackPower, Damage);
+        //                    damageDealt = true; // 데미지 주었음을 표시
+        //                }
+        //            }
+        //        }
+
+        //        yield return null;
+        //    }
+
+        //    Destroy(gameObject);
+        //}
     }
 
     private void FixedUpdate() 

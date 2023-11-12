@@ -6,6 +6,7 @@ using UnityEngine;
 public class BombTower : MonoBehaviour
 {
     public BombWindow BombTowerUI;
+    public Animator BombTowerAnim;
 
     //private GameManager playerGold;
     public BombTowerTemplate bombTemplate;
@@ -78,7 +79,9 @@ public class BombTower : MonoBehaviour
             if (timeSinceLastSpawn >= spawnInterval)
             {
                 timeSinceLastSpawn = 0f;
-                SpawnArrow();
+                //SpawnArrow();
+
+                StartCoroutine(AttackAnimation());
             }
         }
         else
@@ -128,6 +131,13 @@ public class BombTower : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
         BToggle = true;
+    }
+
+    private IEnumerator AttackAnimation()
+    {
+        BombTowerAnim.SetBool("ItShot", true);
+        yield return new WaitForSeconds(0.1f);
+        BombTowerAnim.SetBool("ItShot", false);
     }
 
     public void UpgradeTower()
