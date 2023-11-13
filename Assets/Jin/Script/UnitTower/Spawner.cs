@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
-{ 
+{
+    public TextMeshProUGUI UpgradeCostText;
+    public TextMeshProUGUI DestroyCost;
+
     public TowerTemplate towerTemplate;
 
     //private GameManager playerGold;
@@ -39,6 +43,9 @@ public class Spawner : MonoBehaviour
 
     private void Update()
     {
+        UpdateCostText();
+        DestroyCostText();
+
         // 활성화 상태가 아닌 단위(Unit)를 리스트에서 제거
         spawnedUnits.RemoveAll(unit => unit == null || !unit.activeSelf);
 
@@ -100,6 +107,24 @@ public class Spawner : MonoBehaviour
     {
         Destroy(gameObject);
         GameManager.Instance.GetGold(towerTemplate.weapon[level].ResellCost);
+    }
+
+    private void UpdateCostText()
+    {
+        // costText가 null이 아니라면 TMP 텍스트 업데이트
+        if (UpgradeCostText != null)
+        {
+            UpgradeCostText.text = towerTemplate.weapon[level + 1].cost.ToString();
+        }
+    }
+
+    private void DestroyCostText()
+    {
+        // costText가 null이 아니라면 TMP 텍스트 업데이트
+        if (DestroyCost != null)
+        {
+            DestroyCost.text = towerTemplate.weapon[level].ResellCost.ToString();
+        }
     }
 
     private void SpawnPrefab(GameObject prefab)

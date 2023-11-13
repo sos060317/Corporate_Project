@@ -101,7 +101,7 @@ public class UpgradeArrowTower : MonoBehaviour
         // costText가 null이 아니라면 TMP 텍스트 업데이트
         if (DestroyCost != null)
         {
-            DestroyCost.text = arrowTemplate.aweapon[Arrowlevel + 1].ResellCoset.ToString();
+            DestroyCost.text = arrowTemplate.aweapon[Arrowlevel].ResellCoset.ToString();
         }
     }
 

@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
+using TMPro;
 using UnityEngine;
 
 public class MagicPosCheck : MonoBehaviour
 {
+    public TextMeshProUGUI UpgradeCostText;
+    public TextMeshProUGUI DestroyCost;
+
     public MagicWindow MagicUI;
     public Animator MagicAnimation;
 
@@ -50,6 +54,9 @@ public class MagicPosCheck : MonoBehaviour
 
     private void Update()
     {
+        UpdateCostText();
+        DestroyCostText();
+
         if (Magiclevel == 1)
         {
             MagicAnimation.SetBool("Level1", true);
@@ -89,7 +96,24 @@ public class MagicPosCheck : MonoBehaviour
     {
         Destroy(gameObject);
         GameManager.Instance.GetGold(magicTemplate.mweapon[Magiclevel].ResellCost);
-        Debug.Log(magicTemplate.mweapon[Magiclevel].ResellCost);
+    }
+
+    private void UpdateCostText()
+    {
+        // costText가 null이 아니라면 TMP 텍스트 업데이트
+        if (UpgradeCostText != null)
+        {
+            UpgradeCostText.text = magicTemplate.mweapon[Magiclevel + 1].Mcost.ToString();
+        }
+    }
+
+    private void DestroyCostText()
+    {
+        // costText가 null이 아니라면 TMP 텍스트 업데이트
+        if (DestroyCost != null)
+        {
+            DestroyCost.text = magicTemplate.mweapon[Magiclevel].ResellCost.ToString();
+        }
     }
 
 

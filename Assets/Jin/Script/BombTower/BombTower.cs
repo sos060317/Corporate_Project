@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
+using TMPro;
 using UnityEngine;
 
 public class BombTower : MonoBehaviour
 {
+    public TextMeshProUGUI UpgradeCostText;
+    public TextMeshProUGUI DestroyCost;
+
+
     public BombWindow BombTowerUI;
     public Animator BombTowerAnim;
 
@@ -41,6 +46,8 @@ public class BombTower : MonoBehaviour
 
     private void Start()
     {
+        
+
 
         bombRound.SetActive(false);
 
@@ -56,6 +63,9 @@ public class BombTower : MonoBehaviour
 
     private void Update()
     {
+        UpdateCostText();
+        DestroyCostText();
+
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, detectionRadius);
 
         foreach (Collider2D collider in colliders)
@@ -65,6 +75,8 @@ public class BombTower : MonoBehaviour
                 enemyList.Add(collider.gameObject);
             }
         }
+
+        
 
         enemyList.RemoveAll(enemy => enemy == null || !IsWithinRadius(enemy.transform.position) || !enemy.activeSelf);
 
@@ -131,6 +143,24 @@ public class BombTower : MonoBehaviour
     {
         GameManager.Instance.GetGold(bombTemplate.Bweapon[BombLevel].ResellCost);
         Destroy(gameObject);
+    }
+
+    private void UpdateCostText()
+    {
+        // costText가 null이 아니라면 TMP 텍스트 업데이트
+        if (UpgradeCostText != null)
+        {
+            UpgradeCostText.text = bombTemplate.Bweapon[BombLevel + 1].Bcost.ToString();
+        }
+    }
+
+    private void DestroyCostText()
+    {
+        // costText가 null이 아니라면 TMP 텍스트 업데이트
+        if (DestroyCost != null)
+        {
+            DestroyCost.text = bombTemplate.Bweapon[BombLevel].ResellCost.ToString();
+        }
     }
 
     private IEnumerator DelayTm()
