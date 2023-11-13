@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class UpgradeArrowTower : MonoBehaviour
 {
+    public TextMeshProUGUI UpgradeCostText;
+    public TextMeshProUGUI DestroyCost;
+
     public ArrowTowerTemplate arrowTemplate;
     public Animator ArrowTowerAnim;
 
@@ -39,6 +43,9 @@ public class UpgradeArrowTower : MonoBehaviour
 
     private void Update()
     {
+        UpdateCostText();
+        DestroyCostText();
+
         if (Arrowlevel == 1)
         {
             ArrowTowerAnim.SetBool("LevelUp_1", true);
@@ -73,11 +80,32 @@ public class UpgradeArrowTower : MonoBehaviour
         }
     }
 
-    public void DestroyTower()
+     public void DestroyTower()
     {
         Destroy(gameObject);
         GameManager.Instance.GetGold(arrowTemplate.aweapon[Arrowlevel].ResellCoset);
     }
+
+
+    private void UpdateCostText()
+    {
+        // costText가 null이 아니라면 TMP 텍스트 업데이트
+        if (UpgradeCostText != null)
+        {
+            UpgradeCostText.text = arrowTemplate.aweapon[Arrowlevel + 1].Acost.ToString();
+        }
+    }
+
+    private void DestroyCostText()
+    {
+        // costText가 null이 아니라면 TMP 텍스트 업데이트
+        if (DestroyCost != null)
+        {
+            DestroyCost.text = arrowTemplate.aweapon[Arrowlevel + 1].ResellCoset.ToString();
+        }
+    }
+
+
 
     private void UpdatePosObjects()
     {
