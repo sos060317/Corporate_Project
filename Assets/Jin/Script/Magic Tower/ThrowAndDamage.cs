@@ -14,6 +14,7 @@ public class ThrowAndDamage : MonoBehaviour
 
     private string DamageTag = "Enemy";
     public float damageAreaRadius = 2.0f; // 공격 범위 반경
+    public GameObject hitEffect;
     private float Damage;
 
     private Vector2 targetPosition; // 목표 위치를 Vector2로 변경
@@ -74,6 +75,7 @@ public class ThrowAndDamage : MonoBehaviour
                         if (collider.CompareTag(DamageTag))
                         {
                             collider.GetComponent<EnemyBase>().OnDamage(0, Damage);
+                            Instantiate(hitEffect, collider.transform);
                             break;
                         }
                     }
