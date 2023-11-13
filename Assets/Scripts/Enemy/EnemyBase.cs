@@ -15,6 +15,7 @@ public abstract class EnemyBase : MonoBehaviour
     [SerializeField] private Image healthUiBg;
     [SerializeField] private Image healthUiBar;
     [SerializeField] protected AudioClip dieSound;
+    [SerializeField] protected GameObject dieEffect;
 
     [HideInInspector] public bool Targeting = false;
     
@@ -283,6 +284,7 @@ public abstract class EnemyBase : MonoBehaviour
             }
             
             SoundManager.Instance.PlaySound(dieSound);
+            Instantiate(dieEffect, transform.position, Quaternion.identity);
 
             anim.SetTrigger("Die");
             //return;

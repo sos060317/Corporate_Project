@@ -250,6 +250,7 @@ MonoBehaviour:
   healthUiBg: {fileID: 3927143001955413002}
   healthUiBar: {fileID: 7462625816331178221}
   dieSound: {fileID: 8300000, guid: 01d8f09bcdcd8d14c86e73d1b1c50b9f, type: 3}
+  dieEffect: {fileID: 100006, guid: 2a474af3f4c27be4e9bdce39cfe4315d, type: 3}
   Targeting: 0
   maxHealth: 0
   curHealth: 0
