@@ -174,6 +174,7 @@ public class Enemy_Hedgehog : EnemyBase
             }
             
             SoundManager.Instance.PlaySound(dieSound);
+            Instantiate(dieEffect, transform.position, Quaternion.identity);
             
             anim.SetTrigger("Die");
             return;

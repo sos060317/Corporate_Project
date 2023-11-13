@@ -16,7 +16,7 @@ MonoBehaviour:
   enemyBaseHealth: 1000
   enemyBaseMoveSpeed: 3
   enemyBaseAttackRate: 1.5
-  enemyBaseAttackRange: 0.4
+  enemyBaseAttackRange: 0.7
   defense: 0
   magicResistance: 0
   attackPower: 100
