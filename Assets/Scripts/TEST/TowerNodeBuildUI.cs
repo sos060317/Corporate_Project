@@ -62,12 +62,8 @@ public class TowerNodeBuildUI : MonoBehaviour
 
     public void BuildTower(GameObject towerPrefab)  // 타워설치
     {
-        if (GameManager.Instance.currentGold >= ATower.StartingCost || GameManager.Instance.currentGold >= BTower.Startcoin ||
-            GameManager.Instance.currentGold >= MTower.Startingcoin || GameManager.Instance.currentGold >= UTower.StartingCoin)
-        {
-            TowerBuildManager.Instance.selectedNode.BuildTower(towerPrefab);
+        TowerBuildManager.Instance.selectedNode.BuildTower(towerPrefab);
 
-            TowerBuildManager.Instance.DeselectNode();
-        }
+        TowerBuildManager.Instance.DeselectNode();
     }
 }
