@@ -6843,7 +6843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a3041f7d814ce4098a033dab4eea40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlocked: 1
+  unlocked: 0
   unlockImage: {fileID: 1907102097}
   stageImage: {fileID: 1476355906}
   stars:
