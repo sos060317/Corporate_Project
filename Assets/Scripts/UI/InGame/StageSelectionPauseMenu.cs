@@ -39,6 +39,11 @@ public class StageSelectionPauseMenu : MonoBehaviour
         isShow = true;
 
         mainMenu.SetActive(true);
+
+        if(SceneManager.GetActiveScene().name != "StageSelection") 
+        {
+            GameManager.Instance.isGameStop = true;
+        }
     }
 
     public void HidePauseMenu()
@@ -46,6 +51,11 @@ public class StageSelectionPauseMenu : MonoBehaviour
         isShow = false;
 
         mainMenu.SetActive(false);
+
+        if (SceneManager.GetActiveScene().name != "StageSelection")
+        {
+            GameManager.Instance.isGameStop = false;
+        }
     }
 
     public void TitleButton()

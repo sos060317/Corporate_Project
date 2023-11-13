@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour
     {
         //goldText.text = currentGold.ToString();
         EvolutionHealthBarUpdate();
-        GamePauseUpdate();
+        //GamePauseUpdate();
     }
 
     public void GetGold(float gold)
