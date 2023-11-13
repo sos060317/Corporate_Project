@@ -61513,6 +61513,7 @@ MonoBehaviour:
   UTower: {fileID: 6198729432191957988, guid: d9f359471f50e0840a9b1d951fcb3c82, type: 3}
   towerWindow: {fileID: 1717857817}
   buttonImage: {fileID: 750505853}
+  towerBuildSound: {fileID: 8300000, guid: f581f05a21e4d1d4184c3d34e646086c, type: 3}
 --- !u!114 &1717857817
 MonoBehaviour:
   m_ObjectHideFlags: 0
