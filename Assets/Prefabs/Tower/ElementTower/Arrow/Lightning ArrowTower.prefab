@@ -1062,6 +1062,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589ed93119419e84aaae64c77909b35f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UpgradeCostText: {fileID: 0}
+  DestroyCost: {fileID: 0}
   arrowTemplate: {fileID: 11400000, guid: 7ff9544debe48214a9d2cc8f3751d44a, type: 2}
   ArrowTowerAnim: {fileID: 4999052530675375389}
   Arrowlevel: 0
@@ -1149,7 +1151,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!114 &4999052531100461100
 MonoBehaviour:
