@@ -18,6 +18,8 @@ public class TowerNodeBuildUI : MonoBehaviour
 
     public RectTransform buttonImage;
 
+    public AudioClip towerBuildSound;
+
     private RectTransform rectTransform;
 
     private TowerNode selectedTowerNode;
@@ -65,5 +67,7 @@ public class TowerNodeBuildUI : MonoBehaviour
         TowerBuildManager.Instance.selectedNode.BuildTower(towerPrefab);
 
         TowerBuildManager.Instance.DeselectNode();
+        
+        SoundManager.Instance.PlaySound(towerBuildSound);
     }
 }
