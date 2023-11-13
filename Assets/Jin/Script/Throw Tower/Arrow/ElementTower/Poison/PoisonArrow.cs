@@ -21,6 +21,7 @@ public class PoisonArrow : MonoBehaviour
     public string damageTag = "Enemy"; // 데미지를 줄 옵젝
     public float damageAreaRadius = 2.0f; // 공격 범위
     public float Damage = 25;
+    public GameObject hitEffect;
 
     private Vector2 finish; // 종료 위치
     private bool reachedEnd = false;
@@ -101,6 +102,7 @@ public class PoisonArrow : MonoBehaviour
                 {
                     collider.GetComponent<EnemyBase>().OnDamage(Damage * GameManager.Instance.towerAttackDamageMultiply, 0);
                     collider.GetComponent<EnemyBase>().PoisonEnemy(arrowTemplate.aweapon[arrowLevel].poisonTime, PoisonDamage * GameManager.Instance.towerAttackDamageMultiply, arrowTemplate.aweapon[arrowLevel].poisonCount); // 초, 뎀지, 틱사이 시간
+                    Instantiate(hitEffect, collider.transform);
                     Destroy(gameObject);
                     break;
                 }

@@ -382,6 +382,7 @@ MonoBehaviour:
   damageTag: Enemy
   damageAreaRadius: 0.75
   Damage: 25
+  hitEffect: {fileID: 100004, guid: 7867af58a6ec48846ae807eb4022fbaa, type: 3}
 --- !u!1 &5455035187461016554
 GameObject:
   m_ObjectHideFlags: 0
