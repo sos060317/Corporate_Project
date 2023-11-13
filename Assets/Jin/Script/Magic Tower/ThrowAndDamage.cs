@@ -38,6 +38,16 @@ public class ThrowAndDamage : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.isGameStop)
+        {
+            MagicAnim.StartPlayback();
+            return;
+        }
+        else
+        {
+            MagicAnim.StopPlayback();
+        }
+
         if (isFollowing)
         {
             delayTimer -= Time.deltaTime;

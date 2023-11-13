@@ -54,6 +54,16 @@ public class MagicPosCheck : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.isGameStop)
+        {
+            MagicAnimation.StartPlayback();
+            return;
+        }
+        else
+        {
+            MagicAnimation.StopPlayback();
+        }
+
         UpdateCostText();
         DestroyCostText();
 

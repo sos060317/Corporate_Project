@@ -39,6 +39,16 @@ public class IceArrow : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.isGameStop)
+        {
+            NextArrow.StartPlayback();
+            return;
+        }
+        else
+        {
+            NextArrow.StopPlayback();
+        }
+
         arrowLevel = IceArrowTower.alevel;
 
         Damage = arrowTemplate.aweapon[arrowLevel].aDamage;

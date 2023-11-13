@@ -46,6 +46,16 @@ public class IceArrowTower : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.isGameStop)
+        {
+            IceArrowAnim.StartPlayback();
+            return;
+        }
+        else
+        {
+            IceArrowAnim.StopPlayback();
+        }
+
 
         //Debug.Log(enemyList.Count); ?? ?? ???
 

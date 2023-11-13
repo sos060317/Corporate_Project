@@ -63,6 +63,16 @@ public class BombTower : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.isGameStop)
+        {
+            BombTowerAnim.StartPlayback();
+            return;
+        }
+        else
+        {
+            BombTowerAnim.StopPlayback();
+        }
+
         UpdateCostText();
         DestroyCostText();
 

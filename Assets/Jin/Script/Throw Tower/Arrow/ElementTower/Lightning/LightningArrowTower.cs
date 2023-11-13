@@ -46,6 +46,15 @@ public class LightningArrowTower : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.isGameStop)
+        {
+            LightningArrowAnim.StartPlayback();
+            return;
+        }
+        else
+        {
+            LightningArrowAnim.StopPlayback();
+        }
 
         //Debug.Log(enemyList.Count); ?? ?? ???
 

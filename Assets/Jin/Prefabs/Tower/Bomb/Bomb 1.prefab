@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BombTemplate: {fileID: 11400000, guid: 547d37d0e999a2848a842625bb40c3ae, type: 2}
+  Bombanim: {fileID: 5795372136668327241}
   bombTower: {fileID: 4186010935434785114, guid: 59391adc21e50684a994196bc86779da, type: 3}
   curve:
     serializedVersion: 2
