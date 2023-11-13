@@ -11,6 +11,7 @@ public class IceArrow : MonoBehaviour
     [HideInInspector] public IceArrowTower IceArrowTower;
     public ArrowTowerTemplate arrowTemplate;
     public UpgradeArrowTower ArrowUpgrade;
+    public GameObject hitEffect;
     private int arrowLevel = 0;
 
 
@@ -91,6 +92,7 @@ public class IceArrow : MonoBehaviour
                 {
                     collider.GetComponent<EnemyBase>().OnDamage(Damage * GameManager.Instance.towerAttackDamageMultiply, 0);  // 물리? , 마법? 모르것다
                     collider.GetComponent<EnemyBase>().SpeedDownEnemy(arrowTemplate.aweapon[arrowLevel].sllowTime, arrowTemplate.aweapon[arrowLevel].sllowextent); //1.5f ,0.7
+                    Instantiate(hitEffect, collider.transform);
                     Destroy(gameObject);
                     break;
                 }

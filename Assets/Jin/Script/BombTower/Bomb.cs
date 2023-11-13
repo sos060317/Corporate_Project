@@ -14,6 +14,7 @@ public class Bomb : MonoBehaviour
     public AnimationCurve curve;
     public float duration = 1.0f;
     public float maxHeightY = 3.0f;
+    public GameObject hitEffect;
     //public string enemyTag = "FlowingPos"; // 적의 태그
     private int Blaval;
 
@@ -68,6 +69,8 @@ public class Bomb : MonoBehaviour
 
         if (!damageDealt)
         {
+            Instantiate(hitEffect, transform.position, Quaternion.identity);
+            
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, damageAreaRadius);
 
             foreach (Collider2D collider in colliders)

@@ -425,6 +425,7 @@ MonoBehaviour:
   IceArrowTower: {fileID: 0}
   arrowTemplate: {fileID: 11400000, guid: 7ff9544debe48214a9d2cc8f3751d44a, type: 2}
   ArrowUpgrade: {fileID: 3639177885408315513, guid: 42096af811bca5f488b8a9d50c7abbab, type: 3}
+  hitEffect: {fileID: 5112403345868107898, guid: 6f34ef0d986e9db4199cf75805f79753, type: 3}
   curve:
     serializedVersion: 2
     m_Curve:
