@@ -1162,6 +1162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589ed93119419e84aaae64c77909b35f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UpgradeCostText: {fileID: 0}
+  DestroyCost: {fileID: 0}
   arrowTemplate: {fileID: 11400000, guid: 7ff9544debe48214a9d2cc8f3751d44a, type: 2}
   ArrowTowerAnim: {fileID: 2448012366278824789}
   Arrowlevel: 0

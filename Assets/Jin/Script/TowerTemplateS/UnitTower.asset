@@ -20,25 +20,25 @@ MonoBehaviour:
     SpawnTime: 5
     MaxUnit: 3
     cost: 100
-    ResellCost: 0
+    ResellCost: 30
   - Unitdamage: 25
     UnitHp: 250
     radius: 5
     SpawnTime: 5
     MaxUnit: 3
     cost: 150
-    ResellCost: 0
+    ResellCost: 55
   - Unitdamage: 25
     UnitHp: 250
     radius: 5
     SpawnTime: 5
     MaxUnit: 4
     cost: 220
-    ResellCost: 0
+    ResellCost: 80
   - Unitdamage: 30
     UnitHp: 300
     radius: 5
     SpawnTime: 4
     MaxUnit: 5
     cost: 300
-    ResellCost: 0
+    ResellCost: 120
