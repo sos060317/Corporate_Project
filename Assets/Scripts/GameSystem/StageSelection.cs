@@ -9,6 +9,7 @@ public class StageSelection : MonoBehaviour
     [Header("스테이지")]
     [SerializeField] private bool unlocked;      // 스테이지가 풀렸는지 아닌지를 판별하는 변수
     [SerializeField] private Image unlockImage;  // 스테이지가 잠겼는지 알려주는 이미지
+    [SerializeField] private Image stageImage;   // 스테이지 Icon 이미지
     [SerializeField] private GameObject[] stars; // 스테이지의 클리어 정도를 알려주는 별
     [SerializeField] private Sprite starSprite;  // 스테이지의 클리어 정도를 알려주는 별의 그림
     
@@ -46,7 +47,8 @@ public class StageSelection : MonoBehaviour
             unlockImage.gameObject.SetActive(true); // 잠긴 이미지를 보여주고
             for (int i = 0; i < stars.Length; i++)
             {
-                stars[i].gameObject.SetActive(false); // 별 이미지를 없애준다
+                stars[i].gameObject.SetActive(false);   // 별 이미지를 없애준다
+                stageImage.gameObject.SetActive(false); // 스테이지 Icon 이미지를 없애준다
             }
         }
         else // 스테이지를 클리어 했다면
@@ -54,7 +56,8 @@ public class StageSelection : MonoBehaviour
             unlockImage.gameObject.SetActive(false); // 잠긴 이미지를 없애주고
             for (int i = 0; i < stars.Length; i++)
             {
-                stars[i].gameObject.SetActive(true); // 별 이미지를 보여준다
+                stars[i].gameObject.SetActive(true);   // 별 이미지를 보여준다
+                stageImage.gameObject.SetActive(true); // 스테이지 Icon 이미지를 보여준다
             }
 
             for (int i = 0; i < PlayerPrefs.GetInt("Lv" + gameObject.name); i++)
