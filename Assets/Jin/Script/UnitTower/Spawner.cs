@@ -43,6 +43,11 @@ public class Spawner : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.isGameStop)
+        {
+            return;
+        }
+
         UpdateCostText();
         DestroyCostText();
 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bomb : MonoBehaviour
 {
     public BombTowerTemplate BombTemplate;
+    public Animator Bombanim;
 
     public BombTower bombTower;
 
@@ -34,6 +35,19 @@ public class Bomb : MonoBehaviour
         SetEnemyPositionAsFinish();
 
         StartCoroutine(Curve(start, finish));
+    }
+
+    private void Update()
+    {
+        if (GameManager.Instance.isGameStop)
+        {
+            Bombanim.StartPlayback();
+            return;
+        }
+        else
+        {
+            Bombanim.StopPlayback();
+        }
     }
 
     private void SetEnemyPositionAsFinish()

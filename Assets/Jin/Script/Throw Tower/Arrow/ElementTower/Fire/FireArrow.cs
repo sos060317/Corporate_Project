@@ -44,8 +44,16 @@ public class FireArrow : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.isGameStop)
+        {
+            NextArrow.StartPlayback();
+            return;
+        }
+        else
+        {
+            NextArrow.StopPlayback();
+        }
 
-        
         arowLevel = fireArrowTower.alevel;
 
         Damage = arrowTemplate.aweapon[arowLevel].aDamage;

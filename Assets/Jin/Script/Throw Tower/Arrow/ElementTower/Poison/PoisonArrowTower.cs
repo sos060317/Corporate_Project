@@ -46,6 +46,16 @@ public class PoisonArrowTower : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.isGameStop)
+        {
+            PoisonArrowAnim.StartPlayback();
+            return;
+        }
+        else
+        {
+            PoisonArrowAnim.StopPlayback();
+        }
+
 
         //Debug.Log(enemyList.Count); ?? ?? ???
 
