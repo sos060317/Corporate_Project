@@ -11,6 +11,7 @@ public class ArrowTowerTemplate : ScriptableObject
     [System.Serializable]
     public struct AWeapon
     {
+
         public int PosLevel;
         public float aDamage;
         public int Acost;

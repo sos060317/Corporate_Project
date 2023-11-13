@@ -7,7 +7,6 @@ public class PoisonArrow : MonoBehaviour
     public Animator NextArrow;
 
     private EnemyBase enemybase;
-    private float attackPower;
 
     [HideInInspector] public PoisonArrowTower poisonArrowTower;
     public ArrowTowerTemplate arrowTemplate;
@@ -26,6 +25,8 @@ public class PoisonArrow : MonoBehaviour
     private Vector2 finish; // 종료 위치
     private bool reachedEnd = false;
 
+    private float PoisonDamage;
+
 
 
     private void Start()
@@ -35,6 +36,8 @@ public class PoisonArrow : MonoBehaviour
 
         SetEnemyPositionAsFinish();
         StartCoroutine(Curve(start, finish));
+
+        PoisonDamage = arrowTemplate.aweapon[arrowLevel].poisonDamage;
     }
 
     private void Update()
@@ -86,8 +89,8 @@ public class PoisonArrow : MonoBehaviour
             {
                 if (collider.CompareTag(damageTag))
                 {
-                    collider.GetComponent<EnemyBase>().OnDamage(attackPower, Damage);
-                    collider.GetComponent<EnemyBase>().PoisonEnemy(arrowTemplate.aweapon[arrowLevel].poisonTime, arrowTemplate.aweapon[arrowLevel].poisonDamage, arrowTemplate.aweapon[arrowLevel].poisonCount); // 초, 뎀지, 틱사이 시간
+                    collider.GetComponent<EnemyBase>().OnDamage(Damage * GameManager.Instance.towerAttackDamageMultiply, 0);
+                    collider.GetComponent<EnemyBase>().PoisonEnemy(arrowTemplate.aweapon[arrowLevel].poisonTime, PoisonDamage * GameManager.Instance.towerAttackDamageMultiply, arrowTemplate.aweapon[arrowLevel].poisonCount); // 초, 뎀지, 틱사이 시간
                     Destroy(gameObject);
                     break;
                 }

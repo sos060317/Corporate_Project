@@ -7,7 +7,6 @@ public class IceArrow : MonoBehaviour
     public Animator NextArrow;
 
     private EnemyBase enemybase;
-    private float attackPower;
 
     [HideInInspector] public IceArrowTower IceArrowTower;
     public ArrowTowerTemplate arrowTemplate;
@@ -90,7 +89,7 @@ public class IceArrow : MonoBehaviour
             {
                 if (collider.CompareTag(damageTag))
                 {
-                    collider.GetComponent<EnemyBase>().OnDamage(attackPower, Damage);  // 물리? , 마법? 모르것다
+                    collider.GetComponent<EnemyBase>().OnDamage(Damage * GameManager.Instance.towerAttackDamageMultiply, 0);  // 물리? , 마법? 모르것다
                     collider.GetComponent<EnemyBase>().SpeedDownEnemy(arrowTemplate.aweapon[arrowLevel].sllowTime, arrowTemplate.aweapon[arrowLevel].sllowextent); //1.5f ,0.7
                     Destroy(gameObject);
                     break;

@@ -7,7 +7,6 @@ public class FireArrow : MonoBehaviour
     public Animator NextArrow;
 
     private EnemyBase enemybase;
-    private float attackPower;
 
     [HideInInspector] public FireArrowTower fireArrowTower;
     public ArrowTowerTemplate arrowTemplate;
@@ -29,6 +28,8 @@ public class FireArrow : MonoBehaviour
     public float TickDamage;
     public float TickTime;
 
+    private float FireDamage;
+
     private void Start()
     {
         Vector3 start = transform.position;
@@ -37,7 +38,7 @@ public class FireArrow : MonoBehaviour
         SetEnemyPositionAsFinish();
         StartCoroutine(Curve(start, finish));
 
-        
+        FireDamage = arrowTemplate.aweapon[arowLevel].fireDamage;
     }
 
     private void Update()
@@ -94,8 +95,8 @@ public class FireArrow : MonoBehaviour
             {
                 if (collider.CompareTag(damageTag))
                 {
-                    collider.GetComponent<EnemyBase>().OnDamage(attackPower, Damage);  // 물리? , 마법? 모르것다
-                    collider.GetComponent<EnemyBase>().FireEnemy(arrowTemplate.aweapon[arowLevel].fireTime, arrowTemplate.aweapon[arowLevel].fireDamage, arrowTemplate.aweapon[arowLevel].fireCount); // 몇초, 몇뎀, 몇틱
+                    collider.GetComponent<EnemyBase>().OnDamage(Damage * GameManager.Instance.towerAttackDamageMultiply, 0);  // 물리? , 마법? 모르것다
+                    collider.GetComponent<EnemyBase>().FireEnemy(arrowTemplate.aweapon[arowLevel].fireTime, FireDamage * GameManager.Instance.towerAttackDamageMultiply, arrowTemplate.aweapon[arowLevel].fireCount); // 몇초, 몇뎀, 몇틱
                     
                     Destroy(gameObject);
                     break;
