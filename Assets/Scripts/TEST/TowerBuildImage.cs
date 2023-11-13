@@ -16,7 +16,10 @@ public class TowerBuildImage : MonoBehaviour, IPointerClickHandler
             
             return;
         }
-        
+
+        TowerBuildManager.Instance.selectedNode.GetComponent<TowerNode>().isClick = false;
+        TowerBuildManager.Instance.selectedNode.GetComponent<SpriteRenderer>().color = TowerBuildManager.Instance.selectedNode.GetComponent<TowerNode>().nomalColor;
+
         TowerBuildManager.Instance.towerNodeBuildUI.BuildTower(ownTower);
 
         TowerBuildManager.Instance.DeselectNode();
