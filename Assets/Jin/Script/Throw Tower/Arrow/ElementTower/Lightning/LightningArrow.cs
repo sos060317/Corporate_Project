@@ -11,6 +11,7 @@ public class LightningArrow : MonoBehaviour
     [HideInInspector] public LightningArrowTower lightningArrowTower;
     public ArrowTowerTemplate arrowTemplate;
     public UpgradeArrowTower ArrowUpgrade;
+    public GameObject hitEffect;
     private int arrowLevel = 0;
 
 
@@ -88,6 +89,7 @@ public class LightningArrow : MonoBehaviour
                 {
                     collider.GetComponent<EnemyBase>().OnDamage(Damage * GameManager.Instance.towerAttackDamageMultiply, 0);  // 물리? , 마법? 모르것다
                     collider.GetComponent<EnemyBase>().FaintEnemy(arrowTemplate.aweapon[arrowLevel].timeStopTime);
+                    Instantiate(hitEffect, collider.transform.position, Quaternion.identity);
                     Destroy(gameObject);
                     break;
                 }

@@ -89,6 +89,7 @@ MonoBehaviour:
   lightningArrowTower: {fileID: 0}
   arrowTemplate: {fileID: 11400000, guid: 7ff9544debe48214a9d2cc8f3751d44a, type: 2}
   ArrowUpgrade: {fileID: 4999052530675375360, guid: a5b20ff3db631f74b87e445b005cb77c, type: 3}
+  hitEffect: {fileID: 100000, guid: 77ec3c4e07a36814fb3169ecef41b50a, type: 3}
   curve:
     serializedVersion: 2
     m_Curve:
