@@ -20,6 +20,7 @@ public class FireArrow : MonoBehaviour
 
     public string damageTag = "Enemy"; // 데미지를 줄 옵젝
     public float damageAreaRadius = 2.0f; // 공격 범위
+    public GameObject hitEffect;
     private float Damage;
 
     private Vector2 finish; // 종료 위치
@@ -97,7 +98,7 @@ public class FireArrow : MonoBehaviour
                 {
                     collider.GetComponent<EnemyBase>().OnDamage(Damage * GameManager.Instance.towerAttackDamageMultiply, 0);  // 물리? , 마법? 모르것다
                     collider.GetComponent<EnemyBase>().FireEnemy(arrowTemplate.aweapon[arowLevel].fireTime, FireDamage * GameManager.Instance.towerAttackDamageMultiply, arrowTemplate.aweapon[arowLevel].fireCount); // 몇초, 몇뎀, 몇틱
-                    
+                    Instantiate(hitEffect, collider.transform);
                     Destroy(gameObject);
                     break;
                 }

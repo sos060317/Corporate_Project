@@ -46,7 +46,15 @@ public class FireArrowTower : MonoBehaviour
 
     private void Update()
     {
-
+        if (GameManager.Instance.isGameStop)
+        {
+            FireArrowAnim.StartPlayback();
+            return;
+        }
+        else
+        {
+            FireArrowAnim.StopPlayback();
+        }
 
         alevel = sp.Arrowlevel;
 
