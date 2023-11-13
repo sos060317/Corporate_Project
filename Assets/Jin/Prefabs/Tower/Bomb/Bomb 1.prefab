@@ -135,6 +135,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   duration: 0.5
   maxHeightY: 4
+  hitEffect: {fileID: 1040608886635896, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
   DamageTag: Enemy
   damageAreaRadius: 2
   Damage: 10
