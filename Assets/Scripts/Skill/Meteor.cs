@@ -6,6 +6,7 @@ using UnityEngine;
 public class Meteor : MonoBehaviour
 {
     [SerializeField] private GameObject meteorEffectPrefab;
+    [SerializeField] private AudioClip meteorSound;
     
     private Vector3 endPos;
     
@@ -30,6 +31,8 @@ public class Meteor : MonoBehaviour
         if (Vector3.Distance(transform.position, endPos) < 0.3f)
         {
             Instantiate(meteorEffectPrefab, transform.position, Quaternion.identity);
+
+            SoundManager.Instance.PlaySound(meteorSound);
             
             Destroy(gameObject);
         }

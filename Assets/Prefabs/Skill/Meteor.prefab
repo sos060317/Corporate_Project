@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meteorEffectPrefab: {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1, type: 3}
+  meteorSound: {fileID: 8300000, guid: 89001e92ca492453599bb2bc49326e85, type: 3}
 --- !u!95 &1018857897583920201
 Animator:
   serializedVersion: 5
