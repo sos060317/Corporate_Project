@@ -70,15 +70,13 @@ public class IceArrow : MonoBehaviour
         //    finish = IceArrowTower.EnemyPos;
         //}
 
-        if (IceArrowTower.nowShot != false)
-        {
             finish = IceArrowTower.EnemyPos;
 
             if (finish == Vector2.zero)
             {
                 Destroy(gameObject);
             }
-        }
+
 
     }
 
