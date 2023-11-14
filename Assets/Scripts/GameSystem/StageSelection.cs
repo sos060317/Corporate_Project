@@ -30,6 +30,7 @@ public class StageSelection : MonoBehaviour
 
     private void UpdateLevelStatus()
     {
+        Debug.Log(gameObject.name);
         int previousLevelNum = int.Parse(gameObject.name) - 1;
         //Debug.Log(int.Parse(gameObject.name));
         if (PlayerPrefs.GetInt("Lv" + previousLevelNum) > 0)

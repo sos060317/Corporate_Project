@@ -18,7 +18,7 @@ MonoBehaviour:
   enemyBaseAttackRate: 1
   enemyBaseAttackRange: 1
   defense: 1
-  magicResistance: 40
+  magicResistance: 10
   attackPower: 1
   spellPower: 1
   profileImage: {fileID: 273098058, guid: a2aa8fd6ea871244e8c1c7f28ba4502b, type: 3}
