@@ -5930,6 +5930,7 @@ MonoBehaviour:
   - {fileID: 3849307150248586265, guid: a37038ee07c8f914e9d24af4c9942c75, type: 3}
   - {fileID: 3849307150248586265, guid: 9c1af12f93b2a964198b0631d13b21db, type: 3}
   - {fileID: 3849307150248586265, guid: acc7423f097602945a079fe320fcd616, type: 3}
+  - {fileID: 3849307150248586265, guid: f62d202181ceb8e4cb39dab8d9a1a6ca, type: 3}
   - {fileID: 3849307150248586265, guid: 23a24f564a6ebce418da947cbcbe3284, type: 3}
   tipText: {fileID: 876308503}
   bookSound: {fileID: 8300000, guid: 85979b0a572bf8948a072eb24e774b48, type: 3}
