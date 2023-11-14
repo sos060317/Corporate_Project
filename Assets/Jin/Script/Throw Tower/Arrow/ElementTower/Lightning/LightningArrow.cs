@@ -23,7 +23,7 @@ public class LightningArrow : MonoBehaviour
     public float damageAreaRadius = 2.0f; // 공격 범위
     private float Damage;
 
-    private Vector2 finish; // 종료 위치
+    public Vector2 finish; // 종료 위치
     private bool reachedEnd = false;
 
 
@@ -66,15 +66,13 @@ public class LightningArrow : MonoBehaviour
         //{
         //    finish = lightningArrowTower.EnemyPos;
         //}
-        if (lightningArrowTower.nowShot != false)
-        {
-            finish = lightningArrowTower.EnemyPos;
+          finish = lightningArrowTower.EnemyPos;
 
-            if (finish == Vector2.zero)
-            {
-                Destroy(gameObject);
-            }
-        }
+          if (finish == Vector2.zero)
+          {
+              Destroy(gameObject);
+          }
+
 
     }
 
