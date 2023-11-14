@@ -11,6 +11,7 @@ public class GameClearMenu : MonoBehaviour
     [SerializeField] private GameObject[] particleObjs;
     [SerializeField] private TransitionSettings transitionSettings;
     [SerializeField] private AudioClip fadeOutSound;
+    [SerializeField] private AudioClip starSound;
 
     public void Init(int starCount)
     {
@@ -30,6 +31,7 @@ public class GameClearMenu : MonoBehaviour
             starRects[i].gameObject.SetActive(true);
             starRects[i].DOScale(new Vector3(1, 1, 1), 0.4f).SetEase(Ease.OutBack);
             particleObjs[i].SetActive(true);
+            SoundManager.Instance.PlaySound(starSound);
             yield return new WaitForSeconds(0.5f);
         }
     }
