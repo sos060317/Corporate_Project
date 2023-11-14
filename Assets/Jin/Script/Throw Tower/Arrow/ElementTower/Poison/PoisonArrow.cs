@@ -65,9 +65,15 @@ public class PoisonArrow : MonoBehaviour
 
     private void SetEnemyPositionAsFinish()
     {
+
         if (poisonArrowTower.nowShot != false)
         {
             finish = poisonArrowTower.EnemyPos;
+
+            if (finish == Vector2.zero)
+            {
+                Destroy(gameObject);
+            }
         }
 
     }

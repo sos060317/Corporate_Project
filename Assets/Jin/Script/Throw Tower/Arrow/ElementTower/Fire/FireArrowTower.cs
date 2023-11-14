@@ -22,7 +22,7 @@ public class FireArrowTower : MonoBehaviour
 
     [SerializeField]
     private List<GameObject> enemyList = new List<GameObject>();
-    private float timeSinceLastSpawn = 1f;
+    private float timeSinceLastSpawn = 1.3f;
 
     public bool isClicked = false;
 
@@ -200,7 +200,7 @@ public class FireArrowTower : MonoBehaviour
 
     private bool IsWithinRadius(Vector2 position)
     {
-        return Vector2.Distance(ArrowRound.transform.position, position) <= detectionRadius;
+        return Vector2.Distance(ArrowRound.transform.position, position) <= ArrowRound.AroRound;
     }
 
     private void OnDrawGizmosSelected()
@@ -211,8 +211,8 @@ public class FireArrowTower : MonoBehaviour
             Gizmos.color = Color.green;
             Gizmos.DrawWireSphere(ArrowRound.transform.position, ArrowRound.AroRound);
 
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(ArrowRound.transform.position, detectionRadius);
+            //Gizmos.color = Color.green;
+            //Gizmos.DrawWireSphere(ArrowRound.transform.position, detectionRadius);
 
         }
     }

@@ -22,7 +22,7 @@ public class IceArrowTower : MonoBehaviour
 
     [SerializeField]
     private List<GameObject> enemyList = new List<GameObject>();
-    private float timeSinceLastSpawn = 1f;
+    private float timeSinceLastSpawn = 1.4f;
 
     public bool isClicked = false;
 
@@ -193,7 +193,7 @@ public class IceArrowTower : MonoBehaviour
 
     private bool IsWithinRadius(Vector2 position)
     {
-        return Vector2.Distance(ArrowRound.transform.position, position) <= detectionRadius;  //  ???? ??? Enmey ??? ????
+        return Vector2.Distance(ArrowRound.transform.position, position) <= ArrowRound.AroRound;  //  ???? ??? Enmey ??? ????
     }
 
     private void OnDrawGizmosSelected()

@@ -74,7 +74,7 @@ public class IceArrow : MonoBehaviour
         {
             finish = IceArrowTower.EnemyPos;
 
-            if (finish == null)
+            if (finish == Vector2.zero)
             {
                 Destroy(gameObject);
             }

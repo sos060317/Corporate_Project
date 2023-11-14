@@ -70,7 +70,7 @@ public class LightningArrow : MonoBehaviour
         {
             finish = lightningArrowTower.EnemyPos;
 
-            if (finish == null)
+            if (finish == Vector2.zero)
             {
                 Destroy(gameObject);
             }
