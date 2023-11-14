@@ -23,4 +23,4 @@ MonoBehaviour:
   spellPower: 0
   enemyPrefab: {fileID: 6892805195981400713, guid: d36073761df0e294a9a51a078b3ec20a, type: 3}
   profileImage: {fileID: -1139722445, guid: 80619cb05b611bd4b9a44ace5691bf45, type: 3}
-  coins: 25
+  coins: 30
