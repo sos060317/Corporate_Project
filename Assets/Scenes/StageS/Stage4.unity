@@ -42804,6 +42804,7 @@ MonoBehaviour:
   UTower: {fileID: 6198729432191957988, guid: d9f359471f50e0840a9b1d951fcb3c82, type: 3}
   towerWindow: {fileID: 1745057702}
   buttonImage: {fileID: 1732917429}
+  towerBuildSound: {fileID: 0}
 --- !u!114 &1745057702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55128,15 +55129,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.99215686, g: 0.5058824, b: 0.99607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a77593e27ba0dee42a7a93c5e425e7cb, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 2f513620c254f0b4d83671379db4281a, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
