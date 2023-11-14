@@ -89,11 +89,18 @@ public class UpgradeArrowTower : MonoBehaviour
 
     private void UpdateCostText()
     {
-        // costText가 null이 아니라면 TMP 텍스트 업데이트
-        if (UpgradeCostText != null)
+        if (Arrowlevel <= 2)
         {
-            UpgradeCostText.text = arrowTemplate.aweapon[Arrowlevel + 1].Acost.ToString();
+            if (UpgradeCostText != null)
+            {
+                UpgradeCostText.text = arrowTemplate.aweapon[Arrowlevel + 1].Acost.ToString();
+            }
         }
+        else
+        {
+            UpgradeCostText.text = ("Max!");
+        }
+        
     }
 
     private void DestroyCostText()

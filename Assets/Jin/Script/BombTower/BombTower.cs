@@ -158,11 +158,21 @@ public class BombTower : MonoBehaviour
 
     private void UpdateCostText()
     {
-        // costText가 null이 아니라면 TMP 텍스트 업데이트
-        if (UpgradeCostText != null)
+        if(BombLevel <= 2)
         {
-            UpgradeCostText.text = bombTemplate.Bweapon[BombLevel + 1].Bcost.ToString();
+            if (UpgradeCostText != null)
+            {
+                UpgradeCostText.text = bombTemplate.Bweapon[BombLevel + 1].Bcost.ToString();
+            }
         }
+        else
+        {
+            if (UpgradeCostText != null)
+            {
+                UpgradeCostText.text = ("Max!");
+            }
+        }
+        
     }
 
     private void DestroyCostText()

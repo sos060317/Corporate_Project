@@ -110,11 +110,18 @@ public class MagicPosCheck : MonoBehaviour
 
     private void UpdateCostText()
     {
-        // costText가 null이 아니라면 TMP 텍스트 업데이트
-        if (UpgradeCostText != null)
+        if (Magiclevel <= 2)
         {
-            UpgradeCostText.text = magicTemplate.mweapon[Magiclevel + 1].Mcost.ToString();
+            if (UpgradeCostText != null)
+            {
+                UpgradeCostText.text = magicTemplate.mweapon[Magiclevel + 1].Mcost.ToString();
+            }
         }
+        else
+        {
+            UpgradeCostText.text = ("Max!");
+        }
+        
     }
 
     private void DestroyCostText()
