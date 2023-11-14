@@ -24,7 +24,6 @@ public class Bomb : MonoBehaviour
     public float Damage;
 
     private Vector2 finish; // 종료 위치
-    private bool reachedEnd = false;
 
     private bool damageDealt = false; // 데미지를 이미 주었는지 여부 확인 변수
 
@@ -59,6 +58,11 @@ public class Bomb : MonoBehaviour
         if (bombTower.BombShot != false)
         {
             finish = bombTower.BEnemyPos;
+        }
+
+        if (finish == Vector2.zero)
+        {
+            Destroy(gameObject);
         }
     }
 

@@ -28,7 +28,7 @@ public class BombTower : MonoBehaviour
     [SerializeField]
     private List<GameObject> enemyList = new List<GameObject>();
     private bool canSpawn = false;
-    private float timeSinceLastSpawn = 0.7f;
+    private float timeSinceLastSpawn = 1.9f;
 
     public int BombLevel = 0;
 
