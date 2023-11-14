@@ -12,6 +12,7 @@ public class BananaSkillPrefab : MonoBehaviour
 
     [SerializeField] private Color ableColor;
     [SerializeField] private Color unableColor;
+    [SerializeField] private AudioClip bananaSound;
 
     private bool attackPossible = false;
     
@@ -53,6 +54,8 @@ public class BananaSkillPrefab : MonoBehaviour
             var meteor = Instantiate(bananaPrefab, skillPos, Quaternion.identity);
             
             meteor.Init(skillPos + Random.insideUnitCircle);
+            
+            SoundManager.Instance.PlaySound(bananaSound);
             
             yield return new WaitForSeconds(Random.Range(0.1f, 0.5f));
         }
