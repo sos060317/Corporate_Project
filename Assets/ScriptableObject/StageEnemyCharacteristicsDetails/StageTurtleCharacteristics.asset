@@ -17,7 +17,7 @@ MonoBehaviour:
   enemyBaseMoveSpeed: 1
   enemyBaseAttackRate: 1
   enemyBaseAttackRange: 1
-  defense: 40
+  defense: 10
   magicResistance: 1
   attackPower: 1
   spellPower: 1

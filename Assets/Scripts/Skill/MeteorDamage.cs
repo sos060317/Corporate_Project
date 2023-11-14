@@ -9,7 +9,7 @@ public class MeteorDamage : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            other.GetComponent<EnemyBase>().OnDamage(20 * GameManager.Instance.skillAttackDamageMultiply, 0);
+            other.GetComponent<EnemyBase>().OnDamage(40 * GameManager.Instance.skillAttackDamageMultiply, 0);
         }
     }
 }
