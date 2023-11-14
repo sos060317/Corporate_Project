@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: BuffDetails_TowerAttackDamage
   m_EditorClassIdentifier: 
   buffDatas:
-  - buffForce: 1.02
-    needGold: 100
-    buffExplanation: "\uD0C0\uC6CC \uACF5\uACA9\uB825\n102%"
-  - buffForce: 1.03
-    needGold: 100
-    buffExplanation: "\uD0C0\uC6CC \uACF5\uACA9\uB825\n103%"
-  - buffForce: 1.04
-    needGold: 100
-    buffExplanation: "\uD0C0\uC6CC \uACF5\uACA9\uB825\n104%"
   - buffForce: 1.05
     needGold: 100
     buffExplanation: "\uD0C0\uC6CC \uACF5\uACA9\uB825\n105%"
-  - buffForce: 1.06
+  - buffForce: 1.1
     needGold: 100
-    buffExplanation: "\uD0C0\uC6CC \uACF5\uACA9\uB825\n106%"
+    buffExplanation: "\uD0C0\uC6CC \uACF5\uACA9\uB825\n110%"
+  - buffForce: 1.13
+    needGold: 100
+    buffExplanation: "\uD0C0\uC6CC \uACF5\uACA9\uB825\n113%"
+  - buffForce: 1.16
+    needGold: 100
+    buffExplanation: "\uD0C0\uC6CC \uACF5\uACA9\uB825\n116%"
+  - buffForce: 1.2
+    needGold: 100
+    buffExplanation: "\uD0C0\uC6CC \uACF5\uACA9\uB825\n120%"

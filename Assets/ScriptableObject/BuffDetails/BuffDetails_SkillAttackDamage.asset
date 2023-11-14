@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: BuffDetails_SkillAttackDamage
   m_EditorClassIdentifier: 
   buffDatas:
-  - buffForce: 1.02
+  - buffForce: 1.05
     needGold: 100
-    buffExplanation: "\uC2A4\uD0AC \uB370\uBBF8\uC9C0\n102%"
-  - buffForce: 1.04
-    needGold: 100
-    buffExplanation: "\uC2A4\uD0AC \uB370\uBBF8\uC9C0\n104%"
-  - buffForce: 1.06
-    needGold: 100
-    buffExplanation: "\uC2A4\uD0AC \uB370\uBBF8\uC9C0\n106%"
-  - buffForce: 1.08
-    needGold: 100
-    buffExplanation: "\uC2A4\uD0AC \uB370\uBBF8\uC9C0\n108%"
+    buffExplanation: "\uC2A4\uD0AC \uB370\uBBF8\uC9C0\n105%"
   - buffForce: 1.1
     needGold: 100
     buffExplanation: "\uC2A4\uD0AC \uB370\uBBF8\uC9C0\n110%"
+  - buffForce: 1.13
+    needGold: 100
+    buffExplanation: "\uC2A4\uD0AC \uB370\uBBF8\uC9C0\n113%"
+  - buffForce: 1.16
+    needGold: 100
+    buffExplanation: "\uC2A4\uD0AC \uB370\uBBF8\uC9C0\n116%"
+  - buffForce: 1.2
+    needGold: 100
+    buffExplanation: "\uC2A4\uD0AC \uB370\uBBF8\uC9C0\n120%"

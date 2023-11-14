@@ -14,22 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mweapon:
   - LeveL: 1
-    damage: 50
+    damage: 40
     Mcost: 150
-    Mradius: 10
+    Mradius: 4.7
     ResellCost: 30
   - LeveL: 2
-    damage: 50
+    damage: 45
     Mcost: 200
-    Mradius: 10
+    Mradius: 5
     ResellCost: 50
   - LeveL: 3
     damage: 50
     Mcost: 260
-    Mradius: 10
+    Mradius: 5.3
     ResellCost: 85
   - LeveL: 4
-    damage: 60
+    damage: 55
     Mcost: 300
-    Mradius: 10
+    Mradius: 5.5
     ResellCost: 120

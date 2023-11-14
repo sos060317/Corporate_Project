@@ -111,3 +111,36 @@ MonoBehaviour:
       enemySpawnCount: 3
       enemySpawnInterval: 0.4
       nextEnemyDelay: 3
+  - waveDatas:
+    - enemyType: {fileID: 11400000, guid: 3e86b7733a7288c4e986c83c3929dfb6, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 0.5
+      nextEnemyDelay: 0.8
+    - enemyType: {fileID: 11400000, guid: 30078f86dc69c064c84a8583be72171d, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 0.5
+      nextEnemyDelay: 0.8
+    - enemyType: {fileID: 11400000, guid: 3e86b7733a7288c4e986c83c3929dfb6, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 0.5
+      nextEnemyDelay: 2
+    - enemyType: {fileID: 11400000, guid: 30078f86dc69c064c84a8583be72171d, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 0.5
+      nextEnemyDelay: 0.8
+    - enemyType: {fileID: 11400000, guid: 3e86b7733a7288c4e986c83c3929dfb6, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 0.5
+      nextEnemyDelay: 0.8
+    - enemyType: {fileID: 11400000, guid: 30078f86dc69c064c84a8583be72171d, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 0.5
+      nextEnemyDelay: 0.8
+    - enemyType: {fileID: 11400000, guid: 3e86b7733a7288c4e986c83c3929dfb6, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 0.5
+      nextEnemyDelay: 0.8
+    - enemyType: {fileID: 11400000, guid: 30078f86dc69c064c84a8583be72171d, type: 2}
+      enemySpawnCount: 5
+      enemySpawnInterval: 0.5
+      nextEnemyDelay: 0.8

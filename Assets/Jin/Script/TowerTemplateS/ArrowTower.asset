@@ -17,7 +17,7 @@ MonoBehaviour:
   - PosLevel: 1
     aDamage: 25
     Acost: 120
-    Aradius: 4.5
+    Aradius: 4.2
     ResellCoset: 50
     AttackSpeed: 1.5
     fireDamage: 5
@@ -26,51 +26,51 @@ MonoBehaviour:
     poisonDamage: 5
     poisonTime: 3
     poisonCount: 3
-    sllowTime: 1.5
-    sllowextent: 0.7
-    timeStopTime: 1
+    sllowTime: 2
+    sllowextent: 0.5
+    timeStopTime: 0.3
   - PosLevel: 2
     aDamage: 25
     Acost: 150
-    Aradius: 6
+    Aradius: 4.2
     ResellCoset: 60
     AttackSpeed: 1.5
-    fireDamage: 3
+    fireDamage: 10
     fireTime: 3
-    fireCount: 5
-    poisonDamage: 7
+    fireCount: 3
+    poisonDamage: 10
     poisonTime: 3
-    poisonCount: 5
-    sllowTime: 1.5
-    sllowextent: 0.7
-    timeStopTime: 1
+    poisonCount: 3
+    sllowTime: 2.5
+    sllowextent: 0.5
+    timeStopTime: 0.5
   - PosLevel: 3
     aDamage: 30
     Acost: 200
-    Aradius: 4.5
+    Aradius: 4.2
     ResellCoset: 75
     AttackSpeed: 1.5
-    fireDamage: 3
+    fireDamage: 10
     fireTime: 3
-    fireCount: 5
-    poisonDamage: 7
+    fireCount: 4
+    poisonDamage: 10
     poisonTime: 3
-    poisonCount: 5
-    sllowTime: 1.5
-    sllowextent: 0.7
-    timeStopTime: 1
+    poisonCount: 4
+    sllowTime: 2.5
+    sllowextent: 1
+    timeStopTime: 0.7
   - PosLevel: 4
-    aDamage: 35
+    aDamage: 30
     Acost: 320
-    Aradius: 4.5
+    Aradius: 4.2
     ResellCoset: 100
     AttackSpeed: 1.5
-    fireDamage: 3
-    fireTime: 3
-    fireCount: 5
-    poisonDamage: 7
-    poisonTime: 3
-    poisonCount: 5
-    sllowTime: 1.5
-    sllowextent: 0.7
+    fireDamage: 10
+    fireTime: 4
+    fireCount: 4
+    poisonDamage: 10
+    poisonTime: 4
+    poisonCount: 4
+    sllowTime: 2
+    sllowextent: 1.2
     timeStopTime: 1
