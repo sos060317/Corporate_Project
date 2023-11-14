@@ -1514,7 +1514,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 93}
   m_SizeDelta: {x: 60, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &444173008
@@ -1969,7 +1969,7 @@ RectTransform:
   - {fileID: 1413666985}
   - {fileID: 778283870}
   m_Father: {fileID: 571330624}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2454,10 +2454,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 973666831}
-  - {fileID: 2030391626}
   - {fileID: 1441085619}
-  - {fileID: 475828795}
   - {fileID: 1308076040}
+  - {fileID: 2030391626}
+  - {fileID: 475828795}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4324,8 +4324,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 973666831}
+  - component: {fileID: 973666832}
   m_Layer: 5
-  m_Name: Stage1
+  m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4355,8 +4356,29 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -450, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &973666832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973666830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4a3041f7d814ce4098a033dab4eea40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unlocked: 1
+  unlockImage: {fileID: 228352540}
+  stageImage: {fileID: 1016499460}
+  stars:
+  - {fileID: 2048849013}
+  - {fileID: 2119354089}
+  - {fileID: 873506156}
+  starSprite: {fileID: -1008867147, guid: 8fd732bd974bf1245b6adb2376e6ae57, type: 3}
+  transition: {fileID: 11400000, guid: b0126e1e0c6c2a04895d564bd230dfb9, type: 2}
 --- !u!1 &995714197
 GameObject:
   m_ObjectHideFlags: 0
@@ -4560,7 +4582,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 93}
   m_SizeDelta: {x: 60, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1003322304
@@ -4674,7 +4696,6 @@ GameObject:
   - component: {fileID: 1016499461}
   - component: {fileID: 1016499460}
   - component: {fileID: 1016499459}
-  - component: {fileID: 1016499458}
   m_Layer: 5
   m_Name: 1
   m_TagString: Untagged
@@ -4702,27 +4723,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 355.0391, y: 310.6592}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1016499458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016499456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4a3041f7d814ce4098a033dab4eea40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unlocked: 1
-  unlockImage: {fileID: 228352540}
-  stageImage: {fileID: 1016499460}
-  stars:
-  - {fileID: 2048849013}
-  - {fileID: 2119354089}
-  - {fileID: 873506156}
-  starSprite: {fileID: -1008867147, guid: 8fd732bd974bf1245b6adb2376e6ae57, type: 3}
-  transition: {fileID: 11400000, guid: b0126e1e0c6c2a04895d564bd230dfb9, type: 2}
 --- !u!114 &1016499459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4767,7 +4767,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1016499458}
+      - m_Target: {fileID: 973666832}
         m_TargetAssemblyTypeName: StageSelection, Assembly-CSharp
         m_MethodName: PressSelection
         m_Mode: 5
@@ -5403,9 +5403,8 @@ GameObject:
   - component: {fileID: 1130483660}
   - component: {fileID: 1130483659}
   - component: {fileID: 1130483658}
-  - component: {fileID: 1130483657}
   m_Layer: 5
-  m_Name: 4
+  m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5431,27 +5430,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 355.0391, y: 310.6592}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1130483657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1130483655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4a3041f7d814ce4098a033dab4eea40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unlocked: 0
-  unlockImage: {fileID: 1160380709}
-  stageImage: {fileID: 1130483659}
-  stars:
-  - {fileID: 1025477112}
-  - {fileID: 2145032499}
-  - {fileID: 949472090}
-  starSprite: {fileID: -1008867147, guid: 8fd732bd974bf1245b6adb2376e6ae57, type: 3}
-  transition: {fileID: 11400000, guid: b0126e1e0c6c2a04895d564bd230dfb9, type: 2}
 --- !u!114 &1130483658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5496,16 +5474,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GamePauseMenu, Assembly-CSharp
-        m_MethodName: LoadScene
+      - m_Target: {fileID: 1308076041}
+        m_TargetAssemblyTypeName: StageSelection, Assembly-CSharp
+        m_MethodName: PressSelection
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Stage4
+          m_StringArgument: Stage3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1130483659
@@ -6029,8 +6007,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1308076040}
+  - component: {fileID: 1308076041}
   m_Layer: 5
-  m_Name: Stage4
+  m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6055,13 +6034,34 @@ RectTransform:
   - {fileID: 1160380708}
   - {fileID: 1003322303}
   m_Father: {fileID: 571330624}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 450, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1308076041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308076039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4a3041f7d814ce4098a033dab4eea40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unlocked: 0
+  unlockImage: {fileID: 1160380709}
+  stageImage: {fileID: 1130483659}
+  stars:
+  - {fileID: 1025477112}
+  - {fileID: 2145032499}
+  - {fileID: 949472090}
+  starSprite: {fileID: -1008867147, guid: 8fd732bd974bf1245b6adb2376e6ae57, type: 3}
+  transition: {fileID: 11400000, guid: b0126e1e0c6c2a04895d564bd230dfb9, type: 2}
 --- !u!1 &1322158342
 GameObject:
   m_ObjectHideFlags: 0
@@ -6581,8 +6581,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1441085619}
+  - component: {fileID: 1441085620}
   m_Layer: 5
-  m_Name: Stage3
+  m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6607,13 +6608,34 @@ RectTransform:
   - {fileID: 1907102096}
   - {fileID: 1791350403}
   m_Father: {fileID: 571330624}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1441085620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441085618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4a3041f7d814ce4098a033dab4eea40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unlocked: 0
+  unlockImage: {fileID: 1907102097}
+  stageImage: {fileID: 1476355906}
+  stars:
+  - {fileID: 1023340064}
+  - {fileID: 692638003}
+  - {fileID: 1759106457}
+  starSprite: {fileID: -1008867147, guid: 8fd732bd974bf1245b6adb2376e6ae57, type: 3}
+  transition: {fileID: 11400000, guid: b0126e1e0c6c2a04895d564bd230dfb9, type: 2}
 --- !u!1 &1464960541
 GameObject:
   m_ObjectHideFlags: 0
@@ -6803,9 +6825,8 @@ GameObject:
   - component: {fileID: 1476355907}
   - component: {fileID: 1476355906}
   - component: {fileID: 1476355905}
-  - component: {fileID: 1476355904}
   m_Layer: 5
-  m_Name: 3
+  m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6831,27 +6852,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 355.0391, y: 310.6592}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1476355904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476355902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4a3041f7d814ce4098a033dab4eea40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unlocked: 0
-  unlockImage: {fileID: 1907102097}
-  stageImage: {fileID: 1476355906}
-  stars:
-  - {fileID: 1023340064}
-  - {fileID: 692638003}
-  - {fileID: 1759106457}
-  starSprite: {fileID: -1008867147, guid: 8fd732bd974bf1245b6adb2376e6ae57, type: 3}
-  transition: {fileID: 11400000, guid: b0126e1e0c6c2a04895d564bd230dfb9, type: 2}
 --- !u!114 &1476355905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6896,7 +6896,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476355904}
+      - m_Target: {fileID: 1441085620}
         m_TargetAssemblyTypeName: StageSelection, Assembly-CSharp
         m_MethodName: PressSelection
         m_Mode: 5
@@ -6905,7 +6905,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Stage3
+          m_StringArgument: Stage2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1476355906
@@ -8172,7 +8172,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 93}
   m_SizeDelta: {x: 60, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1791350404
@@ -9385,7 +9385,7 @@ GameObject:
   - component: {fileID: 2030391628}
   - component: {fileID: 2030391627}
   m_Layer: 5
-  m_Name: 2
+  m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9409,7 +9409,7 @@ RectTransform:
   - {fileID: 1322158343}
   - {fileID: 695465471}
   m_Father: {fileID: 571330624}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
