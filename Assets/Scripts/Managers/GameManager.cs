@@ -68,6 +68,13 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    #region 사운드 관련 변수
+
+    [Space(10)] [Header("사운드 관련 변수")]
+    [SerializeField] private AudioClip fadeInSound;
+
+    #endregion
+
     [HideInInspector] public bool isGameStop;
     [HideInInspector] public bool isUseSkill;
 
@@ -132,6 +139,7 @@ public class GameManager : MonoBehaviour
         goldText.text = currentGold.ToString();
         
         SoundManager.Instance.PlayMusic(gameSound);
+        SoundManager.Instance.PlaySound(fadeInSound);
     }
 
     private void Update()
