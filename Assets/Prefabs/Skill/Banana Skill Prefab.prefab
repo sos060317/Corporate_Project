@@ -173,3 +173,4 @@ MonoBehaviour:
   sizeObj: {fileID: 8384630656995614076}
   ableColor: {r: 0.4862745, g: 0.84313726, b: 1, a: 0.7019608}
   unableColor: {r: 1, g: 0.22352941, b: 0.22352941, a: 0.7019608}
+  bananaSound: {fileID: 8300000, guid: 2c5292ba5cf254919a6b9e2b18e04f49, type: 3}

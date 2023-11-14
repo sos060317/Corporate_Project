@@ -209,7 +209,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 1866960527, guid: 3c7ff3da463b787428be80063b54c3c9, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.50980395}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1326,9 +1326,6 @@ MonoBehaviour:
   EnemyPos: {x: 0, y: 0}
   nowShot: 0
   canToggle: 1
-  whatIsEnemy:
-    serializedVersion: 2
-    m_Bits: 128
   attackSound: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
 --- !u!60 &4465740853892227339
 PolygonCollider2D:
