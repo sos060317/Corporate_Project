@@ -1326,6 +1326,9 @@ MonoBehaviour:
   EnemyPos: {x: 0, y: 0}
   nowShot: 0
   canToggle: 1
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 128
   attackSound: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
 --- !u!60 &4465740853892227339
 PolygonCollider2D:

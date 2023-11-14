@@ -65,9 +65,19 @@ public class IceArrow : MonoBehaviour
 
     private void SetEnemyPositionAsFinish()
     {
+        //if (IceArrowTower.nowShot != false)
+        //{
+        //    finish = IceArrowTower.EnemyPos;
+        //}
+
         if (IceArrowTower.nowShot != false)
         {
             finish = IceArrowTower.EnemyPos;
+
+            if (finish == Vector2.zero)
+            {
+                Destroy(gameObject);
+            }
         }
 
     }

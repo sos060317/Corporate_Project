@@ -21,6 +21,7 @@ public class ThrowAndDamage : MonoBehaviour
     private bool isFollowing = true;
 
     private float delayTimer = .5f;
+    private float deTimer = .6f;
 
     public Animator MagicAnim;
 
@@ -35,6 +36,8 @@ public class ThrowAndDamage : MonoBehaviour
         //}
 
         StartCoroutine(DelayedStart());
+
+
     }
 
     private void Update()
@@ -52,6 +55,7 @@ public class ThrowAndDamage : MonoBehaviour
         if (isFollowing)
         {
             delayTimer -= Time.deltaTime;
+            deTimer -= Time.deltaTime;
 
             if (delayTimer <= 0f)
             {
@@ -76,10 +80,18 @@ public class ThrowAndDamage : MonoBehaviour
                         {
                             collider.GetComponent<EnemyBase>().OnDamage(0, Damage);
                             Instantiate(hitEffect, collider.transform);
+                            Destroy(gameObject);
                             break;
                         }
                     }
 
+                    Destroy(gameObject);
+                }
+            }
+            if (deTimer <= 0f)
+            {
+                if (targetPosition == Vector2.zero)
+                {
                     Destroy(gameObject);
                 }
             }

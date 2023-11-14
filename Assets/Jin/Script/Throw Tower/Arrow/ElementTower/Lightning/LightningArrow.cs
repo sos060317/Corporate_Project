@@ -62,9 +62,18 @@ public class LightningArrow : MonoBehaviour
 
     private void SetEnemyPositionAsFinish()
     {
+        //if (lightningArrowTower.nowShot != false)
+        //{
+        //    finish = lightningArrowTower.EnemyPos;
+        //}
         if (lightningArrowTower.nowShot != false)
         {
             finish = lightningArrowTower.EnemyPos;
+
+            if (finish == Vector2.zero)
+            {
+                Destroy(gameObject);
+            }
         }
 
     }

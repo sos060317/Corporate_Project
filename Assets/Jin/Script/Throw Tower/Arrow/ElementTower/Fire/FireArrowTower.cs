@@ -22,7 +22,7 @@ public class FireArrowTower : MonoBehaviour
 
     [SerializeField]
     private List<GameObject> enemyList = new List<GameObject>();
-    private float timeSinceLastSpawn = 1f;
+    private float timeSinceLastSpawn = 1.3f;
 
     public bool isClicked = false;
 
@@ -73,6 +73,7 @@ public class FireArrowTower : MonoBehaviour
 
         enemyList.RemoveAll(enemy => enemy == null || !IsWithinRadius(enemy.transform.position) || !enemy.activeSelf);
 
+
         nowShot = enemyList.Count > 0;
 
         if (nowShot)
@@ -84,12 +85,11 @@ public class FireArrowTower : MonoBehaviour
                 UpdateFlowingObjectPosition();
                 //FireArrowAnim.SetBool("ItShot", true);
                 StartCoroutine(AttackAnimation());
-                //Debug.Log("Ȯ��");
             }
         }
         else
         {
-            
+            StartCoroutine(StopAnimation());
         }
 
         if (fireArrowTowerUI.buttonDown == true)
@@ -142,6 +142,13 @@ public class FireArrowTower : MonoBehaviour
         FireArrowAnim.SetBool("ItShot", false);
     }
 
+    private IEnumerator StopAnimation()
+    {
+        FireArrowAnim.SetBool("AnimationChack", true);
+        yield return new WaitForSeconds(0.2f);
+        FireArrowAnim.SetBool("AnimationChack", false);
+    }
+
     private IEnumerator DelayTm()
     {
         yield return new WaitForSeconds(0.2f);
@@ -179,7 +186,7 @@ public class FireArrowTower : MonoBehaviour
     private void SpawnArrowsAtPositions()
     {
         SoundManager.Instance.PlaySound(attackSound);
-        
+
         foreach (GameObject spawnPosition in spawnPositions)
         {
             if (spawnPosition.activeSelf)
@@ -193,7 +200,7 @@ public class FireArrowTower : MonoBehaviour
 
     private bool IsWithinRadius(Vector2 position)
     {
-        return Vector2.Distance(ArrowRound.transform.position, position) <= detectionRadius;  //  ???? ??? Enmey ??? ????
+        return Vector2.Distance(ArrowRound.transform.position, position) <= ArrowRound.AroRound;
     }
 
     private void OnDrawGizmosSelected()
@@ -203,6 +210,10 @@ public class FireArrowTower : MonoBehaviour
         {
             Gizmos.color = Color.green;
             Gizmos.DrawWireSphere(ArrowRound.transform.position, ArrowRound.AroRound);
+
+            //Gizmos.color = Color.green;
+            //Gizmos.DrawWireSphere(ArrowRound.transform.position, detectionRadius);
+
         }
     }
 }
