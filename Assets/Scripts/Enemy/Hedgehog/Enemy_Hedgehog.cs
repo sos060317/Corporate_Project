@@ -143,6 +143,11 @@ public class Enemy_Hedgehog : EnemyBase
         var thorn = Instantiate(thornPrefab, transform.position, Quaternion.identity);
 
         thorn.StartShot(transform.position, targetAlly.transform.position, targetAlly, enemyDetailsSo.attackPower);
+
+        if (targetAlly == null)
+        {
+            Destroy(thorn);
+        }
     }
 
     public override void OnDamage(float attackPower, float spellPower)
