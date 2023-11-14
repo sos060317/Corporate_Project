@@ -5922,6 +5922,7 @@ MonoBehaviour:
   - {fileID: 3849307150248586265, guid: af0a3a31f770a35478ea74f7be6d1c7a, type: 3}
   - {fileID: 3849307150248586265, guid: f1ce6f62ec8392644abf5f68a446c213, type: 3}
   tipText: {fileID: 876308503}
+  bookSound: {fileID: 8300000, guid: 85979b0a572bf8948a072eb24e774b48, type: 3}
 --- !u!1 &1277851481
 GameObject:
   m_ObjectHideFlags: 0
