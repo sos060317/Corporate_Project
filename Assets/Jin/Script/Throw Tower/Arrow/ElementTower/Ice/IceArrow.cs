@@ -108,7 +108,7 @@ public class IceArrow : MonoBehaviour
             {
                 if (collider.CompareTag(damageTag))
                 {
-                    collider.GetComponent<EnemyBase>().OnDamage(Damage * GameManager.Instance.towerAttackDamageMultiply, 0);  // 물리? , 마법? 모르것다
+                    collider.GetComponent<EnemyBase>().OnDamage(0, Damage * GameManager.Instance.towerAttackDamageMultiply);  // 물리? , 마법? 모르것다
                     collider.GetComponent<EnemyBase>().SpeedDownEnemy(arrowTemplate.aweapon[arrowLevel].sllowTime, arrowTemplate.aweapon[arrowLevel].sllowextent); //1.5f ,0.7
                     Instantiate(hitEffect, collider.transform);
                     Destroy(gameObject);
