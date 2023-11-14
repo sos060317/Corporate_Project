@@ -288,12 +288,14 @@ public class AllyBase : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    // 타워에서 병영을 이동할때 쓰는 초기화 함수
     public void SetMoveAnimation(bool isMoving, Vector3 dir)
     {
         if (isMoving)
         {
             canMove = false;
             isAttacking = false;
+            targeting = false;
             EnemyUnTargetingEvent?.Invoke();
             targetEnemy = null;
             isTargeting = false;
