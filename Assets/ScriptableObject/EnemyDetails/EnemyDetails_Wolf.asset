@@ -22,5 +22,5 @@ MonoBehaviour:
   attackPower: 100
   spellPower: 0
   enemyPrefab: {fileID: 8696831600610002810, guid: cd78fc39cdf02f9479a1a23de2a01e7a, type: 3}
-  profileImage: {fileID: -1652181765, guid: d2bfec5a5a1888a4bb7168cd0d50e878, type: 3}
+  profileImage: {fileID: -899140742, guid: 598e7f778b082a9409e20d3c69c3a5ce, type: 3}
   coins: 100
