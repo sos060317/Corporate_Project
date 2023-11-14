@@ -37,127 +37,13 @@ public abstract class EvolutionStoneButton : MonoBehaviour
 
     protected BuffIcon icon;
 
-    private void Start()
+    public void Init()
     {
-        // //Color infoTextColor = infoText.color;
-        // //Color infoBgColor = infoBg.color;
-        //
-        // infoTextColor.a = 0f;
-        // infoBgColor.a = 0f;
-        //
-        // infoText.color = infoTextColor;
-        // infoBg.color = infoBgColor;
-        
         icon = Instantiate(iconPrefab, GameManager.Instance.buffIconParent);
         icon.TextChange(curLevel.ToString());
     
         goldText.text = buffDetails.buffDatas[curLevel].needGold.ToString();
     }
-
-    // private void OnMouseDown()
-    // {
-    //     if (EventSystem.current.IsPointerOverGameObject())
-    //     {
-    //         return;
-    //     }
-    //
-    //     if (!canClick)
-    //     {
-    //         return;
-    //     }
-    //
-    //     if (curLevel >= buffDetails.buffDatas.Length)
-    //     {
-    //         return;
-    //     }
-    //
-    //     if (GameManager.Instance.currentGold >= buffDetails.buffDatas[curLevel].needGold)
-    //     {
-    //         LevelUp();
-    //     }
-    // }
-    //
-    // private void OnMouseEnter()
-    // {
-    //     if (!canClick)
-    //     {
-    //         return;
-    //     }
-    //     
-    //     StopAllCoroutines();
-    //     StartCoroutine(ShowInfo());
-    // }
-    //
-    // private void OnMouseExit()
-    // {
-    //     if (!canClick)
-    //     {
-    //         return;
-    //     }
-    //     
-    //     StopAllCoroutines();
-    //     StartCoroutine(HideInfo());
-    // }
-    //
-    // private IEnumerator ShowInfo()
-    // {
-    //     Color infoTextColor = infoText.color;
-    //     Color infoBgColor = infoBg.color;
-    //
-    //     float textAlpha = 1f;
-    //     float bgAlpha = 0.4f;
-    //
-    //     while (fadeAmount <= 1)
-    //     {
-    //         infoTextColor.a = fadeAmount * textAlpha;
-    //         infoBgColor.a = fadeAmount * bgAlpha;
-    //
-    //         infoText.color = infoTextColor;
-    //         infoBg.color = infoBgColor;
-    //
-    //         fadeAmount += Time.deltaTime * 5;
-    //
-    //         yield return null;
-    //     }
-    //
-    //     fadeAmount = 1f;
-    //     
-    //     infoTextColor.a = fadeAmount * textAlpha;
-    //     infoBgColor.a = fadeAmount * bgAlpha;
-    //
-    //     infoText.color = infoTextColor;
-    //     infoBg.color = infoBgColor;
-    // }
-    //
-    // private IEnumerator HideInfo()
-    // {
-    //     Color infoTextColor = infoText.color;
-    //     Color infoBgColor = infoBg.color;
-    //
-    //     float textAlpha = 1f;
-    //     float bgAlpha = 0.4f;
-    //
-    //     while (fadeAmount >= 0)
-    //     {
-    //         infoTextColor.a = fadeAmount * textAlpha;
-    //         infoBgColor.a = fadeAmount * bgAlpha;
-    //
-    //         infoText.color = infoTextColor;
-    //         infoBg.color = infoBgColor;
-    //
-    //         fadeAmount -= Time.deltaTime * 5;
-    //
-    //         yield return null;
-    //     }
-    //
-    //     fadeAmount = 0f;
-    //     
-    //     infoTextColor.a = fadeAmount * textAlpha;
-    //     infoBgColor.a = fadeAmount * bgAlpha;
-    //
-    //     infoText.color = infoTextColor;
-    //     infoBg.color = infoBgColor;
-    // }
-
+    
     public abstract void LevelUp();
 }

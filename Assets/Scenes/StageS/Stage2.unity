@@ -934,6 +934,7 @@ GameObject:
   - component: {fileID: 50629164}
   - component: {fileID: 50629166}
   - component: {fileID: 50629165}
+  - component: {fileID: 50629167}
   m_Layer: 5
   m_Name: Evolution Upgrade Menu
   m_TagString: Untagged
@@ -1001,6 +1002,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50629163}
   m_CullTransparentMesh: 1
+--- !u!114 &50629167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50629163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f5e83448f4b0464d8e166cd3e89e7b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeButtons:
+  - {fileID: 1012646089}
+  - {fileID: 147757072}
+  - {fileID: 1262863696}
+  - {fileID: 821083599}
 --- !u!1 &57977698
 GameObject:
   m_ObjectHideFlags: 0
