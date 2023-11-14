@@ -116,11 +116,18 @@ public class Spawner : MonoBehaviour
 
     private void UpdateCostText()
     {
-        // costText가 null이 아니라면 TMP 텍스트 업데이트
-        if (UpgradeCostText != null)
+        if (level <= 2)
         {
-            UpgradeCostText.text = towerTemplate.weapon[level + 1].cost.ToString();
+            if (UpgradeCostText != null)
+            {
+                UpgradeCostText.text = towerTemplate.weapon[level + 1].cost.ToString();
+            }
         }
+        else
+        {
+            UpgradeCostText.text = ("Max!");
+        }
+        
     }
 
     private void DestroyCostText()
