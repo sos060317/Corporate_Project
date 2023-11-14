@@ -39,10 +39,7 @@ public class PoolManager : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-        }
-    
-        private void Start()
-        {
+            
             for (int i = 0; i < poolArray.Length; i++)
             {
                 CreatePool(poolArray[i].prefab, poolArray[i].poolSize);

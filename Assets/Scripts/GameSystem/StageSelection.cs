@@ -12,6 +12,7 @@ public class StageSelection : MonoBehaviour
     [SerializeField] private Image stageImage;   // 스테이지 Icon 이미지
     [SerializeField] private GameObject[] stars; // 스테이지의 클리어 정도를 알려주는 별
     [SerializeField] private Sprite starSprite;  // 스테이지의 클리어 정도를 알려주는 별의 그림
+    [SerializeField] private AudioClip fadeOutSound;
     
     [Header("씬 로딩")]
     [SerializeField] private TransitionSettings transition;
@@ -74,6 +75,7 @@ public class StageSelection : MonoBehaviour
         if (unlocked)
         {
             //sceneLoader.GetComponent<SceneLoader>().LoadScene(stageId + 2); // 로딩 창 불러오기
+            SoundManager.Instance.PlaySound(fadeOutSound);
             TransitionManager.Instance().Transition(sceneName, transition, 0f);
         }
     }
