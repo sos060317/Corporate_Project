@@ -10,6 +10,7 @@ public class GameClearMenu : MonoBehaviour
     [SerializeField] private RectTransform[] starRects;
     [SerializeField] private GameObject[] particleObjs;
     [SerializeField] private TransitionSettings transitionSettings;
+    [SerializeField] private AudioClip fadeOutSound;
 
     public void Init(int starCount)
     {
@@ -35,6 +36,7 @@ public class GameClearMenu : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
+        SoundManager.Instance.PlaySound(fadeOutSound);
         TransitionManager.Instance().Transition(sceneName, transitionSettings, 0);
     }
 }

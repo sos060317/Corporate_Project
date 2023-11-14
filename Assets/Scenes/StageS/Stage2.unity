@@ -11245,6 +11245,7 @@ MonoBehaviour:
   - {fileID: 1983526674}
   - {fileID: 1620390593}
   transitionSettings: {fileID: 11400000, guid: b0126e1e0c6c2a04895d564bd230dfb9, type: 2}
+  fadeOutSound: {fileID: 8300000, guid: 78ee182f2f4a37a41ac44253a77571de, type: 3}
 --- !u!1001 &467316683
 PrefabInstance:
   m_ObjectHideFlags: 0
