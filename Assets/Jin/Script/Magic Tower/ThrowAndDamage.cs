@@ -21,7 +21,7 @@ public class ThrowAndDamage : MonoBehaviour
     private bool isFollowing = true;
 
     private float delayTimer = .5f;
-    private float deTimer = .6f;
+    private float deTimer = .53f;
 
     public Animator MagicAnim;
 
