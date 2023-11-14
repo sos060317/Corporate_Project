@@ -26,8 +26,8 @@ public class FireArrow : MonoBehaviour
     private Vector2 finish; // 종료 위치
     private bool reachedEnd = false;
 
-    public float TickDamage;
-    public float TickTime;
+    //private float TickDamage;
+    //private float TickTime;
 
     private float FireDamage;
 
@@ -69,9 +69,19 @@ public class FireArrow : MonoBehaviour
 
     private void SetEnemyPositionAsFinish()
     {
+        //if (fireArrowTower.nowShot != false)
+        //{
+        //    finish = fireArrowTower.EnemyPos;
+        //}
+
         if (fireArrowTower.nowShot != false)
         {
             finish = fireArrowTower.EnemyPos;
+
+            if (finish == Vector2.zero)
+            {
+                Destroy(gameObject);
+            }
         }
 
     }

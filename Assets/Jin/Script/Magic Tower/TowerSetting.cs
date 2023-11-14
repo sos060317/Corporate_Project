@@ -98,9 +98,22 @@ public class TowerSetting : MonoBehaviour
 
     private void SpawnMagic(GameObject spawnPosition)
     {
-        var temp = Instantiate(MagicPrefab, spawnPosition.transform.position, Quaternion.identity).GetComponent<ThrowAndDamage>();
+        //var temp = Instantiate(MagicPrefab, spawnPosition.transform.position, Quaternion.identity).GetComponent<ThrowAndDamage>();
 
-        temp.MagicTower = GetComponent<TowerSetting>();
+        //temp.MagicTower = GetComponent<TowerSetting>();
+
+        GameObject magicInstance = Instantiate(MagicPrefab, spawnPosition.transform.position, Quaternion.identity);
+        ThrowAndDamage throwAndDamage = magicInstance.GetComponent<ThrowAndDamage>();
+
+        if (throwAndDamage != null)
+        {
+            Vector2 direction = (enemyList.Count > 0) ? (enemyList[0].transform.position - spawnPosition.transform.position).normalized : Vector2.zero;
+
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            magicInstance.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+            throwAndDamage.MagicTower = GetComponent<TowerSetting>();
+        }
     }
 
     private void UpdateFlowingObjectPosition()
