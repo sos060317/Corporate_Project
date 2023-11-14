@@ -323,4 +323,9 @@ public class AllyBase : MonoBehaviour
         
         Gizmos.DrawWireSphere(transform.position, scanRange);
     }
+
+    private void OnDestroy()
+    {
+        EnemyUnTargetingEvent?.Invoke();
+    }
 }
