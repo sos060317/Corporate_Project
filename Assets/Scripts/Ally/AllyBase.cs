@@ -80,6 +80,16 @@ public class AllyBase : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.isGameStop)
+        {
+            anim.StartPlayback();
+            return;
+        }
+        else
+        {
+            anim.StopPlayback();
+        }
+        
         if (isDie)
         {
             return;
