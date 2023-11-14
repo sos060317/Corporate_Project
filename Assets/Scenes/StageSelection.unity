@@ -3912,7 +3912,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC6B0\uC9C0\uC6D0 \uC798\uC0DD\uAE40"
+  m_text: "\uC6B0\uC9C0\uC6D0 \uBABB\uC0DD\uAE40 \u314B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b62873f6e1601af4cb8211656fa41a93, type: 2}
   m_sharedMaterial: {fileID: 517130933407915673, guid: b62873f6e1601af4cb8211656fa41a93, type: 2}
