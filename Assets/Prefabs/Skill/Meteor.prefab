@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cf97af9ede07464b863695907a00a6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meteorEffectPrefab: {fileID: 4366845387819296593, guid: 22d9cf36c44b65b4ab4a07392023e257, type: 3}
+  meteorEffectPrefab: {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1, type: 3}
 --- !u!95 &1018857897583920201
 Animator:
   serializedVersion: 5
