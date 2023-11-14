@@ -37,6 +37,7 @@ public class BombTower : MonoBehaviour
     public bool isClick = false;
     private bool BToggle;
 
+
     public int Startcoin = 210;
 
 
