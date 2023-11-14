@@ -69,16 +69,20 @@ public class StageEnemyCharacteristicsManager : MonoBehaviour
         chEnemyName.text = ch.enemyName + " Æ¯¼º";
         chEnemyEffect.text = ch.changeStat;
 
-        //StartCoroutine(ShowChWindow());
 
         rect = GetComponent<RectTransform>();
 
-        rect.DOAnchorPosX(0, 0.5f).SetEase(Ease.OutBack);
-        rect.DOAnchorPosX(1700, 0.5f).SetDelay(3f).SetEase(Ease.InBack);
+        
+        StartCoroutine(ShowChWindow());
     }
 
     IEnumerator ShowChWindow()
     {
-        yield return null;
+        yield return new WaitForSeconds(1);
+
+        rect.DOAnchorPosX(0, 0.5f).SetEase(Ease.OutBack);
+        rect.DOAnchorPosX(1700, 0.5f).SetDelay(3f).SetEase(Ease.InBack);
+
+        yield break;
     }
 }
