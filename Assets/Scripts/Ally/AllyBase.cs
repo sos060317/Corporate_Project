@@ -237,6 +237,7 @@ public class AllyBase : MonoBehaviour
     
     public void DeleteTarget()
     {
+        isRun = false;
         isTargeting = false;
         canMove = true;
         isAttacking = false;
