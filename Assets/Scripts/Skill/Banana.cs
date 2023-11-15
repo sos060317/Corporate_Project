@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Banana : MonoBehaviour
 {
+    public float destroyTime;
+    
     private Vector3 endPos;
 
     private bool ableBanana = false;
@@ -15,6 +17,7 @@ public class Banana : MonoBehaviour
         
         endPos = _endPos;
 
+        Invoke(nameof(Destroy), destroyTime);
         StartCoroutine(MoveRoutine());
     }
 
@@ -35,6 +38,11 @@ public class Banana : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    private void Destroy()
+    {
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
