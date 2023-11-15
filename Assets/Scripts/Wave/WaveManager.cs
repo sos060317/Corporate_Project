@@ -69,6 +69,7 @@ public class WaveManager : MonoBehaviour
     public void WaveEnd()
     {
         waveEndCount++;
+        waveCompleteCount++;
 
         if (waveEndCount >= enemySpawnerCount)
         {
