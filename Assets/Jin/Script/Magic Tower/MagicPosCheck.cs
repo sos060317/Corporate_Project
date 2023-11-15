@@ -73,7 +73,7 @@ public class MagicPosCheck : MonoBehaviour
         }
 
         float roundSize = magicTemplate.mweapon[Magiclevel].Mradius;
-        RoundObj.transform.localScale = new Vector3(roundSize, roundSize, roundSize);
+        RoundObj.transform.localScale = new Vector3(roundSize * 2, roundSize * 2, roundSize * 2);
 
 
         // 레벨이 오를 때마다 Pos 오브젝트의 상태를 업데이트
