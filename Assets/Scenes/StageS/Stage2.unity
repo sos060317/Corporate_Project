@@ -11570,6 +11570,8 @@ MonoBehaviour:
     prefab: {fileID: 8669094408152069988, guid: 77d5a559fa90b634c9d78894b7578a48, type: 3}
   - poolSize: 30
     prefab: {fileID: 388473290193081027, guid: f88695b99f218d6499c24906e23267c2, type: 3}
+  - poolSize: 30
+    prefab: {fileID: 6892805195981400713, guid: d36073761df0e294a9a51a078b3ec20a, type: 3}
   - poolSize: 200
     prefab: {fileID: 8683560015101731572, guid: a6ca03634fc4c2a49b83271454d80a09, type: 3}
 --- !u!4 &484924285
