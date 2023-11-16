@@ -1480,7 +1480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 11400000, guid: b0126e1e0c6c2a04895d564bd230dfb9, type: 2}
-  fadeOutSound: {fileID: 0}
+  fadeOutSound: {fileID: 8300000, guid: 78ee182f2f4a37a41ac44253a77571de, type: 3}
 --- !u!1 &444173006
 GameObject:
   m_ObjectHideFlags: 0
