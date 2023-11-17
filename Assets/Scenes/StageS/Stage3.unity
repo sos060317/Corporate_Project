@@ -891,7 +891,7 @@ MonoBehaviour:
   skillCoolTimeMultiply: 1
   evolutionStoneHealthBar: {fileID: 1240374688}
   evolutionStoneMaxHealth: 100
-  levelIndex: 4
+  levelIndex: 3
   cameraObj: {fileID: 1451707420}
   gameSound: {fileID: 8300000, guid: 469ffd86c3cb7d74593d2b106d43d187, type: 3}
   fadeInSound: {fileID: 8300000, guid: 381f6b1a73af9024baf540648b83f27b, type: 3}
