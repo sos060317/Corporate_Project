@@ -824,7 +824,7 @@ MonoBehaviour:
   skillAttackDamageMultiply: 1
   skillCoolTimeMultiply: 1
   evolutionStoneHealthBar: {fileID: 2030288438}
-  evolutionStoneMaxHealth: 100
+  evolutionStoneMaxHealth: 500
   levelIndex: 2
   cameraObj: {fileID: 1451707420}
   gameSound: {fileID: 8300000, guid: 469ffd86c3cb7d74593d2b106d43d187, type: 3}
