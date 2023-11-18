@@ -7,6 +7,10 @@ public class StageSelectionPauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject settingMenu;
+    [SerializeField] private GameObject developerMenu;
+    [SerializeField] private GameObject titleRequestionMenu;
+    [SerializeField] private GameObject exitRequestionMenu;
+    [SerializeField] private GameObject resetRequestionMenu;
 
     private bool isShow = false;
 
@@ -31,6 +35,10 @@ public class StageSelectionPauseMenu : MonoBehaviour
         {
             HidePauseMenu();
             HideSettingMenu();
+            HideDeveloper();
+            HideTitleRequestion();
+            HideExitRequestion();
+            HideResetRequestion();
         }
     }
 
@@ -72,7 +80,47 @@ public class StageSelectionPauseMenu : MonoBehaviour
     {
         settingMenu.SetActive(false);
     }
-    
+
+    public void ShowDeveloper()
+    {
+        developerMenu.SetActive(true);
+    }
+
+    public void HideDeveloper()
+    {
+        developerMenu.SetActive(false);
+    }
+
+    public void ShowTitleRequestion()
+    {
+        titleRequestionMenu.SetActive(true);
+    }
+
+    public void HideTitleRequestion()
+    {
+        titleRequestionMenu.SetActive(false);
+    }
+
+    public void ShowExitRequestion()
+    {
+        exitRequestionMenu.SetActive(true);
+    }
+
+    public void HideExitRequestion()
+    {
+        exitRequestionMenu.SetActive(false);
+    }
+
+    public void ShowResetRequestion()
+    {
+        resetRequestionMenu.SetActive(true);
+    }
+
+    public void HideResetRequestion()
+    {
+        resetRequestionMenu.SetActive(false);
+    }
+
     public void ExitButton()
     {
         Application.Quit();
