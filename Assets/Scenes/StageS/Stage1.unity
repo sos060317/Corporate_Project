@@ -53714,6 +53714,9 @@ MonoBehaviour:
   mainMenu: {fileID: 824273027}
   settingMenu: {fileID: 453897793}
   developerMenu: {fileID: 1249193135}
+  titleRequestionMenu: {fileID: 0}
+  exitRequestionMenu: {fileID: 0}
+  resetRequestionMenu: {fileID: 0}
 --- !u!114 &1485515787
 MonoBehaviour:
   m_ObjectHideFlags: 0
