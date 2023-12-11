@@ -35,7 +35,10 @@ public class MeteorSkillButton : MonoBehaviour
             return;
         }
 
-        skillTime += Time.deltaTime;
+        if (!GameManager.Instance.isUseSkill)
+        {
+            skillTime += Time.deltaTime;
+        }
 
         skillImage.fillAmount = skillTime / (skillCooldownTime * GameManager.Instance.skillCoolTimeMultiply);
     }
