@@ -836,7 +836,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &44137042
 Transform:
   m_ObjectHideFlags: 0
@@ -1012,7 +1012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91be9013e4adf444abaf3f42852904ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startGoldCount: 1000
+  startGoldCount: 750
   goldText: {fileID: 1132474588}
   waveText: {fileID: 1332969625}
   gameClearMenu: {fileID: 466374068}
@@ -36509,7 +36509,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &735086155
 Transform:
   m_ObjectHideFlags: 0
@@ -62753,7 +62753,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1568113148
 Transform:
   m_ObjectHideFlags: 0
@@ -81686,7 +81686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2032832529
 Transform:
   m_ObjectHideFlags: 0

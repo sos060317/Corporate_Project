@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buffDatas:
   - buffForce: 1.05
-    needGold: 100
+    needGold: 150
     buffExplanation: "\uD0C0\uC6CC \uACF5\uACA9\uB825\n105%"
   - buffForce: 1.1
-    needGold: 100
+    needGold: 150
     buffExplanation: "\uD0C0\uC6CC \uACF5\uACA9\uB825\n110%"
   - buffForce: 1.13
-    needGold: 100
+    needGold: 150
     buffExplanation: "\uD0C0\uC6CC \uACF5\uACA9\uB825\n113%"
   - buffForce: 1.16
-    needGold: 100
+    needGold: 150
     buffExplanation: "\uD0C0\uC6CC \uACF5\uACA9\uB825\n116%"
   - buffForce: 1.2
-    needGold: 100
+    needGold: 150
     buffExplanation: "\uD0C0\uC6CC \uACF5\uACA9\uB825\n120%"
