@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class BananaSkillButton : MonoBehaviour
 {
     [SerializeField] private float skillCooldownTime;
     [SerializeField] private Image skillImage;
     [SerializeField] private GameObject bananaSkillPrefab;
+    [SerializeField] private TextMeshProUGUI coolTimeText;
 
     private float skillTime;
 
@@ -30,11 +32,18 @@ public class BananaSkillButton : MonoBehaviour
         if (skillTime / (skillCooldownTime * GameManager.Instance.skillCoolTimeMultiply) >= 1)
         {
             skillButton.interactable = true;
-            
+            coolTimeText.gameObject.SetActive(false);
+
             return;
         }
 
-        skillTime += Time.deltaTime;
+        if (!GameManager.Instance.isUseSkill)
+        {
+            skillTime += Time.deltaTime;
+
+            coolTimeText.gameObject.SetActive(true);
+            coolTimeText.text = Mathf.CeilToInt(skillCooldownTime - skillTime).ToString();
+        }
 
         skillImage.fillAmount = skillTime / (skillCooldownTime * GameManager.Instance.skillCoolTimeMultiply);
     }

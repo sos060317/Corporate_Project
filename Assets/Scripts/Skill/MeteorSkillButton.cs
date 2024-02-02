@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class MeteorSkillButton : MonoBehaviour
 {
     [SerializeField] private float skillCooldownTime;
     [SerializeField] private Image skillImage;
     [SerializeField] private GameObject meteorSkillPrefab;
+    [SerializeField] private TextMeshProUGUI coolTimeText;
 
     private float skillTime;
 
@@ -31,11 +33,18 @@ public class MeteorSkillButton : MonoBehaviour
         if (skillTime / (skillCooldownTime * GameManager.Instance.skillCoolTimeMultiply) >= 1)
         {
             skillButton.interactable = true;
-            
+            coolTimeText.gameObject.SetActive(false);
+
             return;
         }
 
-        skillTime += Time.deltaTime;
+        if (!GameManager.Instance.isUseSkill)
+        {
+            skillTime += Time.deltaTime;
+
+            coolTimeText.gameObject.SetActive(true);
+            coolTimeText.text = Mathf.CeilToInt(skillCooldownTime - skillTime).ToString();
+        }
 
         skillImage.fillAmount = skillTime / (skillCooldownTime * GameManager.Instance.skillCoolTimeMultiply);
     }
@@ -50,7 +59,7 @@ public class MeteorSkillButton : MonoBehaviour
         skillButton.interactable = false;
 
         skillTime = 0;
-        
+
         Instantiate(meteorSkillPrefab, Vector3.zero, Quaternion.identity);
         
         GameManager.Instance.isUseSkill = true;

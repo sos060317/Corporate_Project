@@ -17,14 +17,14 @@ MonoBehaviour:
     needGold: 150
     buffExplanation: "\uACE8\uB4DC \uD68D\uB4DD\uB7C9\n105%"
   - buffForce: 1.1
-    needGold: 150
+    needGold: 200
     buffExplanation: "\uACE8\uB4DC \uD68D\uB4DD\uB7C9\n110%"
   - buffForce: 1.15
-    needGold: 150
+    needGold: 200
     buffExplanation: "\uACE8\uB4DC \uD68D\uB4DD\uB7C9\n115%"
   - buffForce: 1.2
-    needGold: 150
+    needGold: 200
     buffExplanation: "\uACE8\uB4DC \uD68D\uB4DD\uB7C9\n120%"
   - buffForce: 1.25
-    needGold: 150
+    needGold: 200
     buffExplanation: "\uACE8\uB4DC \uD68D\uB4DD\uB7C9\n125%"
