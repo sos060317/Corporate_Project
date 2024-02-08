@@ -6,6 +6,7 @@ using DG.Tweening;
 public class GoldBanana : MonoBehaviour
 {
     public GameObject banana;
+    public GoldLevel goldLevel;
 
     [SerializeField]
     private float freshnessTime;
@@ -15,6 +16,13 @@ public class GoldBanana : MonoBehaviour
     private bool isSpoiled = false;
     private SpriteRenderer spriteRenderer;
     private Tween moveTween;
+    private int bananaLevel;
+
+    public void InitializeLevel(int level, GoldLevel goldLevel)
+    {
+        bananaLevel = level;
+        this.goldLevel = goldLevel;
+    }
 
 
     private void Start()
@@ -67,7 +75,8 @@ public class GoldBanana : MonoBehaviour
         }
         else
         {
-            Debug.Log("Gold를 얻었습니다!");
+            GameManager.Instance.GetGold(goldLevel.goldTowerLevel[bananaLevel].amountGold);
+            Debug.Log(goldLevel.goldTowerLevel[bananaLevel].amountGold + "의 Gold를 얻었습니다!");
             Destroy(gameObject);
         }
     }

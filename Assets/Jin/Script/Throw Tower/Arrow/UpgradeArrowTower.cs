@@ -80,7 +80,7 @@ public class UpgradeArrowTower : MonoBehaviour
         }
     }
 
-     public void DestroyTower()
+    public void DestroyTower()
     {
         Destroy(gameObject);
         GameManager.Instance.GetGold(arrowTemplate.aweapon[Arrowlevel].ResellCoset);
