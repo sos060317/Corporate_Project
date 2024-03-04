@@ -27,11 +27,11 @@ public class TypingText : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(Typing(typingText[0]));
+        StartCoroutine(Typing(0));
     }
 
     private void Update()
-    {
+    { 
         SkipTyping();
     }
 
@@ -46,33 +46,37 @@ public class TypingText : MonoBehaviour
                 return;
             }
 
+            // 이거 지금 이상하니깐 고쳐야함 
+            // 서로 검사하는 인덱스가 다름
+            // currentTypingNumber 초기화가 않된 상태에서 비교함
             if (currentTypingNumber < typingText[currentTypingIndex].Length)
             {
                 currentTypingNumber = typingText[currentTypingIndex].Length - 1;
             }
-            else
+            else if(currentTypingNumber >= typingText[currentTypingIndex].Length)
             {
-                StartCoroutine(Typing(typingText[currentTypingIndex]));
+                StartCoroutine(Typing(currentTypingIndex));
             }
         }
     }
 
 
-    IEnumerator Typing(string _text)
+    IEnumerator Typing(int index)
     {
-        if(currentTypingIndex ==  0)
+        if(index ==  0)
         {
             yield return new WaitForSeconds(2.0f);
         }
 
-        for(currentTypingNumber = 0; currentTypingNumber <= _text.Length; currentTypingNumber++)
+        for(; currentTypingNumber <= typingText[index].Length; currentTypingNumber++)
         {
-            text.text = _text.Substring(0, currentTypingNumber);
+            text.text = typingText[index].Substring(0, currentTypingNumber);
 
             yield return new WaitForSeconds(0.1f);
         }
 
         currentTypingIndex++;
+        StopAllCoroutines();
 
         yield break;
     }
