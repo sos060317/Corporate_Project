@@ -20,13 +20,30 @@ public class TypingText : MonoBehaviour
 
                                     "원숭이 종족은 자신들의 왕국 깊숙한 곳에\r\n" +
                                     "원숭이족의 능력, \"진화\"를 찾게 되었다",
+
+                                    "그리하여 원숭이 종족은 자신들의 \"타워\"를 업그레이드 할 수 있게 되었고",
+
+                                    "그리하여...\r\n" +
+                                    "그 능력으로 원숭이 종족은 다른 종족들에게\r\n" +
+                                    "빼앗긴 자신의 영토를 되찾기 위해서 싸움을 걸게 되는데...."
     };
+
+    private string introPlayerPrefsKey = "HasSeenIntro";
 
     private int currentTypingNumber = 0;
     private int currentTypingIndex = 0;
 
     private void Start()
     {
+        bool hasSeenIntro = PlayerPrefs.GetInt(introPlayerPrefsKey, 0) == 1;
+
+        if (hasSeenIntro)
+        {
+            StopAllCoroutines();
+            this.gameObject.SetActive(false);
+            return;
+        }
+
         StartCoroutine(Typing(0));
     }
 
@@ -39,22 +56,22 @@ public class TypingText : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (currentTypingIndex > typingText.Length - 1)
-            {
-                StopAllCoroutines();
-                this.gameObject.SetActive(false);
-                return;
-            }
-
-            // 이거 지금 이상하니깐 고쳐야함 
-            // 서로 검사하는 인덱스가 다름
-            // currentTypingNumber 초기화가 않된 상태에서 비교함
             if (currentTypingNumber < typingText[currentTypingIndex].Length)
             {
                 currentTypingNumber = typingText[currentTypingIndex].Length - 1;
             }
             else if(currentTypingNumber >= typingText[currentTypingIndex].Length)
             {
+                currentTypingIndex++;
+                
+                if (currentTypingIndex > typingText.Length - 1)
+                {
+                    PlayerPrefs.SetInt(introPlayerPrefsKey, 1);
+                    StopAllCoroutines();
+                    this.gameObject.SetActive(false);
+                    return;
+                }
+                
                 StartCoroutine(Typing(currentTypingIndex));
             }
         }
@@ -65,17 +82,16 @@ public class TypingText : MonoBehaviour
     {
         if(index ==  0)
         {
-            yield return new WaitForSeconds(2.0f);
+            yield return new WaitForSeconds(1.0f);
         }
 
-        for(; currentTypingNumber <= typingText[index].Length; currentTypingNumber++)
+        for(currentTypingNumber = 0; currentTypingNumber <= typingText[index].Length; currentTypingNumber++)
         {
             text.text = typingText[index].Substring(0, currentTypingNumber);
 
             yield return new WaitForSeconds(0.1f);
         }
 
-        currentTypingIndex++;
         StopAllCoroutines();
 
         yield break;
