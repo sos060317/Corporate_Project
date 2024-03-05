@@ -32,12 +32,18 @@ public class StageSelection : MonoBehaviour
     private void UpdateLevelStatus()
     {
         //Debug.Log(gameObject.name);
+        int currentLevelNum = int.Parse(gameObject.name);
         int previousLevelNum = int.Parse(gameObject.name) - 1;
         //Debug.Log(int.Parse(gameObject.name));
         if (PlayerPrefs.GetInt("Lv" + previousLevelNum) > 0)
         {
             Debug.Log(PlayerPrefs.GetInt("Lv" + previousLevelNum));
             unlocked = true;
+        }
+
+        if(PlayerPrefs.GetInt("Lv" + currentLevelNum) > 0)
+        {
+            PlayerPrefs.SetInt("HasSeenOutro", 0);
         }
     }
 

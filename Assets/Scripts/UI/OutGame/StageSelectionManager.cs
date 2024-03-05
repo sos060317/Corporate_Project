@@ -8,6 +8,8 @@ public class StageSelectionManager : MonoBehaviour
     [SerializeField] private AudioClip bgm;
     [SerializeField] private AudioClip fadeInSound;
 
+    public int lastStageNumber;
+
     private void Start()
     {
         SoundManager.Instance.PlayMusic(bgm);

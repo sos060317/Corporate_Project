@@ -1657,6 +1657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgm: {fileID: 8300000, guid: 32918410526853440b5bec5408302562, type: 3}
   fadeInSound: {fileID: 8300000, guid: 381f6b1a73af9024baf540648b83f27b, type: 3}
+  lastStageNumber: 3
 --- !u!4 &206481675
 Transform:
   m_ObjectHideFlags: 0
@@ -8431,6 +8432,7 @@ GameObject:
   - component: {fileID: 1361913463}
   - component: {fileID: 1361913465}
   - component: {fileID: 1361913464}
+  - component: {fileID: 1361913466}
   m_Layer: 5
   m_Name: Outro
   m_TagString: Untagged
@@ -8497,6 +8499,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361913462}
   m_CullTransparentMesh: 1
+--- !u!114 &1361913466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361913462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296ee0e5ed605c141bfb13459db0a684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 193367021}
 --- !u!1 &1375948672
 GameObject:
   m_ObjectHideFlags: 0

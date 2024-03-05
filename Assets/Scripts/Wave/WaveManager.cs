@@ -75,8 +75,6 @@ public class WaveManager : MonoBehaviour
         {
             Debug.Log("Stage Clear!");
 
-            PlayerPrefs.SetInt("HasSeenOutro", 0);
-
             stageClear = true;
         }
     }
