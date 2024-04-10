@@ -8,13 +8,13 @@ public class Outro : MonoBehaviour
     [SerializeField] TextMeshProUGUI text;
     private string typingText = "To Be Continue";
 
-    private string ontroPlayerPrefsKey = "HasSeenOutro";
+    private string outroPlayerPrefsKey = "HasSeenOutro";
 
     bool hasSeenIntro;
 
     private void Awake()
     {
-        hasSeenIntro = PlayerPrefs.GetInt(ontroPlayerPrefsKey, 1) == 1;
+        hasSeenIntro = PlayerPrefs.GetInt(outroPlayerPrefsKey, 1) == 1;
     }
 
     private void Start()
@@ -39,6 +39,9 @@ public class Outro : MonoBehaviour
 
             yield return new WaitForSeconds(0.1f);
         }
+
+        StopAllCoroutines();
+        this.gameObject.SetActive(false);
 
         yield break;
     }

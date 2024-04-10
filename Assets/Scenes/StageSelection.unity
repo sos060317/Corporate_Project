@@ -3120,6 +3120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a3041f7d814ce4098a033dab4eea40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastStageNumber: 0
   unlocked: 0
   unlockImage: {fileID: 1413666986}
   stageImage: {fileID: 0}
@@ -6128,6 +6129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a3041f7d814ce4098a033dab4eea40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastStageNumber: 3
   unlocked: 1
   unlockImage: {fileID: 228352540}
   stageImage: {fileID: 1016499460}
@@ -8335,6 +8337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a3041f7d814ce4098a033dab4eea40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastStageNumber: 3
   unlocked: 0
   unlockImage: {fileID: 1160380709}
   stageImage: {fileID: 1130483659}
@@ -9183,6 +9186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a3041f7d814ce4098a033dab4eea40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastStageNumber: 3
   unlocked: 0
   unlockImage: {fileID: 1907102097}
   stageImage: {fileID: 1476355906}
@@ -13344,6 +13348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a3041f7d814ce4098a033dab4eea40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastStageNumber: 0
   unlocked: 0
   unlockImage: {fileID: 1322158344}
   stageImage: {fileID: 0}
@@ -14265,7 +14270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2119581343
 RectTransform:
   m_ObjectHideFlags: 0

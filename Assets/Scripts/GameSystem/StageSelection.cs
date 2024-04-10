@@ -7,11 +7,12 @@ using UnityEngine.UI;
 public class StageSelection : MonoBehaviour
 {
     [Header("스테이지")]
-    [SerializeField] private bool unlocked;      // 스테이지가 풀렸는지 아닌지를 판별하는 변수
-    [SerializeField] private Image unlockImage;  // 스테이지가 잠겼는지 알려주는 이미지
-    [SerializeField] private Image stageImage;   // 스테이지 Icon 이미지
-    [SerializeField] private GameObject[] stars; // 스테이지의 클리어 정도를 알려주는 별
-    [SerializeField] private Sprite starSprite;  // 스테이지의 클리어 정도를 알려주는 별의 그림
+    [SerializeField] private int lastStageNumber;    // 스테이지 개수
+    [SerializeField] private bool unlocked;          // 스테이지가 풀렸는지 아닌지를 판별하는 변수
+    [SerializeField] private Image unlockImage;      // 스테이지가 잠겼는지 알려주는 이미지
+    [SerializeField] private Image stageImage;       // 스테이지 Icon 이미지
+    [SerializeField] private GameObject[] stars;     // 스테이지의 클리어 정도를 알려주는 별
+    [SerializeField] private Sprite starSprite;      // 스테이지의 클리어 정도를 알려주는 별의 그림
     [SerializeField] private AudioClip fadeOutSound;
     
     [Header("씬 로딩")]
@@ -31,17 +32,15 @@ public class StageSelection : MonoBehaviour
 
     private void UpdateLevelStatus()
     {
-        //Debug.Log(gameObject.name);
         int currentLevelNum = int.Parse(gameObject.name);
         int previousLevelNum = int.Parse(gameObject.name) - 1;
-        //Debug.Log(int.Parse(gameObject.name));
         if (PlayerPrefs.GetInt("Lv" + previousLevelNum) > 0)
         {
             Debug.Log(PlayerPrefs.GetInt("Lv" + previousLevelNum));
             unlocked = true;
         }
 
-        if(PlayerPrefs.GetInt("Lv" + currentLevelNum) > 0)
+        if(currentLevelNum >= lastStageNumber && PlayerPrefs.GetInt("Lv" + currentLevelNum) > 0)
         {
             PlayerPrefs.SetInt("HasSeenOutro", 0);
         }
