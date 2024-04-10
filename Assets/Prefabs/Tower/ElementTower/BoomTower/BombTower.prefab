@@ -112,7 +112,7 @@ MonoBehaviour:
   arrowPrefab: {fileID: 4541512061345682364, guid: 37eeeff25d463ac45aae674df28bc4ae, type: 3}
   spawnPos: {fileID: 6205338833721685053}
   enemyTag: Enemy
-  detectionRadius: 5.5
+  detectionRadius: 4
   spawnInterval: 2
   enemyList: []
   BombLevel: 0

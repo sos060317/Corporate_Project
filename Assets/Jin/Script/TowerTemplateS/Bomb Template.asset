@@ -15,25 +15,25 @@ MonoBehaviour:
   Bweapon:
   - Bcost: 220
     damage: 25
-    round: 7
+    round: 8
     shotSpeed: 2
     damageRound: 2
     ResellCost: 120
   - Bcost: 270
     damage: 30
-    round: 7
+    round: 8
     shotSpeed: 2
     damageRound: 2
     ResellCost: 150
   - Bcost: 330
     damage: 35
-    round: 7
+    round: 8
     shotSpeed: 2
     damageRound: 2
     ResellCost: 190
   - Bcost: 400
     damage: 40
-    round: 7
+    round: 8
     shotSpeed: 3
     damageRound: 3
     ResellCost: 220
